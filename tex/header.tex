@@ -1,0 +1,3092 @@
+%% TODO CALC MEAN AND STD
+% evan: 38
+% rose: 40
+% leah: 25
+% lily: 20
+% mike: 22
+
+% (38+40+25+20+22) = mean 29, std=9.3274
+
+ %pgfplotsinvokeforeach
+
+%\tracinggroups=0
+
+\documentclass[11.5pt]{article}
+
+%\usepackage{color}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor}
+
+%\def\expParticipants{unnamed}
+%\def\expParticipants{lily,leah,unnamed}
+
+%\def\expParticipants{evan,rose}
+
+%\def\expParticipants{lily,leah,evan,rose}
+
+
+%\def\expParticipants{evan,rose,Lily,Lily,leah,evann,leah,rosee,soniaa}
+%\def\expParticipants{evan,rose,Lily,Lily}
+%\def\expParticipants{lily,leah}
+
+
+\def\baselinePlotYMax{50}
+%\def\baselinePlotYMax{}
+
+%evan,rose,Lily,Lily,leah,evann,leah,rosee,soniaa,mikee,mikee
+
+%\def\expParticipants{evan,rose,Lily,Lily,leah,evann,leah,rosee,soniaa,mikee,mikee}
+\def\expParticipants{evan,rose,Lily,leah,evann,rosee,soniaa,mikee}
+
+
+% FILE PATHS
+
+\newcommand\datafilepath[1]{data/exp1/#1}
+
+\def\expOneCsvFilepath{data/exp1/TrialSesssions-(\expParticipants).csv}
+%\def\expTwoPolarCsvFilepath{data/exp1/TrialSesssions-(\expParticipants).csv}
+\def\expTwoCsvFilepath{data/exp1/TrialSesssions-(E2-\expParticipants).csv}
+\def\expTwoPolarCsvFilepath{data/exp1/TrialSesssions-(E2-mean,target,\expParticipants).csv}
+
+
+%\def\expThreeCsvFilepath{data/exp1/TrialSesssions-(E2-\expParticipants).csv}
+\def\expThreeCsvFilepath{data/exp1/TrialSesssions-(E3-mean,target,\expParticipants).csv}
+
+
+
+\def\csvSep{tab}
+
+\tolerance=300
+
+\def\strangeScale{1/10}
+
+
+
+
+\def\meanColor{gray!80}
+
+\def\myGreen{green!80!black}
+\def\myRed{red!100!black}
+\def\myBlue{blue!90!black}
+
+%\def\myCyan{GreenYellow!80!black}
+%\def\myMagenta{BlueViolet!80!black}
+%\def\myYellow{YellowOrange!90!black}
+\def\myCyan{cyan}
+\def\myMagenta{magenta}
+\def\myYellow{yellow}
+\def\myOrange{orange}
+
+\def\myCyanMeanColor{\myCyan}
+\def\myMagentaMeanColor{\myMagenta}
+\def\myYellowMeanColor{\myYellow}
+
+
+\def\themeColorLight{blue!13!white}
+\def\themeColorDark{blue!50!white!80!black}
+
+
+
+%
+%\definecolor{lilyColor}{hsb}{0.0, 1, 1}
+%\definecolor{leahColor}{hsb}{0.33, 1, 1}
+%\definecolor{roseColor}{hsb}{0.66, 1, 1}
+%\definecolor{evanColor}{hsb}{0.75, 1, 1}
+%
+%\def\lilyColor{lilyColor}
+%\def\leahColor{leahColor}
+%\def\roseColor{roseColor}
+%\def\evanColor{evanColor}
+
+\def\mikeColor{MidnightBlue}
+\def\lilyColor{\myRed}
+\def\leahColor{\myGreen}
+\def\roseColor{violet}
+\def\evanColor{\myBlue}
+\def\soniaColor{\myOrange}
+\def\unnamedColor{pink}
+%\def\meanColor{\myRed}
+\def\stdColor{brown}
+
+
+
+
+
+\def\trialOvershootTravelRatioColor{Magenta}	
+\def\trialInertialDistanceTraveledRatioColor{Yellow!50!Orange}	
+\def\trialTouchCountColor{Cyan!80!blue}
+
+%\def\expOneCsvFilepath{data/exp1/TrialSesssions.csv}
+
+
+
+
+%\pgfplotstableread{}{\expTwoData}
+\definecolor{target10}{hsb}{0.0, 0.8, 1}
+\definecolor{target20}{hsb}{0.2, 0.8, 1}
+\definecolor{target30}{hsb}{0.4, 0.8, 1}
+\definecolor{target40}{hsb}{0.6, 0.8, 1}
+\definecolor{target50}{hsb}{0.8, 0.8, 1}
+\definecolor{target-10}{hsb}{0.0, 0.8, 1}
+\definecolor{target-20}{hsb}{0.2, 0.8, 1}
+\definecolor{target-30}{hsb}{0.4, 0.8, 1}
+\definecolor{target-40}{hsb}{0.6, 0.8, 1}
+\definecolor{target-50}{hsb}{0.8, 0.8, 1}
+
+\newcommand\targetColor[1]{target#1}
+
+
+\definecolor{angle0}{hsb}{0, 0.8, 1}
+\definecolor{angle30}{hsb}{0.16, 0.8, 1}
+\definecolor{angle60}{hsb}{0.33, 0.8, 1}
+\definecolor{angle90}{hsb}{0.5, 0.8, 1}
+\definecolor{angle120}{hsb}{0.66, 0.8, 1}
+\definecolor{angle150}{hsb}{0.83, 0.8, 1}
+
+\definecolor{angle180}{hsb}{0, 0.8, 1}
+\definecolor{angle210}{hsb}{0.16, 0.8, 1}
+\definecolor{angle240}{hsb}{0.33, 0.8, 1}
+\definecolor{angle270}{hsb}{0.5, 0.8, 1}
+\definecolor{angle300}{hsb}{0.66, 0.8, 1}
+\definecolor{angle330}{hsb}{0.83, 0.8, 1}
+
+
+\newcommand\angleColor[1]{angle#1}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\usepackage{ifthen}
+
+
+
+
+%\pgfplotstableread{\expOneCsvFilepath}\expOneData
+
+
+%\setcounter{secnumdepth}{3}
+
+\def\dotNetDoubleLimit{1.7976931348623157 \times 10^{308}}
+
+
+
+
+
+
+\def\true{\string TRUE}
+\def\false{\string FALSE}
+
+\def\isFinalBuild{\false} % set to true on final build
+
+\newcommand\ifIsFinalBuildElse[2]{
+	\ifthenelse{\equal{\isFinalBuild}{\true}}{#1}{#2}
+}
+
+
+
+%\def\ifBuild_#1{\\#1}
+
+\def\IFBUILDSTART#1\IFBUILDEND{
+	%	#1
+}
+
+\newcommand\drawWithBuildOption[2] {
+	\draw[#1]
+%	\draw[#1,#2]
+}
+
+\newcommand\runeshade[3]{
+	\draw[#1, fill=#2]	
+%		\draw[#1, top color=#1!#2]			
+}
+
+
+%
+%\newcommand\projectionPointOptions{color=orange}
+%\def\projectedPointOptions{color=gray}
+%\def\projectionLineOptions{->, shorten <= 1pt, shorten >= 1pt, color = gray}
+%
+%
+
+
+\def\colorTopInput{green!40}
+\def\colorRightInput{blue!20}
+\def\colorBottomInput{red!20}
+\def\colorLeftInput{orange!50!yellow!40}
+
+
+\def\colorTop{green}
+\def\colorRight{blue!60}
+\def\colorBottom{red!60}
+\def\colorLeft{orange!70!yellow!50}
+
+
+%\def\scatterClasses{{
+%				lily={mark=*,\lilyColor,line width=0mm},
+%				Lily={mark=*,\lilyColor,line width=0mm},
+%				leah={mark=*,\leahColor,line width=0mm,xshift=-0.05cm},
+%				evan={mark=*,\evanColor,line width=0mm,xshift=0.05cm},		
+%				evann={mark=*,\evanColor,line width=0mm,xshift=0.05cm},		
+%				rose={mark=*,\roseColor,line width=0mm,xshift=0.1cm},		
+%				rosee={mark=*,\roseColor,line width=0mm,xshift=0.1cm},		
+%				unnamed={mark=*,\unnamedColor,line width=0mm,xshift=0.15cm},		
+%				mean={mark=none,\meanColor,line width=0mm},
+%				%			mean={mark=none,\meanColor,line width=0mm},
+%				std={mark=none,\stdColor,line width=0mm}
+%			}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% DEFS END %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% This is "sig-alternate.tex" V2.0 May 2012
+% This file should be compiled with V2.5 of "sig-alternate.cls" May 2012
+%
+% This example file demonstrates the use of the 'sig-alternate.cls'
+% V2.5 LaTeX2e document class file. 
+
+%\documentclass{sig-alternate}
+
+\usepackage{changepage}
+\usepackage{excludeonly}
+
+\usepackage{scalerel}
+
+\usepackage{multicol}
+\usepackage[utf8]{inputenc}	
+\usepackage{color}
+\usepackage{lipsum}
+%\usepackage{xcolor}
+\usepackage[colorlinks,linkcolor=navy,citecolor=blue]{hyperref}
+\usepackage{verbatim}
+\usepackage{textcomp}
+\usepackage{tabularx}
+\usepackage{csquotes}
+%\usepackage{comment}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{gensymb} % was
+
+
+%\documentclass{sig-alternate}
+%\usepackage{multicol}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+%\usepackage{lipsum}
+\usepackage[colorlinks,linkcolor=navy,citecolor=blue]{hyperref}
+%\usepackage{verbatim}
+%\usepackage{textcomp}
+%\usepackage{tabularx}
+%\usepackage{csquotes}
+\usepackage{comment}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage[toc,page]{appendix}
+%\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{mathtools}  
+\usepackage{environ}  
+\usepackage{ulem}
+\usepackage{tikz}
+%\usetikzlibrary{positioning,fadings,through}
+%\usetikzlibrary{positioning,fadings}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,positioning,shapes.misc,fadings}
+
+\tikzset{cross/.style={cross out, draw=black, fill=none, minimum size=2*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt}, cross/.default={2pt}}
+
+
+\usetikzlibrary{arrows}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable,xstring}
+\usepackage{pdfpages}
+\usepackage{nicefrac}
+\usepackage{twoopt}
+
+\usepackage{datatool} % datatool,xfor, substr, fp
+
+
+\usepackage{amsfonts}
+
+\usepgfplotslibrary{fillbetween,patchplots,statistics,groupplots}
+\usetikzlibrary{patterns,pgfplots.polar}
+\usepackage{courier}
+
+%\usepackage[document]{ragged2e} % imports the package ragged2e and left-justifies the text
+%\raggedright 
+
+\usepackage{bbm} % bbm, bbm-macros
+
+
+
+
+\usepackage{csvsimple}
+
+
+
+
+\usepackage{array}
+
+
+
+
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcommand{\fn}[1] {\footnote{#1}}
+
+\newcommand{\AirSwipe}{Air-Swipe}
+
+\definecolor{navy}{HTML}{000080} 
+
+\geometry{
+	letterpaper,
+	left=20mm,
+	right=20mm,
+	top=23mm,
+	bottom=27mm,
+}
+
+
+\setlength\columnsep{20pt}
+
+
+\renewenvironment{abstract}
+{\small
+	\begin{center}
+		\bfseries \abstractname\vspace{-.5em}\vspace{0pt}
+	\end{center}
+	\list{}{%
+		\setlength{\leftmargin}{50mm}% <---------- CHANGE HERE
+		\setlength{\rightmargin}{\leftmargin}%
+	}%
+	\item\relax}
+{\endlist}
+
+
+\makeatletter
+\newcommand{\runedo}[2][ $\triangleright$ ]{%
+	\def\nextitem{\def\nextitem{#1}}%
+	\@for \el:=#2\do{\nextitem\el}%
+}
+\makeatother
+
+
+%\pgfplotsset{
+%	discard if/.style 2 args={
+%		x filter/.code={
+%			\edef\tempa{\thisrow{#1}}
+%			\edef\tempb{#2}
+%			\ifx\tempa\tempb
+%			\def\pgfmathresult{inf}
+%			\fi
+%		}
+%	},
+%	discard if not/.style 2 args={
+%		x filter/.code={
+%			\edef\tempa{\thisrow{#1}}
+%			\edef\tempb{#2}
+%			\ifx\tempa\tempb
+%			\else
+%			\def\pgfmathresult{inf}
+%			\fi
+%		}
+%	}
+%}
+
+
+\makeatletter
+\pgfplotstableset{
+	tablefilter in/.style 2 args={
+		row predicate/.append code={
+			\def\pgfplotstable@loc@TMPd{\pgfplotstablegetelem{##1}{#1}\of}
+			\expandafter\pgfplotstable@loc@TMPd\pgfplotstablename
+			\edef\tempa{\pgfplotsretval}
+			\edef\tempb{#2}
+			\ifx\tempa\tempb
+			\else
+			\pgfplotstableuserowfalse
+			\fi
+		}
+	},
+	tablefilter out/.style 2 args={
+		row predicate/.append code={
+			\def\pgfplotstable@loc@TMPd{\pgfplotstablegetelem{##1}{#1}\of}
+			\expandafter\pgfplotstable@loc@TMPd\pgfplotstablename
+			\edef\tempa{\pgfplotsretval}
+			\edef\tempb{#2}
+			\ifx\tempa\tempb
+			\pgfplotstableuserowfalse
+			\else
+			\fi
+		}
+	}
+}
+\makeatother
+
+
+
+
+
+\pgfplotsset{
+	filter multiple/.style args={#1 equals #2 or #3}{
+		x filter/.append code={
+			\edef\tempa{\thisrow{#1}}
+			\edef\tempb{#2}
+			\edef\tempc{#3}
+			\ifx\tempa\tempb
+			\else
+				\ifx\tempa\tempc
+				\else
+					\def\pgfmathresult{inf}
+				\fi
+			\fi
+%			\edef\tempb{\thisrow{#1}}
+%			\edef\tempa{#2}
+%			\ifx\tempa\tempb
+%				\edef\tempa{#3}
+%%				\edef\tempb{#3}
+%				\ifx\tempa\tempb
+%				\else
+%					\def\pgfmathresult{inf}
+%				\fi
+%			\else
+%				\def\pgfmathresult{inf}
+%			\fi
+		}
+	},
+	interpret as polar/.style={
+		x filter/.code=\pgfmathparse{cos(rawx)*rawy},
+		y filter/.code=\pgfmathparse{sin(rawx)*rawy}
+	},
+	filter in/.style 2 args={
+		x filter/.append code={
+			\edef\tempa{\thisrow{#1}}
+			\edef\tempb{#2}
+			\ifx\tempa\tempb
+			\else
+			\def\pgfmathresult{inf}
+			\fi
+		}
+	},
+	filter out/.style 2 args={
+		x filter/.append code={
+			\edef\tempa{\thisrow{#1}}
+			\edef\tempb{#2}
+			\ifx\tempa\tempb
+			\def\pgfmathresult{inf}
+			\fi
+		}
+	},
+	discard if/.style 2 args={
+		x filter/.append code={
+			\edef\tempa{\thisrow{#1}}
+			\edef\tempb{#2}
+			\ifx\tempa\tempb
+			\def\pgfmathresult{inf}
+			\fi
+		}
+	},
+	discard if not/.style 2 args={
+		x filter/.append code={
+			\edef\tempa{\thisrow{#1}}
+			\edef\tempb{#2}
+			\ifx\tempa\tempb
+			\else
+				\def\pgfmathresult{inf}
+			\fi
+		}
+	},
+  discard ifnum/.style 2 args={
+  	x filter/.append code={
+  		\ifdim\thisrow{#1} pt=#2pt
+  		\def\pgfmathresult{inf}
+  		\fi
+  	}
+  },
+  discard if notnum/.style 2 args={
+  	x filter/.append code={
+  		\ifdim\thisrow{#1} pt=#2pt
+  		\else
+  		\def\pgfmathresult{inf}
+  		\fi
+  	}
+  },	
+	reduce to/.style args={every#1except between values#2and#3}{%
+		/pgfplots/x filter/.code={%
+			\let\pgfmathreserved\pgfmathresult
+			\def\myswitch{1}%
+			\pgfmathparse{##1>#2}%
+			\ifpgfmathfloatcomparison
+			\pgfmathparse{##1<#3}%
+			\ifpgfmathfloatcomparison
+			\def\myswitch{0}%
+			\fi%
+			\fi%
+			\let\pgfmathresult\pgfmathreserved
+			\ifnum1=\myswitch%
+			\pgfmathsetmacro\temp{int(mod(\coordindex,#1))}%
+			\ifnum0<\temp
+			\let\pgfmathresult\pgfutil@empty
+			\fi%
+			\fi%
+		}
+	} 
+}
+
+% -------------------------------------
+
+
+\makeatletter
+
+
+% Set some defaults 
+\tikzset{
+	plane max x/.initial=2,
+	plane max y/.initial=2,
+	plane max z/.initial=2
+}
+
+\tikzset{plane/.style={fill opacity=0.5}}
+
+% Define a plane.
+% #1 = name of the plane
+% #2*x + #3*y + #4*z = #5 is the equation of the plane
+\newcommand*\definePlaneByEquation[5]{
+	\expandafter\gdef\csname tsx@plane@#1\endcsname{
+		\def\tsx@plane@xcoeff{#2}
+		\def\tsx@plane@ycoeff{#3}
+		\def\tsx@plane@zcoeff{#4}
+		\def\tsx@plane@scalar{#5}
+	}
+}
+
+% Draw a plane.
+% The optional first argument is passed as options to TikZ.
+% The mandatory second argument is the name of the plane.
+\newcommand\drawPlane[2][]{
+	\tikzset{plane max x/.get=\tsx@plane@maxx}
+	\tikzset{plane max y/.get=\tsx@plane@maxy}
+	\tikzset{plane max z/.get=\tsx@plane@maxz}
+	\csname tsx@plane@#2\endcsname
+	
+	\ifdim\tsx@plane@xcoeff pt=0pt
+	\ifdim\tsx@plane@ycoeff pt=0pt
+	\ifdim\tsx@plane@zcoeff pt=0pt
+	%invalid plane
+	\else % x=0, y=0
+	\filldraw[plane,#1,shift={(0,0,\tsx@plane@scalar/\tsx@plane@zcoeff)}]
+	(0,0,0) --
+	(\tsx@plane@maxx,0,0) --
+	(\tsx@plane@maxx,\tsx@plane@maxy,0) --
+	(0,\tsx@plane@maxy,0) --
+	cycle;
+	\fi
+	\else % x=0, y != 0
+	\ifdim\tsx@plane@zcoeff pt=0pt % x=0, z=0
+	\filldraw[plane,#1,shift={(0,\tsx@plane@scalar/\tsx@plane@ycoeff,0)}]
+	(0,0,0) --
+	(\tsx@plane@maxx,0,0) --
+	(\tsx@plane@maxx,0,\tsx@plane@maxz) --
+	(0,0,\tsx@plane@maxz) --
+	cycle;
+	\else % x=0
+	\filldraw[plane,#1]
+	(0,\tsx@plane@scalar/\tsx@plane@ycoeff,0) --
+	(0,0,\tsx@plane@scalar/\tsx@plane@zcoeff) --
+	(\tsx@plane@maxx,0,\tsx@plane@scalar/\tsx@plane@zcoeff) --
+	(\tsx@plane@maxx,\tsx@plane@scalar/\tsx@plane@ycoeff,0) --
+	cycle;
+	\fi
+	\fi
+	\else % x!=0
+	\ifdim\tsx@plane@ycoeff pt=0pt % x!=0,y=0
+	\ifdim\tsx@plane@zcoeff pt=0pt % x!=0,y=0,z=0
+	\filldraw[plane,#1,shift={(\tsx@plane@scalar/\tsx@plane@xcoeff,0,0)}]
+	(0,0,0) --
+	(0,0,\tsx@plane@maxz) --
+	(0,\tsx@plane@maxy,\tsx@plane@maxz) --
+	(0,\tsx@plane@maxy,0) --
+	cycle;
+	\else % x!=0,y=0,z!=0
+	\filldraw[plane,#1]
+	(\tsx@plane@scalar/\tsx@plane@xcoeff,0) --
+	(0,0,\tsx@plane@scalar/\tsx@plane@zcoeff) --
+	(0,\tsx@plane@maxy,\tsx@plane@scalar/\tsx@plane@zcoeff) --
+	(\tsx@plane@scalar/\tsx@plane@xcoeff,\tsx@plane@maxy,0) --
+	cycle;
+	\fi
+	\else % x!=0,y!=0
+	\ifdim\tsx@plane@zcoeff pt=0pt % x!=0,y!=0,z=0
+	\filldraw[plane,#1]
+	(\tsx@plane@scalar/\tsx@plane@xcoeff,0) --
+	(0,\tsx@plane@scalar/\tsx@plane@ycoeff,0) --
+	(0,\tsx@plane@scalar/\tsx@plane@ycoeff,\tsx@plane@maxz) --
+	(\tsx@plane@scalar/\tsx@plane@xcoeff,0,\tsx@plane@maxz) --
+	cycle;
+	\else % x!=0,y!=0,z!=0
+	\filldraw[plane,#1]
+	(\tsx@plane@scalar/\tsx@plane@xcoeff,0,0) --
+	(0,\tsx@plane@scalar/\tsx@plane@ycoeff,0) --
+	(0,0,\tsx@plane@scalar/\tsx@plane@zcoeff) --
+	cycle;
+	\fi
+	\fi
+	\fi
+}
+
+% Define a point.
+% #1 = name of the point
+% (#2,#3,#4) is the location.
+% Also creates a coordinate node of name #1 at the location.
+\newcommand\definePointByXYZ[4]{
+	\coordinate (#1) at (#2,#3,#4);
+	\expandafter\gdef\csname tsx@point@#1\endcsname{
+		\def\tsx@point@x{#2}
+		\def\tsx@point@y{#3}
+		\def\tsx@point@z{#4}
+	}
+}
+
+% Project a point to a plane.
+% #1 = name of the new point
+% #2 = name of old point
+% #3 = name of plane
+\newcommand\projectPointToPlane[3]{{
+		\csname tsx@point@#2\endcsname
+		\csname tsx@plane@#3\endcsname
+		
+		% square of norm of the normal vector
+		\pgfmathparse{\tsx@plane@xcoeff*\tsx@plane@xcoeff + \tsx@plane@ycoeff*\tsx@plane@ycoeff + \tsx@plane@zcoeff*\tsx@plane@zcoeff}
+		\let\nnormsq\pgfmathresult
+		
+		% Calculate distance in terms of the (non-normalized) normal vector
+		\pgfmathparse{(\tsx@point@x*\tsx@plane@xcoeff + \tsx@point@y*\tsx@plane@ycoeff + \tsx@point@z*\tsx@plane@zcoeff - \tsx@plane@scalar) / \nnormsq}
+		\let\distance\pgfmathresult
+		
+		% Calculate point
+		\pgfmathparse{\tsx@point@x - \distance*\tsx@plane@xcoeff}
+		\let\x\pgfmathresult
+		\pgfmathparse{\tsx@point@y - \distance*\tsx@plane@ycoeff}
+		\let\y\pgfmathresult
+		\pgfmathparse{\tsx@point@z - \distance*\tsx@plane@zcoeff}
+		\let\z\pgfmathresult
+		
+		\definePointByXYZ{#1}{\x}{\y}{\z}
+	}}
+	
+	
+\newcommand\projectPointToPlaneAlongZ[3]{{
+	\csname tsx@point@#2\endcsname
+	\csname tsx@plane@#3\endcsname
+
+	\pgfmathparse{\tsx@point@x}	\let\x\pgfmathresult	
+	\pgfmathparse{\tsx@point@y}	\let\y\pgfmathresult
+	\pgfmathparse{ \tsx@plane@scalar - \tsx@point@x*\tsx@plane@xcoeff - \tsx@point@y*\tsx@plane@ycoeff}	\let\z\pgfmathresult
+			
+	\definePointByXYZ{#1}{\x}{\y}{\z}
+	}}
+	
+\makeatother
+
+
+
+\NewEnviron{eq}{
+	\begin{align*}  % \begin{equation}\begin{split}	
+	\BODY
+	\end{align*} % \end{split}\end{equation}
+}
+
+\NewEnviron{eqRef}{
+	\begin{align}
+		\begin{split}
+			\BODY
+		\end{split}
+	\end{align}
+}
+
+
+
+\renewcommand{\L}{\left(}
+\newcommand{\R}{\right)}
+\newcommand{\noi}{\noindent}
+\newcommand{\thetaB}{\boldsymbol{\theta}}
+\newcommand{\curvyL}{\mathcal{L}}
+\newcommand{\lra}{\Leftrightarrow}
+\newcommand{\uda}{\Updownarrow}
+\newcommand{\ti}[1] {\textit{#1}}
+\newcommand{\m}[1]{ \begin{bmatrix} #1 \end{bmatrix} }
+\renewcommand{\det}[1]{ \begin{vmatrix} #1 \end{vmatrix} }
+\renewcommand{\b}[1]{ \boldsymbol{#1} }
+\newcommand{\tb}[1] {\textbf{#1}}
+\renewcommand{\bf}[1]{ \textbf{#1} }
+\newcommand{\eqs}{ \begin{align} }
+\newcommand{\eqe}{ \end{align} }
+%\newcommand{\be}[1]{ \begin{#1} }
+%\newcommand{\l}{\left(}
+
+%\renewcommand{\thesubsection}{\thesection.\alph{subsection}}  % use letters for subsections
+
+\newcommand{\subsectionnote}[2]{ \subsection[#1]{#1\footnote{#2} } }
+\newcommand{\wB}[0]{ \b{w} }
+\newcommand{\xB}[0]{ \b{x} }
+%\def\x \b{x}
+\newcommand\gauss[2]{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))} 
+\newcommand\nGauss{\mathcal{N}}
+\renewcommand{\t}[1]{  \text{#1}  }
+\newcommand{\gaussFunctionText}[3]{ % 1=param/x, 2=mean/mu, 3=variance/sigma
+	\frac{1}{ (#3)  \sqrt{2\pi}}  \exp \( - \frac {(#1- #2 )^2}{(2)  (#3) ^2}  \)
+}
+\newcommand{\hlineB}{  \Xhline{4\arrayrulewidth}   }  
+
+
+\newcommand\plotfill[3]{
+	\path[name path=#1Ground] (axis cs:#2,0) -- (axis cs:#3,0);  % just a horisontal line on the x-axis?
+	\addplot [
+	thick,
+	color=blue,
+	fill=blue, 
+	fill opacity=0.1
+	] 
+	fill between[
+	of=#1 and #1Ground,
+	soft clip={domain=#2:#3},
+	];	
+}
+\newcommand\ifrac[2]{\nicefrac{#1}{#2}}
+\newcommand\half{{\nicefrac{1}{2}}}
+
+\newcommand\tc[1]{\texttt{#1}}
+\newcommand\calc[1]{\pgfmathparse{#1}\pgfmathresult}
+\newcommand\round[2][2]{\pgfmathparse{#2}\pgfmathprintnumberto[precision=#1]{\pgfmathresult}{\skod}\skod }
+
+
+\newcommand{\classificationError}[1]{ 
+	1 - max #1
+}
+%\newcommand{\classification}[1]{ 
+%	-	\sum_{k}^{k_{#1}}  {f_k}_{#1}\log_2 {f_k}_{#1} 
+%}
+
+
+\newcounter{myLoopCounter}
+\newcommand{\repeatValue}[2][1]{%
+	\forloop{myLoopCounter}{0}{\value{myLoopCounter}<#1}{#2}%
+}
+
+\newcommand{\note}[1]{   \parbox{15em}{#1}   }
+
+
+%\def\norm#1{\left\|#1\right\|}
+%\let\xB\b{x}
+%\let\svvert\abe
+%\let\Skod\left(
+
+%\let\svverta\L(
+%\let\svvertb\R)
+
+\def\paranthesize#1{}
+
+\def\i#1/#2{ \ifrac{#1}{#2}  }
+\def\(#1\){\left(#1\right)}
+
+\def\[#1\]{\left[#1\right]}
+
+%\def\#1\\#2{\left[#1\right]}
+
+
+%\def \'#1){\b{#1}}
+
+\def\~#1{{ \widetilde{#1} }}
+
+
+%\def\!#1\!{  \pgfmathparse{#1}\pgfmathresult  }
+
+
+\pgfmathdeclarefunction{gauss}{2}{ 
+	% #1=mean (mu), #2=variance (sigma)
+	\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+
+
+%\tikzset{fontscale/.style = {font=\relsize{#1}}
+%}
+
+\newcommand\loadTabbedCsv[2]{ 
+	\DTLsettabseparator
+	\DTLloaddb{#1}{#2} 
+	\DTLmaketabspace
+	} 
+	
+
+
+\NewEnviron{loopCommaCsv}[3][]{{
+%		\DTLsettabseparator
+		%	\catcode`\^^I=12 %
+		%	\DTLsetseparator{	}%		
+		\ifthenelse{\DTLiseq{#1}{}}
+		{}
+		{	\DTLloaddb{#2}{#1}}%
+		
+		
+		\newcommand{\rowNumber}{\arabic{DTLrowi}}
+		\DTLforeach*{#2}{#3}{\BODY}
+		%	\catcode`\^^I=12 %
+		%	\DTLsetseparator{	}%		
+		\DTLmaketabspace
+	}}
+	
+
+\newcommand\foreachTabbedCsvRowInPlot[4][]{{
+		\DTLsettabseparator
+%		\ifthenelse{\DTLiseq{#1}{}}{}{ \DTLloaddb{#2}{#1}}	
+		\newcommand{\rowNumber}{\arabic{DTLrowi}}
+		\pgfplotsextra{
+			\DTLforeach*{#2}{#3}{#4}
+			}
+		\DTLmaketabspace
+}}
+
+
+
+
+\NewEnviron{loopTabbedCsv}[3][]{{
+		\DTLsettabseparator
+		%	\catcode`\^^I=12 %
+		%	\DTLsetseparator{	}%		
+		\ifthenelse{\DTLiseq{#1}{}}
+		{}
+		{	\DTLloaddb{#2}{#1}} %
+		
+		
+		\newcommand{\rowNumber}{\arabic{DTLrowi}}
+		
+		\DTLforeach*{#2}{#3}{\BODY}
+		%	\catcode`\^^I=12 %
+		%	\DTLsetseparator{	}%		
+		\DTLmaketabspace
+	}}
+
+\NewEnviron{loopTabbedCsvAlt}[3]{{
+	\DTLsettabseparator
+	%	\catcode`\^^I=12 %
+	%	\DTLsetseparator{	}%		
+
+	\DTLloaddb{#2}{#1}
+	
+	
+	\newcommand{\rowNumber}{\arabic{DTLrowi}}
+	
+	\DTLforeach*{#2}{#3}{\BODY}
+	%	\catcode`\^^I=12 %
+	%	\DTLsetseparator{	}%		
+	\DTLmaketabspace
+}}
+
+\newcommand{\setSize}[1]{{\lvert #1 \rvert}}
+
+
+\newcommand{\norm}[1]{{\lVert #1 \rVert}}
+%\newcommand{\norm}[1]{{\lvert #1 \rvert}}
+
+\newcommand{\mnorm}[1]{{\lVert #1 \rVert}}
+
+
+\newcommand{\vectorsize}[1]{{\lvert #1 \rvert}}
+
+
+%\lVert \mathbf{p} \rVert
+
+
+\newcommand{\s}[1]{\mathbbm{#1}}
+
+
+
+\newcommand\otherFont[1]{\mathfrak{#1}}
+
+\newcommand\swirlR{\mathcal{R}}
+
+
+
+%\renewcommand{\sqsubset}[1][0pt]{%
+%	\mathrel{\raisebox{#1}{$\oldsqsubset$}}%
+%}
+
+
+
+
+
+
+\newcommand\superimpose[5]{
+	\rlap{$#1$}{\hspace{#4}\raisebox{#5}{\scaleobj{#3}{#2}}}
+}
+\def\mytargetsymbol{\bullet}
+%	\bigcirc
+% \nearrow
+
+
+
+
+
+\def\myskod{ \superimpose{\Box}{\mytargetsymbol}{0.9}{-0.1em}{0.45em} }
+
+\def\cornerBL{	\scaleobj{0.77}{\superimpose{B}{L}{1}{0.485em}{0.34em}} }
+\def\cornerBR{	\scaleobj{0.77}{\superimpose{B}{R}{1}{0.487em}{0.34em} } }
+\def\cornerTL{	\scaleobj{0.77}{\superimpose{T}{L}{1}{0.45em}{0.32em} } }
+\def\cornerTR{	\scaleobj{0.77}{\superimpose{T}{R}{1}{0.45em}{0.32em}} }
+
+
+%
+%
+%\newenvironment{colfigure} {
+%	\par\medskip\noindent\minipage{\linewidth}
+%} {
+%\endminipage\par\medskip
+%}
+%
+%
+%
+%\newcommand{\myimage}[3][width=0.75\linewidth]{
+%	\begin{colfigure}
+%		\centering
+%		\includegraphics[#1]{image/#2}
+%		\captionof{figure}{\small #3}
+%		\label{fig:#2}
+%	\end{colfigure}
+%}			
+%\newcommand{\fullWidthDataFigure}[3][width=0.75\linewidth]{
+%	\begin{figure*}
+%		\centering
+%		\includegraphics[#1]{/image/#2}
+%		\captionof{figure}{\small #3}
+%		\label{fig:#2}
+%	\end{figure*}
+%}			
+
+
+%\usepackage[nottoc]{tocbibind}
+
+
+
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+% paragraph to subsubsubsection
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+	{-2.5ex\@plus -1ex \@minus -.25ex}%
+	{1.25ex \@plus .25ex}%
+	{\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{3} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{3}    % how many sectioning levels to show in ToC
+
+\newcommand\subsubsubsection[1]{\paragraph{\normalfont\fontsize{10.5pt}{1.2}\textsl{#1}} }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newcommand\planeProjectPoint[5]{
+	\definePointByXYZ{#2}{#3}{#4}{#5};
+	\draw (#2) circle [radius=1pt];	
+	\projectPointToPlane{proj#2}{#2}{#1}
+	\fill (proj#2) circle [radius=1pt];
+	\draw[->, shorten <=1pt,shorten >=1pt, color=gray] (#2) -- (proj#2);
+}
+
+\newcommand\planePointProjectExample[4]{
+	\begin{tikzpicture}[x={(#1)}, y={(#2)}, z={(#3)},
+	plane max z=3,#4]
+	
+	\node[text width=0.2cm,gray] at (4.1,-0.3,0) {\small x};
+	\node[text width=0.2cm,gray] at (-0.3,4,0) {\small y};
+	\node[text width=0.2cm,gray] at (-0.2,-0.3,4) {\small z};
+	
+	\draw[->] (0,0,0) -- (4,0,0);
+	\draw[->] (0,0,0) -- (0,4,0);
+	\draw[->] (0,0,0) -- (0,0,4);
+	
+	\definePlaneByEquation{myplane}{1}{1}{1}{3}
+	\drawPlane[thick,fill=blue!10]{myplane}
+	
+	\planeProjectPoint{myplane}{p1}{1}{2}{1}
+	\planeProjectPoint{myplane}{p3}{3}{2}{1}
+	\planeProjectPoint{myplane}{p3}{3}{1}{1}
+	\planeProjectPoint{myplane}{p3}{1}{1}{1}	
+	
+	
+	\definePointByXYZ{topRight}{2.13}{1}{-0.13};	
+	\definePointByXYZ{bottomRight}{2.19}{0.45}{0.36};
+	\definePointByXYZ{topLeft}{0.81}{1.55}{0.64};
+	\definePointByXYZ{bottomLeft}{0.87}{1}{1.13};
+
+%	\draw[color=black] (topRight) circle [radius=1pt];		
+%	\draw[color=black] (bottomRight) circle [radius=1pt];
+%	\draw[color=black] (topLeft) circle [radius=1pt];		
+%	\draw[color=black] (bottomLeft) circle [radius=1pt];		
+%	
+	
+	\end{tikzpicture}
+}
+
+
+\newcommand\plotPlanarRectNoFit[5]{
+	\begin{center}
+		\begin{tikzpicture}
+		\begin{axis}[ 
+		%		every axis plot post/.append style={
+		%			mark=none,domain=1:10 %,samples=50,smooth
+		%		}, % All plots: from -2:2, 50 samples, smooth, no marks				
+		axis x line=bottom,
+		axis y line=left,
+		xmin=#1, 
+		xmax=#2, 
+		ymin=#3,
+		ymax=#4,
+		legend pos=outer north east,
+		xlabel={x},			
+		ylabel={y},			
+		y label style={
+			rotate=-90,
+			%						yshift=50.
+			xshift=10
+		},
+		%		xscale=1.3,
+		%		yscale=1.3,
+		scale=0.9,
+		]
+	%		\plotClass{TOP}{\colorTop, thick}{transparent};
+	%		\plotClass{RIGHT}{\colorRight,thick}{transparent};
+	%		\plotClass{BOTTOM}{\colorBottom,thick}{transparent};
+	%		\plotClass{LEFT}{\colorLeft,thick}{transparent};
+
+
+		%		\plotClass{ORIGO}{gray}{gray, fill=white};
+		
+		\plotClass{INPUT_TOP}{\colorTopInput}{gray,fill=white};
+		\plotClass{INPUT_RIGHT}{\colorRightInput}{gray,fill=white};
+		\plotClass{INPUT_BOTTOM}{\colorBottomInput}{gray,fill=white};
+		\plotClass{INPUT_LEFT}{\colorLeftInput}{gray,fill=white};
+		\plotClass{INPUT_ORIGO}{transparent}{gray, fill=white};		
+		%		\addlegendentry{$\gamma = 0/100$};
+		%		\addlegendentry{$\gamma = 1/10$};
+		%		\addlegendentry{$\gamma = 1$};
+		%		\addlegendentry{$\gamma = 10$};
+		\end{axis}
+		\end{tikzpicture}
+	\end{center}
+}
+
+
+\newcommand\plotPlanarRectFit[5]{
+	\begin{center}
+		\begin{tikzpicture}
+		\begin{axis}[ 
+		%		every axis plot post/.append style={
+		%			mark=none,domain=1:10 %,samples=50,smooth
+		%		}, % All plots: from -2:2, 50 samples, smooth, no marks				
+		axis x line=bottom,
+		axis y line=left,
+		xmin=#1, 
+		xmax=#2, 
+		ymin=#3,
+		ymax=#4,
+		legend pos=outer north east,
+		xlabel={x},			
+		ylabel={y},			
+		y label style={
+			rotate=-90,
+			%						yshift=50.
+			xshift=10
+		},
+		%		xscale=1.3,
+		%		yscale=1.3,
+		scale=0.9,
+		]
+		\plotClass{TOP}{\colorTop, thick}{transparent};
+		\plotClass{RIGHT}{\colorRight,thick}{transparent};
+		\plotClass{BOTTOM}{\colorBottom,thick}{transparent};
+		\plotClass{LEFT}{\colorLeft,thick}{transparent};
+		%		\plotClass{ORIGO}{gray}{gray, fill=white};
+		
+		\plotClass{INPUT_TOP}{\colorTopInput}{gray!40,fill=white};
+		\plotClass{INPUT_RIGHT}{\colorRightInput}{gray!40,fill=white};
+		\plotClass{INPUT_BOTTOM}{\colorBottomInput}{gray!40,fill=white};
+		\plotClass{INPUT_LEFT}{\colorLeftInput}{gray!40,fill=white};
+		\plotClass{INPUT_ORIGO}{transparent}{gray!20, fill=white};		
+		%		\addlegendentry{$\gamma = 0/100$};
+		%		\addlegendentry{$\gamma = 1/10$};
+		%		\addlegendentry{$\gamma = 1$};
+		%		\addlegendentry{$\gamma = 10$};
+		\end{axis}
+		\end{tikzpicture}
+	\end{center}
+}
+
+
+
+\newcommand\planeProjectSpatialExample[4][]{
+	\begin{tikzpicture}[
+	x={(#2)}, 
+	y={(#3)}, 
+	z={(#4)},
+	plane max z=3
+	,#1]
+	
+	\node[text width=0.2cm,gray] at (4,-0.3,0) {\small x};
+	\node[text width=0.2cm,gray] at (-0.3,4,0) {\small y};
+	\node[text width=0.2cm,gray] at (0,-0.25,4) {\small z};
+	
+	\draw[->] (0,0,0) -- (4,0,0);
+	\draw[->] (0,0,0) -- (0,4,0);
+	\draw[->] (0,0,0) -- (0,0,4);
+	
+	\definePlaneByEquation{myplane}{1}{1}{1}{3}
+	\drawPlane[thick,fill=blue!10]{myplane}
+	
+	\planeProjectPoint{myplane}{p1}{1}{2}{1}
+	\planeProjectPoint{myplane}{p3}{3}{2}{1}
+	\planeProjectPoint{myplane}{p3}{3}{1}{1}
+	\planeProjectPoint{myplane}{p3}{1}{1}{1}	
+	
+	
+	%	\definePointByXYZ{Skod}{0.6666}{1.6666}{0.66666};
+	\definePointByXYZ{fittedOrigo}{1.5}{1}{0.5};
+	\draw[color=gray] (fittedOrigo) circle [radius=2pt];		
+	
+	\definePointByXYZ{topRight}{2.13}{1}{-0.13};
+	\draw[color=green] (topRight) circle [radius=1pt];		
+	
+	\definePointByXYZ{bottomRight}{2.19}{0.45}{0.36};
+	\draw[color=orange] (bottomRight) circle [radius=1pt];
+	
+	\definePointByXYZ{topLeft}{0.81}{1.55}{0.64};
+	\draw[color=blue] (topLeft) circle [radius=1pt];		
+	
+	\definePointByXYZ{bottomLeft}{0.87}{1}{1.13};
+	\draw[color=purple] (bottomLeft) circle [radius=1pt];		
+	
+	\draw[-, shorten <=1pt,shorten >=1pt, color=\colorRight, thick] (topRight) -- (bottomRight); % RIGHT
+	\draw[-, shorten <=1pt,shorten >=1pt, color=\colorBottom, thick] (bottomRight) -- (bottomLeft); % BOTTOM
+	\draw[-, shorten <=1pt,shorten >=1pt, color=\colorLeft, thick] (bottomLeft) -- (topLeft); % LEFT
+	\draw[-, shorten <=1pt,shorten >=1pt, color=\colorTop, thick] (topLeft) -- (topRight); % TOP
+	
+	\end{tikzpicture}
+}
+
+\newcommand\planeProjectNoFit[4]{
+	\begin{tikzpicture}[x={(#1)}, y={(#2)}, z={(#3)},
+	plane max z=3,#4]
+	
+	\node[text width=0.2cm,gray] at (4,-0.3,0) {\small x};
+	\node[text width=0.2cm,gray] at (-0.3,4,0) {\small y};
+%	\node[text width=0.2cm,gray] at (0,-0.25,4) {\small z};
+	
+	\draw[->] (0,0,0) -- (4,0,0);
+	\draw[->] (0,0,0) -- (0,4,0);
+	\draw[->] (0,0,0) -- (0,0,4);
+	
+	\definePlaneByEquation{myplane}{1}{1}{1}{3}
+	
+	\drawPlane[thick,fill=blue!10]{myplane}
+	
+	\planeProjectPoint{myplane}{p1}{1}{2}{1}
+	\planeProjectPoint{myplane}{p3}{3}{2}{1}
+	\planeProjectPoint{myplane}{p3}{3}{1}{1}
+	\planeProjectPoint{myplane}{p3}{1}{1}{1}	
+	
+	
+	%	\definePointByXYZ{Skod}{0.6666}{1.6666}{0.66666};
+	\definePointByXYZ{fittedOrigo}{1.5}{1}{0.5};
+	\draw[color=gray] (fittedOrigo) circle [radius=2pt];		
+	
+%	\definePointByXYZ{topRight}{2.13}{1}{-0.13};
+%	\draw[color=green] (topRight) circle [radius=1pt];		
+%	
+%	\definePointByXYZ{bottomRight}{2.19}{0.45}{0.36};
+%	\draw[color=orange] (bottomRight) circle [radius=1pt];
+%	
+%	\definePointByXYZ{topLeft}{0.81}{1.55}{0.64};
+%	\draw[color=blue] (topLeft) circle [radius=1pt];		
+%	
+%	\definePointByXYZ{bottomLeft}{0.87}{1}{1.13};
+%	\draw[color=purple] (bottomLeft) circle [radius=1pt];		
+	
+%	\draw[-, shorten <=1pt,shorten >=1pt, color=\colorRight, thick] (topRight) -- (bottomRight); % RIGHT
+%	\draw[-, shorten <=1pt,shorten >=1pt, color=\colorBottom, thick] (bottomRight) -- (bottomLeft); % BOTTOM
+%	\draw[-, shorten <=1pt,shorten >=1pt, color=\colorLeft, thick] (bottomLeft) -- (topLeft); % LEFT
+%	\draw[-, shorten <=1pt,shorten >=1pt, color=\colorTop, thick] (topLeft) -- (topRight); % TOP
+	
+	\end{tikzpicture}
+}
+
+\def\plotXMin{\pgfkeysvalueof{/pgfplots/xmin}}
+\def\plotXMax{\pgfkeysvalueof{/pgfplots/xmax}}
+
+\def\plotYMin{\pgfkeysvalueof{/pgfplots/xmin}}
+\def\plotYMax{\pgfkeysvalueof{/pgfplots/ymax}}
+
+\newcommand\drawXAxis[1]{
+	\draw[#1] (axis cs:\pgfkeysvalueof{/pgfplots/xmin},0) -- (axis cs:\pgfkeysvalueof{/pgfplots/xmax},0);	
+}
+
+\newcommand\drawYAxis[1]{
+	\draw[#1] (axis cs:0,\pgfkeysvalueof{/pgfplots/ymin}) -- (axis cs:0,\pgfkeysvalueof{/pgfplots/ymax});
+}
+
+
+\def\drawFunctionX{
+	\draw[gray!50, dashed] plot (axis cs:\plotXMin,\plotXMin) -- (axis cs:\plotXMax,\plotXMax);
+	}
+
+\makeatletter
+\pgfplotstableset{
+	discard if not/.style 2 args={
+%		row predicate/.append code={		
+		row predicate/.code={
+			\def\pgfplotstable@loc@TMPd{\pgfplotstablegetelem{##1}{#1}\of}
+			\expandafter\pgfplotstable@loc@TMPd\pgfplotstablename
+			\edef\tempa{\pgfplotsretval}
+			\edef\tempb{#2}
+			\ifx\tempa\tempb
+			\else
+			\pgfplotstableuserowfalse
+			\fi
+		}
+	}
+}
+\makeatother
+
+\newcommand\plotOptionRotateAroundOrigin[1]{rotate around={#1:(axis cs:0,0)}}
+
+\tikzset{
+	error band/.style={fill=orange},
+	error band style/.style={
+		error band/.append style=#1
+	}
+}
+
+
+%\newcommand{\expScatterPlotClass}[5]{
+%	\addplot[
+%%		error band,
+%		%			visualization depends on=\thisrow{alignment} \as \alignment,
+%		%			every node near coord/.style={anchor=\alignment} ,
+%		%			nodes near coords*={(5,5)},
+%		%			nodes near coords*={$(\pgfmathprintnumber[frac]\myvalue)$},
+%		%			visualization depends on={\thisrow{targetValue} \as \myvalue}
+%		%			clickable coords={\thisrow{label}}, 
+%		%		color=red,
+%		mark size=0.5mm,
+%		enlarge x limits=true,
+%		enlarge y limits=true,
+%		scatter,
+%		color=\meanColor,
+%		%			scatter src=explicit symbolic, 
+%		point meta=explicit symbolic,
+%		%		point meta=explicit symbolic,
+%		scatter/classes={
+%%			lily={mark=*,\myRed,line width=0mm},
+%%			leah={mark=*,\myGreen,line width=0mm},		
+%%%			evan={mark=*,orange,line width=0mm},		
+%%%			rose={mark=*,pink,line width=0mm},		
+%%			mean={mark=none,\meanColor,line width=0mm},
+%%%			std{mark=none,azure,line width=0mm},
+%%			unnamed={mark=*,black,line width=0mm}		
+%			lily=\lorot,
+%			leah={mark=*,\myGreen,line width=0mm},
+%			evan={mark=*,\myBlue,line width=0mm},		
+%			rose={mark=*,violet,line width=0mm},		
+%			unnamed={mark=*,pink,line width=0mm},		
+%			mean={mark=none,\meanColor,line width=0mm},
+%			std={mark=none,brown,line width=0mm}
+%		},#5
+%		] 	
+%		plot[error bars/.cd, y dir = both, y explicit]
+%		table[
+%		meta=sessionName,
+%		%			  col sep = \csvSep,
+%		x=#2,	%trialTargetValue,
+%		%			  y=trialTargetValue,
+%		%			  y=trialReleasePositionTargetDiff
+%		y=#3,
+%		y error=#4			
+%		%			  ] {\datafile};
+%	] {#1};
+%	
+%%	  \addplot [draw=none, stack plots=y, forget plot, x=#2, y=#3, #5] {#1};
+%%	  \addplot +[draw=none, stack plots=y, error band, x=#2, y=#3, #5] {#1};
+%%	  \addplot [draw=none, stack plots=y, forget plot, x=#2, y=#3, #5] {#1};	  
+%%	  \addplot [forget plot] {#1};
+%	  
+%	
+%	%% Lower bound (invisible plot)
+%	%\addplot [draw=none, stack plots=y, forget plot] table [
+%	%x=#2,
+%	%y expr=\thisrow{#3}-\thisrow{#4}, #5
+%	%] {#1};
+%	%
+%	%% Stack twice the error, draw as area plot
+%	%\addplot [draw=none, fill=gray!40, stack plots=y, area legend, ] table [
+%	%x={#2},
+%	%y expr=2*\thisrow{#4}, #5
+%	%] {#1} \closedcycle;
+%	%
+%	%% Reset stack using invisible plot
+%	%\addplot [forget plot, stack plots=y,draw=none, #5] table [x={#2}, y expr=-(\thisrow{#3}+\thisrow{#4})] {#1};
+%	
+%}
+
+%\usepackage{subfig}
+\usepackage{caption}
+
+\def\true{true}
+\def\plotMean{\edef\isMeanToBePlotted{\true}}
+
+
+\def\perpAxesOptions{
+%	ytick pos=left,
+	xlabel near ticks,
+	y label style={ 
+		rotate=180, 
+		xscale=-1, 
+%		yscale=-1,  
+	},
+	x label style={ 
+		rotate=180, 
+		xscale=-1, 
+%		yscale=-1 
+	},
+	yticklabel style={ 
+		rotate=-90, 
+		xscale=-1  
+	},
+%	xtick pos=right,
+	xticklabel style={ 
+		rotate=-90, 
+		xscale=-1 
+	},
+}
+
+
+\newcommand\expScatterPlotPerp[2]{
+	\expScatterPlot{#1}{#2}{rotate=90,yscale=-1}{\perpAxesOptions}
+}
+
+
+
+\newcommand\drawAxes{
+		\drawYAxis{ultra thin,gray!30}
+		\drawXAxis{<->, thick, gray!50}
+	}
+
+\pgfplotsset{minor grid style={dashed,red}}
+\pgfplotsset{major grid style={dotted,green!50!black!30}}
+
+
+
+%
+%\newcommand\GetMean[2]{
+%	\pgfplotstableread[col sep = \csvSep]{#1}\tableA
+%	\pgfplotstableset{
+%		create on use/new/.style={
+%%			discard if not={targetValue}{-8},
+%			create col/expr={
+%					\pgfmathaccuma + \thisrow{#2}
+%				},
+%			},
+%		}
+%	\pgfplotstablegetrowsof{\tableA}
+%	\pgfmathsetmacro{\NumRows}{\numexpr\pgfplotsretval-1\relax}
+%
+%%	\pgfplotstablegetelem{\numexpr\NumRows-1\relax}{new}\of{#1} 
+%%	\pgfplotstablegetelem{\NumRows}{new}\of{#1} 
+%	\pgfmathsetmacro{\Sum}{\pgfplotsretval}
+%	\pgfmathsetmacro{\Mean}{\Sum/\NumRows}
+%}
+%
+%
+%\newcommand\DrawVMean[1][]{
+%	\draw[#1] 
+%	(axis cs:\Mean,\pgfkeysvalueof{/pgfplots/ymin}) -- 
+%	(axis cs:\Mean,\pgfkeysvalueof{/pgfplots/ymax});
+%}
+%\newcommand\DrawHMean[1][]{
+%	\draw[#1] 
+%	(axis cs:\pgfkeysvalueof{/pgfplots/xmin},\Mean) -- 
+%	(axis cs:\pgfkeysvalueof{/pgfplots/xmax},\Mean);
+%}
+%
+%
+%
+%
+%
+%
+%
+
+%%%% EXP1
+
+
+
+%\newcommand\expScatterPlotNoStats{
+%	\expScatterPlotClass\expOneCsvFilepath\plotX\plotY{}{
+%		only marks,
+%		discard if={sessionName}{mean},
+%		discard if={sessionName}{std},
+%%		discard if={sessionName}{errorMargin},
+%		discard if not={trialName}{\trialName},
+%	}	
+%}
+
+\newcommand\expScatterPlotMean[2][\meanColor]{
+%	\edef\plotMeanColor{#1}
+	\expScatterPlotClass\expOneCsvFilepath\plotX\plotY{#2}{
+		discard if not={sessionName}{mean},
+		discard if not={trialGroupName}\trialGroupName,
+		color=#1
+	}	
+}
+
+
+\newcommand{\expOneAxis}[2][]{	
+	\begin{axis}[ 
+		xmajorgrids=true, ymajorgrids=true, 
+		ymin=0,   
+%		ymax=\baselinePlotYMax,
+		xmin=-55, xmax=55,
+		%		nodes near coords,
+		xlabel={Target value},
+		ylabel={Duration (seconds)},
+		xtick distance={10},#1
+		]
+		#2
+	\end{axis}			
+	}
+
+
+\newcommand{\expOneGroupPlot}[2][]{
+	\nextgroupplot[ 
+		xmajorgrids=true, ymajorgrids=true, 
+		ymin=0,   
+		ymax=\baselinePlotYMax,
+		xmin=-55, xmax=55,
+		%		nodes near coords,
+		xlabel={Target value},
+		ylabel={Duration (seconds)},
+		xtick distance={10},#1
+		]
+	#2
+}
+
+
+\newcommand\expOnePlot[2]{
+		\addplot[		
+		%			domain=-50:50,
+		%		error band,
+		%			visualization depends on=\thisrow{alignment} \as \alignment,
+		%			every node near coord/.style={anchor=\alignment} ,
+		%			nodes near coords*={(5,5)},
+		%			nodes near coords*={$(\pgfmathprintnumber[frac]\myvalue)$},
+		%			visualization depends on={\thisrow{targetValue} \as \myvalue}
+		%			clickable coords={\thisrow{label}}, 
+		%		color=red,
+		mark size=0.5mm,
+		enlarge x limits=true,
+		enlarge y limits=true,
+		scatter,
+		color=\meanColor,
+		%			scatter src=explicit symbolic, 
+		point meta=explicit symbolic,
+		%		point meta=explicit symbolic,
+		scatter/classes={
+				lily={mark=*,\lilyColor,line width=0mm},
+				Lily={mark=*,\lilyColor,line width=0mm},
+			leah={mark=*,\leahColor,line width=0mm,xshift=-0.05cm},
+				evan={mark=*,\evanColor,line width=0mm,xshift=0.05cm},		
+				evann={mark=*,\evanColor,line width=0mm,xshift=0.05cm},		
+			rose={mark=*,\roseColor,line width=0mm,xshift=0.1cm},		
+			rosee={mark=*,\roseColor,line width=0mm,xshift=0.1cm},
+				sonia={mark=*,\soniaColor,line width=0mm,xshift=-0.1cm},
+				soniaa={mark=*,\soniaColor,line width=0mm,xshift=-0.1cm},
+			mike={mark=*,\mikeColor,line width=0mm,xshift=-.15cm},
+			mikee={mark=*,\mikeColor,line width=0mm,xshift=-.15cm},
+			unnamed={mark=*,\unnamedColor,line width=0mm,xshift=0.15cm},		
+			mean={mark=none,\meanColor,line width=0mm},
+%			mean={mark=none,\meanColor,line width=0mm},
+				std={mark=none,\stdColor,line width=0mm}
+		},
+		%			unbounded coords=skip
+		,#1
+		] 	
+		plot[error bars/.cd, y dir = both, y explicit]
+		table[
+		meta=sessionName,
+		%			  col sep = \csvSep,
+		%		x=#2,	%trialTargetValue,
+		%		%			  y=trialTargetValue,
+		%		%			  y=trialReleasePositionTargetDiff
+		%		y=#3,
+		%		y error=#4	
+%		#2] {\dataSource}; %\expOneCsvFilepath};
+		#2] {\expOneCsvFilepath};
+}
+
+
+
+
+
+
+\newcommand\expOneAxisPlot[3][]{
+	\expOneAxis[#1]{
+		\expOnePlot{#2}{#3}
+		\drawAxes						
+%		#1	
+	}
+}
+
+%\newenvironment{\expOnePlot}[2][]{\expOneAxis{#1}}{}
+
+%\def\filterNoStats{}
+
+\newcommand\expOneScatterPlot[5]{
+	\begin{axis}[ 
+		xmajorgrids=true, ymajorgrids=true, 
+		ymin=0,   ymax=\baselinePlotYMax,
+		xmin=-55, xmax=55,
+%		domain=-50:50,
+			%		nodes near coords,
+		xlabel={Target value},
+		ylabel={Duration (seconds)},
+		xtick distance={10},
+%		unbounded coords=skip,
+		,#5
+		]
+		
+		\drawAxes				
+		
+		\edef\plotX{#2} %{trialTargetValue}
+		\edef\plotY{#3}%{trialDurationSeconds}
+		\edef\trialGroupName{#1}
+%		\edef\errorCol{#1}
+		%		
+
+		\expScatterPlotClass\expOneCsvFilepath\plotX\plotY{}{
+			only marks,
+%			discard if={sessionName}{mean},
+%			discard if={sessionName}{std},
+			discard if={trialIsStatistic}{1},
+			%		discard if={sessionName}{errorMargin},
+			discard if not={trialGroupName}{\trialGroupName},
+		}	
+		#4
+		
+%		\edef\plotErrorMarginColName{#4}%{trialDurationSecondsConfidence}
+
+
+%		\isMeanPlotted
+		
+%		\expScatterPlotMean{}
+%		\ifthenelse{\equal{\plotErrorMarginColName}{}}{	}{ \expScatterPlotMean	} 
+
+
+%		\else
+%%					\expScatterPlotMean
+%%			\expScatterPlotClass{#1}{#2}{#3}{#5, discard if not={sessionName}{mean}}
+%		\fi
+		
+	\end{axis}			
+}
+
+
+
+
+%%%%%%%%
+
+
+
+
+
+%\pgfplotstablesort[sort key={T}]{\sorted}{\data} %get the data and sort by column 'T'
+
+%\newcommand\filter[2]{	discard if={#1}{#2} }
+
+
+
+\newcommand\threeFigure[3]{
+	%	\hspace*{-1.8cm}
+%	\def\threeFigureTikzScale{1.1}%{0.83}
+	\begin{minipage}[b]{0.3\textwidth} #1 \end{minipage}
+	\begin{minipage}[b]{0.3\textwidth} #2 \end{minipage}
+	\begin{minipage}[b]{0.3\textwidth} #3 \end{minipage}\\
+}
+
+\newcommand\twoFigure[2]{
+	%	\hspace*{-1.8cm}
+	\begin{minipage}[b]{0.45\textwidth} #1 \end{minipage}
+	\begin{minipage}[b]{0.45\textwidth} #2 \end{minipage}\\
+}
+
+
+
+
+\newcommand\threeFigureTrialMode[5][]{ % groupName, projection mode
+	\def\noYTickLabels{{,,}}
+	\def\yLabelWhite{\textcolor{white}{}}
+	%	\def\groupName{\IfStrEq{#1}{}{#2}{#1}}	
+%	\hspace{-2cm}
+%	\threeFigure{
+%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{groupplot}[
+%		width=0.5\textwidth,
+		group style={
+			group size=2 by 3,
+			x descriptions at=edge bottom,
+			y descriptions at=edge left,
+			horizontal sep=0,
+			vertical sep=0.4cm
+		}
+		]
+
+	%	\nextgroupplot[y post scale=3]
+	%	\addplot {2*x+5};
+	%	\addplot {3*x+5};
+	
+	%	\nextgroupplot[y post scale=3]
+	%	\addplot {2*x+5};
+	
+		\threeFigureTrialModeAxisPlotWithMean[
+			,#4, 
+			legend entries={
+				mean trial duration (seconds)			
+			},	
+			]{Horizontal}{#3}{#2-Horisontal}
+			%				{PlaneNormal-#2}
+	
+		  \coordinate (top) at (rel axis cs:0,1);% coordinate at top of the first plot
+		  
+		\trialAndProjectionModeTikz[
+			,#5, 
+			legend entries={
+	%			mean duration (seconds),			
+				overshoot travel (\%),
+				inertia travel (\%),
+				touch count $\times$ 10
+			},	
+%			every extra y tick/.style={
+%				grid=none, 
+%%				tick0/.initial=red,
+%%				tick1/.initial=green,
+%%				tick2/.initial=orange,
+%				yticklabel style={
+%%					anchor=north, 
+%%					color=\pgfkeysvalueof{/pgfplots/tick\ticknum},
+%				},
+%			},
+			]
+			{Horizontal}{#3}{#2-Horisontal}	
+	
+	
+		\threeFigureTrialModeAxisPlotWithMean[
+			,#4,
+			]{Vertical}{#3}{#2-Vertical}
+			%				{PlaneNormal-#2}
+		\trialAndProjectionModeTikz[
+			,#5, 
+	%		ylabel={}%\empty, % xtick=\empty, xlabel=\empty,
+			]
+		{Vertical}{#3}{#2-Vertical}	
+		
+		\threeFigureTrialModeAxisPlotWithMean[
+			,#4,
+			]{Combined}{#3}{#2-DimsConcatenationAveraged}
+			%				{PlaneNormal-#2}
+		\trialAndProjectionModeTikz[
+			,#5, 
+	%		ylabel={}%\empty, % xtick=\empty, xlabel=\empty,
+			]
+			{Combined}{#3}{#2-DimsConcatenationAveraged}	
+		
+		
+		\coordinate (bot) at (rel axis cs:1,0);% coordinate at bottom of the last plot
+	
+
+	\end{groupplot}
+	
+	\path (top-|current bounding box.west)-- 
+		node[anchor=south,rotate=90] {\large Duration (seconds)} 
+		(bot-|current bounding box.west);
+	
+	\path (top-|current bounding box.east)-- 
+	node[anchor=south,rotate=-90] {\large Secondary statistics} 
+	(bot-|current bounding box.east);			
+
+	\node[anchor=south] at ($(current bounding box.south) - (0,0.8)$) {Target value / Distance (cm)}; 
+}
+
+\usepackage{colordvi}
+
+
+\newcommand\expOnePlotMean[3][\meanColor]{ % [1]: plot options, 2: trialGroupName, 3: table options  
+	\expOnePlot{
+		#1,
+		filter in={sessionName}{mean},
+		filter in={trialGroupName}{#2}, %\filter,		%Baseline-Horisontal		Baseline-DimsConcatenationAveraged					
+	}{x=trialTargetValue, y=trialDurationSeconds, y error=trialDurationSecondsConfidence,#3}
+}
+
+\newcommand\trialAndProjectionModeTikz[4][]{  % [1]: axis 
+%	\begin{tikzpicture}[scale=1] 
+	\expOneGroupPlot[
+		legend style={draw=none,
+%			fill=none,
+			font=\scriptsize\selectfont,
+			at={(axis cs:0,\plotYMax*.9)},anchor=north
+			},
+		xlabel=,
+		ylabel=,
+%		xlabel={Target value}, 
+%		legend style={
+			%			empty legend, 
+			%			draw=none, 
+%			at={(axis cs:0,\plotYMax-3)},anchor=north
+%		},
+%		legend entries={
+%%			mean duration (seconds),			
+%			overshoot travel (\%),
+%			inertia travel (\%),
+%			touch count
+%		},	
+		extra y ticks ={0,10,...,100},
+%		extra y tick labels={0\%,10\%,...\%,100\%},
+		extra y tick labels={0,10,...,100},
+		%			extra ytick scale label code/.code={$\cdot \pi$},
+		%			extra y tick labels={$s_l$,$s_r$,qr},
+		yticklabel pos=right, 
+		ylabel near ticks , % axis y line*=right, ,ylabel near ticks 
+		%			ylabel={}%\empty, % xtick=\empty, xlabel=\empty,
+		,#1,
+		]{  %south west]{
+
+		%		\addlegendentry[gray]{\text{\large #2}}		
+		\addlegendimage{thick,no markers, dashed, \trialOvershootTravelRatioColor}
+		\addlegendimage{thick,no markers,dashed, \trialInertialDistanceTraveledRatioColor}
+		\addlegendimage{thick,no markers,dashed,\trialTouchCountColor}
+		
+		%				\def \filter{ }	
+		\expOnePlot{
+			%			yscale=0.1,
+			smooth,
+			yscale=10,
+			,#3,
+%			ybar,
+%			bar width=0.3cm,	
+%			fill=\trialTouchCountColor,
+			color=\trialTouchCountColor,
+%			dashed,
+			%			only marks,
+			%			filter out={trialIsStatistic}{1},
+			filter in={trialGroupName}{#4},
+			filter in={sessionName}{mean},
+		}{x=trialTargetValue, y=trialTouchCount}
+		
+		\expOnePlot{
+			yscale=100,
+			%			yellow,
+			%			yscale=2,
+			smooth,
+			#3,
+			color=\trialOvershootTravelRatioColor,
+%			dashed,
+			%			only marks,
+			%			filter out={trialIsStatistic}{1},
+			filter in={trialGroupName}{#4},
+			filter in={sessionName}{mean},
+		}{x=trialTargetValue, y=trialOvershootTravelRatio}
+		
+		\expOnePlot{
+			yscale=100,
+			%			yellow,
+			%			yscale=2,
+			smooth,
+			#3,
+			color=\trialInertialDistanceTraveledRatioColor,
+%			dashed,
+			%			only marks,
+			%			filter out={trialIsStatistic}{1},
+			filter in={trialGroupName}{#4},
+			filter in={sessionName}{mean},
+		}{x=trialTargetValue, y=trialInertialDistanceTraveledRatio}
+		
+		\draw[lightgray,densely dotted] (axis cs:0,0) -- (axis cs:0,\pgfkeysvalueof{/pgfplots/ymax});			
+	}	
+%	\end{tikzpicture}\\	
+}
+
+\newcommand\threeFigureTrialModeAxisPlotWithMean[4][]{  % [1]: axis options, 2: legend text, 3: mean and non-mean plot options, 4: trialGroupName
+%	\begin{tikzpicture}[scale=1] 
+		\expOneGroupPlot[%\expOneAxis[
+%			xlabel={Target value}, 
+			xlabel=,
+			ylabel={#2},
+%			legend style={
+%				empty legend, 
+%				draw=none, 
+%				at={(axis cs:0,\plotYMax-3)},anchor=north
+%				},
+		legend style={
+			draw=none,
+			%			fill=none,
+			at={(axis cs:0,\plotYMax*.9)},
+			anchor=north,
+			font=\scriptsize\selectfont,
+			%			font=\fontsize{4}{5}\selectfont,
+		},
+%		y ticks ={0,10,...,100},
+%			ytick={0\%,10\%,...\%,100\%},
+			yticklabels={,,},
+			extra y ticks ={0,10,...,100},			
+			extra y tick labels={0,10,...,100},
+%			extra y tick labels={0s,10s,...s,100s},
+			,#1,
+			]{  %south west]{
+%			\drawAxes		
+
+			\addlegendimage{thick,no markers, \meanColor}
+			
+			%				\def \filter{ }	
+			\expOnePlotMean[smooth,thick,#3,]{#4}{}
+			\expOnePlot{
+				#3,
+				only marks,
+				filter out={trialIsStatistic}{1},
+				filter in={trialGroupName}{#4},		
+			}{x=trialTargetValue, y=trialDurationSeconds}
+			\draw[lightgray,densely dotted] (axis cs:0,0) -- (axis cs:0,\pgfkeysvalueof{/pgfplots/ymax});	
+		}	
+%	\end{tikzpicture}\\	
+}
+
+
+\newcommand\readCsvFiltered[3]{
+	\def\tmpFilename{test.dat}
+	%\pgfplotstableread[
+	\pgfplotstabletypeset[
+	string type,
+	%every head row/.style={output empty row},
+	%output empty row,
+	begin table={},
+	end table={},
+	%	begin table/.add={}{},
+	%	begin table={},
+	%		end table={},
+	outfile = \tmpFilename,
+	skip coltypes=true,
+	%write to macro=\total,
+	typeset=false,
+	%col sep=ampersand,row sep=\\,
+	%postproc cell content/.append style={},
+	%postproc cell content/.append style={},
+	%	begin table={\begin{verbatim}},
+	%	end table={\end{verbatim}},
+	every head row/.style={},
+	% every last row/.style={},
+	% col sep= comma,	% specify the column separation character
+	% row sep= newline,
+	TeX comment={},
+	typeset cell/.code={
+		\ifnum\pgfplotstablecol=\pgfplotstablecols
+		\pgfkeyssetvalue{/pgfplots/table/@cell content}{##1}
+		\else
+		\pgfkeyssetvalue{/pgfplots/table/@cell content}{##1	}
+		\fi
+	},#2,
+	%	columns={sessionName, trialFinalOffscreenX, trialFinalOffscreenY,  trialFinalOffscreenZ},
+	% columns/sessionName/.style={string type},		
+	]{#1}%{\dataSource}	
+	
+	\pgfplotstableread{\tmpFilename}{#3}
+}
+
+
+\def\makeTicksFontScriptSize{\pgfplotsset{every tick label/.append style={font=\scriptsize}}}
+
+
+
+
+
+
+%\begin{filecontents*}{testdata.csv}
+%	xc,yc,xer,yer,phi
+%	1,4,0.04,0.02,0.5
+%	2,3,0.87,0.24,1
+%	3,5,0.02,0.3,2.35
+%	4,1,0.4,0.9,2.5
+%	5,3,0.2,0.1,0.2
+%	2.5,3,1.2,0.5,0.2
+%	3,2,1,0.25,2.3
+%\end{filecontents*}
+
+
+
+
+
+
+\newcommand\plotPolarTargetValues{
+	\addplot[
+		scatter,				only marks,		
+		point meta=explicit symbolic,
+		line width=0mm,
+		mark size=1.8,
+		scatter/classes={
+			10=\targetColor{10}!80!black,
+			20=\targetColor{20}!80!black,
+			30=\targetColor{30}!80!black,
+			40=\targetColor{40}!80!black,
+			50=\targetColor{50}!80!black,
+			-10=\targetColor{-10}!80!black,
+			-20=\targetColor{-20}!80!black,
+			-30=\targetColor{-30}!80!black,
+			-40=\targetColor{-40}!80!black,
+			-50=\targetColor{-50}!80!black
+	%		mean={mark=*,#3,line width=0.5mm},
+%			target={mark=*,#3!80!black,line width=0mm,mark size=1}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+		}						
+		]%surf, mesh/rows=10] 	
+		plot[->,error bars/.cd, y dir = both, y explicit]
+		table[
+		x=trialReleasePositionX,
+		y=trialReleasePositionY,
+		meta=trialTargetValue,
+		filter in={sessionName}{target}
+		] 
+		{data/exp1/TrialSesssions-(E2-mean,target).csv};
+}
+
+
+
+\newcommand\expPolarPlot[4][]{
+	\addplot[
+		shorten >=.05cm,
+		shorten <=.05cm,
+		scatter,		
+		point meta=explicit symbolic,
+		#4!50!black,
+		%			red,
+		scatter/classes={
+			mean={mark=*,#4,line width=0.5mm,opacity=1},
+			target={mark=*,#4!80!black,line width=0mm,mark size=1}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+		}						
+		]%surf, mesh/rows=10] 	
+		plot[->,error bars/.cd, y dir = both, y explicit]
+		table[
+		x=trialReleasePositionX,
+		y=trialReleasePositionY,
+		meta=sessionName,#1,
+		%		filter multiple=sessionName equals mean or target,
+		%		filter in={trialUIAngleDegrees}{#1},
+		%		filter in={trialTargetValue}{#2}
+		] 
+		%			{data/exp1/TrialSesssions-(E2-polar-evan,rose,Lily,Lily).csv} 
+		{data/exp1/TrialSesssions-(E2-mean,target-trialTargetValue(#3),trialUIAngleDegrees(#2)).csv};
+		%		{\expTwoPolarCsvFilepath};	
+}
+
+
+\newcommand\expPolarPlotAngleExpThree[3][]{
+	\expPolarPlot{#2}{-10}{#3, target-10#1}
+	\expPolarPlot{#2}{-20}{#3, target-20#1}
+	\expPolarPlot{#2}{-30}{#3, target-30#1}
+	\expPolarPlot{#2}{-40}{#3, target-40#1}
+	\expPolarPlot{#2}{-50}{#3, target-50#1}
+	\expPolarPlot{#2}{10}{#3, target10#1}
+	\expPolarPlot{#2}{20}{#3, target20#1}
+	\expPolarPlot{#2}{30}{#3, target30#1}
+	\expPolarPlot{#2}{40}{#3, target40#1}
+	\expPolarPlot{#2}{50}{#3, target50#1}
+}
+
+
+\newcommand\expPolarPlotAngle[2][]{
+	\expPolarPlot{#2}{-10}{target-10#1}
+	\expPolarPlot{#2}{-20}{target-20#1}
+	\expPolarPlot{#2}{-30}{target-30#1}
+	\expPolarPlot{#2}{-40}{target-40#1}
+	\expPolarPlot{#2}{-50}{target-50#1}
+	\expPolarPlot{#2}{10}{target10#1}
+	\expPolarPlot{#2}{20}{target20#1}
+	\expPolarPlot{#2}{30}{target30#1}
+	\expPolarPlot{#2}{40}{target40#1}
+	\expPolarPlot{#2}{50}{target50#1}
+}
+
+\newcommand\expPolarPlotAngleAlt[1]{
+	\expPolarPlot{#1}{-10}{angle#1}
+	\expPolarPlot{#1}{-20}{angle#1}
+	\expPolarPlot{#1}{-30}{angle#1}
+	\expPolarPlot{#1}{-40}{angle#1}
+	\expPolarPlot{#1}{-50}{angle#1}
+	\expPolarPlot{#1}{10}{angle#1}
+	\expPolarPlot{#1}{20}{angle#1}
+	\expPolarPlot{#1}{30}{angle#1}
+	\expPolarPlot{#1}{40}{angle#1}
+	\expPolarPlot{#1}{50}{angle#1}
+}
+
+%\def\defaultRadialStyle{}
+
+\newcommand\polarPlotDrawRadials[1][lightgray, dashed, shorten >=.03cm, shorten <=.12cm]{
+	\draw[#1] (origin) -- +(0:\radius) node[right]{0};
+	\draw[#1] (origin) -- +(30:\radius) node[above right]{30};
+	\draw[#1] (origin) -- +(60:\radius) node[above right]{60};
+	\draw[#1] (origin) -- +(90:\radius) node[above]{90};
+	\draw[#1] (origin) -- +(120:\radius) node[above left]{120};
+	\draw[#1] (origin) -- +(150:\radius) node[above left]{150};
+	\draw[#1] (origin) -- +(180:\radius) node[left]{180};
+	\draw[#1] (origin) -- +(210:\radius) node[left]{210};
+	\draw[#1] (origin) -- +(240:\radius) node[below left]{240};
+	\draw[#1] (origin) -- +(270:\radius) node[below]{270};
+	\draw[#1] (origin) -- +(300:\radius) node[below right]{300};
+	\draw[#1] (origin) -- +(330:\radius) node[below right]{330};
+}
+
+\newcommand\polarPlotDrawRadialsColorByAngle[1][dashed, shorten >=.03cm, shorten <=.12cm]{
+	\draw[#1, \angleColor{0}!80!black] (origin) -- +(0:\radius) node[right]{0};
+	\draw[#1, \angleColor{30}!80!black!70] (origin) -- +(30:\radius) node[above right]{30};
+	\draw[#1, \angleColor{60}!80!black!70] (origin) -- +(60:\radius) node[above right]{60};
+	\draw[#1, \angleColor{90}!80!black!70] (origin) -- +(90:\radius) node[above]{90};
+	\draw[#1, \angleColor{120}!80!black!70] (origin) -- +(120:\radius) node[above left]{120};
+	\draw[#1, \angleColor{150}!80!black!70] (origin) -- +(150:\radius) node[above left]{150};
+	\draw[#1, \angleColor{180}!80!black!70] (origin) -- +(180:\radius) node[left]{180};
+	\draw[#1, \angleColor{210}!80!black!70] (origin) -- +(210:\radius) node[left]{210};
+	\draw[#1, \angleColor{240}!80!black!70] (origin) -- +(240:\radius) node[below left]{240};
+	\draw[#1, \angleColor{270}!80!black!70] (origin) -- +(270:\radius) node[below]{270};
+	\draw[#1, \angleColor{300}!80!black!70] (origin) -- +(300:\radius) node[below right]{300};
+	\draw[#1, \angleColor{330}!80!black!70] (origin) -- +(330:\radius) node[below right]{330};
+}
+
+
+%\newcommand\polarPlotDrawSkewedRadial[5][lightgray, dashed]{	%  #1:options, #2: angle, #3: origo, #4: x-radius, #5:y-radius
+%	\draw[
+%		rotate around={#2:#3}, %				rotate 		,#1,
+%		#1,
+%		] #3 -- #4 node[right]{#2};
+%}
+%
+%\newcommand\polarPlotDrawSkewedRadials[3][lightgray, dashed]{	
+%%	\pgfplotsinvokeforeach {0, 60, ..., 330} {
+%%		\draw[#1] #2 -- 	+(##1:\radius) node[right]{0};
+%}
+
+\def\targetTickDistance{851}
+
+
+\newcommand\expPolarAxis[2][]{
+	
+	\def\expThreeRadius{5000}
+	\def\expThreeScale{1}
+	
+	\def\targetTickDistance{851}
+	\def\radius{\targetTickDistance * 5 * \strangeScale}
+	
+	
+	%	\def\noYTickLabels{{,,}}
+	%	\def\yLabelWhite{\textcolor{white}{}}
+	%	\pgfplotsset{every tick label/.append style={font=\scriptsize}}
+	%	\pgfplotsset{every tick label/.append style={font=\scriptsize}}		
+	\makeTicksFontScriptSize
+	
+	\begin{axis}[
+		%		at={(origin)},
+		axis lines=left,
+		xtick=\empty, ytick=\empty,
+		extra x ticks={-4258, 0, 4258},
+		extra x tick labels={ -0.5m, 0, 0.5m},
+		extra y ticks={-4258, 0, 4258},
+		extra y tick labels={-0.5m, 0, 0.5m},
+%		at={(current axis.center)}, %%%%%%%%%%%%%%%%%% FIX APPLIED
+%		at={(origin)},
+		%		at={(origin)},
+		anchor=origin, %center,
+		%		anchor=south west,
+		xmax=\expThreeRadius,
+		ymax=\expThreeRadius,
+		xmin=-\expThreeRadius,
+		ymin=-\expThreeRadius,
+		scale=\expThreeScale,
+		%	 		enlarge x limits=false,
+		%	 		enlarge y limits=false,	
+		%	x=0.5cm, y=0.5cm, 
+		%			ymin=-50, ymax=50,		
+		%			xmin=-50,xmax=50,
+		xmajorgrids=true, 
+		ymajorgrids=true,
+		enlargelimits=false,
+		%		axis equal image, 
+		%	ymin=-1, ymax=1,		
+		%	%	domain=-50:50,
+		%	xmin=-1,xmax=1,
+		%	zmin=-1,zmax=1,
+		%		nodes near coords,
+		%	xlabel={x},
+		%	ylabel={z},
+		%	xtick distance={10},
+		legend style={draw=none},
+		axis equal,
+		%	legend entries={
+		%		 xtick distance={60},
+		,#1		 
+		]	
+		
+		\coordinate (origin) at (axis cs:0,0);
+		
+		
+		%			\draw (axis cs:0,0) -- node[left]{Text} (axis cs:200,600);
+		%		\draw[->, pink] (axis cs:0,0) -- node[left]{Text} (50:50);
+		%			\draw[->, violet] (origin) -- +(75:100);
+		
+		
+		% radials
+		
+		%			\pgfplotsinvokeforeach {30, 60, ..., 360} {
+		%				\draw[lightgray, dashed] (origin) -- +(##1:\radius);
+		%			}
+		
+			
+			
+		\draw [\targetColor{50},densely dotted] (origin) circle (5 * \targetTickDistance * \strangeScale);
+			
+		#2		
+	\end{axis}	
+}
+
+\newcommand\drawCircles[1][]{
+	\pgfplotsinvokeforeach {1, ..., 4} {
+		\draw [\targetColor{##10}, densely dotted,#1] (origin) circle (##1 * \targetTickDistance * \strangeScale);
+	}	
+}
+
+
+\newcommand\releaseSpacePlot[3][]{
+	\addplot3[
+	%		y={0,<unit length>*cos(10),0},%(<unit length>*cos(60),<unit length>*sin(60))}
+	%		rotate around={10:(current axis.origin)},
+	%	surf, 
+	%	mesh/rows=10, 
+	%	shader=interp
+	only marks,
+	opacity=0.75,
+	mark size=1.2,
+	%		discard if not={sessionName}{rose}
+	%		x filter/.expression={5}
+	,#1
+	]%surf, mesh/rows=10] 	
+	table[
+	%			x=trialFinalOffscreenX,
+	%			y=trialFinalOffscreenZ,
+	%			z=trialFinalOffscreenY,
+	x=trialFinalOffscreenLocationWRTDeviceX,
+	y=trialFinalOffscreenLocationWRTDeviceY,%trialFinalOffscreenZ,
+	z=trialFinalOffscreenLocationWRTDeviceZ,%trialFinalOffscreenY,
+	meta=sessionName,#3
+	] {#2};% {\expOneCsvFilepath};
+}
+
+
+\newcommand\plotPcaRings{			
+	\coordinate (origin) at (axis cs:0,0);			    
+	
+	%			\begin{scope}[yscale=-1] %, y dir=reverse
+	
+	%			\def\PPM{85.1692913385827} % i,e. 851
+	\def\PPM{10} % i,e. 851
+	\foreachTabbedCsvRowInPlot{Pca}{\xc=x, \yc=y,\xr=xr,\yr=yr,\circleAngle=deg,\target=target}{	
+		\coordinate (circlePos) at ($(origin) + (\xc/\PPM, \yc/\PPM)$);
+		%			\node[mark size=0.02cm,color=\targetColor\target] at (circlePos) {\pgfuseplotmark{triangle*}};
+%		\coordinate (circlePos) at ($(origin) + (\xc/\PPM, \yc/\PPM)$);
+		\draw (circlePos) node[
+			cross,
+			rotate around={-1*\circleAngle-45:(circlePos)},
+%			rotate around={-1*\circleAngle-45:(circlePos)},
+			color=\targetColor\target
+			] {};		
+		\draw[color=\targetColor\target,very thick] ($(origin) + (\xc/\PPM, \yc/\PPM)$) ellipse [
+		x radius=\xr/\PPM,
+		y radius=\yr/\PPM,
+		rotate around={-1*\circleAngle:(circlePos)} %				rotate around={deg(148):(50,0)}
+		];
+	}
+}
+
+\newcommand\fullPageReleaseSpacePlots[1]{
+	\def\leftMarginChange{-2cm}
+	\def\myscale{1}
+	\vspace*{\leftMarginChange}
+	\twoFigure{ 
+		\hspace*{\leftMarginChange}
+		\begin{tikzpicture}[scale=\myscale,
+		%			x label style={at={(axis cs:0.5,-0.1,1)}}
+		]%[rotate=90]
+		\releaseSpaceAxis[view={10}{17}]{
+			%				\begin{scope}[yscale=-1] 
+			#1
+			%				\end{scope}
+		}
+		\end{tikzpicture}	
+	}{
+		\begin{tikzpicture}[scale=\myscale]%[rotate=90]
+		\releaseSpaceAxis[view={0}{0}]{ 
+			#1
+		}
+		\end{tikzpicture}		
+	}
+	\twoFigure{ 	
+		\hspace*{\leftMarginChange}
+		%		\vspace*{-2cm}
+		\begin{tikzpicture}[scale=\myscale]%[rotate=90]
+		\releaseSpaceAxis[view={80}{17}]{
+			#1
+			%				\releaseSpacePlot[\participantColor]{\releaseSpaceData}
+		}
+		\end{tikzpicture}	
+	}{		
+		\begin{tikzpicture}[scale=\myscale]%[rotate=90]
+		\releaseSpaceAxis[view={90}{0}]{
+			#1
+		}
+		\end{tikzpicture}	
+	}	
+	\twoFigure{ 	
+		\hspace*{\leftMarginChange}
+		\begin{tikzpicture}[scale=\myscale]%[rotate=90]
+		\releaseSpaceAxis[view={35}{35}]{
+			#1
+		}
+		\end{tikzpicture}	
+	}{		
+		\begin{tikzpicture}[scale=\myscale]%[rotate=90]
+		\releaseSpaceAxis[view={0}{90}]{
+			#1					
+		}			
+		\end{tikzpicture}	
+	}	
+}
+
+%\NewEnviron{fullPageReleaseSpacePlotsEnv}{
+%	\def\leftMarginChange{-2cm}
+%	\def\myscale{1.1}
+%	\vspace*{\leftMarginChange}
+%	\twoFigure{ 
+%		\hspace*{\leftMarginChange}
+%		\begin{tikzpicture}[scale=\myscale,
+%		%			x label style={at={(axis cs:0.5,-0.1,1)}}
+%		]%[rotate=90]
+%		\releaseSpaceAxis[view={10}{17}]{
+%			%				\begin{scope}[yscale=-1] 
+%			\BODY
+%			%				\end{scope}
+%		}
+%		\end{tikzpicture}	
+%	}{
+%	\begin{tikzpicture}[scale=\myscale]%[rotate=90]
+%	\releaseSpaceAxis[view={0}{0}]{ 
+%		\BODY
+%	}
+%	\end{tikzpicture}		
+%}
+%\twoFigure{ 	
+%	\hspace*{\leftMarginChange}
+%	%		\vspace*{-2cm}
+%	\begin{tikzpicture}[scale=\myscale]%[rotate=90]
+%	\releaseSpaceAxis[view={80}{17}]{
+%		\BODY
+%		%				\releaseSpacePlot[\participantColor]{\releaseSpaceData}
+%	}
+%	\end{tikzpicture}	
+%}{		
+%\begin{tikzpicture}[scale=\myscale]%[rotate=90]
+%\releaseSpaceAxis[view={90}{0}]{
+%	\BODY
+%}
+%\end{tikzpicture}	
+%}	
+%\twoFigure{ 	
+%	\hspace*{\leftMarginChange}
+%	\begin{tikzpicture}[scale=\myscale]%[rotate=90]
+%	\releaseSpaceAxis[view={35}{35}]{
+%	\BODY
+%	}
+%	\end{tikzpicture}	
+%}{		
+%\begin{tikzpicture}[scale=\myscale]%[rotate=90]
+%\releaseSpaceAxis[view={0}{90}]{
+%	\BODY					
+%}			
+%\end{tikzpicture}	
+%}	
+%}
+
+
+%\newcommand\releaseSpacePlotParticipantTargets[2]{
+%
+%}
+
+\newcommand\releaseSpacePlotAllParticipants[2]{
+	\releaseSpacePlot[\leahColor,#1]{\dataTwoLeah}{#2}
+	\releaseSpacePlot[\evanColor,#1]{\dataTwoEvan}{#2}
+	\releaseSpacePlot[\roseColor,#1]{\dataTwoRose}{#2}
+	\releaseSpacePlot[\lilyColor,#1]{\dataTwoLily}{#2}
+	\releaseSpacePlot[\soniaColor,#1]{\dataTwoSonia}{#2}
+	\releaseSpacePlot[\mikeColor,#1]{\dataTwoMike}{#2}
+}
+
+
+
+
+\newcommand\drawInputPlane{
+	\addplot3[name path=toppath,fill=blue, opacity=0.1,samples=2, domain=-.5:.5] (x, 0.5, 0);
+	\addplot3[name path=botpath,fill=blue, opacity=0.1,samples=2,domain=-.5:.5]  (x, -.5, 0);
+	\addplot [gray,opacity=0.02] fill between[of=toppath and botpath];
+	\addplot3[fill=blue, opacity=0.1,samples=2, domain=-.5:.5] (0.5, y, 0);
+	\addplot3[fill=blue, opacity=0.1,samples=2,domain=-.5:.5]  (-.5, y, 0);
+}
+
+\newcommand\drawInputSphere{
+	%SPHERE
+	\addplot3[surf,
+	% opacity = 0.1,
+	draw opacity = 0.1,
+	fill opacity = 0,
+	shader=flat,
+	mesh/interior colormap=
+	{blueblack}{color=(black) color=(gray)},
+	mesh/interior colormap thresh=1,
+	% shader=interp,
+	samples = 30,
+	variable = \u,
+	variable y = \v,
+	domain = 0:360,
+	%        y domain = 0:360,
+	]
+	({0.3*cos(u)*sin(v)}, {0.3*sin(u)*sin(v)}, {0.3*cos(v)});	
+}
+
+\newcommand\releaseSpaceAxis[2][]{
+	\makeTicksFontScriptSize
+	\begin{axis}[
+		enlargelimits=false,
+		%	x dir=reverse, 
+		xmajorgrids=true, ymajorgrids=true, 
+		%	ymin=-1, ymax=1,		
+		%	%	domain=-50:50,
+		%	xmin=-1,xmax=1,
+		%	zmin=-1,zmax=1,
+		%		nodes near coords,
+		zlabel style={rotate=-90},
+		xlabel={x},
+		ylabel={y},
+		zlabel={z},
+		%	xtick distance={10},
+		legend style={draw=none},
+		%	legend entries={
+		%		baseline,
+		%		plane-normal,
+		%		plane-directional,
+		%		spherical},	
+		%	legend style={at={(axis cs:-15,15)},anchor=south west},
+		%	view={290}{80},
+		axis equal
+		,#1]
+		%	xmax=\domainMax,xmin=-\domainMax,	ymax=\domainMax,ymin=-\domainMax,	
+		
+		%				\begin{scope}[]%[y dir=reverse]
+		#2		
+		%				\end{scope}
+		
+		%		#2		
+		
+		%	\drawInputSphere\
+		
+		%		\draw (axis cs:0,0,0) circle (3cm);
+		%	\addplot3[name path=toppath,fill=blue, opacity=0.1, fill opacity=0.4,samples=10,domain=0:1] (x, y,0);
+		
+		%\addplot3 [surf,blue, opacity=0.01] {0};
+		
+		%\addplot3[contour gnuplot={labels=false,levels={0},draw color=blue},domain=-4:4]
+		%{exp(-x^2 -0.3*y^2 -0.2*x*y)*5- 0.1};
+		
+		\def\circleColor{\myBlue!40}
+		
+		% helper circles
+		\addplot3[\circleColor,samples y=1,,samples=360,domain=1:360] ({0.5*cos(x)},{0.5*sin(x)},0);
+		\addplot3[dashed, \circleColor,samples y=1,,samples=360,domain=1:360] (0, {0.5*cos(x)},{0.5*sin(x)});
+		\addplot3[dashed, \circleColor,samples y=1,,samples=360,domain=1:360] ({0.5*cos(x)},0,{0.5*sin(x)});
+		
+		%\addplot[
+		%blue,
+		%domain=1:pi,
+		%samples=17,
+		%] 
+		
+		%	\drawInputPlane
+		
+		\def\xmin{\pgfkeysvalueof{/pgfplots/xmin}}
+		\def\xmax{\pgfkeysvalueof{/pgfplots/xmax}}
+		\def\ymin{\pgfkeysvalueof{/pgfplots/ymin}}
+		\def\ymax{\pgfkeysvalueof{/pgfplots/ymax}}
+		\def\zmin{\pgfkeysvalueof{/pgfplots/zmin}}
+		\def\zmax{\pgfkeysvalueof{/pgfplots/zmax}}
+		
+		%	\drawAxes				
+		\draw[thick,gray!30,dotted] (axis cs:\xmin,0,\zmin) -- (axis cs:\xmax,0,\zmin);	
+		\draw[thick,gray!30,dotted] (axis cs:0,\ymin,\zmin) -- (axis cs:0,\ymax,\zmin);
+		
+		\def\linecolor{\myGreen!30}
+		
+		%	from bottom to device
+		\draw[thick,\linecolor, dashed] (axis cs:0,0,\zmin) -- (axis cs:0,0,0);	
+		
+		%	from device center to axes
+		\draw[thick,\linecolor,dotted] (axis cs:\xmin,0,0) -- (axis cs:\xmax,0,0);	
+		\draw[thick,\linecolor,dotted] (axis cs:0,\ymin,0) -- (axis cs:0,\ymax,0);
+		
+		%	vertical lines
+		\draw[thick,\linecolor,dotted] (axis cs:0,\ymax,0) -- (axis cs:0,\ymax,\zmin);
+		\draw[thick,\linecolor,dotted] (axis cs:0,\ymin,0) -- (axis cs:0,\ymin,\zmin);
+		\draw[thick,\linecolor,dotted] (axis cs:\xmin,0,0) -- (axis cs:\xmin,0,\zmin);	
+		\draw[thick,\linecolor,dotted] (axis cs:\xmax,0,0) -- (axis cs:\xmax,0,\zmin);	
+		
+		
+		%\addplot3[area plot]  \TL -- \TR -- -- \BR -- \BL -- cycle;
+		%
+		%-- (axis cs:\pgfkeysvalueof{/pgfplots/xmax},#1,\pgfkeysvalueof{/pgfplots/zmin})
+		%-- (axis cs:\pgfkeysvalueof{/pgfplots/xmin},#1,\pgfkeysvalueof{/pgfplots/zmin})
+		%-- cycle;			
+		
+		%% SAN JOSE SPACE:	
+		%	\def\TL{(0.223457493299726,-0.16266075098759,1.68620133133376)}	
+		%	\def\TR{(0.228854267516688,-0.167606074963504,1.77226374528067)}
+		%	\def\BR{(0.184601753473317,-0.196480492341992,1.77337953408869)}
+		%	\def\BL{(0.179204979256355,-0.191535168366078,1.68731712014177)}
+		% yz swap:
+		%	\def\TL{(0.223457493299726, 1.68620133133376, -0.16266075098759)}	
+		%	\def\TR{(0.228854267516688, 1.77226374528067, -0.167606074963504)}
+		%	\def\BR{(0.184601753473317, 1.77337953408869, -0.196480492341992)}
+		%	\def\BL{(0.179204979256355, 1.68731712014177, -0.191535168366078 )}
+		
+		
+		%% SAN JOSE SPACE WRT DEVICE AXIS: 
+		Offscreen rect corners WRT device: (TL:), (TR:), (BR:), (BL:)
+		
+		\def\TL{(-0.043186573421452,-0.0264256597021248,0)}	
+		\def\TR{(0.043186573421452,-0.0264256597021248,0)}
+		\def\BR{(0.043186573421452,0.0264256597021248,0)}
+		\def\BL{(-0.043186573421452,0.0264256597021248,0)}
+		
+		
+		%	\def\TL{(0.0194278699132049,0.0169098706772011,-0.0435891013774647)}	
+		%	\def\TR{(0.0248246441301665,0.0119645467012872,0.0424733125694508)}
+		%	\def\BR{(-0.0194278699132049,-0.0169098706772011,0.0435891013774647)}
+		%	\def\BL{(-0.0248246441301665,-0.0119645467012872,-0.0424733125694508)}
+		%SWAP	
+		%	\def\TL{(0.0194278699132049, -0.0435891013774647, 0.0169098706772011)}	
+		%	\def\TR{(0.0248246441301665, 0.0424733125694508, 0.0119645467012872)}
+		%	\def\BR{(-0.0194278699132049,0.0435891013774647, -0.0169098706772011)}
+		%	\def\BL{(-0.0248246441301665,-0.0424733125694508, -0.0119645467012872)}
+		
+		\addplot3[surf, \myRed] coordinates { \TL \TR \BR \BL \TL };
+		
+		
+	\end{axis}			
+}
+
+\newcommand\plotReleasePositionsColorByTarget[1][]{
+	\addplot[
+	shorten >=.05cm,
+	shorten <=.05cm,
+	scatter,
+	only marks,
+	opacity=0.75,
+	mark size=1.2,
+	point meta=explicit symbolic,
+	%	scatter/classes=\scatterClasses,
+	%			red,
+	%			marks only,
+	scatter/classes={
+		10=\targetColor{10},
+		20=\targetColor{20},
+		30=\targetColor{30},
+		40=\targetColor{40},
+		50=\targetColor{50},
+		-10=\targetColor{-10},
+		-20=\targetColor{-20},
+		-30=\targetColor{-30},
+		-40=\targetColor{-40},
+		-50=\targetColor{-50}
+		%			lily={mark=*,\lilyColor,line width=0mm},
+		%			Lily={mark=*,\lilyColor,line width=0mm},
+		%			leah={mark=*,\leahColor,line width=0mm},
+		%			evan={mark=*,\evanColor,line width=0mm},		
+		%			evann={mark=*,\evanColor,line width=0mm},		
+		%			rose={mark=*,\roseColor,line width=0mm},		
+		%			rosee={mark=*,\roseColor,line width=0mm},		
+		%					sonia={mark=*,\soniaColor,line width=0mm},
+		%					soniaa={mark=*,\soniaColor,line width=0mm},			
+		%			unnamed={mark=*,\unnamedColor,line width=0mm},		
+		%			mean={mark=none,\meanColor,line width=0mm},
+		%			%			mean={mark=none,\meanColor,line width=0mm},
+		%			std={mark=none,\stdColor,line width=0mm}
+	}
+	%	scatter/classes={
+	%		mean={mark=*,red,line width=0.5mm},
+	%		target={mark=*,blue!80!black,line width=0mm,mark size=1}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+	%	}						
+	]%surf, mesh/rows=10] 	
+	plot[->,error bars/.cd, y dir = both, y explicit]
+	table[
+	x=trialReleasePositionX,
+	y=trialReleasePositionY,
+	meta=trialTargetValue,
+	%		filter multiple=sessionName equals mean or target,
+	%			filter in={trialUIAngleDegrees}{30},
+	filter out={trialIsStatistic}{1},#1,
+	] 
+	{data/exp1/TrialSesssions-(E2-\expParticipants).csv};	
+}
+
+
+
+
+
+%\newcommand{\drawDeviceRect}{
+%	\pgfplotsextra{
+%		\DTLforeach*{Device}{\onscreenPixelHeight=onscreenPixelHeight, \onscreenPixelWidth=onscreenPixelWidth}{
+%			
+%		}
+%	}
+%}
+
+
+% DATABASES FROM CSV FILES
+
+\def\pcaFilepath{data/exp1/PCA.csv}
+
+\loadTabbedCsv{Pca}\pcaFilepath
+\loadTabbedCsv{PcaNoSkew}{data/exp1/PCA-noskew.csv}
+\loadTabbedCsv{PcaAggregated}{data/exp1/PCA-aggregated.csv}
+
+%\loadTabbedCsv{Skoooood}\expThreeCsvFilepath
+
+
+%%% DEVICE PARAMS
+\def\deviceFilepath{data/exp1/device.csv}	
+\loadTabbedCsv{Device}\deviceFilepath	
+%%%
+
+
+
+
+\loadTabbedCsv{PcaTarget50}{data/exp1/PCA-targetValue(50).csv}
+
+
+\def\PPM{10} % i,e. 851
+
+\newcommand\drawOnscreenDims[1][fill=red!40, draw=red, opacity=0.2]{
+	\coordinate (origin) at (axis cs:0,0);			    
+	\pgfplotsextra{\DTLforeach*{Device}{\onscreenPixelHeight=onscreenPixelHeight, \onscreenPixelWidth=onscreenPixelWidth}{
+			%	\edef\onscreenPixelHeight{\onscreenPixelHeight}
+			%	\edef\onscreenPixelWidth{\onscreenPixelWidth}
+			\filldraw[#1] ($(origin) - (.5*\onscreenPixelWidth/\PPM,.5*\onscreenPixelHeight/\PPM)$) rectangle ($(origin) +  (.5*\onscreenPixelWidth/\PPM,.5*\onscreenPixelHeight/\PPM)$);	
+		}}
+	}
+	
+	
+	% E2 July 10: [2016-07-10 20:10:20 INFORMATIONAL] TestPage: Offscreen rect: (0.223457493299726,-0.16266075098759,1.68620133133376) -- (0.228854267516688,-0.167606074963504,1.77226374528067) -- (0.179204979256355,-0.191535168366078,1.68731712014177) -- (0.184601753473317,-0.196480492341992,1.77337953408869)
+	
+	
+	
+	
+	%\readCsvFiltered{\expTwoCsvFilepath}{
+	%%	tablefilter in={sessionName}{evan},
+	%%	columns={sessionName, sessionType, trialUIAngle, trialIsStatistic, trialFinalOffscreenX, trialFinalOffscreenY,  trialFinalOffscreenZ},
+	%%	tablefilter in={sessionType}{E2},
+	%%	tablefilter in={trialUIAngle}{1.0471975511966},
+	%%	tablefilter in={sessionName}{Lily},
+	%%	tablefilter in={sessionName}{Lily},
+	%	tablefilter in={sessionName}{evan},
+	%	tablefilter out={trialIsStatistic}{1},
+	%%	tablefilter in={trialDurationSecondsIsOutlier}{0}
+	%	}\expTwoData
+	%%\pgfplotstableread{test.dat}{\expTwoData}
+	
+	
+	
+	
+	%\pgfplotstablesort[sort key={trialFinalOffscreenY}]{\sorted}{\total} %get the data and sort by column 'T'
+	
+	%\pgfplotstablesort[sort key={trialFinalOffscreenY}]{\sorted}{\expTwoData} %get the data and sort by column 'T'
+	
+	
+	
+	%\def\participantName{Lily}
+	%\def\participantName{rose}
+	%\def\participantName{evan}
+	\def\participantName{rose}
+	\def\participantColor{\leahColor!50}
+	\pgfplotstableread{data/exp1/TrialSesssions-(E2-\participantName).csv}{\releaseSpaceData}
+	
+	
+	\pgfplotstableread{data/exp1/TrialSesssions-(E2-evan).csv}{\dataTwoEvan}
+	\pgfplotstableread{data/exp1/TrialSesssions-(E2-rose).csv}{\dataTwoRose}
+	\pgfplotstableread{data/exp1/TrialSesssions-(E2-leah).csv}{\dataTwoLeah	}
+	\pgfplotstableread{data/exp1/TrialSesssions-(E2-Lily).csv}{\dataTwoLily}
+	\pgfplotstableread{data/exp1/TrialSesssions-(E2-soniaa).csv}{\dataTwoSonia}
+	\pgfplotstableread{data/exp1/TrialSesssions-(E2-mikee).csv}{\dataTwoMike}
+	
+	
+	\newcommand\expPolarPlotAngles{
+		\expPolarPlotAngle{0}
+		\expPolarPlotAngle{30}
+		\expPolarPlotAngle{60}
+		\expPolarPlotAngle{90}
+		\expPolarPlotAngle{120}
+		\expPolarPlotAngle{150}
+	}
+	
+%	\newcommand\expPolarPlotAnglesDimmed[1]{
+%		\expPolarPlotAngle[#1]{0}
+%		\expPolarPlotAngle[#1]{30}
+%		\expPolarPlotAngle[#1]{60}
+%		\expPolarPlotAngle[#1]{90}
+%		\expPolarPlotAngle[#1]{120}
+%		\expPolarPlotAngle[#1]{150}
+%	}
+
+	
+%\usepackage{floatrow}			
+
+\usepackage{pdfpages}
+
+\newcommand\expThreePlotDiagonals[1][lightgray, dashed]{
+		\draw[#1] ($(origin) + (\angleAx/\PPM,\angleAy/\PPM)$) -- ($(origin) + (\angleGx/\PPM,\angleGy/\PPM)$);
+		\draw[#1] ($(origin) + (\angleBx/\PPM,\angleBy/\PPM)$) -- ($(origin) + (\angleHx/\PPM,\angleHy/\PPM)$);
+		\draw[#1] ($(origin) + (\angleCx/\PPM,\angleCy/\PPM)$) -- ($(origin) + (\angleIx/\PPM,\angleIy/\PPM)$);
+		\draw[#1] ($(origin) + (\angleDx/\PPM,\angleDy/\PPM)$) -- ($(origin) + (\angleJx/\PPM,\angleJy/\PPM)$);
+		\draw[#1] ($(origin) + (\angleEx/\PPM,\angleEy/\PPM)$) -- ($(origin) + (\angleKx/\PPM,\angleKy/\PPM)$);
+		\draw[#1] ($(origin) + (\angleFx/\PPM,\angleFy/\PPM)$) -- ($(origin) + (\angleLx/\PPM,\angleLy/\PPM)$);
+	}
+
+\newcommand\expThreeForeachPcaRow[3][1]{ %\DTLiseq{\target}{50}
+			\pgfplotsextra{\DTLforeach*[#1]{#2}{\xc=x, \yc=y,\xr=xr,\yr=yr,\circleAngle=deg,\target=target,\circleRadius=circleRadius,\circleRadiusM=circleRadiusM,
+					\angleAx=angle0x,
+					\angleAy=angle0y,
+					\angleBx=angle30x,
+					\angleBy=angle30y,
+					\angleCx=angle60x,
+					\angleCy=angle60y,
+					\angleDx=angle90x,
+					\angleDy=angle90y,
+					\angleEx=angle120x,
+					\angleEy=angle120y,
+					\angleFx=angle150x,
+					\angleFy=angle150y,
+					\angleGx=angle180x,
+					\angleGy=angle180y,
+					\angleHx=angle210x,
+					\angleHy=angle210y,
+					\angleIx=angle240x,
+					\angleIy=angle240y,
+					\angleJx=angle270x,
+					\angleJy=angle270y,
+					\angleKx=angle300x,
+					\angleKy=angle300y,
+					\angleLx=angle330x,
+					\angleLy=angle330y}
+	{
+		\coordinate (circlePos) at ($(origin) + (\xc/\PPM, \yc/\PPM)$);
+
+		#3
+	}}	
+}
+
+
+\newcommand\polarPlotDrawRadialsReversed{
+			\begin{scope}[yscale=-1] 
+				\polarPlotDrawRadials[lightgray, dashed, shorten >=.03cm, shorten <=.4cm, opacity=0.3] 
+			\end{scope}			
+}
+
+\newcommand\expThreePlotComfortZone[1]{
+	%% ELLIPSES
+	\expThreeForeachPcaRow[\DTLiseq{\target}{50}]{#1}{				
+		\draw[\targetColor{50}, thick, opacity=0.8, fill=\targetColor{50}!30!black, fill opacity=0.02, dashed] ($(origin) + (\xc/\PPM, \yc/\PPM)$) ellipse [
+		x radius=\xr/\PPM,
+		y radius=\yr/\PPM,
+		rotate around={-1*\circleAngle:(circlePos)} 
+		];
+	}
+}
+
+
+\newcommand\expThreePlot[3]{
+	%	\begin{figure}	
+	%		\centering
+		%		\hspace*{-1cm}			
+		%		\twoFigure{		
+		%			%		\hspace*{-0.22cm}
+		\begin{tikzpicture}[scale=1.2,>=stealth]
+		%		\hspace*{-0.22cm}
+		\expPolarAxis[		
+		extra y tick labels={ 0.5m, 0, -0.5m},					
+		y dir=reverse,  %%% REVERSE BECAUSE TRACKER VIEWS FROM OPPOSITE SIDE!		
+		]{	
+			
+%			\polarPlotDrawRadialsReversed			
+			%		\begin{scope}[yscale=-1] 
+			%		\polarPlotDrawRadials 
+			%		\end{scope}			
+			%		
+			
+			#3
+											
+			\coordinate (origin) at (axis cs:0,0);			    
+
+%			\expThreePlotComfortZone{#2}
+
+			\expThreeForeachPcaRow[\DTLiseq{\target}{50}]{#2}{				
+					%% RADIALS
+					%%				, path fading=west, fading angle=30
+					%				\newcommand\drawSkewedRadials{		
+					
+					% angle numbers		
+					\node[draw=none,lightgray, right] at ($(origin) + (\angleAx/\PPM,\angleAy/\PPM)$) {\scriptsize 0};
+					\node[draw=none,lightgray, above right] at ($(origin) + (\angleBx/\PPM,\angleBy/\PPM)$) {\scriptsize 30};
+					\node[draw=none,lightgray, above right] at ($(origin) + (\angleCx/\PPM,\angleCy/\PPM - 3)$) {\scriptsize 60};
+					\node[draw=none,lightgray, above] at ($(origin) + (\angleDx/\PPM,\angleDy/\PPM - 12)$) {\scriptsize 90};
+					\node[draw=none,lightgray, above left] at ($(origin) + (\angleFx/\PPM,\angleFy/\PPM)$) {\scriptsize 150};
+					\node[draw=none,lightgray, above left] at ($(origin) + (\angleEx/\PPM,\angleEy/\PPM)$) {\scriptsize 120};
+					\node[draw=none,lightgray, left] at ($(origin) + (\angleGx/\PPM,\angleGy/\PPM)$) {\scriptsize 180};
+					\node[draw=none,lightgray, below left] at ($(origin) + (\angleHx/\PPM,\angleHy/\PPM)$) {\scriptsize 210};
+					\node[draw=none,lightgray, left] at ($(origin) + (\angleIx/\PPM,\angleIy/\PPM)$) {\scriptsize 240};
+%					\node[draw=none,lightgray, below] at ($(origin) + (\angleJx/\PPM,\angleJy/\PPM)$) {\scriptsize 270};
+					\node[draw=none,lightgray, below right] at ($(origin) + (\angleKx/\PPM,\angleKy/\PPM)$) {\scriptsize 300};
+					\node[draw=none,lightgray, below right] at ($(origin) + (\angleLx/\PPM,\angleLy/\PPM)$) {\scriptsize 330};
+					
+%					\expThreePlotDiagonals[\targetColor{\ta}]
+				}
+				%\shade[inner color=transparent,outer color=red!40] (0,0) rectangle (4,4);
+				
+				
+%				\drawOnscreenDims
+				
+				%			\expPolarPlotAngles
+				%			\plotReleasePositionsColorByTarget			
+			}	
+			\end{tikzpicture}
+%			\caption{Determining the radius, cutoff target=40 TODO!}
+%			\label{fig:expThreeSkew}				
+%		\end{figure}
+	}	
+
+\newcommand\expThreePlotRadials[2][black!50, dashed,mark size=0.07]{
+%	\expThreePlot{#1}{
+			% RADIALS			
+			\addplot[
+			%			red,
+			scatter,
+			only marks,
+			mark size=0.1,
+			%		red,
+			point meta=explicit symbolic,
+			,
+			scatter/classes={
+				%			ellipse=transparent, %{mark=*,gray,line width=1mm}							
+%				0={\targetColor{50}!50, dashed} %{mark=*,gray,line width=1mm}					
+				1={#1} %{mark=*,gray,line width=1mm}					
+			}					
+			] 	
+			table[
+			x=x,
+			y=y,	
+			meta=isRadial,
+%			filter in={type}{radial},		
+			filter in={isRadial}{1},								
+%			filter in={target}{50},					
+			%		filter in={target}{50}					
+			] {#2};	
+%	}
+}
+
+\newcommand\comfotZoneBisect[5][gray!50, dashed]{
+	%% ELLIPSES 			
+	\addplot[
+	%			red,
+	scatter,
+	%			only marks,
+	opacity=0.75,
+	mark size=0.3,
+	point meta=explicit symbolic,
+	%				scatter/classes={
+	%					0=\targetColor{10},
+	%					30=\targetColor{20},
+	%					60=\targetColor{30},
+	%					90=\targetColor{40},
+	%					120=\targetColor{50} %				50={mark=*,\targetColor{50},line width=1mm, draw=\targetColor{50}}							
+	%				}	
+	,#1,				
+	] 	
+	table[
+	x=x,
+	y=y,	
+	meta=deg
+	,filter in={target}{#5}					
+	,filter multiple={deg equals #2 or #3}					
+	%			filter in={target}{50}					
+	] {#4};	
+}
+
+\newcommand\expThreePlotEllipse[2][]{			
+	%			%% ELLIPSES 			
+	\addplot[
+	scatter,
+	only marks,
+	opacity=0.75,
+	mark size=0.3,
+	point meta=explicit symbolic,
+	scatter/classes={
+		10=\targetColor{10},
+		20=\targetColor{20},
+		30=\targetColor{30},
+		40=\targetColor{40},
+		50=\targetColor{50} %				50={mark=*,\targetColor{50},line width=1mm, draw=\targetColor{50}}							
+	}					
+	] 	
+	table[
+	x=x,
+	y=y,	
+	meta=target
+	,filter in={isEllipse}{1}
+	,#1,					
+	%			filter in={target}{50}					
+	] {#2};	
+}
+
+\usepackage{pgfplotstable}
+
+\makeatletter
+\pgfplotsset{
+	/pgfplots/flexible xticklabels from table/.code n args={3}{%
+		\pgfplotstableread[#3]{#1}\coordinate@table
+		\pgfplotstablegetcolumn{#2}\of{\coordinate@table}\to\pgfplots@xticklabels
+		\let\pgfplots@xticklabel=\pgfplots@user@ticklabel@list@x
+	}
+}
+\makeatother
+
+\newcommand\expPolarPlotReleaseDiff[5][]{%%%%%%%%TEST
+	%	\pgfmathdivide{#1}{180}
+	%	\definecolor{degreeColor#1}{hsb}{\pgfmathresult, 1, 1}
+
+
+	\addplot[
+		%		bar shift=12.5,
+		%		red,
+		%			only marks,
+		%	->,
+		rotate around={#2:(axis cs:0,0)},
+		%	shorten >=.15cm,
+		%	shorten <=.15cm,
+		ycomb,
+		nodes near coords,
+		nodes near coords={
+			\pgfmathparse{abs(\mean/8516.92913385827)} 
+			\pgfmathprintnumberto[precision=2]{\pgfmathresult}{\roundedmean} 
+			\pgfmathparse{\std/8516.92913385827)} 
+			\pgfmathprintnumberto[precision=2]{\pgfmathresult}{\roundedstd} 
+			\pgfmathparse{0.3 + abs(\target)/100} 
+			\scalebox{\pgfmathresult}{ \roundedmean / \roundedstd  } % \trialUIAngleDegrees }% \roundedmean / \roundedstd }
+%			\pgfmathresult
+		},
+		visualization depends on={value \thisrow{#4} \as \mean},
+		visualization depends on={value \thisrow{#4Confidence} \as \std},
+		visualization depends on={value \thisrow{trialTargetValue} \as \target},
+		visualization depends on={value \thisrow{trialUIAngleDegrees} \as \trialUIAngleDegrees},
+%			\ifthenelse{\equal{\thecitation}{This work}}{\pgfmathparse{\thenumber*100}\pgfmathprintnumber{\pgfmathresult}\% [This work]}{\pgfmathparse{\thenumber*100}\pgfmathprintnumber{\pgfmathresult}\% \cite{\thecitation}}
+%		},		
+%		nodes near coords align={above left},	
+		every node near coord/.append style={
+%			rotate around={#2-90:(axis cs:0,0)},
+			      /pgf/number format/fixed,
+			      /pgf/number format/precision=5,
+			      rotate=#2-90,%{Mod(#2,180)}, 
+			anchor=#5, %center
+			inner sep=2pt,
+			scale=0.7,
+%			scale=9.
+			font=\tiny % \scriptsize\selectfont,							
+		},
+%		xtick=data,
+%		xticklabel style={
+%				text height=1.5ex
+%				rotate=90, 
+%				font=\scriptsize\selectfont,							
+%%				scale=0.5 
+%		},
+%		symbolic y coords={trialFromTargetToReleaseVerticalLength},
+%		flexible xticklabels from table={\expTwoPolarCsvFilepath}{trialFromTargetToReleaseVerticalLength}{col sep=tab},
+		%	x dir=reverse, 
+		%	scatter,
+		ybar, 
+		bar width=2,
+		fill=#3,%degreeColor#1!90,%red!30,
+%		point meta=explicit symbolic,
+		%			red,
+		%	scatter/classes={
+		%		mean={mark=*,\myRed,line width=0mm},
+		%		target={mark=*,\myGreen,line width=0mm}		
+		%	}			
+%		show sum on top,
+		,#1,			
+		]%surf, mesh/rows=10] 	
+		plot[error bars/.cd, 
+			y dir = both, y explicit,  	
+			%	x dir = both, x explicit,  	
+			%		error bar style={
+			%			line width=1.5pt, 
+			%			rotate around={30:(axis cs:\x,\y)},
+			%			xshift=4.5mm
+			%			},
+			error mark options = {
+				%		rotate around={#1:current origin} 
+				%%		line width=1.5pt, 
+				mark size = 0pt 
+			},
+			] %,bar width=3pt,
+		table[
+			x=trialTargetHorizontalDistanceFromOrigo,
+	%		x expr=\coordindex,
+			y=#4,
+			y error=#4Confidence,
+			%	x error=trialFromTargetToReleaseVerticalLengthConfidence,
+			meta=sessionName,
+			filter in={sessionName}{mean},
+			%			filter in={sessionType}{E2},
+			filter in={trialUIAngleDegrees}{#2},
+			%	filter in={trialTargetValue}{#2}
+			%		filter in={trialUIAngle}{1.5707963267949}
+			] 
+			%			{data/exp1/TrialSesssions-(E2-polar-evan,rose,Lily,Lily).csv} 
+			{\expTwoPolarCsvFilepath};	
+}
+
+
+
+
+\newcommand\improvement[2]{\round[2]{100*(#1/#2-1)}}
+
+% EXP 3 -----------------------------
+
+%\newcommand\expThreeStatsPlot[2]{
+%	\addplot[		
+%	%			domain=-50:50,
+%	%		error band,
+%	%			visualization depends on=\thisrow{alignment} \as \alignment,
+%	%			every node near coord/.style={anchor=\alignment} ,
+%	%			nodes near coords*={(5,5)},
+%	%			nodes near coords*={$(\pgfmathprintnumber[frac]\myvalue)$},
+%	%			visualization depends on={\thisrow{targetValue} \as \myvalue}
+%	%			clickable coords={\thisrow{label}}, 
+%	%		color=red,
+%	mark size=0.5mm,
+%	enlarge x limits=true,
+%	enlarge y limits=true,
+%	scatter,
+%	color=\meanColor,
+%	%			scatter src=explicit symbolic, 
+%	point meta=explicit symbolic,
+%	%		point meta=explicit symbolic,
+%	scatter/classes={
+%		lily={mark=*,\lilyColor,line width=0mm},
+%		Lily={mark=*,\lilyColor,line width=0mm},
+%		leah={mark=*,\leahColor,line width=0mm,xshift=-0.05cm},
+%		evan={mark=*,\evanColor,line width=0mm,xshift=0.05cm},		
+%		evann={mark=*,\evanColor,line width=0mm,xshift=0.05cm},		
+%		rose={mark=*,\roseColor,line width=0mm,xshift=0.1cm},		
+%		rosee={mark=*,\roseColor,line width=0mm,xshift=0.1cm},
+%		sonia={mark=*,\soniaColor,line width=0mm,xshift=-0.1cm},
+%		soniaa={mark=*,\soniaColor,line width=0mm,xshift=-0.1cm},
+%		mike={mark=*,\mikeColor,line width=0mm,xshift=-.15cm},
+%		mikee={mark=*,\mikeColor,line width=0mm,xshift=-.15cm},
+%		unnamed={mark=*,\unnamedColor,line width=0mm,xshift=0.15cm},		
+%		mean={mark=none,\meanColor,line width=0mm},
+%		%			mean={mark=none,\meanColor,line width=0mm},
+%		std={mark=none,\stdColor,line width=0mm}
+%	},
+%	%			unbounded coords=skip
+%	,#1
+%	] 	
+%	plot[error bars/.cd, y dir = both, y explicit]
+%	table[
+%	meta=sessionName,
+%	%			  col sep = \csvSep,
+%	%		x=#2,	%trialTargetValue,
+%	%		%			  y=trialTargetValue,
+%	%		%			  y=trialReleasePositionTargetDiff
+%	%		y=#3,
+%	%		y error=#4	
+%	%		#2] {\dataSource}; %\expThreeCsvFilepath};
+%	#2] {\expThreeCsvFilepath};
+%}
+%
+%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\begin{filecontents*}{sinePlaneFitPoints.csv}
+%\end{filecontents*}
+
+
+
+

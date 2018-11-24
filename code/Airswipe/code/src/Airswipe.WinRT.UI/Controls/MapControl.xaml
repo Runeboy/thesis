@@ -1,0 +1,29 @@
+﻿<UserControl
+    x:Name="control"
+    x:Class="Airswipe.WinRT.UI.Controls.MapControl" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Airswipe.WinRT.UI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:common="using:Airswipe.WinRT.UI.Common">
+
+    <Canvas x:Name="MapContainerCanvas" PointerEntered="MapContainerCanvas_PointerEntered" PointerExited="MapContainerCanvas_PointerExited"  PointerMoved="MapContainerCanvas_PointerMoved"   common:FrameworkElementExtensions.ClipToBounds="True" Background="Green">
+        <!--<Canvas.Clip>
+                    <RectangleGeometry Rect="0 0 {Binding ElementName=ContainerCanvas, Path=ActualHeight} 600" />
+                </Canvas.Clip>-->
+        <Canvas ManipulationMode="All" ManipulationDelta="InputCanvas_ManipulationDelta"  Name="MapCanvas">
+            <!-- {ThemeResource ApplicationPageBackgroundThemeBrush} -->
+            <!-- Height="{Binding ActualHeight, ElementName=parentElementName}"  -->
+            <!--<Rectangle Width="100"
+                      Height="100"
+                      Fill="Red"
+                      Canvas.Left="80"
+                      Canvas.Top="80" />-->
+        </Canvas>
+        <Ellipse Name="BUllsEyeEllipse" Width="{Binding ElementName=control, Path=BullsEyeSize}" Height="{Binding ElementName=control, Path=BullsEyeSize}" Stroke="Red" 
+                 StrokeThickness="10" Opacity="0.5" />
+    </Canvas>
+
+</UserControl>

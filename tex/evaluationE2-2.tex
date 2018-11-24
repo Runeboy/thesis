@@ -1,0 +1,31 @@
+\input{header}
+
+\begin{document}
+	\thispagestyle{empty}	
+	\pgfplotsset{filter discard warning=false}
+	
+	\begin{figure*}[!ht]
+		%	\def\domainMax{1.2}
+		\centering
+		\fullPageReleaseSpacePlots{
+			\pgfplotsinvokeforeach{-50,-40,-30,-20,-10,10,20,30,40,50}{ % {leah,evan,Lily,rose,mikee,soniaa} {
+				\releaseSpacePlot[\targetColor{#1}]{data/exp1/TrialSesssions-(E2-evan,target(#1)).csv}{};
+				\releaseSpacePlot[\targetColor{#1}]{data/exp1/TrialSesssions-(E2-Lily,target(#1)).csv}{};
+				\releaseSpacePlot[\targetColor{#1}]{data/exp1/TrialSesssions-(E2-rose,target(#1)).csv}{};
+				\releaseSpacePlot[\targetColor{#1}]{data/exp1/TrialSesssions-(E2-mikee,target(#1)).csv}{};
+				\releaseSpacePlot[\targetColor{#1}]{data/exp1/TrialSesssions-(E2-soniaa,target(#1)).csv}{};
+				\releaseSpacePlot[\targetColor{#1}]{data/exp1/TrialSesssions-(E2-leah,target(#1)).csv}{};
+			}
+			%		\releaseSpacePlot[\evanColor]{\dataTwoEvan}{}
+			%		\releaseSpacePlot[\roseColor]{\dataTwoRose}{}
+			%		\releaseSpacePlot[\lilyColor]{\dataTwoLily}{}
+			%		\releaseSpacePlot[\soniaColor]{\dataTwoSonia}{}
+			%		\releaseSpacePlot[\mikeColor]{\dataTwoMike}{}
+		}
+		%	\end{scaletikzpicturetowidth}
+		%	\caption{As figure \ref{fig:expTwoViewPoints}, but with color codings for each (absolute) target value.}
+		%	\label{figure:expOneTwoBaselineTwoDimDurationAll}			
+	\end{figure*}
+	
+	
+\end{document}

@@ -1,0 +1,205 @@
+\twocolumn[
+\section{Appendices}\label{ch:appendices}
+]
+
+\subsection{Normal vector and offsets}
+
+The derivation given below is a variation (and more pedagogical version) of the proof given in section 6.7 of \cite{SciCom},  modified for the case of fitting a rectangle.
+
+\subsubsubsection{Deriving the normal vector}
+
+%To start, note that the spatial point sets are already available, by forming lines of the previously derived off-screen corner points. Also, the unit-length constraint (\ref{eq:quadConstr}) is in fact quadratic, since 
+
+To start, we note that the unit-length constraint (\ref{eq:quadConstr}) is in fact quadratic, since 
+\begin{eqRef}\label{eq:quad}
+	\norm{n} = \sqrt{n_x^2 + n_y^2} = 1 =  n_x^2 + n_y^2
+\end{eqRef}
+. Also,  
+%the length of the right-hand side of the latter constraint (\ref{eq:systemConstr}) equals the square root of the objective (\ref{eq:of}), which is the sum of squared residuals $r$ that is to be minimized. Since 
+$$ \lim_{\norm{\b{r}} \to 0 } E_{\text{rect}}  \\\\\\\\\\\\\\\ = 0  $$
+and hence, the solution to (\ref{eq:of}) may be obtained by minimizing the length of the residual vector $\b{r}$. This is equivalent to minimizing the right-hand side of (\ref{eq:systemConstr}), that is
+\begin{eqRef}\label{eq:restatement}
+	%	\underset{\b{n},\b{c}}{\text{min}} \ \norm{A\b{x}}  = 	\underset{\b{n},\b{c}}{\text{min}} \ \norm{\b{r}} 
+	\arg	\min_{\b{n},\b{c}} \norm{A \b{x}  }  
+	%	= \arg	\min_{\b{n},\b{c}} \norm{\b{r}} 
+\end{eqRef}
+%the left-hand side of (\ref{eq:restatement}) is of the form $Ax$ and
+. 
+
+Next, observe from (\ref{eq:AExpanded}) that  $A$ is a real-valued matrix that has at least as many rows as columns. In addition, the last two columns for each row of $A$ contains components, that are the result of projecting a motion tracking point onto the spatial plane. Hence, since this has inherent noise, each row of $A$ must be unique. If no single row is reducible to zero as a (non-trivial) linear combination of any other,  $A$ then has full row rank. This same reasoning is applicable to the  columns of $A$. So, with full column rank there must exist the decomposition\fn{Section 6.5.1 of \cite{SciCom}} $A = QR$ (where $Q$ is orthogonal and $R$ upper triangular by definition). We may therefore restate the entities we would like to minimize  as
+\begin{eq}
+	\norm{A\b{x}} & = \norm{\b{r}}  
+	\\ & \uda   \\
+	\norm{QR\b{x}} & = \norm{\b{r}}  
+	\\ & \uda \\
+	\norm{Q^T Q R\b{x}} & = \norm{Q^T \b{r}}
+	&& \parbox{11em}{\small because Q is orthogonal and therefore leaves the norm invariant}  
+	\\ & \uda \\
+	\norm{R\b{x}} & = \norm{Q^T \b{r}}
+	&& \parbox{11em}{\small since it follows from the orthogonality of Q that its inverse and transpose are equal}
+	\\ & \uda \\
+	\norm{R\b{x}} & = \norm{\b{r}}
+	&& \parbox{11em}{\small since the inverse of Q is also orthogonal by definition}
+\end{eq}
+in which $R$, being upper triangular, greatly increases the sparsity of the left-hand side, that is
+\begin{eqRef}\label{eq:Rx}
+	R \b{x} = 
+	\m{
+		r_{11} & r_{12} & r_{13} & \dots & r_{16} \\
+		0 	   & r_{12} & r_{23} & \dots & r_{26} \\
+		0 	   & 0      & r_{33} & \dots & r_{36} \\
+		\vdots & \vdots & \vdots & \vdots& \vdots \\
+		%		0 	   & 0	    & \dots & r_{36} \\
+		0 	   & 0	    & 0	    & 0 	& r_{66} \\
+		0 	   & 0	    & 0	    & 0 	& 0 \\
+		\vdots & \vdots & \vdots & \vdots& \vdots \\
+		0 	   & 0	    & 0	    & 0 	& 0 \\
+	}
+	\m{c_T \\ c_B \\ c_L \\ c_R \\ n_x \\ n_y }	
+	%	= \dots
+\end{eqRef}
+. At this point, we could choose to solve for $\b{n}$ only by decimating this system to
+\begin{eqRef} \label{eq:solveForN}
+	& \m{
+		0 & 0 \\ 0 & 0 \\ 0 & 0 \\ 0 & 0 \\ 1 & 0 \\ 0 & 1 \\ 0 & 0 \\ \vdots & \vdots \\ 0 & 0
+	}^T 
+	%	I[1..3,]
+	R \b{x} 
+	\m{
+		0 & 0 \\ 0 & 0 \\ 0 & 0 \\ 0 & 0 \\ 1 & 0 \\ 0 & 1 \\ 
+	}	
+	\\ = & \m{
+		r_{55} & r_{56} \\
+		0 	   & r_{66} \\
+	}
+	\m{ n_x \\ n_y }	 	 
+	\\ =  & \ \mathcal{R} \b{n} 
+\end{eqRef}
+, such that we can solve for $\b{n}$ by   
+\begin{eqRef}\label{eq:R56n} 
+	\arg \min_{\b{n}, \norm{\b{n}} = 1} & \ \norm{\mathcal{R} \b{n}} \\ 
+\end{eqRef}
+. Note, this is in the form of a linear least squares problem (with quadratic constraint, as shown by (\ref{eq:quad})), a case for which a solution is obtainable using singular value decomposition\fn{Using the definition in section 6.3 of \cite{SciCom}}. That is, we are able to decompose $\mathcal{R}$ as  
+\begin{eqRef}\label{eq:Rn}
+	\norm{\swirlR \b{n}} & = \norm{ U \Sigma V^T \b{n} } 
+	\\ 
+	& =  \norm{ \Sigma V^T \b{n} } \qquad \quad \parbox{5em}{\small  because U is orthogonal} 
+	%	& \parbox{5em}{\small because U is orthogonal}  
+\end{eqRef}
+and since
+$$
+\lim_{\norm{\swirlR \b{n}}^2 \to \ 0 } \norm{\swirlR \b{n}} = 0
+$$	
+then (\ref{eq:R56n}) is equivalent  to minimizing the square, giving \begin{eqRef}\label{eq:minSigmaVTN} 
+	%	\min & \ \norm{\Sigma V^T \b{n}}^2 \\ 
+	%	\text{subject to} & \ \norm{\b{n}} = 1 
+	\arg \min_{\b{n}, \norm{\b{n}} = 1} & \ \norm{\Sigma V^T \b{n}}^2 \\ 
+\end{eqRef} %\fn{Although less relevant to the solution, the diagonals are the sorted square roots of the eigenvalues of $\swirlR^T \swirlR$, as shown by theorem 6.3 and 6.4 in \cite{SciCom}}
+. Note that $\Sigma$ is a diagonal matrix (by definition) with non-strictly decreasing values $(\sigma_1, \sigma_2, \dots, \sigma_n)$. Furthermore, $V^T$ has no effect on the objective, due to it being orthogonal. With  $\Sigma$  having decreasing eigenvalues, the solution to (\ref{eq:minSigmaVTN}) is then inferable by
+%the squares of a linear combination of the diagonals of $\Sigma$, as determined by $V^T \b{n}$:
+\begin{eqRef}\label{eq:qn} 
+	\norm{\Sigma V^T \b{n}}^2 
+	& = \norm{\Sigma \b{y}}^2  
+	\\
+	& = (\sigma_1 y_1)^2 + (\sigma_2 y_2)^2 + \dots + (\sigma_n y_n)^2 
+	\\
+	& = \sigma_1^2 y_1^2 + \sigma_2^2 y_2^2 + \dots + \sigma_n^2 y_n^2 
+	\\
+	&\ge \sigma_n^2 (y_1^2 + y_2^2 + \dots + y_n^2)
+	\\
+	& = \sigma_n^2
+\end{eqRef}
+in which the last line holds because
+$$y_1^2 + y_2^2 +  .. + y_n^2=\norm{\b{y}}^2   = \norm{V^T \b{n}}^2 = \norm{ \b{n}}^2 = 1$$
+.  Also, the last inequality  holds because  $\sigma_n$ is the smallest diagonal value of $\Sigma$\fn{This observation of the minimal is implicit from the proof of theorem 6.5 in \cite{SciCom} when changing the problem from maximization to minimization}. 
+
+Hence, the solution to (\ref{eq:minSigmaVTN}) is found by simply  choosing $\b{y}$ appropriately as
+\begin{eqRef}\label{eq:skooooooooooooood} 
+	\arg \min_{\b{y}, \norm{\b{y}} = 1} \ \norm{\Sigma \b{y} }^2  
+	& = \norm{ \Sigma \[0, 0, \dots, 1\]^T }^2 
+	\\
+	& = \sigma_n^2
+\end{eqRef}
+%, where $\b{y} = \b{n}$. Knowing $\b{y}$ allows us to solve for $\b{n}$ by
+and subsequently solving for $\b{n}$ by
+\begin{eq}
+	\b{y} & = V^T \b{n}
+	\\ &	\uda \\ 
+	\b{n} & = V \b{y}
+	\\
+	& = V \[0, 0, \dots, 1\]^T
+	%	\\
+	%	& = \b{v_n}
+\end{eq} 
+which is simply the $n$-th column of $V$.%, which we derived from the singuar values decomposition.
+%which, together with  $\sigma_n^2$, constitutes an eigenvector and eigenvalue associated with the eigendecomposition of  $\swirlR^T \swirlR$. 
+
+
+\subsubsubsection{Deriving the offsets}
+
+%Having found the normal $\b{n}$, we are now able to solve for the offsets. Returning to (\ref{eq:Rx}), we  will now make the assumption that input is close to a rectangular shape and the residual therefore  small, i.e. $Rx \approx 0$. We also decimate the system to solve for $\b{c}$ instead (leaving exactly what we previously discarded in solving for $\b{n}$ only):
+
+%That is, we will assume that the data points are equally distributed around the lines, such that the solution is found by the zero residual $E_{rect} \approx 0$.
+
+Having found the normal $\b{n}$, we are now able to determine the offsets by solving (\ref{eq:Rx}) for the  zero residuals, i.e. $Rx \approx 0$.  We therefore modify and solve (\ref{eq:Rx})  for $\b{c}$ instead (leaving exactly what we previously discarded in solving for $\b{n}$) and get
+
+% have the equations for all four lines, since the (previously discarded) first four equations of (\ref{eq:Rx}) allows us to compute the offsets as the linear system by 
+\begin{eq}
+	0 & \approx R \b{x} 
+	\\ & \uda % \quad \text{\scriptsize (QR factorize)} 
+	\\ 
+	%	R \m{\b{c} \\ \b{n}} & = 0
+	%	\\ & \uda % \quad \text{\scriptsize (QR factorize)} 
+	%	\\ 
+	0 & \approx R \m{\b{c} \\ \b{n}}
+	\qquad \text{\small where again $R=Q^TA \lra  A = QR $}
+	%	\\ & \Downarrow \qquad \parbox{15em}{(ignoring irrelevant zero rows  and making the assumption of zero residual)}
+	\\ & \Downarrow % \qquad \parbox{15em}{(removing irrelevant zero rows of R)}
+	\\
+	\m{0 \\ 0 \\0 \\ 0}
+	& = 
+	\m{
+		r_{11} & r_{12} & r_{13} & r_{14} & r_{15} & r_{16} \\
+		0 	   & r_{12} & r_{23} & r_{24} & r_{25} & r_{26} \\
+		0 	   & 0      & r_{33} & r_{34} & r_{35} & r_{36} \\
+		0 	   & 0      & 0 	 & r_{44} & r_{45} & r_{46} \\
+	}
+	\m{c_T \\ c_B \\ c_L \\ c_R \\ n_x \\ n_y }	
+	\\ & \uda \\ 
+	\m{0 \\ 0 \\0 \\ 0}
+	& = 
+	\m{
+		r_{11} & r_{12} & r_{13} & r_{14} \\
+		0 	   & r_{12} & r_{23} & r_{24} \\
+		0 	   & 0      & r_{33} & r_{34} \\
+		0 	   & 0      & 0 	 & r_{44} \\
+	}
+	\m{c_T \\ c_B \\ c_L \\ c_R  }	
+	+
+	\m{
+		r_{15} & r_{16} \\
+		r_{25} & r_{26} \\
+		r_{35} & r_{36} \\
+		r_{45} & r_{46} \\
+	}
+	\m{ n_x \\ n_y }	
+	\\ & \uda \\ 
+	\m{c_T \\ c_B \\ c_L \\ c_R  }	
+	& = 
+	-
+	\m{
+		r_{11} & r_{12} & r_{13} & r_{14} \\
+		0 	   & r_{12} & r_{23} & r_{24} \\
+		0 	   & 0      & r_{33} & r_{34} \\
+		0 	   & 0      & 0 	 & r_{44} \\
+	}^{-1}
+	\m{
+		r_{15} & r_{16} \\
+		r_{25} & r_{26} \\
+		r_{35} & r_{36} \\
+		r_{45} & r_{46} \\
+	}
+	\b{n}
+\end{eq}
+which allows us to solve for the offsets directly. With this, both the normal $\b{n}$ and offsets $\b{c}$ are known, which means we have the equations of all rectangle lines.
+

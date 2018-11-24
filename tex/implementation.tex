@@ -1,0 +1,51 @@
+\twocolumn[
+	\section{Implementation}\label{ch:implementation}
+	]
+\noi In this section we touch very briefly on design choices  and  lessons learned  from implementing and configuring the solution.\\
+
+\subsection{Choice of runtime}
+
+The solution was implemented in the WinRT runtime, which runs natively on the Surface Pro. It has excellent support for developing touch-enabled user interfaces, such as those found on mobile devices. It is also a newer runtime partially derived from the widely popular .NET, but with limited and complicated backwards compatibility due to being a super-subset of this.
+
+\subsection{Mathematical routines}
+
+Some parts of the solution rely on substantial use of linear algebra for matrix operations, decompositions etc. Stable libraries already exist for this type of logic and one popular choice, the Accord.NET framework was chosen to work with. However, this entire framework needs to be re-targeted and recompiled (to Windows 8) in order for it to work in the WinRT runtime. In addition, some parts of the source code had to be manually changed, although we will omit further technical detail here.
+
+%\fn{On an additional and more technical note, parts of the source relating to the Enum data type needs to be removed, for elaborate reasons we omit here.}.
+
+%\subsection{Optimizxations}
+%
+%necessary to convert controls to bitmap
+
+\subsection{Application design}
+
+The overall design of the application provides several functionalities, primarily for the calibration of spaces, execution of experiments, and data processing/extraction. Several interfaces also provide the ability for confirming application parameters  by inspection, such as projection information (lengths, delta movements etc.) and three-dimensional rendering of the tracking data as well as visual projection pointers for determining the optimal tracker setup. Part of this is shown in figure \ref{fig:meandstickman}.
+
+\subsection{Application parameters}
+
+As previously accounted for, some smoothing parameters needed to be determined by visual inspection. The effects of these were estimated by observing the translated off-screen interaction in the on-screen space, i.e. the projections of tracked joints of interest onto an imaginary extension of the plane spanned by the device. That its, off-screen input was visualized on-screen through the positioning of circle "cursors" in the user interface, which visually reveals any presence of noise.  
+
+For the general smoothing that incorporates the past, an optimal $\gamma=1.0035$ was found by parameter sweeping through a value range until no jitter was visible. To reason briefly, for a frame rate of approximately 30 frames per second, this corresponds to $\pi = 1.0035^{-30} \approx 0.0573$, which is equivalent to incorporating only $1/17$ of the previous frame. As such, eliminating jitter noise compromises little on the information of the most recent tracking frame. 
+
+As for the mechanism that ensures responsiveness, a value of $\lambda=770$ was identified as optimal in similar sweeping approach. Hence, for this choice to disregard the past completely ($\alpha = 0$), we would need to see delta movement 
+\begin{eq}
+	0 = \nu &= \max \(0, 1- \lambda \norm{\b{\delta}}^2 \)   \\ & \uda \\ 
+	0  & \le	 1 - (770)(\norm{\b{\delta}}^2) 
+	\\ & \uda \\
+	\norm{\b{\delta}} & \ge 1/\sqrt{770}
+	\\
+	& \approx 0.0036 m
+\end{eq}
+, i.e. Euclidean distance of at least 3.6 millimeters for every 30 milliseconds (the aforementioned frame rate). In more comprehensible scale, this corresponds to approximately 12 centimeters per second, a number that appears reasonable as being on the border between precision and non-precision movements.
+
+
+
+%and projection data for input interfaces (e.g. projection lengths, positions, movements etc.).
+
+\begin{figure}[!hb]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/meandstickman}
+	\caption{Shaking hands with oneself: visual rendering of the tracking data allows for exploring the stability and possible configurations of various tracker positionings. A sidebar (green on right) allows for adjusting smoothing parameters ($\gamma$ and $\lambda$) and a visual cursor (partly obscured red circle in center) allows for evaluating the resulting projection behavior.}
+	\label{fig:meandstickman}
+\end{figure}
+

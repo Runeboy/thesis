@@ -1,0 +1,229 @@
+﻿<UserControl
+    x:Class="Airswipe.WinRT.UI.Controls.SidebarControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:core="using:Airswipe.WinRT.Core"
+    xmlns:controls="using:Airswipe.WinRT.UI.Controls"
+    xmlns:data="using:Airswipe.WinRT.Core.Data"    
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    d:DesignHeight="1000"
+    Width="500">
+
+    <UserControl.Resources>
+        <!--<data:ConnectionTypeConverter x:Key="connectionTypeConverter"></data:ConnectionTypeConverter>-->
+        <x:String x:Key="StackPanelItemsSeparator">3,10,0,3</x:String>
+        <x:String x:Key="CheckboxMargin">0,0,0,0</x:String>
+        <SolidColorBrush x:Key="CustomBorderBrush" Color="Black" Opacity="0.1" />
+    </UserControl.Resources>
+
+    <Grid Name="ContainerGrid" Background="Red">
+        <!--<Grid.Resources>
+            <Style TargetType="Border">                
+            </Style>
+        </Grid.Resources>-->
+        <ScrollViewer  VerticalScrollMode="Enabled" ManipulationCompleted="ScrollViewer_ManipulationCompleted">
+            <StackPanel Orientation="Vertical" Margin="10">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                        <Setter Property="Height" Value="50"/>
+                    </Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Margin" Value="{StaticResource StackPanelItemsSeparator}"/>
+                        <Setter Property="FontSize" Value="14"/>
+                    </Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Margin" Value="{StaticResource StackPanelItemsSeparator}"/>
+                        <Setter Property="BorderThickness" Value="5" />
+                        <Setter Property="Padding" Value="5" />
+                        <Setter Property="BorderBrush" Value="{StaticResource CustomBorderBrush}"/>
+                    </Style>
+                    <Style TargetType="CheckBox">
+                        <Setter Property="Margin" Value="{StaticResource CheckboxMargin}"/>
+                    </Style>
+                </StackPanel.Resources>
+
+                <Button Content="Hide &gt;&gt;" Click="HideButton_Click" Margin="0 0 0 10" />
+
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.5" />
+                    </StackPanel.Background>
+                    <TextBlock Text="Machine addresses:" />
+                    <TextBlock Name="AddressesTextBlock" Text="(no data)" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.5" />
+                    </StackPanel.Background>
+                    <TextBlock Name="MotionBroadcasterAddressTextBlock" />
+                </StackPanel>
+
+                <TextBlock Text="Local:" />
+                <Grid HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition  Width="Auto"  />
+                    </Grid.ColumnDefinitions>
+                    <ComboBox Name="LocalAddressComboxBox"
+                  PlaceholderText="Select"  
+                  ItemsSource="{Binding NetworkAddresses}" 
+                  SelectedItem="{Binding SelectedLocalNetworkAddress, Mode=TwoWay}"  
+                  />
+                    <Button Name="AddLocalAddressButton" Content="+" Grid.Column="1" Click="AddAddressButton_Click" />
+                </Grid>
+
+                <TextBlock Text="Server:" />
+                <Grid HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition  Width="Auto"  />
+                    </Grid.ColumnDefinitions>
+                    <ComboBox Name="RemoteAddressComboxBox"
+                  PlaceholderText="Select"  
+                  ItemsSource="{Binding NetworkAddresses}" 
+                  SelectedItem="{Binding SelectedServerNetworkAddress, Mode=TwoWay}"  
+                  />
+                    <Button Name="AddServerAddressButton" Content="+" Grid.Column="1" Click="AddAddressButton_Click" />
+                </Grid>
+                <!-- SelectedItem="{Binding SelectedLocalNetworkAddress}"  / -->
+
+                <TextBlock Text="Type:" />
+                <ComboBox Name="ConnectionTypeComboxBox"
+                  PlaceholderText="Select"  
+                  ItemsSource="{Binding ConnectionTypes}"
+                  SelectionChanged="ConnectionTypeComboxBox_SelectionChanged" 
+                  SelectedItem="{Binding SelectedConnectionTypeString}">
+                </ComboBox>
+
+                <!-- SelectedItem="{Binding SelectedConnectionType, Mode=TwoWay, Converter={Binding converter2}}"   -->
+
+                <StackPanel Orientation="Vertical">
+                    <Button Name="ConnectButton"
+                    Content="Connect"
+                    Height="50"        
+                    Style="{StaticResource AppBarButtonStyle}" Click="ConnectButton_Click" HorizontalAlignment="Stretch" />
+                    <Button Name="DisconnectButton"
+                    Content="Disconnect"
+                    Height="50"        
+                    Style="{StaticResource AppBarButtonStyle}" Click="DisconnectButton_Click" HorizontalAlignment="Stretch" />
+                </StackPanel>
+
+                <Border>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Actions" />
+                        <Button Name="GetDescriptionsButton" Content="Descriptions" Click="GetDescriptionsButton_Click" />
+                        <Button Name="GetLastFrameButton" Content="Poll Last Frame" Click="GetLastFrameButton_Click" Visibility="Collapsed"  />
+                        <Button Name="PingButton" Content="Ping" Click="PingButton_Click" Visibility="Collapsed"  />
+                    </StackPanel>
+                </Border>
+
+                <Border>
+                    <StackPanel Orientation="Vertical">
+                        <Button Content="Toggle cursor visbility" Click="Button_Click"  />
+                        <CheckBox Visibility="Collapsed" Content="Projection cursor visible" Checked="ProjectionCursorVisibility_CheckChange" Unchecked="ProjectionCursorVisibility_CheckChange" IsChecked="True" />
+                        <CheckBox Content="Simulate frame receival via local storage serialization" Checked="AppFrameFileSimulation_CheckChange" Unchecked="AppFrameFileSimulation_CheckChange" />
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox Content="Simulate frame receival via CSV parse: " Checked="AppCsvFrameFileSimulation_CheckChange" Unchecked="AppCsvFrameFileSimulation_CheckChange" />
+                            <StackPanel Orientation="Vertical" Margin="10,20,0,0">
+                                <TextBox Name="CsvFileTextBox"  Text="frames.csv" Background="Transparent"  Foreground="LightGray" BorderBrush="Transparent" />
+                                <CheckBox Content="Continuously" Name="ParseCsvContinuouslyCheckBox" Checked="ParseCsvContinuouslyCheckBox_CheckChange" Unchecked="ParseCsvContinuouslyCheckBox_CheckChange"  />
+                            </StackPanel>
+                            <!--<CheckBox Content="Simulate frame receival around offscreen boundaries: " Checked="AppOffscreenBoundariesFrameFileSimulation_CheckChange" Unchecked="AppOffscreenBoundariesFrameFileSimulation_CheckChange" />-->
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                
+                <Border Name="StatsBorder">
+                    <StackPanel Orientation="Vertical">
+                        <!--<Border.BorderBrush>
+                    <SolidColorBrush Color="Black" Opacity="0.1" />
+                </Border.BorderBrush>-->
+                        <TextBlock Text="Statistics" FontSize="18" />
+                        <TextBlock  Name="StatsTextBlock" Text="Frame count: (no data)" />
+                        <TextBlock  Name="ConnectTimeTextBlock" Text="Connect time: (no data)" />
+                        <TextBlock  Name="FrameRateTextBlock" Text="Frame rate: (no data)" />
+
+
+
+                        <Border>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="Projection distances" FontSize="18" />
+
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Plane normal projection distance (slider max: 1000): " />
+                                    <TextBlock Name="ProjectionDistanceTextBlock" Text="(no data)" />
+                                </StackPanel>
+                                <Slider Name="ProjectionDistanceSlider" Orientation="Horizontal" HorizontalAlignment="Stretch"  Value="0" Minimum="0" Maximum="1000" TickPlacement="Outside" TickFrequency="1" IsDirectionReversed="False" />
+                                <!--<TextBlock  Name="TrackedPointTextBlock" Text="Tracked point: (no data)" />-->
+
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Directional projection distance (slider max: 1000): " />
+                                    <TextBlock Name="DirectionalProjectionDistanceTextBlock" Text="(no data)" />
+                                </StackPanel>
+                                <Slider Name="DirectionalProjectionDistanceSlider" Orientation="Horizontal" HorizontalAlignment="Stretch"  Value="0" Minimum="0" Maximum="1000" TickPlacement="Outside" TickFrequency="1" IsDirectionReversed="False" />
+
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Spherical projection distance (mm, slider max: 1000): " />
+                                    <TextBlock Name="SphericalProjectionDistanceTextBlock" Text="(no data)" />
+                                </StackPanel>
+                                <Slider Name="SphericalProjectionDistanceSlider" Orientation="Horizontal" HorizontalAlignment="Stretch"  Value="0" Minimum="0" Maximum="1000" TickPlacement="Outside" TickFrequency="1" IsDirectionReversed="False" />
+
+                            </StackPanel>
+                        </Border>
+
+                        <Border>
+                            <StackPanel Orientation="Vertical">
+
+                               <TextBlock Text="Deltas" FontSize="18" />
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Spatial delta length (slider max: 0.1):" />
+                            <TextBlock Name="SpatialDeltaTextBlock" Text="(no data)" />
+                        </StackPanel>
+                        <Slider Name="SpatialDeltaSlider"  Orientation="Horizontal" HorizontalAlignment="Stretch" Value="0"  Minimum="0" Maximum="100" TickPlacement="Outside" TickFrequency="10" IsDirectionReversed="False" />
+
+                        
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock  Text="Plane normal projection delta length (slider max: 300):" />
+                            <TextBlock  Name="ProjectionDeltaTextBlock" Text="(no data)" HorizontalAlignment="Right" />
+                        </StackPanel>
+                        <Slider Name="ProjectionDeltaSlider"   Orientation="Horizontal" HorizontalAlignment="Stretch" Value="0"  Minimum="0" Maximum="300" TickPlacement="Outside" TickFrequency="10" IsDirectionReversed="False" />
+                        <!--<TextBlock  Name="DeltaLengthMaxTextBlock" Text="0" />-->
+                        <!--</StackPanel>-->
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock  Text="Spherical projection delta length (slider max: 300):" />
+                            <TextBlock  Name="SphericalDeltaTextBlock" Text="(no data)" HorizontalAlignment="Right" />
+                        </StackPanel>
+                        <Slider Name="SphericalDeltaDeltaSlider"   Orientation="Horizontal" HorizontalAlignment="Stretch" Value="0"  Minimum="0" Maximum="300" TickPlacement="Outside" TickFrequency="10" IsDirectionReversed="False" />
+
+                    </StackPanel>
+                </Border>
+                
+                    
+                    <TextBlock  Visibility="Collapsed" Name="ExpAvgMovementTextBlock" Text="Movement (exp avg): (no data)" />
+
+                        <TextBlock Text="Data description" FontSize="18" />
+                        <TextBlock  Name="DataDescriptionTextBlock" Text="(no data)" />
+                    </StackPanel>
+                </Border>
+
+                <!--<Border>
+                    <ListBox Height="100" ItemsSource="{Binding MarkerSets}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate >
+                                <TextBlock Text="{Binding Name}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Border>-->
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

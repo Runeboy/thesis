@@ -1,0 +1,175 @@
+\twocolumn[
+	\section{Background}\label{ch:background}
+	]
+	
+\noi Much of the work undertaken here will build on using technological edge and lessons learned from existing work within the field of human-computer research. For the latter, interest is primarily in the work that relates spatial awareness on displays with full or partial elimination of mechanical input devices, such as gesture-based interaction. A brief overview of relevant terms, technology and research literature   will be reviewed, with the aim of providing reference points for understanding the challenges involved and how to best approach the problem.\\ % that help better understand the problem.
+
+
+\subsection{Mobile Interaction}
+
+While clear definitions are hard to come across in the diverse and rapidly changing landscape of mobile devices, early attempts\cite{MobileInteractionDef} at framing their interaction with humans has classified them as devices with very limited and differing resources, fluctuant communication speeds and often containing confidential information that leave them with severe security issues. For these reasons, interaction scenarios on a mobile device differ significantly from that of standard computers and most frequently centers around some communication purpose.
+
+Usage patterns are shifting with progress however. Today, the technological trend towards minimalism could  appear to be shifting mobile interaction  towards \ti{wearable computing}, understood as miniature body-worn computational and sensory devices\cite{WearComp}. This also changes the nature of interaction, since the devices can be discretely worn, with current examples such as  \ti{smart-watches} or wristbands that monitor health data.
+
+\subsubsection{Mobile Device Modalities}
+
+To accomplish any interaction between a human and computer,  exchange of  information must be provided in one way or another. Since this must necessarily take some physical form, it follows that the information must be carried through mediums that are  perceptible to one or more of the human senses. Formally, these  are referred to as \ti{modalities}\cite{Modalities}, of which sound, light or touch are the primary ones employed in today's smart devices.
+
+For the simple case of interacting through a single modality, the interaction is referred to as \ti{unimodal}. But an information exchange may very well be based on multiple, i.e. \ti{multi-modal}, with the likely benefit of increasing the quality of the information exchange. A lack of modality may be problematic and cause errors, one relevant example being the difficulty of pressing virtual buttons on a touch-enabled display.
+
+\subsection{Mobile Technologies}
+
+A sprawl of different mobile device families are currently on the market. The most popular, and presumably most applicable ones, are briefly outlined here.
+
+
+\subsubsection{Mobile Devices}
+
+The large family of mobile devices is a rapidly evolving type of product with no strict definition, although three facts of assumed relevance will be noted here. 
+
+First, adopting a definition by the National Institute of Standards and Technology\cite{NIST}, a mobile device has the characteristics of a portable form factor and an operating system that is not a full-fledged operating system. Second, the most popular search engine provider, Google, recently announced\cite{gSearchMob} that mobile devices have surpassed standard  computers in terms of search activity - a trend also supported by statistics collected by the world's largest major network company, Cisco\cite{ciscoStats}. Third, the most popular mobile devices, i.e. current phones and tablets\fn{Such as iPhones, iPads, Android and Blackberry units.}, are all designed to run on battery and therefore have processors  mainly aimed at achieving low power consumption rather than speed.  
+
+These facts together underline that  mobile devices are  disrupting existing consumer behavior as forerunners in their particular field, although still not computationally intended to perform beyond a limited set of well-defined and lighter tasks.  
+
+\subsubsection{Hybrid Devices}
+
+Another indicator of the consumer appeal associated with mobile devices, are several attempts from major manufacturers at bridging the gap between the portability of a mobile device and the power of standard laptops. These devices try to combine the best of two worlds by incorporating faster chips and balance that choice off with extra battery power. While the hybrid definition is somewhat blurry from there on, one additional trend appears to be an ambition to combine the dual modes of minimalism and productivity by supporting both touch and keyboard input, facilitated by various novel engineering designs.
+
+As of writing, two of the world's largest technology companies, Apple and Microsoft, each offer touch-based mobile device products, and each of these overlap into  the hybrid market with corresponding "pro" versions. The pro version of the former runs a restricted operation system, while the latter is based on a classic operating system, i.e. with full flexibility and freedom. 
+
+\subsection{Tracking Technologies}
+
+With the recent surge in computer vision, several popular motion tracking technologies exist today, with some tailored towards specific purposes and some capable of full-flung body tracking. Two of assumed relevance will be reviewed here.
+
+\subsubsection{Full-body tracking}
+
+As an example of high-end motion  tracking with six degrees of freedom, the OptiTrack system currently serves as one of the most popular and is widely cited within the academic research community. 
+The system is essentially based on synchronizing a large number of cameras, such that the spatial positions and/or orientations of special retroreflective markers may be inferred. Under ideal conditions, and with the cameras covering a wide range of angles that combined provide the system with continuous visibility of all tracking markers,  it becomes possible to perform motion tracking at sub-millimeter accuracy and at distances of up to 30 meters\cite{OptiTrackSupport}. Hence, it is powerful in terms of its applicability, but also heavy-weight and potentially over-powered, depending on the application.
+
+\subsubsection{Low-cost tracking}
+
+With a steady introduction of low-cost tracking devices in recent years, the repertoire of tools for gesture-based interaction has been growing steadily and now allows anyone with creative thought to explore a vast array of new research questions on a limited budget. In its simplest form, gestures may now be inferred by minuscule cameras alone, a strategy currently being pursued by major tech giants. For instance, one Samsung project now allows users to use their hands as interactive displays\cite{SamsungProjectWatch}. More disruptive developments include that of the Google Soli chip, which is capable of extracting human intent from close-range radar wave reflections. This then provides a 360-degree vision that perceives the physics of a hand in its entirety, as opposed to the surface alone. Researchers from Carnegie Mellon have pursued a slightly similar concept\cite{SkinTrack}, using high-frequency electrical signals from a ring, emitted upon touching the opposing arm. The finger position is then inferable by comparing an intercept delay from two sensors located on a wristband. Clearly, what these new developments have in common are clever attempts at using multi-modal feedback from the human body itself, i.e. touch, sound and vision, which effectively diminishes the need for costly materials and superfluous technology.% and , these developments are bound to accelerate. 
+
+% has incurs positive feedback that makes chartering this new interaction territory more relevant than ever before. 
+
+The development of affordable tracking has also partially been market-driven by a gaming industry that has been alive and growing since the early days of the computer itself. Especially simulator games have sought to heighten the sense of realism, by additional input methods that expand the field of view beyond the capabilities of the display\fn{Such as the popular \href{http://naturalpoint.com/trackir/}{TrackIR} from NaturalPoint, which achieves head tracking using retroflective markers and/or LED emitters.}.
+
+Another and quite different factor that has had a significant impact on the efficiency and availability of affordable tracking devices is the field of Machine Learning. Tremendous gains have been made in this field within the past two decades. As an all-data based discipline and combined with the transparency of publicized research, open-source projects have emerged that vastly improves specialized usage patterns in motion tracking and is available for anyone to use\fn{Such as the popular \href{https://sourceforge.net/projects/opencvlibrary/}{OpenCV}, an open-source computer vision programming library that supports all commonly applied machine learning algorithms.}.
+
+As one could expect, closed-source commercial products have too attempted to harvest the synergy of these concurrent developments. One clear contender to pave the way for low-cost tracking is the Kinect, an ambitious full-body motion tracker that was released by Microsoft in 2010 as a novel gesture-based game console controller and accessory. As somewhat of a surprise, the product was never widely adopted by the gaming community and has illuminated the fact that technological challenges still persist for such type of product\fn{Current usage of the Kinect is low and dwindling, as announced by Micrsoft in the fall of 2015\cite{XBoxLowUsage}.}. Despite having the best imaginable launchpad - financial backing, a place in a healthy commercial ecosystem and the latest in motion tracking - the product still lacked commercial success. This was partly due to some requirements on the physical space in which it is used and some of its novel features have inaccuracies for which the end users had little tolerance\cite{WhyXBoxFailed}. 
+
+In a surprising twist however, while slowly being abandoned by its original target audience, the Kinect is now instead making its way into the more stringent-friendly human-computer interaction research body, as a low-cost tracking device with excellent depth detection. This transition was initially made possible through various hacks that made the device work on other platforms than its intended game console. These have since evolved into more organized open-source solutions, such as \href{https://openkinect.org/}{openkinect.org}. Realizing its hidden potential, Microsoft eventually provided windows compatibility and an interface that now allows developers to explore the capabilities of the Kinect for custom interaction scenarios. 
+
+What mainly sets the Kinect apart from its equivalent low-cost peers, is its position as the first real-time depth camera capable of handling a wide variety of body sizes, undergoing many general motions, and run on consumer-hardware in interactive rates\cite{KinectPartTwo}. Furthermore, the depth detection is surprisingly good for a device that is described as fundamentally being based on triangulation\cite{KinectWorks}. However, the Kinect's depth measurements do occasionally fluctuate and the device does not necessarily  obtain full depth coverage of the scene for every single frame\cite{Kinect3DExp}. Also, work by Khoshelham\cite{KinectAcc} show that distances do matter for the Kinect, i.e. the systematic errors of its data output do not deviate significantly from that of high-end scanners, but only for measurements obtained from within distances of one to three meters from the sensor. These close-proximity capabilities are showcased by collaborative work between Microsoft and several Universities\cite{Kinect3DExp}, in which they reconstruct three-dimensional models in real-time by moving the sensor around a scene or object\fn{Enabling dream scenarios such as obliterating porcelain plates or graffiti painting, in the comfort of the home}.
+
+\def\kinectComment{The Kinect's use of structured light is to some extent available through the original patent applications, but the format of these do not support higher-level understanding very well - the comprehension given here is therefore based on a second-hand account in the form of university material\cite{HowKinectWorks} that clearly labels the original patents as the sources}
+
+While the inner works of the Kinect is beyond the scope of this paper, briefly touching upon the basics of will help understand important details on proper use\fn{\kinectComment}. In essence, the Kinect is a light scanner that combines a number of techniques to accurately achieve its main purpose: determining the joint positions of an individual, such that body posture and gestures may be derived with high probability. Part of the secret to accomplishing this, and what makes it unique, is a patented technique of factory-encoding a known \ti{speckle-pattern}\cite{shpunt2011depth} which is emitted as UV-light, such that it appears invisible to the human eye. A capture of this is shown in figure \ref{fig:speckle}. This proves to be advantageous because since each speckle is unique, the subsequent retrieval of their individual deflection is identifiable and gives clear hints about the reflected surface, as well as distance\fn{In more detail, these attributes are inferred  using the \ti{parallax} effect, the degree of blur (depth from focus) and the use of astigmatic lenses in perpendicular dimensions for exploiting increasing skew distortion as a function of distance}. Having obtained these data, body pixels are extracted and body parts classified using a Random Forest, in a process publicized by Microsoft Research\cite{KinectPartTwo}. From their work, it is also seen that the learning algorithm is optimized to a few hundred sequences of body poses typical for game scenarios. What is also mentioned is that the Random Forest has been trained on single finger tracking (for menu navigation) and is believed to have room for handling unseen poses. 
+
+To sum up, ideal use of the Kinect is best achieved by minimization of external UV-light, using postures that face the sensor to some extent and provide a full-body view in relatively  close proximity to the unit. 
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.75\linewidth]{image/speckle}
+	\caption{The  UV-light emitted by the Kinect, tainting everything in its path with a speckle pattern. Processing this reflection then reveals the scene in great detail.}
+	\label{fig:speckle}
+\end{figure}
+
+
+%\myimage{speckle}{skod.png} 
+
+
+
+%\cite{KinectWorks}
+
+
+
+
+
+
+
+\subsection{Related Work}
+
+The concept of interacting with a computer through gestures in space has been explored for many years and a plethora of existing research already exists. We will take into account conclusions from these that relate mostly to our task, i.e. the problems and challenges of interacting in upwards of three dimensions on smaller displays using spatial interactions.
+
+
+\subsubsection{Spatial awareness on mobile devices}
+
+For obvious reasons, the small viewport of a portable device severely reduces the number of visual references and may confuse  the viewer as to where he  or she is currently located. For this same reason, sensing information  of interest that reside outside the viewport also becomes difficult. In other words, maintaining spatial awareness is a difficult on smaller displays.
+
+Researchers have pursued ways to overcome this, such as using small visual cues for providing the user with subtle references of off-screen information.  Examples include work by Baudisch and Rosenholtz\cite{Halo} which shows that, for data that may be visualized in two dimensions, the use of geometric marker scaling for points-of-interest (and residing out of view) leads to a noticeable speed optimization. For three-dimensions however,  there is currently a lack of effective techniques for visualizing off-screen information, as has been concluded in similar work by Jäckle et al.\cite{OffScreenDims}.
+
+An early and radically different strategy, as exemplified through work by Yee\cite{peep}, keeps the input space fixed in relation to the physical surroundings and lets the user develop his or her awareness by moving the viewport around in space - thereby "peeping" into areas of interest. While enticing in its concept, the approach has not been widely adopted, except for special use cases (such as star gazing applications). Furthermore, Yee concluded that the technique is physically tiring for anything but short-term interactions and suffers from (at the time, in 2003) poor sensor accuracy.
+
+What may be concluded here, is that mobile interaction is most efficient when using a two-dimensional user interface, with some elements to support spatial awareness for the current location and possibly other areas of the information space that reside out of view. 
+
+
+\subsubsection{Using imaginary extension planes}
+
+With the ongoing efforts at exploiting sensor technology, researchers are actively trying to predict future use of the space  surrounding mobile devices. Many ideas are based on the obvious - expanding the input space by imaginary planes that extend and align with the display plane itself. 
+
+One such example is an idea by Hasan et. al\cite{adbin} that bins the off-screen space in a radial fashion and successfully accelerates certain tasks, such as list browsing. Furthermore, they found the optimal expansion radius to be within 40 centimeters from the device and that optimal interaction occurred on the side of the dominant hand. 
+
+Similar work by the same author\cite{Hasan} compares map navigation using traditional \ti{flick-and-pinch} touch-input to that of navigating by off-screen input instead - i.e. anchoring to the (projected) index finger and onto an imaginary extension of the display. What was discovered here, was that for basic navigation, the off-screen interaction showed improved performance in terms of both a decrease in navigation time and number of redundant touch inputs (also referred to as \ti{clutches}).
+
+ 
+\subsubsection{Using spatial depth}
+
+%One relevant subfield that explores device-free navigation is \ti{mid-air pointing} techniques, in which computer vision facilitates spatial interactions with the computer. 
+
+While the ability to interact through space brings the additional dimension of depth into play, its applicability in three-dimensional navigation could appear to  be somewhat constrained. It has  e.g. been shown by Bhuiyan and Picking\cite{AirPointing} that using the arm and hand to make selections by pointing at a large display may be fast, but inaccurate. Hence, confidently making selections by moving the hand in a three-dimensional space was in fact slow, in addition to being physically demanding. Navigating a two-dimensional plane however, was optimal in terms of providing good accuracy and speed, with test subjects able to make precise selections rapidly (and explicitly expressing their favor with the two-dimensional approach). 
+
+\subsubsection{Optimal use of depth}
+
+Since depth is hampered by inaccuracy, one possible strategy could be to simplify it by discretization, in style similar to the aforementioned binning of imaginary planes. Such an approach improves the time taken to perform some motion, easing on the need for accuracy with loss of a continuous input range as a result. Such an idea has many real-world analogues for interaction scenarios where time is crucial (such as the division of the neck of a musical string instrument into frets). 
+
+One extreme case of binning, binary, would be the obvious choice for scenarios such as  "clicking" an imaginary button in mid-air. Of interest here is work by Vogel and Balakrishnan \cite{AirTap}, in which they explore applying a third dimension through the concept on an \ti{AirTap}. This tapping of an imaginary button is shown easy to achieve by the simple exceeding of certain thresholds for relative positioning and acceleration. An identified challenge in their work is the inherent problem with ambiguity when tapping in mid-air, as many hand movements may resemble the definition of an air tap. Also, the same set of hand gestures tend to vary slightly for different individuals. This further underlines the difficulty of depth, even for the simplest of cases.
+
+
+
+
+
+\begin{comment} ### THESIS ##################################################
+
+\subsection{Hand-tracking techniques}
+Extensive work has done on researching different ways of tracking and using hand movements for interaction and these tend to be based on either sensor equipment or visual recognition. The first, and perhaps the most trivial of the two, relies on evaluating sensor measurements of various hand and finger movements. Recent and fairly typical example work include that of Kumar, Verma and Prasad\cite{DataGlove}, in which a \ti{Hand Data Glove} is used in combination with simple resistors and thresholds to obtain real-time measurements that may be used for interaction. In this approach, bending a finger increases the resistance in a corresponding sensor and, with a resistor for each finger, the setup allows for associating and triggering specific actions for different combinations of finger flexae. In their experiment, they also equipped the glove with motion sensors and show how this may be exploited for spatial interaction, an obvious idea that is encountered recurrently in gesture-based research.
+
+While the above idea of using a hand glove may provide for a functional gesture-based input system, it is however restrictive, cumbersome and costly. Furthermore, it was derived as early as 1989 by Sturman et al.\cite{HandsOn89} that using the angles of fingers as input unfortunately does not work well except for extreme angles (i.e. fingers fully open or clenched), even despite being able to measure finger flex within two degrees of accuracy. 
+
+XXXXXXXXXX
+
+A simpler and less obstructive way of tracking the hand is using computer vision to recognize the hand and its gestures. For instance, Dhawale et al.\cite{BareHand3D} has showed that  interacting with typical applications using simple hand recognition algorithms in combination with a small set of hand gestures, is possible with consistent recognition rates upwards of 100 percent.
+
+############################################################# 
+\end{comment}  
+
+
+\begin{comment}
+costly, as observed by the work of Dhawale, Masoodian and Rogers\cite{BareHand3D}. Here, the concept of using computer vision for input is revived under the justification of new technological capabilities in performing complex image processing algorithms in real-time.
+
+\end{comment}
+
+
+\begin{comment} ### THESIS ##################################################
+
+
+
+\subsection{The feedback problem}
+
+What Sturman et al.\cite{HandsOn89} also determined is that the absence of tactile feedback causes difficulties for most users, especially when feedback is highly expected. This observation may seem surprising given that between 80 and 90 percent of all sensory input is based on vision\cite{Haptic}. Nonetheless, tactile feedback plays a major role in terms of subconscious interaction with our surroundings and is what allows us to e.g. flip a light switch in the dark, play a musical instrument or type fast on a computer keyboard (hence the enduring dominance of the keyboard).
+
+One way to deal with this lack of feedback, as proposed a decade later in 1998 by Segen and Kumar\cite{VideoGesture}, is to quite simply avoid any notion of direct contact with objects on-screen. Instead, the user interacts with content only by pointing and using all but a few well-defined set of simple gestures. While this does diminish the need for feedback, it does so by averting any refined form of interaction and hence, the strategy will likely be inadequate for most applications.
+
+Another and more advanced take on solving the feedback problem, is to provide it actively. This approach is steadily gaining ground for use in consumer-level devices and a fair amount of research has been done on its affect when used in conjunction with existing device types.  In formal terms, the by far most dominant technique in use today is that of \ti{haptic feedback}, a definition that is composed of two modalities, \ti{vibrotactile} and \ti{kinesthetic}. The first relates to the vibrational sensations that is commonly utilized in consumer-devices for providing cues, especially portable devices. The second modality deals with the gross movement of the body, such as perception of weight and resistance, and is popular in applications that attempt to create an immersive experience, such as  steering games and virtual reality systems. In essence, the purpose of haptic (tactile) feedback is to allow for communicating with a computer without the need for visual feedback and it achieves this by way of providing a supplementary level of awareness, thus overcoming the  challenge of simulating the presence of physical structures that do not exist.
+
+\subsection{Effect of feedback}
+
+Research shows that the use of feedback appears to have a positive effect on usability. For instance, Dennerlein et al.\cite{ForceFeedbackMouse} showed that extending the concept of a mouse with feedback forces in order to provide assistive types of tactile cues more than doubled completion times for the task of precision guiding a cursor. Another study by Jacko et al.\cite{MultiModelGains} found that for all test cases, feedback in the form of either single (unimodal) or multiple (multimodal) forms consistently led to improved performance. 
+
+Also from a subjective point of view, Serafin et al.\cite{PreferTactile} have concluded that test subjects themselves, when given the choice, tend to express strong favor with tactile feedback in user interfaces that are touch-based. This was also shown by Chang and  O'Sullivan\cite{MobilePreferHaptic} to hold for the specific case of haptic feedback in small portable devices, in which  35 out of 42 participants preferred haptic-enabled over non-haptic devices.
+
+
+
+############################################################# 
+\end{comment}  

@@ -1,0 +1,267 @@
+\twocolumn[
+	\section{Results and Evaluation}\label{ch:evaluation}
+	]
+
+%Kinect was smoothed with values..
+
+\noi To understand how well the \AirSwipe\ solution performs, a series of experiments were conducted, with the overall goal of providing quantifiable measurements for evaluation. Our definition of success will be the overall extent to which the solution optimizes the user experience. This will primarily be interpreted as a reduction of interaction time, but secondary factors, such as redundancy of input and sense of control, will also be taken into account.\\
+
+
+\subsection{Experimental setup}
+
+All the experiments were based on using the Surface as input device and with the smaller on-screen space artificially simulated by using rims. All tracking was done using the Kinect, which was placed in optimal conditions that were determined by experimenting with a wide variety of light conditions and tracker positions. Of all tested setups, one proved ideal in terms of providing consistently stable tracking of the body joints of interest (finger, hand and shoulder).
+
+\subsubsection{Positioning}
+
+The optimal positioning was found to be with the tracker having a profile view of the device and in equal height to it. Relative to the user, the tracker was placed on the side opposite to the interacting hand. As the user was distanced an arms-length (approx. $0.5$ meter) from the device, this left the tracker with an angled forward view of the individual to track (as is required by its design). This setup, depicted in figures \ref{fig:experimentalSetupProfile} and \ref{fig:experimentalSetupAbove}, provided stable tracking for the full range of motion, until the user's arm reached an angle that aligned it with the body profile  (an extreme and awkward input position considered beyond the requirements of the experiment)\fn{For the curious reader, a video\cite{SolutionVideo} of an early prototype that demonstrates this experimental setup is also available.}. 
+
+%beyond what was needed for the . This primarily applied to the side opposite of the tracker and to a minor extent to the opposite side. While this threshold did not represent a physically impossible input space, the extremity of the angle was awkward (and hence, realistic as user input possible also so).
+
+
+
+\begin{figure}[!h]
+	\begin{center}
+		\begin{tikzpicture}%[remember picture,overlay]
+		
+%		{\includegraphics[]{image/stickman_front}};
+
+		
+
+		\begin{scope}[shift={(-4,3.9)}, scale=0.4]
+	
+%			\coordinate (P1) at (0,0);
+%			\coordinate (P2) at (2.4,-0.2);
+%			\coordinate (P3) at (2.7, 1.5);
+%			\coordinate (P4) at (0.3,1.92);
+			\coordinate (P1) at (0,0);
+			\coordinate (P2) at (2.4,-0.2);
+			\coordinate (P3) at (2.7, 2);
+			\coordinate (P4) at (0.3,1.92);
+
+			\coordinate (DEVICE_HOOK) at ($0.5*(P3)+0.5*(P2)$);
+			
+			\coordinate (TRACKER_HOOK) at ($(DEVICE_HOOK) + (10,0)$);
+
+			\begin{scope}%[opacity=0.5]
+			
+				
+		%	
+	%s			\node (1) [draw, rounded rectangle]  at (TRACKER_HOOK) {rounded rectangle};
+	%			\node (1) [draw, rounded rectangle]  at (TRACKER_HOOK) {rounded rectangle};
+	%			
+	%			\draw[thick, rounded corners=5pt,fill=black] (P1) -- (P2) -- (P3) -- (P4) -- cycle;		
+				\draw[thick, rounded corners=5pt,fill=\themeColorDark,\themeColorDark] (P1) -- (P2) -- (P3) -- (P4) -- cycle;
+	
+				\def\deviceRim{0.2}
+				\drawWithBuildOption{thick, rounded corners=3pt,fill=\themeColorLight!50,\themeColorLight!50}{top color=\themeColorLight} ($(P1) + (\deviceRim,\deviceRim)$) -- ($(P2) + (-\deviceRim,\deviceRim)$) -- ($(P3) + (-\deviceRim,-\deviceRim)$) -- ($(P4) + (\deviceRim,-\deviceRim) $) -- cycle;
+	
+			\end{scope}
+
+	
+
+			\coordinate (TRACKER_WEST) at ($(TRACKER_HOOK) + (0,0)$);
+			\def\trackerSize{1}
+			\def\trackerRatio{2}
+			\coordinate (TRACKER_NW) at ($(TRACKER_WEST) + (0,0.5*\trackerSize)$);
+			
+			 
+%			\draw[thick, rounded corners=3pt,fill=\themeColorDark,\themeColorDark] 
+%				(TRACKER_NW) -- 
+%				($(TRACKER_NW) + (\trackerSize*\trackerRatio, 0)$) -- 
+%				($(TRACKER_NW) + (\trackerSize*\trackerRatio,-\trackerSize)$) -- 
+%				($(TRACKER_NW) + (0,-\trackerSize) $) -- cycle;
+%
+			\draw[<->,dashed,very thick,gray,shorten <=.15cm,shorten >=.15cm] (DEVICE_HOOK) -- (TRACKER_HOOK);
+
+			\coordinate (SHINE_TOP) at ($(TRACKER_HOOK) + (-4,2)$);
+			
+			\draw[-,dotted,thick, color=gray!50,shorten <=0.1cm, ] ($(TRACKER_HOOK) + (0.5,0)$) -- (SHINE_TOP);
+			\draw[-,dotted,thick, color=gray!50,shorten <=0.1cm, ] ($(TRACKER_HOOK) + (0.5,0)$) -- ($(SHINE_TOP) + (0,-4)$) ;
+
+			
+			 \draw[rounded corners=1pt, fill=\themeColorDark,\themeColorDark] ($(TRACKER_NW) + (0,-.2) $) rectangle ($(TRACKER_NW) +(0.3,-.8)$);
+			 \draw[thick, rounded corners=3pt,fill=\themeColorDark,\themeColorDark] ($(TRACKER_NW) + (.4,0)$) rectangle ($(TRACKER_NW) +(2,-1)$);
+
+			\node[align=left, fill=white,text=black!80] at ($0.5*(DEVICE_HOOK) + 0.5*(TRACKER_HOOK) - (1,0)$) {\large  1.57 m};
+
+%			\pic [densely dotted, draw, black!80, -,"$\theta$", angle eccentricity=1.16,angle radius=1.3cm] {angle = SHINE_TOP--TRACKER_HOOK--DEVICE_HOOK};
+
+			
+			\pic [densely dotted, draw, black!80, -,"\small $90 \degree$", angle eccentricity=1.8,angle radius=0.7cm] {angle = TRACKER_HOOK--DEVICE_HOOK--P3};
+
+
+%			\coordinate (SKOD) at ($(DEVICE_HOOK) - (10,0)$);
+				
+			 \draw[densely dotted, gray] ($(DEVICE_HOOK) + (0.2,0)$) -- ($(DEVICE_HOOK) + (0.2,0) + (0,1.8)$);
+			
+		\end{scope}
+
+%%%%%%%%%%% stickman
+\def\stickmanScale{4}		
+%		\def\stickmanColor{black!70!white}		
+\def\stickmanColor{\themeColorDark}		
+\begin{scope}[shift={(-5,5)}]%, scale=\stickmanScale]
+
+\node[\stickmanColor,circle,fill,minimum size=5*\stickmanScale] (head) {};
+
+\node[\stickmanColor,rounded corners=\stickmanScale,minimum height=16*\stickmanScale,minimum width=4.5*\stickmanScale,fill,below = 1pt of head] (body) {};
+
+
+\draw[\stickmanColor,line width=1.8*\stickmanScale,round cap-round cap] ([shift={(0.02*\stickmanScale,-0.03*\stickmanScale)}]body.north east) --++(-10:0.3*\stickmanScale);
+
+%righ arm
+\draw[\stickmanColor,line width=1.8*\stickmanScale,round cap-round cap] ([shift={(-0.04*\stickmanScale,-0.03*\stickmanScale)}]body.north west)--++(-90:0.3*\stickmanScale);
+
+
+\draw[\stickmanColor,thick,white,-round cap, minimum width=\stickmanScale] (body.south) --++(90:.25*\stickmanScale);
+
+\coordinate (A) at ($(body.north east) + (0.07, 0)$);
+\coordinate (B) at ($(A) + (1,-1)$);
+\coordinate (C) at ($(A) + (0,-1)$);
+
+\pic [densely dotted, draw, black!80, -,"\small $20\degree$", angle eccentricity=1.8,angle radius=0.7cm] {angle = C--A--B};
+
+\end{scope}
+		
+		
+
+		\end{tikzpicture}
+		\caption{The experimental setup, as seen from a  profile-view. This shows the participant rotated towards the viewer, for the purpose of the illustration (the actual experiment has the user standing relaxed in front of the display).}
+		\label{fig:experimentalSetupProfile}
+	\end{center}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[!h]
+	\begin{center}
+		\begin{tikzpicture}%[remember picture,overlay]
+		
+		%		{\includegraphics[]{image/stickman_front}};
+		
+		\begin{scope}[shift={(-4.9,3.9)}, scale=0.4]
+		
+		\coordinate (P1) at (0,0);
+		\coordinate (P2) at (3,0);
+		\coordinate (P3) at (3, 0.5);
+		\coordinate (P4) at (0,0.5);
+		
+		
+		\coordinate (DEVICE_HOOK) at ($0.5*(P3)+0.5*(P2)$);
+		
+		\coordinate (TRACKER_HOOK) at ($(DEVICE_HOOK) + (10,0)$);
+
+%		\draw[thick, rounded corners=4pt, fill=transparent] (P1) -- (P2) -- (P3) -- (P4) -- cycle;		
+		\draw[thick, rounded corners=2pt,\themeColorDark,fill=\themeColorDark] (P1) -- (P2) -- (P3) -- (P4) -- cycle;
+	
+		
+		\coordinate (TRACKER_WEST) at ($(TRACKER_HOOK) + (0,0)$);
+		\def\trackerSize{1}
+		\def\trackerRatio{2}
+		\coordinate (TRACKER_NW) at ($(TRACKER_WEST) + (0,0.5*\trackerSize)$);
+		
+		
+		%			\draw[thick, rounded corners=3pt,fill=\themeColorDark,\themeColorDark] 
+		%				(TRACKER_NW) -- 
+		%				($(TRACKER_NW) + (\trackerSize*\trackerRatio, 0)$) -- 
+		%				($(TRACKER_NW) + (\trackerSize*\trackerRatio,-\trackerSize)$) -- 
+		%				($(TRACKER_NW) + (0,-\trackerSize) $) -- cycle;
+		%
+		\draw[<->,dashed,very thick,gray,shorten <=.15cm,shorten >=.15cm] (DEVICE_HOOK) -- (TRACKER_HOOK);
+		
+		\coordinate (SHINE_TOP) at ($(TRACKER_HOOK) + (-4,2)$);
+		
+		\draw[-,dotted,thick, color=gray!50,shorten <=0.1cm, ] ($(TRACKER_HOOK) + (0.5,0)$) -- (SHINE_TOP);
+		\draw[-,dotted,thick, color=gray!50,shorten <=0.1cm, ] ($(TRACKER_HOOK) + (0.5,0)$) -- ($(SHINE_TOP) + (0,-4)$) ;
+		
+		
+		\draw[rounded corners=1pt, fill=\themeColorDark,\themeColorDark] ($(TRACKER_NW) + (0,-.2) $) rectangle ($(TRACKER_NW) +(0.3,-.8)$);
+		\draw[thick, rounded corners=3pt,fill=\themeColorDark,\themeColorDark] ($(TRACKER_NW) + (.4,0)$) rectangle ($(TRACKER_NW) +(2,-1)$);
+		
+		\node[align=left, fill=white,text=black!80] at ($0.5*(DEVICE_HOOK) + 0.5*(TRACKER_HOOK) - (1,0)$) {\large  1.57 m};
+		
+		%			\pic [densely dotted, draw, black!80, -,"$\theta$", angle eccentricity=1.16,angle radius=1.3cm] {angle = SHINE_TOP--TRACKER_HOOK--DEVICE_HOOK};
+		
+		
+		\pic [densely dotted, draw, black!80, -,"\small $90 \degree$", angle eccentricity=1.8,angle radius=0.7cm] {angle = TRACKER_HOOK--DEVICE_HOOK--P3};
+		
+		\draw[densely dotted, gray] (DEVICE_HOOK) -- ($(DEVICE_HOOK) + (0,1.8)$);
+		
+		\end{scope}
+		
+		
+		
+		\def\stickmanScale{4}		
+		%		\def\stickmanColor{black!70!white}		
+		\def\stickmanColor{\themeColorDark}		
+		\begin{scope}[shift={(-4.3,3)}]%, scale=\stickmanScale]
+		
+			\node[\stickmanColor,circle,fill,minimum size=5*\stickmanScale] (head) {};
+			
+%			%body
+			\node[\stickmanColor,rounded corners=1.2*\stickmanScale,minimum height=2.2*\stickmanScale,minimum width=7*\stickmanScale,fill,] (body) {};
+			
+			
+			%righ arm
+			\draw[\stickmanColor,line width=1.8*\stickmanScale,round cap-round cap] ([shift={(0.04*\stickmanScale,-0.03*\stickmanScale)}]body.north east) --++(110:0.1*\stickmanScale);
+			
+			\draw[\stickmanColor,line width=1.8*\stickmanScale,round cap-round cap] ([shift={(0.05*\stickmanScale,0.2*\stickmanScale)}]body.west)--++(-115:0.2*\stickmanScale);
+			
+%			\draw[\stickmanColor,line width=1.8*\stickmanScale,round cap-round cap] ([shift={(-0.04*\stickmanScale,0.08*\stickmanScale)}]body.west)--++(-90:0.1*\stickmanScale);
+			
+	%		\draw[\stickmanColor,thick,white,-round cap, minimum width=\stickmanScale] (body.south) --++(90:.25*\stickmanScale);
+		
+		\end{scope}
+		\end{tikzpicture}
+		\caption{The experimental setup, as seen from above.}
+		\label{fig:experimentalSetupAbove}
+	\end{center}
+\end{figure}
+
+
+\subsubsection{Lighting}
+
+It was found that high volumes of both artificial and natural light had a negative impact on the tracking, which correlates with the general Kinect guideline of lower lighting conditions. Hence, only a minor degree of (non-direct) daylight was allowed into the test room and only in direction with the tracking device's point of view.
+
+
+\subsubsection{Simulated On-screen Dimensions}
+
+As the Surface has a significantly larger display than that of current small mobile device, a strategy for simulating the latter was necessary. Swiping outside the boundaries of a small mobile display will usually move outside the dimensions of the actual device, since the two are essentially equal. Hence, going into off-screen space will be marked by a loss of modality (touch) and introducing similar feedback will  therefore approximate real-world conditions better.
+
+\begin{figure}[!b]
+	\centering
+	\includegraphics[width=0.5\linewidth]{image/chopsticks}
+	\caption{The frame used for simulating a small input space, chosen to align with the display dimensions of a popular and small mobile device, the Samsung S6. Here shown overlaid with its close relative, the Samsung S4.}
+	\label{fig:chopsticks}
+\end{figure}
+
+\begin{figure}
+	\centering
+    \includegraphics[width=0.5\linewidth]{image/rims}
+	\caption{The simulating of the dimensions of a smaller mobile device, achieved by fixating a low-profile frame onto the display.}
+	\label{fig:rims}
+\end{figure}
+
+
+
+The chosen approach was therefore to employ physical rims to define the smaller input space. These have some height, such that the user is given noticeable feedback in transitioning outside the boundaries. Also, this height catalyzes the off-screen interaction by "forcing" the finger into mid-air. In detail, a rectangular frame  was carefully constructed, such that it had height 4mm the and the exact inner dimensions of $4.436 \text{mm} \times 2.495  \text{mm}$, which is representative of one currently popularized smaller mobile device. This is  shown  in figure \ref{fig:chopsticks}. The frame was then fixated onto the Surface, in such a way that it aligned perfectly with the form factor of the device. The device was then  ready for calibration with the implementation. This construction and its calibration is shown in figure \ref{fig:rims}. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

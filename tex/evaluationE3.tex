@@ -1,0 +1,1055 @@
+%
+
+%\vspace*{-2cm}
+
+\subsection{Experiment three: optimized sphere}
+
+With experiment one having identified  the spherical interface as the superior of the three examined and experiment two   showing it as not capturing essential details, an attempt at evaluating some optimization would be desirable. The aim in this experiment was therefore to compare the spherical space against some modification derived  from it. That is, the original baseline of touch-only is not of direct interest here (as its general performance versus a spherical off-screen interface has already been shown by experiment one). A modified spherical interface was therefore derived on the basis of the data from the previous experiment two and this was experimentally  evaluated against the  non-modified version. 
+ 
+%merits and drawbacks compared to the sphere has already been deduced in experiment one. 
+
+\subsubsection{Task and interface}
+
+Participants were requested to seek out target values as in experiment one, but now using a true two-dimensional task and  a target grid similar to that of experiment two (as shown in the previous figure \ref{fig:expTwoDimsPosNeg}). As learned from experiment two, the extreme target value ($\pm50$) was likely beyond physical reach and therefore omitted. The second-largest target ($\pm40$) was then considered the new fringe value. Hence, the chosen grid pattern encompasses $\ifrac{180\degree}{30\degree}=6$ lines, each with $\ifrac{40}{10}=4$ targets.
+
+
+\subsubsection{Trial design}
+	
+All target values were randomized in fashion identical to the previous experiments.  A total of 3 participants $\times$ 2 interfaces $\times$ 6 angles $\times$ 8 targets were collected, through 288 trials in total.
+
+\subsubsection{Procedure and participants}
+
+% leah: 25
+% mike: 22
+% evan: 38
+%  mean 28.33, std 8.5049
+
+Only three of the past participants could be made available for the experiment (mean 28.3, standard dev. 8.5), although the potential data was assumed adequate for making rough interpretations. Participants were informed that the space would vary slightly between the two interfaces, but were also requested to interact based on their intuition. No learning time was given, as the task and general interface was already familiar.
+
+%All but one of the previous participants volunteered (yeilding new mean age=TODO, std=ODO). 
+	
+%assuming shouldr position cannot be omitted
+
+\subsubsection{Hypothesis}
+
+It was assumed that the data from experiment two could be used to reach an optimization that would perform better in terms of interaction times, for all target values within physical reach. Hence, an elaborate interpretation of the past experimental data was undertaken to deduce the various properties that should be part of the optimized spherical interface.
+
+\subsubsubsection{Choosing general properties}
+
+The previous experiment had revealed effects such as compression, rotation and scale through the principal components of the aggregated data for  each absolute target value. The strategy chosen here was then to  modify the space by trying to conform to these, as opposed to elaborate attempts at theorizing on the complex interplay of factors that produce them (e.g. joint interactions, obstruction of view for certain inputs etc.).
+
+To take these properties into account, it was first noted that when participants had been asked to estimate the extreme target ($\pm50$), they generally gave inputs that appeared to be at the maximum of their physical ability. Hence, the assumption was made that these estimations had in fact defined the natural boundary of the true space. That is, while being sincere attempts at providing estimations, they were just as much representative for what the participants perceived as the physical limit of extreme input. The data points for the extreme target were therefore presumed to be an indicator of a \ti{comfort zone}, for which the participants felt they were able to interact within - and the corresponding principals components considered to be prime candidates for the modification.%and chosen to serve as the basis for the optimization
+
+%\subsubsubsection{Deriving compression and rotation}
+%-------------
+
+Under the assumption that any curvature in the true input space is convex, we could choose to define the boundary of the modified space as the convex envelope of the data points of the comfort zone. Furthermore, it would be reasonable to assume that such boundary should be smooth, as opposed to jagged by the conforming to individually scattered data points. Hence, we may initially choose  the ellipse formed by the principal components and eigenvalues of the comfort zone data as representative of the general shape of the true space. In visual terms, these components correspond to the outer ellipse in the previous figure \ref{fig:expTwoMeansVersusTargets}, squeezed or stretched, as if it was a ball. Hence, this space becomes dispersed on the main principal component, compressed on the secondary component and skewed for all space not aligned exactly on either of these. In addition, the elliptical space spanned by these components is clearly significantly smaller than the original space and corresponds to an overall compression, if the boundary was still to represent the same extreme target value ($\pm50$). If not dealt with, this would change the spatial unit of scale.
+
+
+
+\begin{figure}[!b]	
+	\centering
+	\hspace*{-1cm}			
+	\vspace{-0.2cm}			
+	%		\twoFigure{		
+	%			%		\hspace*{-0.22cm}
+	\scalebox{.8}{
+	\begin{tikzpicture}[scale=1.2]
+	%		\hspace*{-0.22cm}
+	\expPolarAxis[		
+	extra y tick labels={ 0.5m, 0, -0.5m},					
+	y dir=reverse,  %%% REVERSE BECAUSE TRACKER VIEWS FROM OPPOSITE SIDE!		
+	]{	
+		
+		
+		\begin{scope}[yscale=-1] 
+		\polarPlotDrawRadials 
+		\end{scope}			
+		
+%		\drawOnscreenDims
+		
+		%		\plotReleasePositionsColorByTarget			
+		
+		
+		
+		%		\coordinate (origin) at (axis cs:0,0);			    
+		
+		%	\plotPcaRings
+		
+		
+		\coordinate (origin) at (axis cs:0,0);			    
+		%	\def\PPM{10} % i,e. 851
+		%%	\foreachTabbedCsvRowInPlot
+		\pgfplotsextra{\DTLforeach*[\DTLiseq{\target}{50}]{Pca}{\xc=x, \yc=y,\xr=xr,\yr=yr,\circleAngle=deg,\target=target,\circleRadius=circleRadius,\circleRadiusM=circleRadiusM}{	
+				
+				
+				\coordinate (circlePos) at ($(origin) + (\xc/\PPM, \yc/\PPM)$);
+				%			\node[mark size=0.02cm,color=\targetColor\target] at (circlePos) {\pgfuseplotmark{triangle*}};
+				
+%				% CROSS
+				\draw (circlePos) node[cross, rotate around={-1*\circleAngle-45:(circlePos)},color=\targetColor\target] {};		
+				
+				
+				% circle radius text and line
+				\draw[black!80,<->,thick] (origin) -- +($(\circleRadius/\PPM,0)$);
+				\node[align=left, fill=white,text=black!80] at ($(origin)  + (0.5*\circleRadius/\PPM,0)$) {\scriptsize $\circleRadiusM$m};
+				%
+				
+				% ellipse	
+				\draw[color=\targetColor\target,very thick,dashed,
+				fill=\targetColor{50}!30!black, fill opacity=0.03, % FILL
+				] ($(origin) + (\xc/\PPM, \yc/\PPM)$) ellipse [
+				x radius=\xr/\PPM,
+				y radius=\yr/\PPM,
+				rotate around={-1*\circleAngle:(circlePos)} %				rotate around={deg(148):(50,0)}
+				];
+									
+				% circle at mean
+				\draw[color=\targetColor\target!60!black,thick,densely dotted,opacity=0.4] (circlePos) ellipse [
+				x radius=\circleRadius/\PPM,
+				y radius=\circleRadius/\PPM
+				];
+				% circle at origin
+				\draw[color=\targetColor\target!60!black,thick,densely dotted] (origin) ellipse [
+				x radius=\circleRadius/\PPM,
+				y radius=\circleRadius/\PPM
+				];
+			}}
+			
+			
+		}	
+	\end{tikzpicture}
+}
+	\caption{The derivation of the target value for the comfort zone boundary. Repositioning a circle (of area equal to the elliptical comfort zone) to the origo reveals a target value of 0.34. Adopting that value as the comfort zone boundary prevents odd scaling of the new input space.}
+	\label{fig:expTwoBoundaryValue}				
+\end{figure}
+
+
+\subsubsubsection{Maintaining unit scale}
+	
+To counter the latter, the assumption was made that the overall unit of scale should not change, but remain fairly equal to that of the on-screen space. That is, the user should not experience any significant change in the magnitude of incremental movements when swiping into off-screen space. To align this with the choice of the comfort zone as the total input space, a new target value for its boundary was derived, such that the units of scale remained invariant. In other words, the comfort zone boundary should not equal the extreme of target values, but rather some value that provides a sense of an even and 
+continuous space. 
+
+To derive this value, a simple approach was taken based on area. In the visual sense, if we "squeeze" the elliptical shape of the comfort zone back into circular shape, the target value of the boundary will be given by the radius of this circle. As shown by figure \ref{fig:expTwoBoundaryValue}, this corresponds to a target value of 0.34 meters. This in return allows us to deduce new  boundaries for all target values by simple scaling (i.e. their radii in the modified space). Hence, the optimized space that leaves the unit scale invariant is as shown in figure \ref{fig:expThreeSpace}.
+
+
+\begin{figure}
+	\centering
+\vspace*{-1.2cm}
+	\hspace{1cm}		
+	\expThreePlot{data/exp1/nonskewedCircles.csv}{PcaNoSkew}{
+		\drawCircles
+		
+		\polarPlotDrawRadialsReversed			
+		
+		\expThreePlotComfortZone{Pca}
+				
+		\expThreePlotEllipse[filter in={target}{50}]{data/exp1/nonskewedCircles.csv}		
+		\expThreePlotEllipse{data/exp1/nonskewedCircles.csv}		
+		\expThreeForeachPcaRow[\DTLisgt{\target}{0}]{PcaNoSkew}{
+%		\expThreePlotDiagonals[\targetColor{\target}, dashed]
+				}						
+		%		\expThreeForeachPcaRow[\DTLiseq{\target}{20}]{PcaNoSkew}{
+		%			\expThreePlotDiagonals[\targetColor{\target}, dashed]
+		%		}						
+		%		\expThreeForeachPcaRow[\DTLiseq{\target}{30}]{PcaNoSkew}{
+		%			\expThreePlotDiagonals[\targetColor{\target}, dashed]
+		%		}						
+		%		\expThreeForeachPcaRow[\DTLiseq{\target}{40}]{PcaNoSkew}{
+		%			\expThreePlotDiagonals[\targetColor{\target}, dashed]
+		%		}						
+		
+%		\expThreeForeachPcaRow[\DTLiseq{\target}{50}]{PcaNoSkew}{
+%			\expThreePlotDiagonals[\targetColor{\target}, dashed]
+%		}
+
+	
+%		\comfotZoneBisect{0}{180}{data/exp1/nonskewedCircles.csv}
+%	%	\comfotZoneBisect{30}{210}{data/exp1/nonskewedCircles.csv}
+%	%	\comfotZoneBisect{60}{240}{data/exp1/nonskewedCircles.csv}
+%		\comfotZoneBisect{90}{270}{data/exp1/nonskewedCircles.csv}
+%	%	\comfotZoneBisect{120}{300}{data/exp1/nonskewedCircles.csv}
+%	%	\comfotZoneBisect{150}{330}{data/exp1/nonskewedCircles.csv}		
+%		
+%		\expThreeForeachPcaRow[\DTLisgt{\target}{0}]{PcaNoSkew}{
+%			\draw (circlePos) node[cross, rotate around={-1*\circleAngle-45:(circlePos)}, color=\targetColor\target]{};				
+%			%			\expThreePlotDiagonals[\targetColor{\target}, dashed]
+%		}
+		
+	}						
+	%		\includegraphics{evaluation-fig11.pdf}
+	\caption{The scaled targets that result from adopting the newly derived value of the comfort zone boundary. The area enclosed by each new (elliptical) target boundary then has area equal to its old (circular) counterpart.}
+	\label{fig:expThreeSpace}
+\end{figure}
+
+
+%\fn{In more geometric terms, the operation for any projected point is equivalent to adding the vector from the origo and to the line spanned by the point and the opposing projection, of magnitude equal to length of the original (non-projected) point over the derived comfort range radius.}
+
+
+
+\subsubsubsection{Defining a dynamic mean}
+
+Finally, we will complete the optimization by addressing the difficulty of a mean that converges in origo as the target value goes to zero (as remarked in the discussion section of the previous experiment). Visually, we would like to apply a dynamic "force", such that spatial locations are pulled towards the origo as they approach the mean. This idea is captured by figure \ref{fig:expThreeSpaceComfortOrigo}. The result of such an operation is shown by figure \ref{fig:expThreeSpaceWithSkew}, in which the imposed curvature leaves any projection invariant on what corresponds the the "old" extreme boundary ($\pm50$), but have all converge to origo for when they approach the zero target value. Perhaps not surprisingly, the resulting space begins to resemble a three-dimensional view of a sphere, with one pole slightly shifted to the north-west, relative to the viewpoint. 
+
+\subsubsubsection{Confirmation by visual inspection}
+
+Since we chose to derive the optimized interface from the target estimations, it would be natural to briefly investigate how the two compare now. Overlaying the past estimation data onto the newly modified space is shown in figure \ref{fig:expThreeSpaceWithSkewClean}. While not a perfect match with the data, it could look as if the modification does a slightly better job at capturing the inherent patterns. 
+
+To abstract from the directions of the deviations, figure \ref{fig:expThreeComparingSpaces} compares the mean deviation magnitudes for all angles and targets. From this, it seems as if the greatest optimization is achieved on the 150/330 and 0/180 degree radials. This is numerically confirmed in table \ref{table:expThreeDeviationsTable}, from which these radials appear to have their mean deviations reduced with $17.02\%$ and $18.67\%$, respectively. Also, in terms of target values, the initial target in the southern region (-10) shows a full improvement of $21.43\%$. A few deteriorations are also seen for some targets (20 and -40) but of much smaller magnitude, compared to the gains.  
+
+This completes the steps taken for reaching the optimization. The hypothesis is that this interface will better incorporate the observed complexities of the true space and as such, perform better than the original, from which it was derived.
+
+
+\begin{figure*}[!htb]
+	\centering
+	\hspace{-1.5cm}
+	\twoFigure{
+		\hspace*{-1cm}
+		\expThreePlot{data/exp1/nonskewedCircles.csv}{PcaNoSkew}{
+			\polarPlotDrawRadialsReversed			
+			
+			\expThreePlotComfortZone{Pca}
+			
+			%		\drawCircles
+			%		\expThreePlotEllipse{data/exp1/nonskewedCircles.csv}		
+			%		\expThreePlotEllipse[filter in={target}{50}]{data/exp1/nonskewedCircles.csv}		
+			%		\expThreeForeachPcaRow[\DTLiseq{\target}{10}]{PcaNoSkew}{
+			%			\expThreePlotDiagonals[\targetColor{\target}, dashed]
+			%		}						
+			%		\expThreeForeachPcaRow[\DTLiseq{\target}{20}]{PcaNoSkew}{
+			%			\expThreePlotDiagonals[\targetColor{\target}, dashed]
+			%		}						
+			%		\expThreeForeachPcaRow[\DTLiseq{\target}{30}]{PcaNoSkew}{
+			%			\expThreePlotDiagonals[\targetColor{\target}, dashed]
+			%		}						
+			%		\expThreeForeachPcaRow[\DTLiseq{\target}{40}]{PcaNoSkew}{
+			%			\expThreePlotDiagonals[\targetColor{\target}, dashed]
+			%		}						
+			%		\expThreeForeachPcaRow[\DTLiseq{\target}{50}]{PcaNoSkew}{
+			%			\expThreePlotDiagonals[\targetColor{\target}, dashed]
+			%		}
+			
+			
+			\comfotZoneBisect{0}{180}{data/exp1/nonskewedCircles.csv}{34}
+			\comfotZoneBisect{30}{210}{data/exp1/nonskewedCircles.csv}{34}
+			\comfotZoneBisect{60}{240}{data/exp1/nonskewedCircles.csv}{34}
+			\comfotZoneBisect{90}{270}{data/exp1/nonskewedCircles.csv}{34}
+			\comfotZoneBisect{120}{300}{data/exp1/nonskewedCircles.csv}{34}
+			\comfotZoneBisect{150}{330}{data/exp1/nonskewedCircles.csv}{34}	
+			
+			\expThreeForeachPcaRow[\DTLiseq{\target}{50}]{Pca}{
+				\draw[blue,->,shorten <= 1pt,shorten >= 1pt] ($(origin) + (\xc/\PPM,\yc/\PPM)$) -- (origin);
+			}
+			
+		}						
+		%		\includegraphics{evaluation-fig11.pdf}
+		\caption{An intuitive illustration of the approach for dealing with the increasing dislocation of the mean, here shown for equi-distanced projections that correspond exactly to the comfort zone boundary. The blue arrow indicates the desired direction of this pull, which has maximum magnitude at the mean and should decrease linearly to zero at some target value of choice.}
+		\label{fig:expThreeSpaceComfortOrigo}
+	}{	
+%	\captionsetup{margin={2cm,0cm}}
+%	  \subfloat[]{hej meddig}
+		\centering		
+		\hspace*{0.5cm}		
+		\vspace{0.8cm}		
+		\expThreePlot{data/exp1/skewedCircles.csv}{Pca}{
+	%		\polarPlotDrawRadialsReversed			
+			
+			\expThreePlotComfortZone{Pca}
+							
+	%		\expThreeForeachPcaRow[\DTLisgt{\target}{0}]{PcaNoSkew}{
+	%%			\expThreePlotDiagonals[\targetColor{\target}, dashed]
+	%		}
+	
+	%		\expThreePlotEllipse{data/exp1/nonskewedCircles.csv}		
+			\expThreePlotEllipse[filter in={target}{50}]{data/exp1/skewedCircles.csv}		
+	
+	%		\expThreeForeachPcaRow[\DTLiseq{\target}{50}]{PcaNoSkew}{
+	%			\expThreePlotDiagonals[\targetColor{\target}, dashed]
+	%		}
+	
+	%		\pgfplotsinvokeforeach{0,30,60,90,120,150} {
+	%			\comfotZoneBisect{0}{180}{data/exp1/nonskewedCircles.csv}{34}
+	%		}
+	
+	
+	%COMFORT ZONE BISECTS
+			\comfotZoneBisect[gray!40, dashed]{0}{180}{data/exp1/nonskewedCircles.csv}{34}
+			\comfotZoneBisect[gray!40, dashed]{30}{210}{data/exp1/nonskewedCircles.csv}{34}
+			\comfotZoneBisect[gray!40, dashed]{60}{240}{data/exp1/nonskewedCircles.csv}{34}
+			\comfotZoneBisect[gray!40, dashed]{90}{270}{data/exp1/nonskewedCircles.csv}{34}
+			\comfotZoneBisect[gray!40, dashed]{120}{300}{data/exp1/nonskewedCircles.csv}{34}
+			\comfotZoneBisect[gray!40, dashed]{150}{330}{data/exp1/nonskewedCircles.csv}{34}
+			
+	%		\comfotZoneBisect{0}{180}{data/exp1/nonskewedCircles.csv}{50}
+	%		\comfotZoneBisect{30}{210}{data/exp1/nonskewedCircles.csv}{50}
+	%		\comfotZoneBisect{60}{240}{data/exp1/nonskewedCircles.csv}{50}
+	%		\comfotZoneBisect{90}{270}{data/exp1/nonskewedCircles.csv}{50}
+	%		\comfotZoneBisect{120}{300}{data/exp1/nonskewedCircles.csv}{50}
+	%		\comfotZoneBisect{150}{330}{data/exp1/nonskewedCircles.csv}{50}
+			
+	%		\draw[gray, dashed]($(origin) + (3185/\PPM,359/\PPM)$) -- ($(origin) + (-2768/\PPM,754/\PPM)$);
+			
+			\expThreePlotRadials[\targetColor{50}!50!black, dashed,mark size=0.07]{data/exp1/skewedCircles.csv}
+	
+			% CROSS
+	%		\draw (origin) node[cross, rotate around={45:(origin)}, color=\targetColor{50}!50!black]{};				
+			\expThreeForeachPcaRow[\DTLiseq{\target}{50}]{Pca}{
+				\draw (origin) node[cross, rotate around={-1*\circleAngle-45:(origin)}, color=\targetColor{50}!50!black]{};				
+				\draw (circlePos) node[cross, rotate around={-1*\circleAngle-45:(circlePos)}, color=\targetColor\target]{};				
+				%			\expThreePlotDiagonals[\targetColor{\target}, dashed]
+			}
+		}
+	%	\expThreePlotWithRadials{data/exp1/skewedCircles.csv}
+			%		\includegraphics{evaluation-fig11.pdf}
+%		\parbox[6cm]{5cm}{	
+			\hspace{4cm}
+			\captionsetup{margin={2cm,0cm}}
+			\parbox{10cm}{			
+				\caption{
+					A visualization of the dynamic pull, that ensures that all projection space converges at the origo as target values approach zero, but yet leaves projections at an outer extreme boundary invariant. Projections inside this zone are then slightly affected, with the difference exemplified here by the "old" diagonals of the comfort zone (dashed lines in light gray versus the "new" curved radials).
+				}
+				\label{fig:expThreeSpaceWithSkew}
+			}
+			\captionsetup{margin={0cm,0cm}}			
+%			\caption{}
+%		}
+	}
+\end{figure*}
+
+\begin{figure*}[!htb]
+	\begin{centering}
+		%	\hspace*{-1cm}			
+		\twoFigure{		
+			\hspace*{-1cm}
+			\expThreePlot{data/exp1/skewedCircles.csv}{Pca}{
+				
+				\expThreePlotRadials{data/exp1/skewedCircles.csv}
+				
+				\polarPlotDrawRadialsReversed			
+				\expThreePlotEllipse{data/exp1/skewedCircles.csv}		
+				%		\expThreePlotRadials{data/exp1/skewedCircles.csv}
+				
+				\expThreeForeachPcaRow[\DTLiseq{\target}{50}]{Pca}{
+					\draw (origin) node[cross, rotate around={-1*\circleAngle-45:(origin)}, color=\targetColor{50}!50!black]{};				
+				}
+				
+				%		\expPolarPlotAngles
+				
+				%		\expPolarPlotAngle{0}
+				%		\expPolarPlotAngle{30}
+				%		\expPolarPlotAngle{60}
+				%		\expPolarPlotAngle{90}
+				%		\expPolarPlotAngle{120}
+				%		\expPolarPlotAngle{150}
+				
+				
+				\pgfplotsinvokeforeach{0,30,60,90,120,150} {
+					\expPolarPlot{#1}{-10}{opacity=0,angle#1}
+					\expPolarPlot{#1}{-20}{opacity=0,angle#1}
+					\expPolarPlot{#1}{-30}{opacity=0,angle#1}
+					\expPolarPlot{#1}{-40}{opacity=0,angle#1}
+					\expPolarPlot{#1}{-50}{opacity=0,angle#1}
+					\expPolarPlot{#1}{10}{opacity=0,angle#1}
+					\expPolarPlot{#1}{20}{opacity=0,angle#1}
+					\expPolarPlot{#1}{30}{opacity=0,angle#1}
+					\expPolarPlot{#1}{40}{opacity=0,angle#1}
+					\expPolarPlot{#1}{50}{opacity=0,angle#1}
+					
+%					\expPolarPlot[x=trialFromOrigoToExp3ReleasePositionX,y=trialFromOrigoToExp3ReleasePositionY]{#1}{-10}{opacity=0.5,angle#1}
+%					\expPolarPlot[x=trialFromOrigoToExp3ReleasePositionX,y=trialFromOrigoToExp3ReleasePositionY]{#1}{-20}{opacity=0.5,angle#1}
+%					\expPolarPlot[x=trialFromOrigoToExp3ReleasePositionX,y=trialFromOrigoToExp3ReleasePositionY]{#1}{-30}{opacity=0.5,angle#1}
+%					\expPolarPlot[x=trialFromOrigoToExp3ReleasePositionX,y=trialFromOrigoToExp3ReleasePositionY]{#1}{-40}{opacity=0.5,angle#1}
+%					\expPolarPlot[x=trialFromOrigoToExp3ReleasePositionX,y=trialFromOrigoToExp3ReleasePositionY]{#1}{-50}{opacity=0.5,angle#1}
+%					\expPolarPlot[x=trialFromOrigoToExp3ReleasePositionX,y=trialFromOrigoToExp3ReleasePositionY]{#1}{10}{opacity=0.5,angle#1}
+						
+				}
+				
+			}
+			%		\end{figure}
+			
+		}{
+		%		\begin{figure}
+		\hspace{0.5cm}		
+		
+		\expThreePlot{data/exp1/skewedCircles.csv}{Pca}{
+			
+			%		\drawCircles
+			
+			\expThreePlotRadials{data/exp1/skewedCircles.csv}
+			
+			\polarPlotDrawRadialsReversed			
+			\expThreePlotEllipse{data/exp1/skewedCircles.csv}		
+			%		\expThreePlotRadials{data/exp1/skewedCircles.csv}
+			
+			\expThreeForeachPcaRow[\DTLiseq{\target}{50}]{Pca}{
+				\draw (origin) node[cross, rotate around={-1*\circleAngle-45:(origin)}, color=\targetColor{50}!50!black]{};				
+			}
+			
+			%		\expPolarPlotAngles
+			
+			\pgfplotsinvokeforeach{0,30,60,90,120,150} {
+				\expPolarPlotAngleExpThree{#1}{opacity=0}
+				%				\expPolarPlotAngleExpThree{30}{opacity=0.5}
+				%				\expPolarPlotAngleExpThree{60}{opacity=0.5}
+				%				\expPolarPlotAngleExpThree{90}{opacity=0.5}
+				%				\expPolarPlotAngleExpThree{120}{opacity=0.5}
+				%				\expPolarPlotAngleExpThree{150}{opacity=0.5}
+			}
+			
+		}
+		%			\caption{TODO.}
+		%			\label{fig:expThreeSpaceWithSkewClean222222}
+		%		\end{figure}
+	}	
+	\end{centering}
+	\caption{How the final optimization relates to the estimation means of the past experiment two, from which is was conceived. Again, each point represents the averaged estimation location for some particular angle and target value. Our primary interest is the data contained within the  comfort zone (that is, all but the outer set of points). For these data, the modified space could appear to fare somewhat better.}
+	\label{fig:expThreeSpaceWithSkewClean}
+	%	\caption{}
+	%	\label{fig:TODO}
+\end{figure*}
+
+
+%\onecolumn
+
+\begin{figure*}[!ht]
+	\centering
+	%	\includegraphics{evaluationE2-5.pdf}
+	\vspace*{-1.7cm}
+	\begin{tikzpicture}[scale=2.3]		
+				\hspace*{-0.5cm}
+	\expPolarAxis{		
+		\polarPlotDrawRadials
+		\drawCircles		
+		
+		\coordinate (origin) at (axis cs:0,0);			    
+		%	\def\PPM{10} % i,e. 851
+		%%	\foreachTabbedCsvRowInPlot
+		\pgfplotsextra{\DTLforeach*[\DTLiseq{\target}{50}]{Pca}{\xc=x, \yc=y,\xr=xr,\yr=yr,\circleAngle=deg,\target=target,\circleRadius=circleRadius,\circleRadiusM=circleRadiusM}{	
+				\coordinate (circlePos) at ($(origin) + (\xc/\PPM, \yc/\PPM)$);
+				% circle at origin
+				\draw[color=gray!13,fill=gray!20, thick, fill opacity=0.5] (origin) ellipse [
+				x radius=\circleRadius/\PPM,
+				y radius=\circleRadius/\PPM
+				];
+			}}
+			
+			
+			%[xshift=5pt]
+			\pgfplotsinvokeforeach {0,30,60,90,120,150} {
+				\expPolarPlotReleaseDiff[xshift=-1pt, opacity=0.3]{#1}{angle#1}{trialFromTargetToReleaseVerticalLength}{north}
+				\expPolarPlotReleaseDiff[xshift=1pt]{#1}{angle#1}{trialFromTargetToExp3ReleaseVerticalLength}{south}
+			}				
+			%				\expPolarPlotReleaseDiff{0}{angle0}{trialFromTargetToReleaseVerticalLength}				
+			%				\expPolarPlotReleaseDiff{30}{angle30}{trialFromTargetToReleaseVerticalLength}
+			%				\expPolarPlotReleaseDiff{60}{angle60}{trialFromTargetToReleaseVerticalLength}
+			%				\expPolarPlotReleaseDiff{90}{angle90}{trialFromTargetToReleaseVerticalLength}
+			%				\expPolarPlotReleaseDiff{120}{angle120}{trialFromTargetToReleaseVerticalLength}
+			%				\expPolarPlotReleaseDiff{150}{angle150}{trialFromTargetToReleaseVerticalLength}
+			
+			
+			
+			
+		}	
+	\end{tikzpicture}
+	\caption{A revisit to the mean deviation wheel previously given in experiment two, but now showing the deviation means that would result if using the modified space. Again, each bar represents the mean of the sum of deviations for a particular angle and target value. Not all radials show improvement over the non-modified space (bars in fade), but the general picture does appear to be some reduction in deviation magnitude.}
+	\label{fig:expThreeComparingSpaces}
+\end{figure*}
+	
+	
+
+\begin{table*}[!hb]
+	\centering
+	\hspace{-4.5cm}
+	\twoFigure{
+		%		\begin{table}
+		\resizebox{9cm}{!}{		
+			\input{evalution-E2MeanDeviation}
+		}
+		\vspace*{0.2cm}
+		%		\end{table}
+	}{
+	\hspace{1.2cm}
+	\resizebox{11cm}{!}{		
+		\input{evalution-E3ModificationMeanDeviation}
+	}
+}
+\caption{Then mean target deviations and their accumulations, for both the optimized and non-optimized space. The left shows the non-optimized estimation data, repeated from  experiment two for comparison. The right shows how these deviations would look if the optimized space was to be used instead, with improvements indicated in percentage. Some radials and targets show great improvement, while only a few result in minor deterioration (again, the reader is reminded that positive targets reside in the upper/northern half of the space and negative are those in the bottom/south). }
+\label{table:expThreeDeviationsTable}	
+\end{table*}
+	
+	
+\onecolumn
+\twocolumn
+
+\subsubsection{Results}
+
+Six outliers were removed prior to the data review, using a hard limit of no more than 25 seconds for the duration of each trial\fn{In detail, these outliers correspond to target/angle pairs $(-20,0)$, $(-10,30)$, $(10,60)$, $(10,90)$,  $(30,30)$ and (40,0)}. Data for both primary and secondary indicators of the user experience was collected, as enumerated in the following.
+
+
+% OUTLIERS
+%6
+%
+% target: -40, angle:0)
+% , target: 10, angle:1.5707963267949
+%, target: -20, angle:0)
+% target: -10, angle:0.523598775598299)
+% target: 10, angle:1.0471975511966): 
+% target: 30, angle:0.523598775598299)
+ 
+\subsubsubsection{Primary indicators}
+ 
+ 
+In figure \ref{fig:expThreeDurationTimesWheel}, an overview is given that concurrently relates the change in durations for all angles and targets. The initial impression from this appears as positive, but minor improvements on all angles, except for the 0/180 degree line. Two general and opposing contributions are easily identified for the optimized space: these durations start out with  minor fluctuations, but seem to do modestly better than the non-modified space as targets goes towards the extreme ($\pm40$). 
+
+In more exact terms, table \ref{table:expThreeDurationTimesTable} numerically reveals where the greatest change occur. This confirms that the fluctuations for lower targets ($\pm10, 20$) do in fact underperform, but also that the modified space quickly picks up, with greatest gain in the south/lower half of the space (i.e. negative targets). There is significant gain on the lower extreme target (-40), possibly indicating that the modification has freed participants from colliding these physical input with their own body/waistline. 
+
+In terms of angles, the largest improvement ($10.27\%$) is seen the 90/270 degree line and visually correlating this with the previous figure  \ref{fig:expThreeDurationTimesWheel} indicates that the lower half of space is the sole contributor in this regard. Interestingly, the horizontal 0/180 line shows a slight deterioration ($-6.05\%$) - although one could expect the opposite, given that the modified space appeared to visually align very well with the estimations from experiment two (as previously shown in the left-hand side of figure \ref{fig:expThreeSpaceWithSkewClean}). Finally, the table shows an overall improvement of $5.24\%$ reduction in interaction time, a modest number presumed highly affected by the fluctuations for lower-valued targets.
+
+\subsubsubsection{Secondary indicators}
+
+While interaction time has here been chosen to serve as  the primary litmus test for the  quality of the user experience, we will also give some attention to secondary indicators, as was done in experiment one. First, there are virtually no subsequent touch  counts, as was also the case for the spherical interface in experiment one. However, there appears to be significant overshooting for the modified interface, as is depicted in figure  \ref{fig:expThreeOvershootComparison} and numerically supported by table \ref{table:expThreeOvershootComparisonTable}. In numbers, the modification does substantially worse, with a full $44.86\%$ overall increase in overshoot travel. Furthermore, there is significant variance between the different angles and targets, making it difficult to identify any clear patterns. This variance is likely exacerbated by the low number of participants and outliers removal, making any elaborate  attempts at interpretation somewhat speculative.
+
+
+\subsubsection{Discussion}
+
+With the new interface both visually and numerically appearing  to slightly reduce interaction times, the proposed modification does enhance the user experience, although not of revolutionary magnitude. However, the achieved gains also appear to be accompanied by significant overshooting, although this is likely a result of the ordering of interfaces in the experiment: the modification was evaluated after the non-modified space, i.e. the participants were required to immediately adjust to the change of space. Since such a switch must necessarily be based on adjusting to visual feedback (given inputs versus observed incremental map movements), it would likely have some initial impact on navigational precision - which would be reflected by some overshooting. If this viewpoint is true, this overshooting would be most pronounced in the initial stages of navigating towards a target value, i.e. before the user gets the chance to adjust the input to the observed effects. This corresponds to small target values (such as $\pm10, \pm20$), which are exactly where the modified interface shows increased overshooting.  
+
+
+With interaction times still showing as superior in spite of (presumably experimentally incurred) loss of precision as reflected by overshooting, even faster interactions may likely result if the modified space was to be evaluated more thoroughly and in isolation. The modification is therefore assumed to be a small, but true step towards an optimization, thereby confirming the hypothesis. A more elaborate exploration of this approach for modifying a spherical space, preferably based on evaluating data from a much greater number of test subjects, is left for future work.
+
+
+
+
+\begin{figure*}[!htb]
+	\centering
+	
+	\vspace*{-1.7cm}
+	%	\includegraphics{evaluationE2-5.pdf}
+%				\vspace*{10cm}
+	\begin{tikzpicture}[scale=2.4]		
+				\hspace*{-0.5cm}
+	\expPolarAxis{		
+		
+		
+		\coordinate (origin) at (axis cs:0,0);			    
+		%	\def\PPM{10} % i,e. 851
+		%%	\foreachTabbedCsvRowInPlot
+		\pgfplotsextra{\DTLforeach*[\DTLiseq{\target}{50}]{Pca}{\xc=x, \yc=y,\xr=xr,\yr=yr,\circleAngle=deg,\target=target,\circleRadius=circleRadius,\circleRadiusM=circleRadiusM}{	
+				\coordinate (circlePos) at ($(origin) + (\xc/\PPM, \yc/\PPM)$);
+				% circle at origin
+				\draw[color=gray!11,fill=gray!10, thick, fill opacity=0.5] (origin) ellipse [
+				x radius=\circleRadius/\PPM,
+				y radius=\circleRadius/\PPM
+				];
+			}}
+
+		\polarPlotDrawRadialsColorByAngle
+		\drawCircles[opacity=0.1]		
+
+			
+		%	\expOnePlot{
+		%		#1,
+		%		filter in={sessionName}{mean},
+		%		filter in={trialGroupName}{#2}, %\filter,		%Baseline-Horisontal		Baseline-DimsConcatenationAveraged					
+		%	}{x=trialTargetValue, y=trialDurationSeconds, y error=trialDurationSecondsConfidence,#3}
+					
+					
+		%			%[xshift=5pt]
+		%			\pgfplotsinvokeforeach {0,30,60,90,120,150} {
+		%				\expPolarPlotReleaseDiff[xshift=-1pt, opacity=0.3]{#1}{angle#1}{trialFromTargetToReleaseVerticalLength}{north}
+		%				\expPolarPlotReleaseDiff[xshift=1pt]{#1}{angle#1}{trialFromTargetToExp3ReleaseVerticalLength}{south}
+		%			}				
+			
+			
+		}	
+
+
+
+
+	\begin{axis}[
+		anchor=origin,
+		axis lines=none,
+%		xtick=\empty, ytick=\empty,				
+		xmax=55,
+		xmin=-55,
+		ymax=55,
+		ymin=-55,
+		enlargelimits=false,
+		axis equal, 
+		scale=0.94,
+		]
+		\pgfplotsinvokeforeach{0,30,60,90,120,150} {
+				
+
+
+				\addplot[		
+					rotate around={#1:(axis cs:0,0)},
+					visualization depends on={value \thisrow{trialUIAngleDegrees} \as \trialUIAngleDegrees},
+					visualization depends on={value \thisrow{trialDurationSeconds} \as \trialDurationSeconds},
+					visualization depends on={value \thisrow{trialTargetValue} \as \trialTargetValue},
+					mark size=0.5mm,
+					smooth,
+					%dashed,
+%					densely dotted,
+					bar width=2,
+					every node near coord/.append style={
+						/pgf/number format/fixed,
+						/pgf/number format/precision=5,
+						%						rotate=#1-90,%{Mod(#2,180)}, 
+						anchor=south west, %center
+						inner sep=2pt,
+						scale=0.45,
+						font=\tiny % \scriptsize\selectfont,							
+					},								
+					color=\angleColor{#1}!85!black!35,%\meanColor,
+					] 	
+					plot[
+					error bars/.cd, y dir = both, y explicit
+					,error mark options = { mark size = 0pt }
+					]
+					table[
+					meta=sessionName,
+					x=trialTargetValue, 
+					y=trialDurationSeconds, 
+%					y error=trialDurationSecondsConfidence,
+					filter in={trialUIAngleDegrees}{#1},					
+					filter in={trialIsExp3SpaceToBeUsed}{0},					
+					filter in={sessionName}{mean}					
+					] {\expThreeCsvFilepath};
+				
+				\addplot[		
+				rotate around={#1:(axis cs:0,0)},
+				mark size=0.1mm,
+				opacity=0.2,
+				only marks,
+				scatter,	
+				scatter/classes={
+					10=\targetColor{10},
+					20=\targetColor{20},
+					30=\targetColor{30},
+					40=\targetColor{40},
+					50=\targetColor{50},
+					-10=\targetColor{-10},
+					-20=\targetColor{-20},
+					-30=\targetColor{-30},
+					-40=\targetColor{-40},
+					-50=\targetColor{-50}
+				},				
+				color=\angleColor{#1}!95!black,%\meanColor,
+				] 	
+				plot[
+				error bars/.cd, y dir = both, y explicit,
+				,error mark options = { 
+					mark size = 0pt 
+					%							,\angleColor{#1}!80!black
+				}
+				]
+				table[
+				meta=trialUIAngleDegrees,
+				x=trialTargetValue, 
+				y=trialDurationSeconds, 
+				filter in={trialUIAngleDegrees}{#1},					
+				filter in={trialIsExp3SpaceToBeUsed}{0},					
+				filter in={sessionName}{mean}					
+				] {\expThreeCsvFilepath};
+				
+				
+				
+				\addplot[		
+					rotate around={#1:(axis cs:0,0)},
+				%			domain=-50:50,
+				%		error band,
+					visualization depends on={value \thisrow{trialUIAngleDegrees} \as \trialUIAngleDegrees},
+					visualization depends on={value \thisrow{trialDurationSeconds} \as \trialDurationSeconds},
+					visualization depends on={value \thisrow{trialTargetValue} \as \trialTargetValue},
+					mark size=0.5mm,
+			%		red,
+			%		ybar,
+%					ycomb,
+					smooth,
+					bar width=2,
+					every node near coord/.append style={
+						%			rotate around={#2-90:(axis cs:0,0)},
+						/pgf/number format/fixed,
+						/pgf/number format/precision=5,
+%						rotate=#1-90,%{Mod(#2,180)}, 
+						anchor=south west, %center
+						inner sep=2pt,
+						scale=0.7,
+						%			scale=9.
+						font=\tiny % \scriptsize\selectfont,							
+					},								
+					nodes near coords={
+						\color{\angleColor{#1}!75!black} \round[1]{\trialDurationSeconds}
+%						\scalebox{\calc{\trialTargetValue/10}}{\round[1]{\trialDurationSeconds}}
+					},		
+					color=\angleColor{#1}!95!black,%\meanColor,
+					] 	
+					plot[
+						error bars/.cd, y dir = both, y explicit,
+						,error mark options = { 
+							mark size = 0pt 
+%							,\angleColor{#1}!80!black
+							}
+						,error bar style={
+							line width=0.15pt, 
+							\angleColor{#1}!80!black
+%							dotted
+						}
+						]
+					table[
+					meta=sessionName,
+					x=trialTargetValue, 
+					y=trialDurationSeconds, 
+					y error=trialDurationSecondsConfidence,
+					filter in={trialUIAngleDegrees}{#1},					
+					filter in={trialIsExp3SpaceToBeUsed}{1},					
+					filter in={sessionName}{mean}					
+					] {\expThreeCsvFilepath};
+
+
+				\addplot[		
+					rotate around={#1:(axis cs:0,0)},
+					mark size=0.15mm,
+					opacity=0.5,
+					only marks,
+					scatter,	
+					scatter/classes={
+						10=\targetColor{10},
+						20=\targetColor{20},
+						30=\targetColor{30},
+						40=\targetColor{40},
+						50=\targetColor{50},
+						-10=\targetColor{-10},
+						-20=\targetColor{-20},
+						-30=\targetColor{-30},
+						-40=\targetColor{-40},
+						-50=\targetColor{-50}
+					},				
+					color=\angleColor{#1}!95!black,%\meanColor,
+					] 	
+					plot[
+					error bars/.cd, y dir = both, y explicit,
+					,error mark options = { 
+						mark size = 0pt 
+						%							,\angleColor{#1}!80!black
+					}
+					]
+					table[
+					meta=trialUIAngleDegrees,
+					x=trialTargetValue, 
+					y=trialDurationSeconds, 
+					filter in={trialUIAngleDegrees}{#1},					
+					filter in={trialIsExp3SpaceToBeUsed}{1},					
+					filter in={sessionName}{mean}					
+					] {\expThreeCsvFilepath};
+
+		
+		}
+	\end{axis}
+
+		\end{tikzpicture}
+		\caption{Differences in interaction durations between the optimized and non-optimized interface (the latter shown as faded). The duration for any angle and target is found by the perpendicular distance to the radial of same color. Duration scale is given by the numeric labels, shown for each target value of the optimized interface (in units of seconds). The two interfaces obviously come very close to each other, although with the optimized appearing to do slightly better overall as targets approach the new extreme ($\pm40$).}
+		\label{fig:expThreeDurationTimesWheel}
+\end{figure*}
+
+
+
+
+\begin{table*}[!hb]
+	\centering
+	\hspace{-4.5cm}
+	\twoFigure{
+		%		\begin{table}
+		\resizebox{9cm}{!}{		
+			\input{evalution-E3DurationsNonoptimized}
+		}
+		\vspace*{0.2cm}
+		%		\end{table}
+	}{
+		\hspace{1.2cm}
+		\resizebox{11cm}{!}{		
+			\input{evalution-E3DurationsOptimized}
+		}
+	}
+	\caption{Mean duration times (seconds) between the non-optimized interface, left, and the optimization, right. As can be seen by the relative changes (as indicated in percentage on the right), there are minor improvements for almost all angles and targets, as is also reflected by an overall reduction in interaction time.}
+	\label{table:expThreeDurationTimesTable}	
+\end{table*}
+
+
+
+\begin{figure*}[!htb]
+	\centering
+	\vspace*{-1.7cm}
+	%	\includegraphics{evaluationE2-5.pdf}
+	%				\vspace*{10cm}
+	\begin{tikzpicture}[scale=2.4]		
+	\hspace*{-0.5cm}
+	\expPolarAxis{		
+		
+		
+		\coordinate (origin) at (axis cs:0,0);			    
+		%	\def\PPM{10} % i,e. 851
+		%%	\foreachTabbedCsvRowInPlot
+		\pgfplotsextra{\DTLforeach*[\DTLiseq{\target}{50}]{Pca}{\xc=x, \yc=y,\xr=xr,\yr=yr,\circleAngle=deg,\target=target,\circleRadius=circleRadius,\circleRadiusM=circleRadiusM}{	
+				\coordinate (circlePos) at ($(origin) + (\xc/\PPM, \yc/\PPM)$);
+				% circle at origin
+				\draw[color=gray!11,fill=gray!10, thick, fill opacity=0.5] (origin) ellipse [
+				x radius=\circleRadius/\PPM,
+				y radius=\circleRadius/\PPM
+				];
+			}}
+			
+			\polarPlotDrawRadialsColorByAngle
+			\drawCircles[opacity=0.1]		
+			
+			
+			%	\expOnePlot{
+			%		#1,
+			%		filter in={sessionName}{mean},
+			%		filter in={trialGroupName}{#2}, %\filter,		%Baseline-Horisontal		Baseline-DimsConcatenationAveraged					
+			%	}{x=trialTargetValue, y=trialDurationSeconds, y error=trialDurationSecondsConfidence,#3}
+			
+			
+			%			%[xshift=5pt]
+			%			\pgfplotsinvokeforeach {0,30,60,90,120,150} {
+			%				\expPolarPlotReleaseDiff[xshift=-1pt, opacity=0.3]{#1}{angle#1}{trialFromTargetToReleaseVerticalLength}{north}
+			%				\expPolarPlotReleaseDiff[xshift=1pt]{#1}{angle#1}{trialFromTargetToExp3ReleaseVerticalLength}{south}
+			%			}				
+			
+			
+		}	
+		
+		
+		
+		
+		\begin{axis}[
+		anchor=origin,
+		axis lines=none,
+		%		xtick=\empty, ytick=\empty,				
+		xmax=55,
+		xmin=-55,
+		ymax=55,
+		ymin=-55,
+		enlargelimits=false,
+		axis equal, 
+		scale=0.94,
+		]
+		\pgfplotsinvokeforeach{0,30,60,90,120,150} {
+			
+			\def\overshootYScale{1}
+			\def\overshootYUnit{}
+			\def\overshootYKey{trialOvershootTravelRatioPercentage}
+						
+			
+			\addplot[		
+			rotate around={#1:(axis cs:0,0)},
+%			anchor=origin,
+			visualization depends on={value \thisrow{trialUIAngleDegrees} \as \trialUIAngleDegrees},
+			visualization depends on={value \thisrow{trialDurationSeconds} \as \trialDurationSeconds},
+			visualization depends on={value \thisrow{trialTargetValue} \as \trialTargetValue},
+			mark size=0.5mm,
+			smooth,
+			%dashed,
+			%					densely dotted,
+			bar width=2,
+			every node near coord/.append style={
+				/pgf/number format/fixed,
+				/pgf/number format/precision=5,
+				%						rotate=#1-90,%{Mod(#2,180)}, 
+				anchor=south west, %center
+				inner sep=2pt,
+				scale=0.45,
+				font=\tiny % \scriptsize\selectfont,							
+			},								
+			color=\angleColor{#1}!85!black!35,%\meanColor,
+			yscale=\overshootYScale,
+			y=\overshootYUnit
+			] 	
+			plot[
+			error bars/.cd, y dir = both, y explicit
+			,error mark options = { mark size = 0pt }
+			]
+			table[
+			meta=sessionName,
+			x=trialTargetValue, 
+			y=\overshootYKey, 
+			%					y error=trialDurationSecondsConfidence,
+			filter in={trialUIAngleDegrees}{#1},					
+			filter in={trialIsExp3SpaceToBeUsed}{0},					
+			filter in={sessionName}{mean}					
+			] {\expThreeCsvFilepath};
+			
+			
+%			\addplot[		
+%			rotate around={#1:(axis cs:0,0)},
+%			mark size=0.1mm,
+%			opacity=0.2,
+%			only marks,
+%			scatter,	
+%			scatter/classes={
+%				10=\targetColor{10},
+%				20=\targetColor{20},
+%				30=\targetColor{30},
+%				40=\targetColor{40},
+%				50=\targetColor{50},
+%				-10=\targetColor{-10},
+%				-20=\targetColor{-20},
+%				-30=\targetColor{-30},
+%				-40=\targetColor{-40},
+%				-50=\targetColor{-50}
+%			},				
+%			color=\angleColor{#1}!95!black,%\meanColor,
+%			yscale=\overshootYScale,
+%			y=\overshootYUnit
+%			] 	
+%			plot[
+%			error bars/.cd, y dir = both, y explicit,
+%			,error mark options = { 
+%				mark size = 0pt 
+%				%							,\angleColor{#1}!80!black
+%			}
+%			]
+%			table[
+%			meta=trialTargetValue,
+%			x=trialTargetValue, 
+%			y=\overshootYKey, 
+%			filter in={trialUIAngleDegrees}{#1},					
+%			filter in={trialIsExp3SpaceToBeUsed}{0},					
+%			filter in={sessionName}{mean}					
+%			] {\expThreeCsvFilepath};
+			
+			
+			
+			\addplot[		
+			rotate around={#1:(axis cs:0,0)},
+			%			domain=-50:50,
+			%		error band,
+			visualization depends on={value \thisrow{trialUIAngleDegrees} \as \trialUIAngleDegrees},
+			visualization depends on={value \thisrow{trialDurationSeconds} \as \trialDurationSeconds},
+			visualization depends on={value \thisrow{trialTargetValue} \as \trialTargetValue},
+			visualization depends on={value \thisrow{trialOvershootTravelRatio} \as \trialOvershootTravelRatio},
+			mark size=0.5mm,
+			%		red,
+			%		ybar,
+			%					ycomb,
+			smooth,
+			bar width=2,
+			every node near coord/.append style={
+				%			rotate around={#2-90:(axis cs:0,0)},
+				/pgf/number format/fixed,
+				/pgf/number format/precision=5,
+				%						rotate=#1-90,%{Mod(#2,180)}, 
+				anchor=south, %center
+				inner sep=2pt,
+				scale=0.7,
+				%			scale=9.
+				font=\tiny % \scriptsize\selectfont,							
+			},								
+			nodes near coords={
+				\color{\angleColor{#1}!75!black} \round[2]{\trialOvershootTravelRatio*100}
+				%						\scalebox{\calc{\trialTargetValue/10}}{\round[1]{\trialDurationSeconds}}
+			},		
+			color=\angleColor{#1}!95!black,%\meanColor,
+			yscale=\overshootYScale,
+			y=\overshootYUnit
+			] 	
+			plot[
+			error bars/.cd, y dir = both, y explicit,
+			,error mark options = { 
+				mark size = 0pt 
+				%							,\angleColor{#1}!80!black
+			}
+			,error bar style={
+				line width=0.15pt, 
+				\angleColor{#1}!80!black
+				%							dotted
+			}
+			]
+			table[
+			meta=sessionName,
+			x=trialTargetValue, 
+			y=\overshootYKey, 
+			y error=trialOvershootTravelRatioPercentageConfidence,
+%			y error={\overshootYKeyConfidence,
+			filter in={trialUIAngleDegrees}{#1},					
+			filter in={trialIsExp3SpaceToBeUsed}{1},					
+			filter in={sessionName}{mean}					
+			] {\expThreeCsvFilepath};
+			
+			
+			\addplot[		
+			rotate around={#1:(axis cs:0,0)},
+			mark size=0.15mm,
+			opacity=0,
+			only marks,
+			scatter,	
+%			scatter/classes={
+%				10=\targetColor{10},
+%				20=\targetColor{20},
+%				30=\targetColor{30},
+%				40=\targetColor{40},
+%				50=\targetColor{50},
+%				-10=\targetColor{-10},
+%				-20=\targetColor{-20},
+%				-30=\targetColor{-30},
+%				-40=\targetColor{-40},
+%				-50=\targetColor{-50}
+%			},				
+			color=\angleColor{#1}!95!black,%\meanColor,
+			fill=\angleColor{#1}!95!black,%\meanColor,
+			yscale=\overshootYScale,
+			y=\overshootYUnit
+			] 	
+			plot[
+			error bars/.cd, y dir = both, y explicit,
+			,error mark options = { 
+				mark size = 0pt 
+				%							,\angleColor{#1}!80!black
+			}
+			]
+			table[
+%			meta=trialUIAngleDegrees,
+			x=trialTargetValue, 
+			y=\overshootYKey, 
+			y error=trialOvershootTravelRatioPercentageConfidence,
+			filter in={trialUIAngleDegrees}{#1},					
+			filter in={trialIsExp3SpaceToBeUsed}{1},					
+			filter in={sessionName}{mean}					
+			] {\expThreeCsvFilepath};
+			
+			
+		}
+		\end{axis}
+		
+		\end{tikzpicture}
+		\caption{As the previous figure \ref{fig:expThreeDurationTimesWheel}, but for targets overshoot instead. These values of the optimized interface are given in percentage for each target.}
+		\label{fig:expThreeOvershootComparison}
+\end{figure*}
+
+\begin{table*}[!hb]
+	\centering
+	\hspace{-4.5cm}
+	\twoFigure{
+		%		\begin{table}
+		\resizebox{9cm}{!}{		
+			\input{evalution-E3ModificationMeanOvershoot}
+		}
+		\vspace*{0.2cm}
+		%		\end{table}
+	}{
+	\hspace{1.2cm}
+	\resizebox{11cm}{!}{		
+		\input{evalution-E3ModificationMeanOvershootOptimized}
+	}
+}
+\caption{Mean overshoot percentages between the non-optimized interface, left, and the optimization, right. Besides the accumulated totals, the means (of means) are also shown, since these units are in percentage.  As can be seen, there is significant variance across the board in terms of improvement, as indicated by the relative changes in the right table.}
+\label{table:expThreeOvershootComparisonTable}	
+\end{table*}
+
+
+%
+%TODO:Parameter sweeping
+%
+%small targets irrelevant -> overall improvement
+

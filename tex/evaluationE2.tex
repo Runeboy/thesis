@@ -1,0 +1,424 @@
+\subsection{Experiment two: learning the sphere}
+
+Having determined the spherical interface as the most optimal, it was desired to explore this spatial definition in more detail. That is, we would like to learn how well users' expectations of the space relate to the idea of a simple sphere. Participants were therefore asked to complete a variant of the task that systematically investigates their perception of spatial targets versus their the true projections, as currently defined by the spherical interface.
+
+\subsubsection{Tasks}
+
+Participants were asked to perform estimations in a two-dimensional task, for combinations of target values and line angles that  correspond to dividing the entire spherical input space into a circular grid. This grid and  distribution of target  values is shown in \ref{figure:expTwoTargetLocations}. The task was then to position the input (finger) on the spatial location that corresponds to the requested target value on some line angle, as the participant perceived it.
+
+\begin{figure}[!ht]
+	%	\def\domainMax{1.2}
+	\centering
+	\begin{tikzpicture}[scale=0.95]	
+	\expPolarAxis[			
+	extra y tick labels={ 0.5m, 0, -0.5m},					
+	y dir=reverse,  %%% REVERSE BECAUSE TRACKER VIEWS FROM OPPOSITE SIDE!
+	%			extra y tick labels=,	
+	%				hide y axis,ymajorgrids=true,yminorgrids=true,
+	]{		
+		\coordinate (origin) at (axis cs:0,0);			    
+		
+		\drawCircles
+		
+		\plotPolarTargetValues
+		
+		\begin{scope}[yscale=-1] 
+		\polarPlotDrawRadials 
+		\end{scope}			
+		
+		\drawOnscreenDims			
+	}		
+	\end{tikzpicture}
+	\caption{The mesh of target values for experiment two, defined by the dividing of the input space into a circular grid with origo at the zero target value. As can be seen, the grid has  radials for every 30 degrees and target values for every $0.1$ meter. The rectangle at the center corresponds to the exact dimension of the on-screen input space (as derived during the calibration process). Both major grid axes align with the device form factor, such that the viewpoint corresponds to a top-down view of the plane spanned by the device.  Note the color coding convention introduced to clearly distinguish equivalent target values, a visual aid that will be used recurrently henceforth. }
+	\label{figure:expTwoTargetLocations}				
+\end{figure}
+
+
+
+\subsubsection{Input interfaces}
+
+The participants only interfaced through the spherical definition of space for estimating targets in off-screen space. However, no visual feedback of the input was given, as the very objective was to estimate locations without any attempts to conform to the interface.
+
+ 
+\subsubsection{Trial design}
+
+The variation of the experimental task was identical to that used in experiment one, except there were now two dimensions and $\ifrac{180\degree}{30\degree}=6$ differently angled input lines (each line corresponding to two opposing and aligned radials). For the angling of any line, the positive range was placed on the top-most radial and the negative range on the opposing bottom, under the assumption that this ordering was intuitive to most users. Also, all combinations of angles and target values were randomized using the same seeding technique as in experiment one.
+
+Although no visual feedback was to be given, some indicator of trial initiation was considered meaningful. To provide this in an intuitive manner, the movement of entities was reversed, such that the bulls eye now followed the user's input, with the trial line remaining fixed instead. Hence, to initiate an estimation trial, the participant touched the screen once, after which the bulls eye began to follow the finger, quickly sliding out of view as the user's finger moved outside the boundaries of the display (to perform the estimation).
+
+A total of 5 participants $\times$ 1 interface $\times$ 6 angles $\times$ 10 targets were estimated, yielding a total recording of 300 trials. % 5 x 1 x 1 x 60
+
+\subsubsection{Procedure and participants}
+
+Similarly to the previous experiment, the same set of participants were given demonstrations, practice trials and clearly advised that their intuition of target locations was the primary intention of the experiment, rather than completion time. Participants touched the on-screen space to initiate a trial, then moved to their chosen point of estimation and used a clicker to indicate completion with the non-interacting hand.
+
+%All american participants informed about dimension of information space : 1m approx 40 inch
+
+\subsubsection{Hypothesis}
+
+It was hypothesized that users' assumption of space is closely tied to the spherical motion of the arm, but that actual interaction represents some departure from this ideal, due to the interplay of complex and unknown factors. That is, reality is presumed much more intricate for a variety of reasons,  such as obstruction of view and the complex interactions between the joints of the arm. %Hence, the true space was assumed to be spherical to some degree, but skewed, scaled and possible rotated around a mean not necessarily centered at the projection point of the shoulder (as has been the sphere definition so far).
+
+\subsubsection{Results}
+
+To obtain an initial grasp on the three-dimensional data and any potential patterns contained within it, we will seek to perform various visualizations.
+
+\subsubsubsection{View of raw data}
+
+Figure \ref{fig:expTwoViewPoints} shows the data color coded for each participant and from a multitude of angles. Here, it is seen that the input for all of them do in fact follow some degree of curvature around the device, both for the horizontal and vertical dimension. The data sets also differ significantly. Two of them, as indicated by violet and blue, provide vastly different takes on the input space. The first provides a close to planar input and the latter a more spherical. One of these  even goes well beyond the extremums of the scale. This has a reasonable explanation however, as the participant was observed moving a few steps from the device, in order to provide these off-scale inputs. While being an instance of unintended user behavior, it was left uninterrupted - and none of the other participants took similar "off-road" approach. 
+
+Also seen from the top-view (bottom) of the figure, is that the input appear to be heavily skewed towards the south-west corner of the plane spanned by the device. Conversely the north-west corner is noticeably void of points. In addition, the side-view (center row) clearly reveals that participants are quick to depart out from the plane normal in the northern region, but much less so in the south. This could possibly be due to the obstruction of the body and a reluctance to pull the hand up towards the chest area, since that is an awkward and strenuous motion. These observations combined suggest a space that is not centered at the exact origo and one that does not have equivalent shapes in the northern and southern regions of the off-screen space.
+
+%\begin{figure}[!ht]
+%	\centering
+%	\begin{tikzpicture}%[rotate=90]
+%	\expOneScatterPlot{Spherical-TwoDimensional-Estimation}{trialTargetValue}{trialReleasePositionTargetDiff}{}{ylabel={Estimation value}, ymin=-55, ymax=55,\plotOptionRotateAroundOrigin{10}}
+%	\end{tikzpicture}	
+%	\caption{TEEEEESTING!!!!}
+%	\label{figure:expTwoTwoDimSphericalDuration22222}			
+%\end{figure}
+%
+
+
+%\begin{figure}[!ht]
+%	\centering
+%	\expScatterPlot{\expOneCsvFilepath}{
+%		discard if not={trialMoveBullsEyeInsteadOfMap}{1},
+%		discard if not={trialMode}{TwoDimensional},
+%		discard if not={trialProjectionMode}{PlaneNormal},
+%	}{}{}
+%	%	\expOnePlot{data/exp1/Estimations--(\expParticipants)--PlaneNormal--TwoDimensional.csv}{}
+%	\caption{ESTIMATION: TwoDimensional, PlaneNormal}
+%	%	\caption{Directional, vertical,PlaneNormal.}
+%	\label{figure:expOneTwoDim3}			
+%\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\pgfplotstableread{\expTwoPolarCsvFilepath}{\expTwoData}
+
+
+%\begin{figure*}[!ht]
+%	\vspace*{-1cm}
+%	%	\def\domainMax{1.2}
+%	\centering
+%%	\begin{minipage}[t][5cm][t]{\textwidth}
+%%	\end{minipage}
+%%	\fullPageReleaseSpacePlots{\releaseSpacePlotAllParticipants{}{}}
+%	%	\end{scaletikzpicturetowidth}
+%	\caption{The total set of collected estimations with respect to the axis formed by the device and with the data  color coded for each participant. The on-screen space is shown as a red rectangle and with choice of axis as if the device is lying flat down in the origo. The z-axis then represents perpendicular distance from the device plane and the x and y axes represent horizontal and vertical dimensions respectively. To provide spatial orientation of the data patterns, three different views are shown. The top row present a perspective on the horizontal dimension (as if the viewer is kneeling down and viewing the device in profile). The  middle row inspects the vertical dimension (as if viewing the device in profile from the right-hand side). The bottom row presents a top-down view (as if the view point is straight on the device).}
+%	\label{fig:expTwoViewPoints}			
+%	\hspace*{-1cm}
+%	\includegraphics{evaluationE2-1.pdf}
+%\end{figure*}
+%
+%
+%%\newpage
+%%\begin{figure*}[!b]
+%%%	\centering
+%%\end{figure*} 
+%
+%\begin{figure*}[!t]
+%%	\vspace*{-1cm}
+%	\centering
+%	\caption{As the previous figure \ref{fig:expTwoViewPoints}, but with color codings for each (absolute) target value.}
+%	\label{fig:expTwoViewPointsByTarget}			
+%	\hspace*{-1cm}
+%%	\includepdf{evaluationE2-2.pdf}
+%	\includegraphics{evaluationE2-2.pdf}
+%\end{figure*} 
+%%\ \newpage
+
+We may also want to investigate the data color coded by target values instead, as shown by figure \ref{fig:expTwoViewPointsByTarget}. From here, it is seen that the estimations vary  little for small targets, but slowly increase and become severely scattered for the extremes. This trend of dispersion appear most pronounced in the south-east corner. Correlating this with the previous figure \ref{fig:expTwoViewPoints}, it could appear that participants struggle more or less with achieving consistent estimations in this south-east region.
+
+\begin{figure}[!ht]	
+	\centering
+	\begin{tikzpicture}[scale=1.2]
+			\hspace*{-0.5cm}
+	\expPolarAxis[		
+	extra y tick labels={ 0.5m, 0, -0.5m},					
+	y dir=reverse,  %%% REVERSE BECAUSE TRACKER VIEWS FROM OPPOSITE SIDE!		
+	]{	
+		\drawCircles
+		
+		\plotReleasePositionsColorByTarget %[filter in={trialIsStatistic}{1}]			
+		
+%		\plotPolarTargetValues	
+		
+%		\expPolarPlotAngles
+		
+		\begin{scope}[yscale=-1] % to get the axis labels positioned correctly
+		\polarPlotDrawRadials				
+		\end{scope}						
+		
+%		\drawOnscreenDims
+		%			\plotPcaRings	
+		
+	}	
+	\end{tikzpicture}
+	\caption{The estimated locations obtained from projecting each data point using the spherical interface, here color coded by absolute target value. As opposed to the top-down view of the "raw" data, height now has influence on the end location, which makes for a slightly different picture. In addition, the projection center is now the projected location of the shoulder onto the plane spanned by the device. As such, the device is not exactly in origo from this (projection) viewpoint, but should theoretically be slightly dislocated towards the north-west quadrant (since all participants are interacting with the right hand).}
+	\label{fig:expTwoProjectedData}				
+\end{figure}
+
+\def\sphereProjectNote{To ensure that the reader follows, the two-dimensional view of spherical projections has an analogue in the "stretching out" of a globe onto a plane, which results in amplification of surface area. Hence, any point not in the center of the sphere will obviously have height greater than zero from the device plane and therefore show greater dislocation from this center, when compared to a top-down view of the same data in the actual space.}
+
+\subsubsubsection{View of projected data}
+
+To expand on the analysis, we now relate the data to their resulting projections in the spherical interface, as shown in figure \ref{fig:expTwoProjectedData}. If the spherical interface has been used in an ideal fashion, the resulting locations should show a higher degree of dispersion, compared to the "raw" top-down view, due to the added effect of height\fn{\sphereProjectNote}. What we see instead though, is somewhat equivalent density on the south-west to north-east line and  a pattern of slightly more compaction on the perpendicular north-west to south-east line. This may  indicate that the true space is compressed. To expand lightly on this,  at least one likely contributing factor would be easy to identify: the joint of the interacting arm does not have constant flex. More precisely, the arm will have some natural flex when pointing  directly at the screen, but slowly extend and eventually reach zero as the arm travels from the origo and towards the extreme target values. This effectively corresponds to a sphere of greater radius than defined by the interface, causing the user to undershoot slightly (which translates to greater compaction in the projections, as visualized here). 
+
+
+
+
+%\newpage
+%\pagebreak
+
+\onecolumn
+
+\begin{figure*}[!ht]
+	\vspace*{-1cm}
+	%	\def\domainMax{1.2}
+	\centering
+	%	\begin{minipage}[t][5cm][t]{\textwidth}
+	%	\end{minipage}
+	%	\fullPageReleaseSpacePlots{\releaseSpacePlotAllParticipants{}{}}
+	%	\end{scaletikzpicturetowidth}
+	\caption{The total set of collected estimations with respect to the axis formed by the device and with the data  color coded for each participant. The on-screen space is shown as a red rectangle and with choice of axis as if the device is lying flat down in the origo. The z-axis then represents perpendicular distance from the device plane and the x and y axes represent horizontal and vertical dimensions respectively. To provide spatial orientation of the data patterns, three different views are shown. The top row present a perspective on the horizontal dimension (as if the viewer is kneeling down and viewing the device in profile). The  middle row inspects the vertical dimension (as if viewing the device in profile from the right-hand side). The bottom row presents a top-down view (as if the view point is straight on the device).}
+	\label{fig:expTwoViewPoints}			
+	\hspace*{-1cm}
+	\includegraphics{evaluationE2-1.pdf}
+\end{figure*}
+
+
+%\newpage
+%\begin{figure*}[!b]
+%%	\centering
+%\end{figure*} 
+
+\begin{figure*}[!ht]
+	%	\vspace*{-1cm}
+	\centering
+	\caption{As the previous figure \ref{fig:expTwoViewPoints}, but with color codings for each (absolute) target value.}
+	\label{fig:expTwoViewPointsByTarget}			
+	\hspace*{-1cm}
+	%	\includepdf{evaluationE2-2.pdf}
+	\includegraphics{evaluationE2-2.pdf}
+\end{figure*} 
+%\ \newpage
+
+
+\twocolumn
+
+
+\vspace*{-1.3cm}
+
+\subsubsubsection{Mean projection deviations}
+
+
+
+\begin{figure*}[!htb]	
+	\begin{centering}
+		\vspace*{-1.3cm}	
+		\hspace*{-1cm}			
+		\twoFigure{		
+			\hspace*{-1cm}
+			%			\includegraphics{evaluationE2-3.pdf}			
+			\begin{tikzpicture}[scale=1.2]
+			%		\hspace*{-0.22cm}
+			\expPolarAxis[		
+			extra y tick labels={ 0.5m, 0, -0.5m},					
+			y dir=reverse,  %%% REVERSE BECAUSE TRACKER VIEWS FROM OPPOSITE SIDE!		
+			]{	
+				\drawCircles
+				
+				\plotPolarTargetValues	
+				
+				\expPolarPlotAngles
+				
+				\begin{scope}[yscale=-1] % to get the axis labels positioned correctly
+				\polarPlotDrawRadials				
+				\end{scope}						
+				
+				%							\drawOnscreenDims
+				%			\plotPcaRings
+				
+			}	
+			\end{tikzpicture}
+		}{
+		\hspace{0.5cm}
+		%			\includegraphics{evaluationE2-4.pdf}				
+		\begin{tikzpicture}[scale=1.2]	
+		\expPolarAxis[			
+		extra y tick labels={ 0.5m, 0, -0.5m},					
+		y dir=reverse,  %%% REVERSE BECAUSE TRACKER VIEWS FROM OPPOSITE SIDE!
+		%			extra y tick labels=,	
+		%				hide y axis,ymajorgrids=true,yminorgrids=true,
+		]{		
+			\drawCircles
+			
+			
+			
+			\expPolarPlotAngleAlt{0}
+			\expPolarPlotAngleAlt{30}
+			\expPolarPlotAngleAlt{60}
+			\expPolarPlotAngleAlt{90}
+			\expPolarPlotAngleAlt{120}
+			\expPolarPlotAngleAlt{150}
+			
+			\begin{scope}[yscale=-1] 
+			\polarPlotDrawRadials 
+			\end{scope}			
+			
+			%						\drawOnscreenDims
+			
+			%				\draw[
+			%				%	rotate=deg(\an),
+			%				color=blue,very thick] (axis cs:0,0) ellipse [x radius=40.58140,y radius=32.07781,
+			%%				rotate around={deg(148):(9.4,28.8)}
+			%				%				rotate around={deg(148):(50,0)}
+			%				];
+			
+			%				\draw[dashed, ->, color=brown,very thick] (origin) -- +(100,100); 			
+			%				\draw[dashed, ->, color=pink,very thick] (origin) -- +(10,10); 
+			
+			%				\draw[color=blue,very thick] ($(origin) + (5.0, 4.7)$) ellipse [x radius=57,y radius=65,
+			%				rotate around={deg(17):(5.0,4.7)}
+			%				%				rotate around={deg(148):(50,0)}
+			%				];
+			
+			
+			
+			
+			%			\draw[
+			%			%	rotate=deg(\an),
+			%			color=orange,very thick] (axis cs:0,28.8) ellipse [x radius=405.8140,y radius=320.7781,
+			%			rotate around={deg(148):(9.4,28.8)}
+			%			%				rotate around={deg(148):(50,0)}
+			%			];
+			
+		}		
+		\end{tikzpicture}
+	}
+\end{centering}
+\caption{The mean estimations of target values versus their "true" locations in the grid.  Each point represents the averaged estimation location for the particular angle and target value. On the left-hand side, each estimation mean is color-coded by target value and an arrow indicates the error, i.e. the magnitude and direction towards the true location. The plot on the right-hand side is identical, except color coding is by line angle instead.}
+\label{fig:expTwoMeanDeviations}				
+\end{figure*}
+
+
+Attempting to generalize on the projection data by viewing all data points at once is overwhelming. Instead, we may derive and visualize the mean target deviations and  how much "off" they are from the corresponding grid targets. This is illustrated in figure \ref{fig:expTwoMeanDeviations}, which shows that there are indeed large differences. Notably, the participants appear to estimate too far right  of the 90 degree radial and too far left on the  opposite 270 degree radial. Such symmetry also applies somewhat to other angles as well and in a systematic way that suggests spatial compression and rotation. Also apparent, is the reluctance of participants to interact in the far north-west corner, as is implicit by the means of this region all being closely compacted and in close proximity to the origo. %One potential reason for this is that, since the sphere center is indeed anchored by the projection of the shoulder, most projection points will appear   may be that the sphere 
+
+
+
+
+
+\begin{figure}
+	\centering
+	\hspace*{-1cm}							
+	%	\includegraphics{evaluationE2-5.pdf}
+	\begin{tikzpicture}[scale=1.1]		
+	%			\hspace*{-1cm}
+	\expPolarAxis{		
+		\polarPlotDrawRadials
+		\drawCircles		
+		
+		\coordinate (origin) at (axis cs:0,0);			    
+		%	\def\PPM{10} % i,e. 851
+		%%	\foreachTabbedCsvRowInPlot
+		\pgfplotsextra{\DTLforeach*[\DTLiseq{\target}{50}]{Pca}{\xc=x, \yc=y,\xr=xr,\yr=yr,\circleAngle=deg,\target=target,\circleRadius=circleRadius,\circleRadiusM=circleRadiusM}{	
+				\coordinate (circlePos) at ($(origin) + (\xc/\PPM, \yc/\PPM)$);
+				% circle at origin
+				\draw[color=gray!13,fill=gray!20, thick, fill opacity=0.5] (origin) ellipse [
+				x radius=\circleRadius/\PPM,
+				y radius=\circleRadius/\PPM
+				];
+			}}
+			
+			
+			%[xshift=5pt]
+			\pgfplotsinvokeforeach {0,30,60,90,120,150} {
+				\expPolarPlotReleaseDiff[xshift=0pt, opacity=1]{#1}{angle#1}{trialFromTargetToReleaseVerticalLength}{north}
+				%					\expPolarPlotReleaseDiff[xshift=1pt]{#1}{angle#1}{trialFromTargetToExp3ReleaseVerticalLength}{south}
+			}				
+			%				\expPolarPlotReleaseDiff{0}{angle0}{trialFromTargetToReleaseVerticalLength}				
+			%				\expPolarPlotReleaseDiff{30}{angle30}{trialFromTargetToReleaseVerticalLength}
+			%				\expPolarPlotReleaseDiff{60}{angle60}{trialFromTargetToReleaseVerticalLength}
+			%				\expPolarPlotReleaseDiff{90}{angle90}{trialFromTargetToReleaseVerticalLength}
+			%				\expPolarPlotReleaseDiff{120}{angle120}{trialFromTargetToReleaseVerticalLength}
+			%				\expPolarPlotReleaseDiff{150}{angle150}{trialFromTargetToReleaseVerticalLength}
+			
+			
+			
+			
+		}	
+		\end{tikzpicture}
+		\caption{A compact illustration that captures the mean deviations and corresponding confidence values (with deviation defined as Euclidean distance from estimation to target). All bars are color coded by angle, with each capturing the mean of the sum of deviations for the target at its base. Hence, these magnitudes then also capture any scatter around the true location, as opposed to the previous figure \ref{fig:expTwoMeanDeviations}.  The numeric values for mean and confidence values are given underneath each bar and in that order.}
+		\label{fig:expTwoMeanBars}
+	\end{figure}
+
+
+To gain a better sense of the magnitude of the deviations, we will investigate using both intuition and hard numbers. Figure \ref{fig:expTwoMeanBars} provides the former in the form of a visual overview and table \ref{table:expTwoDeviationTable} the latter by the listing of numerical values. From the visual impression, the correlation between the estimation error and target values could appear linear, although  clearly not  applicable to all the data. In general however, the estimations begin to fluctuate with increasing proximity to the target range extremities, indicating that these may have been out of reach. Three of the participants gave explicit feedback in support of this view. Furthermore, the numerical data show almost a full doubling in mean deviation between the two extreme targets (-40 versus -50  and 40 versus 50). Also, the fluctuations could seem to occur for all but the compact north-east region and the trend becoming severely pronounced in opposing south-east region. Worst appears to be the latter, which shows a full 0.27 meter deviation from the extreme target (-50) on the 330 degree radial, supporting the idea of significant variance in that region. Hence, with the general pattern of overly pronounced fluctuations in the vicinity of extremums, these outer targets (40 and 50) are likely beyond the physical reach of the participants.
+
+
+\begin{table}[!hb]
+	\centering
+%	\hspace{-4.5cm}
+	\resizebox{8cm}{!}{		
+		\input{evalution-E2MeanDeviation}
+	}
+	\caption{The mean deviations and their various accumulations (the reader is reminded that positive targets reside in the upper/northern half of the space and negative those in the bottom/south by design).}
+ 	\label{table:expTwoDeviationTable}				
+\end{table}
+
+
+\subsubsubsection{Principal components for each target}
+
+As has now been determined, the participants' perception of space is indeed spherical, but does not follow the input interface in the ideal manner. In more detail, there could appear to  be some compression, rotation and translation from the origo. 
+
+%While the total sum of projected points theoretically constitute a grid-pattern rather than a Gaussian distribution around the mean, 
+To approach a more concrete interpretation of the data, we will employ the heavier tool of principal component analysis. We will assume Gaussian noise for the fluctuations that occur around the absolute target values, i.e. the "rings" formed by the points for each such data set. In addition, we'll discard outliers based on  deviation from the target, i.e. the distance from the estimation and to the target location. An outlier analysis was therefore performed for each grouping of trials (with equivalent angles and target values). Extreme cases were identified,  understood as three interquartile ranges above the upper quartile (Q3) or below the lower (Q1). These outliers were not removed, but rather replaced with the mean of the non-outliers, so as to retain the weighting of the data points in the analysis\fn{ In numbers, four values were identified as outliers,  corresponding to target/angle pairs $(-50,150)$, $(-50,120)$, $(30,0)$ and $(40,120).$}.
+
+Deriving the principal components for each target value results in the picture shown in figure \ref{fig:expTwoMeansVersusTargets}. As can be seen by the means, there is a pattern of downward dislocation that increases by target value. This indicates that the location of the mean is in fact dynamic, in that it depends on the distance from origo. As for the observed scale and rotation, the components of the smaller targets do not exhibit any significant structure. The outer does, however, and paints a clear picture of a space that is rotated 34.6 degrees, which appear to align well with the visually observed patterns of the data. %This corresponds well in terms of the general direction and rotation of the data patterns.  
+
+%interpretation is not straight-forward, but . 
+
+
+
+
+\begin{figure}[!ht]	
+	\centering
+				\hspace*{-1cm}			
+	%		\twoFigure{		
+	%			%		\hspace*{-0.22cm}
+	\begin{tikzpicture}[scale=1.2]
+	%		\hspace*{-0.22cm}
+	\expPolarAxis[		
+	extra y tick labels={ 0.5m, 0, -0.5m},					
+	y dir=reverse,  %%% REVERSE BECAUSE TRACKER VIEWS FROM OPPOSITE SIDE!		
+	]{	
+		
+		\begin{scope}[yscale=-1] 
+		\polarPlotDrawRadials 
+		\end{scope}			
+		
+		
+		\plotReleasePositionsColorByTarget			
+		
+		%		\coordinate (origin) at (axis cs:0,0);			    
+		
+		\plotPcaRings
+		
+		\drawOnscreenDims
+	}	
+	\end{tikzpicture}
+	\caption{The result of applying principal component analysis to five sets of point projections, formed by grouping on absolute target values. The intersects of principle components for each set is shown by the perpendicular lines (crosses) at the corresponding means.}
+	\label{fig:expTwoMeansVersusTargets}				
+\end{figure}
+
+
+
+\subsubsection{Discussion}
+
+
+The data collected, and the interpretations that were derived from it, did indeed indicate a space much more complex than what is captured by the simple definition of a sphere, as was the hypothesis. Hence, the spherical interface may very well be a good approximation of the true input space, but also one that does not capture essential details, such as compression, rotation, scale and translation from the origo, all properties which the data suggest exist. Furthermore, the magnitude of these effects could appear to be correlated with the projection distance from the origo. That is, the space appears circular and centered at the origo for the initial small target values and expands into increasingly elliptical form with greater dislocation from the origo as the targets increase.  This clearly makes conforming to such projection space less than straight-forward, because it then has a "third dimension" of dynamic curvature. Also, the input appeared to become fluctuant and incoherent for the  extreme target values (40 and 50), possibly indicating that these are physically out of reach. As such, the experiment has confirmed the hypothesis, but leaves any more exact definition of the true input space  open for interpretation.
+
+
+
+

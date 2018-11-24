@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D6D95CE-4EA9-47AC-88B9-351D06B58638}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Airswipe.WinRT.Core</RootNamespace>
+    <AssemblyName>Airswipe.WinRT.Core</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Data\CsvDoStatsAttribute.cs" />
+    <Compile Include="Data\CsvIgnoreAttribute.cs" />
+    <Compile Include="Data\CsvIsIndexAttribute.cs" />
+    <Compile Include="Data\CsvModifyAttribute.cs" />
+    <Compile Include="Data\CsvPcaXAttribute.cs" />
+    <Compile Include="Data\CsvPcaYAttribute.cs" />
+    <Compile Include="Data\Dto\DuplicateTrialAttribute.cs" />
+    <Compile Include="Data\Dto\MyDataTable.cs" />
+    <Compile Include="Data\Dto\PlaneBase.cs" />
+    <Compile Include="Data\Dto\PointBase.cs" />
+    <Compile Include="Data\Dto\ProjectedXYPoint.cs" />
+    <Compile Include="Data\Dto\TrialSession.cs" />
+    <Compile Include="Data\Dto\TrialSessionBase.cs" />
+    <Compile Include="Data\Exp3PointMapper.cs" />
+    <Compile Include="Data\MyPCA.cs" />
+    <Compile Include="Data\OutlierLimitAttribute.cs" />
+    <Compile Include="Data\ProjectedPlanePoint.cs" />
+    <Compile Include="Data\ProjectedSpatialPoint.cs" />
+    <Compile Include="Data\Dto\RectangleBase.cs" />
+    <Compile Include="Data\Dto\RectLinePoints.cs" />
+    <Compile Include="Data\MatrixExpert.cs" />
+    <Compile Include="Data\PointComponents.cs" />
+    <Compile Include="Data\Rectangle.cs" />
+    <Compile Include="Data\Dto\Circle.cs" />
+    <Compile Include="Data\Dto\XYRect.cs" />
+    <Compile Include="Data\RectLineBoundary.cs" />
+    <Compile Include="Data\SpatialRectangle.cs" />
+    <Compile Include="Data\TrackerTypes.cs" />
+    <Compile Include="Data\TrialSessionType.cs" />
+    <Compile Include="Log\ILogger.cs" />
+    <Compile Include="Log\LogEvent.cs" />
+    <Compile Include="Log\LogEventDebugWriter.cs" />
+    <Compile Include="Log\LogEventListener.cs" />
+    <Compile Include="Log\LogFormatter.cs" />
+    <Compile Include="Log\LogTraceEventSource.cs" />
+    <Compile Include="Log\TypeLogger.cs" />
+    <Compile Include="Misc\DistanceExpert.cs" />
+    <Compile Include="Data\PointLocation.cs" />
+    <Compile Include="Data\Dto\ProjectedXYZPoint.cs" />
+    <Compile Include="Data\Dto\XYZPoint.cs" />
+    <Compile Include="Misc\DTOJsonConverter.cs" />
+    <Compile Include="Misc\GeometryExpert.cs" />
+    <Compile Include="Data\RectJointBoundary.cs" />
+    <Compile Include="Data\PlaneProjection.cs" />
+    <Compile Include="Data\SpatialPoint.cs" />
+    <Compile Include="Data\PlanePoint.cs" />
+    <Compile Include="Data\Dto\XYPoint.cs" />
+    <Compile Include="Data\SpatialPlane.cs" />
+    <Compile Include="Data\TypedSpacialPoint.cs" />
+    <Compile Include="Data\Dto\XYZRect.cs" />
+    <Compile Include="Fitting\ConstrainedLeastSquareFit.cs" />
+    <Compile Include="Misc\MathExpert.cs" />
+    <Compile Include="Misc\RandomExtension.cs" />
+    <Compile Include="Misc\PlotExpert.cs" />
+    <Compile Include="MotionTracking\InputSpace.cs" />
+    <Compile Include="MotionTracking\JsonObject.cs" />
+    <Compile Include="Data\Dto\Trial.cs" />
+    <Compile Include="Data\Dto\TrialMode.cs" />
+    <Compile Include="Data\Dto\XYZPlane.cs" />
+    <Compile Include="MotionTracking\InputPoint.cs" />
+    <Compile Include="MotionTracking\InputRect.cs" />
+    <Compile Include="MotionTracking\Marker.cs" />
+    <Compile Include="MotionTracking\ConnectionType.cs" />
+    <Compile Include="MotionTracking\ConnectSucceeded.cs" />
+    <Compile Include="MotionTracking\DataDescriptionReady.cs" />
+    <Compile Include="MotionTracking\DisconnectComplete.cs" />
+    <Compile Include="MotionTracking\FrameBatchReady.cs" />
+    <Compile Include="MotionTracking\FrameReady.cs" />
+    <Compile Include="MotionTracking\DataDescriptor.cs" />
+    <Compile Include="MotionTracking\FrameOfMocapData.cs" />
+    <Compile Include="MotionTracking\MarkerSet.cs" />
+    <Compile Include="MotionTracking\MotionTrackerClient.cs" />
+    <Compile Include="MotionTracking\MotionTrackingSource.cs" />
+    <Compile Include="MotionTracking\OnscreenPoint.cs" />
+    <Compile Include="MotionTracking\ProjectionMode.cs" />
+    <Compile Include="MotionTracking\RigidBody.cs" />
+    <Compile Include="MotionTracking\RigidBodyData.cs" />
+    <Compile Include="MotionTracking\ServerDescription.cs" />
+    <Compile Include="MotionTracking\Skeleton.cs" />
+    <Compile Include="MotionTracking\SimplifiedMotionTrackerClient.cs" />
+    <Compile Include="MotionTracking\OffscreenPoint.cs" />
+    <Compile Include="MotionTracking\CapturedInputPoint.cs" />
+    <Compile Include="MotionTracking\TrackedPointReadyHandler.cs" />
+    <Compile Include="Misc\StringExpert.cs" />
+    <Compile Include="MotionTracking\PointTrackingConfidence.cs" />
+    <Compile Include="OutlierFilter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Skod\Class1.cs" />
+    <Compile Include="Log\StorageFileLogEventListener.cs" />
+    <Compile Include="Skod\MotionBroadcastDetected.cs" />
+    <Compile Include="Skod\MotionBroadcastDetector.cs" />
+    <Compile Include="Skod\MotionClientStatistics.cs" />
+    <Compile Include="Skod\MotionTrackerSettings.cs" />
+    <Compile Include="Skod\Network\NetworkExpert.cs" />
+    <Compile Include="Skod\StorageExpert.cs" />
+    <Compile Include="UI\MessageExpert.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Accord, Version=3.1.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Accord.NET\Framework\Debug\Portable\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math, Version=3.1.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Accord.NET\Framework\Debug\Portable\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics">
+      <HintPath>..\..\..\lib\Accord.NET\Framework\Debug\Portable\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Shim, Version=2.1.0.0, Culture=neutral, PublicKeyToken=c55ec16d10c4b366, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Accord.NET\Framework\Debug\Portable\Shim.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Network\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

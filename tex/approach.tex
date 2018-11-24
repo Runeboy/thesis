@@ -1,0 +1,99 @@
+\twocolumn[
+	\section{Approach}\label{ch:approach}
+	]
+
+\noi Here,  assumptions and requirements for a possible solution are enumerated, as well as the reasoning behind the choice of technologies.\\
+
+
+\subsection{Assumptions}
+
+The solution will be shaped by certain assumptions on the technology and future usage of swiping outside  the screen boundaries. These are:	 
+
+\begin{itemize}
+	\item Off-screen swiping takes place in close proximity to the display, as defined by the general motion range of the human arm. With past work showing 40 centimeters as a reasonable radius from the device\cite{adbin}, we will consider slightly more, 50 centimeters, as the extreme of inputs
+	\item Users interact with mobile device displays in a 10 to 30 degree downward viewing angle and distance equal to holding the device with a slightly bent arm 
+	\item The device, tracker and software to interact with are capable of retrieving and processing tracking points in real-time, defined as at least 24 frames per second
+	\item The user will experience some loss of input confidence in the transition to off-screen space, due to the loss of a modality (touch)
+\end{itemize}
+	
+\subsection{Requirements}
+
+To successfully facilitate off-screen swiping, the solution is presumed required to uphold certain properties:
+
+\begin{itemize}
+	\item \tb{Responsiveness} that provides the user with a sense of interacting naturally and instantly with the device 
+	\item \tb{Accuracy} in the tracking of the index finger and the visual feedback it invokes
+	\item \tb{Seamless transition} from on-screen  to off-screen space that appears continuous to the user
+\end{itemize}
+
+
+
+\subsection{Technology choices}
+
+The Surface Pro 3 and Kinect were chosen as the technological foundation of the solution. Each comes with its own set of advantages and drawbacks, as outlined here. 
+
+\subsubsection{Surface as a mobile device}
+
+To get underway with the technological foundation of the solution, an appropriate mobile device with support for touch-input had to be selected. Recognizing that existing tracker technologies involve substantial processor  usage and with optimizations beyond the scope, the Surface Pro 3 hybrid was the preferred choice. 
+
+
+%, with the form factor assumed to be simulated by way of physically attached boundaries, that provide a clear physical feedback for marking the transition off of the onscreen space.
+%
+
+%For the choice of device, it has been assumed relevant to work with a unit that supports touch, either has or capable of simulating the desired small display form factor and provides plenty of leeway in terms of processing power. The latter is relevant because the device will both receive and process incoming spatial data from the motion tracker, as well as provide the ability to simultaneously display statistical information about these in real-time for verification purposes.
+%
+%Recognizing that any current small mobile devices are less likely to fit the bill, a hybrid device in the form of the \ti{Surface Pro 3} (Intel i3 processor model) was chosen as the one that fulfills the desired properties, with the form factor assumed to be simulated by way of physically attached boundaries, that provide a clear physical feedback for marking the transition off of the onscreen space.
+%
+
+
+
+%
+%Next, a specific mile obile device and platform will be selected for developing a prototype. This includes acquiring the technical knowledge and practical programming skills required in order to create and deploy an application that implements the algorithm for \AirSwipe\ interactions. In order to implement the actual \AirSwipe\ algorithm, it will be necessary to get familiar with a commercial technology for tracking hand movements within a three-dimensional space and how this data can be relayed to the mobile device executing the algorithm.  
+
+\subsubsubsection{Advantages}
+
+The Surface Pro provides plenty of processing power, memory and large bandwidth by way its USB-3 connectivity. In addition, it runs a highly restricted and touch-based user interface (WinRT) on top of a normal Windows 8.1 operating system. Switching to the underlying OS is both possible and intended, to support a \ti{dual-mode} usage pattern of serving as both a simple on-the-go device and, if needed, a flexible and more complex workhorse. Hence, it doubles as both a development machine and deployment device for touch-based applications.% and has a fast run-time environment.%, this greatly simplifies deployment and maximizes hardware utilization.
+
+\subsubsubsection{Disadvantages}
+
+From the standpoint of our attempt at a solution, the main problem with the Surface Pro is that the display is significantly greater than that of an average mobile device. This is assumed to be of minor relevance however, if some appropriate technique for using only a minor portion of the display is available. 
+
+\subsubsection{Kinect as motion tracker}
+
+Testing out the Kinect under optimal conditions revealed a particular setup where the tracking was stable, fast and adequate for the task. Hence, it was chosen to proceed with this as the tracking device.
+
+\subsubsubsection{Advantages}
+
+%chose kinect because ...........offer adequate computational resources to manage the complexity implied by the multimodal interaction. .............
+
+
+The Kinect is cabled directly  and offloads the computational heavy derivation of body joints to a dedicated on-board GPU. As such, the connected device receives motion capture data instantaneously, but is spared the blunt of the computational load involved. 
+
+\subsubsubsection{Disadvantages}
+
+Official usage directions impose some restrictions on the lighting conditions and the angle between the tracker and individual to track. Since the learning algorithm was trained on commonly occurring body shapes and gaming playing positions, the device will hypothetically be somewhat impaired by individuals or actions that do not match the training data very well. Also, the amount of data fed from the Kinect is enormous and is the reason for the USB-3 requirement. No lag was seen in the tracking however.
+
+%Furthermore, the manufacturer specifically indicates that if using the Kinect with a Surface Pro device, a less-than-minimal processor model (i5 or higher) is preferential. A video presentation from the developers indicate that less will also do. This could indicate that the data processing done by the device drivers does incur noticeable processor usage. While initial usage confirmed this to some extent, no lag was seen in the tracking. 
+%
+%\subsection{Practical evaluation}
+%
+%Lastly, the end result needs to be evaluated through an experimental setup that allows for testing whether or not the hypothesis holds true, preferably using a reasonable number of participating volunteers. 
+
+
+\subsection{Evolution of the approach}
+
+In the early stages of surveying the technological topography, the naive idea was to use an Android smart-phone, since this represents a popular and current mobile device.  This choice was set back by both observed speed and connectivity concerns. First, simulating data operations in a test application appeared to be quite slow. Second, there was no way to interface with the Kinect without the extra lag of an additional proxy device. Third, the OptiTrack manufacturer does not provide an API for parsing motion capture network broadcasts on Android (Java). An idea of porting the OptiTrack c++ API to Java was abandoned, as it grew beyond trivial and appeared likely to conflict with the time frame of the project.
+
+Instead, a windows mobile device (Nokia Lumia) was chosen to test with the OptiTrack API. This approach was fruitless for two reasons. First, the OptiTrack API does not support the particular type of processor found in the Lumia series (ARM). Second, the manufacturer of the Lumia's operating system, Microsoft, have built in (and used) a function that remotely disables the opportunity for deploying applications to any phone below the Windows Phone 8.1 version number. This became apparent during attempts at deploying a test application, as it was prevented by the block.
+
+The final choice of device provided a good amount of resources that greatly reduced the risk of further setbacks for reasons not relevant to the end goals. However, testing the OptiTrack with the Surface revealed another problem: only a fraction of the tracking points (which are broadcasted over a LAN) actually reached the device, making the tracking data more or less useless. The root cause of this issue was never uncovered, but is presumed to be network related, possibly due to newly introduced security measures in the WinRT runtime. The OptiTrack was therefore finally abandoned in favor of the Kinect, which worked flawlessly.
+
+%. The Kinect on the other hand,  with a fast, direct connection and sufficient accuracy for the particular usage scenario, was then favored over the OptiTrack.
+
+
+%To debug the problem, the sequence of tracking points of a swipe motion were collected and OptiTrack c++ sample code  for simulates network broadcasts in the expected format \fn{The \ti{SimpleServer} sample project from version 2.7.0 of the OptiTrack API} was customized to source from the collected swipe data. This was subsequently executed on a separate server running on the same network as the Surface, to duplicate the physical setup. In spite of attempts at a wide range of network configurations, the root of the issue was never discovered, but is presumed to be related to network settings. The Kinect on the other hand,  with a fast, direct connection and sufficient accuracy for the particular usage scenario, was then favored over the OptiTrack.
+
+
+
+
+

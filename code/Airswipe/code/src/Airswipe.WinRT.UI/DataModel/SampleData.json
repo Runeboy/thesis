@@ -1,0 +1,38 @@
+{"Groups":[
+  {
+    "UniqueId": "Settings",
+    "Title": "Settings",
+    "Subtitle": "Adjust settings"
+  },
+  {
+    "UniqueId": "LogViewer",
+    "Title": "Log Viewer",
+    "Subtitle": "View log activity"
+  },
+  {
+    "UniqueId": "Test",
+    "Title": "Test",
+    "Subtitle": "Test the AirSwipe"
+  },
+  {
+    "UniqueId": "Calibrate",
+    "Title": "Calibrate",
+    "Subtitle": "Calibrate the input dimension"
+  },
+  {
+    "UniqueId": "DistanceMeasure",
+    "Title": "OptiTrack Test",
+    "Subtitle": "Measure relative tracking point distances"
+  },
+  {
+    "UniqueId": "Kinect",
+    "Title": "Kinect Test",
+    "Subtitle": "View connection info and joint tracking"
+  },
+  {
+    "UniqueId": "Data",
+    "Title": "Data Explorer",
+    "Subtitle": "Data prep and extraction"
+  }
+]
+}

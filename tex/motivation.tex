@@ -1,0 +1,152 @@
+\twocolumn[
+	\section{Research Questions}\label{ch:motivation}
+	]
+
+\noi
+This section seeks to narrow in on initial and higher-level considerations, such as defining relevant research questions, goals, motivations and whether a solution is at all feasible given the current technological landscape.\\
+
+
+\subsection{Questions and Hypothesis}
+
+In order to swipe outside the boundaries of a mobile display, we seek to address the following:
+
+%\begin{tabular}{ c p{17em} }
+%	\tb{H1:} & Given the ability to track a user's hand in real-time, that information may be exploited to extend  \ti{swipe} beyond the display boundaries of a touch-based mobile device. \\
+%	\tb{H2:} & Through the multitude of ways that off-screen space may be defined, there exists a definition that enhances the user experience by reducing the number of touch operations required to navigate the information space.
+%\end{tabular}
+\begin{itemize}
+	\item Are there any obstacles present in attempting to use tracking technology on mobile devices? 
+	\item Given the ability to track a user's hand in real-time, how can that information may be exploited to let the user swipe beyond the display boundaries?
+	\item How can the off-screen space be defined, such that the transition between spaces appear continuous and accurately translates the user's perception of location into efficient navigation of the information space?
+\end{itemize}
+From these questions, we pose the following hypothesis:
+\begin{displayquote}
+	\ti{Current mobile technology allows for touch-input interactions to extend outside the boundaries of the display, in such a way that  the overall user experience is improved.}
+\end{displayquote}
+This hypothesis will either be confirmed or falsified, through the concept's design, implementation, experiment and subsequent evaluation.
+
+\subsection{Goals and non-goals}
+
+To address our questions, our goals are to 
+
+\begin{itemize}
+	\item Illuminate the potential and applicability of the \AirSwipe\ concept, including possible drawbacks
+	\item Formulate and implement a solution using theoretical methods in a scientific manner and with appropriate choice of technology
+	\item Measure the impact of the solution through a test setup that reflects expected usage patterns of off-screen space
+%	\item 
+%	\item
+%	\item	 
+\end{itemize}
+\noi
+In contrast, the following is not part of our aim:
+
+\begin{itemize}
+	\item The implementation of a solution that is applicable to any environment, such as the wide range of lighting conditions that  human activity takes place within
+	\item Efficiency optimizations, such as attempts at minimizing processor  or memory usage 
+%	\item
+%	\item
+%	\item
+%	\item	 
+\end{itemize}
+
+
+%\subsection{Learning goals}
+%
+%Knowledge
+%\begin{itemize}
+%	\item Explaining a technique for tracking hand motions
+%	\item Describing how gestures may be derived from spatial data
+%\end{itemize}
+%
+%\noindent
+%Skills
+%\begin{itemize}
+%	\item Implementing a system for tracking hand motions
+%	\item Identifying the \ti{swipe} hand gesture from data patterns
+%	\item Structuring and performing an evaluation of a novel interaction system
+%\end{itemize}
+%
+%\noindent
+%Competences
+%\begin{itemize}
+%	\item Analyzing multi-dimensional tracking data
+%	\item Recognizing and describing possible applications of performing gestures in off-screen space
+%	
+%\end{itemize}
+
+
+
+\begin{comment}
+In this project, it is expected that theoretical and practical experience will be obtained through the attempt at exploring a specific instance of a problem within human-computer interaction. This particularly includes learning how computer vision may be applied to the novel interaction concept of combining mid-air gestures with touch interactions. Hence, the learning outcome will serve as an introduction to the utility of computer vision, as well as an introduction to working within an active research field.
+
+In addition, secondary learning outcomes are expected in the broad sense of adhering to a scientific approach, i.e. pursuing the components of structured analysis, method choices, application and finally evaluating and reflecting on obtained results.
+\end{comment}
+
+
+\subsection{Motivation}
+
+
+
+Pursuing solutions for incorporating hand-tracking in proximity of mobile displays is motivated by current limitations, recent technological advancements and the overall potential for advancement of human-computer interaction. 
+
+
+
+\subsubsection{Advantages of off-screen space}
+
+With current input  highly constrained by ever decreasing display sizes, swiping off-screen would greatly expand the input range (which will then equal the motion range of the arm instead). This represents a vast amplification  of the input space and would allow for navigating applications with much larger information spaces, as well as avoiding obscuring of the display. Given the wide applicability of mobile devices, more complex applications would be made feasible and entirely new usage patterns could  emerge.
+
+\subsubsection{Applications}
+
+Since most applications with significant information space currently suffer from the confinements of input on a mobile device, possible applications of off-screen input are easily identifiable: 
+\begin{itemize}
+	\item \tb{Map navigation} services are currently expected to cover the entire globe. Such an immense space can only be navigated by zooming, which exploits that rapid change of height preserves map topology and therefore does not disturb the user's spatial orientation. Swiping off-screen would likely either diminish the need for zoom operations or allow them to be performed concurrently with the navigation, allowing for a faster and more continuous interaction.
+%		\item \tb{Discretized information space navigation} is a term we may apply to the
+	\item \tb{Paging} is the ubiquitous pattern of discretizing the information space into a vast number of separate user interfaces, often referred to as \ti{pages}. As an example, interacting with the settings of a mobile device is typically performed through an extensive number of interfaces and in hierarchies that can appear confusing. Another special  case is that of electronic documents (PDFs), which are in some sense linked-lists of upwards of thousands of interfaces. One current interface example\fn{Microsoft's Reader on windows 8.1.} seeks to incorporate  map-style zooming, using a touch gesture to transition to a zoomed-out view with the entire document is laid out in a grid fashion. Hence, applications with a large and discretized information space may very well benefit from off-screen interactions, possibly through adopting map-style navigation mechanisms.
+	\item \tb{Input precision } is currently a problem with touch, due to the lack of precision pointing. However, this may be overcome by the use of  off-screen space. As an imaginary example, positioning a slider (a common user interface control) could be performed with greatly increased sensitivity in off-screen space, e.g. by the distance of the hand from the display.
+%	\item \tb{Increased dimensionality} may be exploited since spatial tracking implicitly adds a dimension of depth relative to the display. Depending on the interpretation of depth, such an additional parameter may serve to perform continuous adjustments or toggle between discrete steps defined by some threshold. 
+\end{itemize}
+
+
+\subsection{Feasibility}
+
+%\fn{At the time of writing, this includes iPhone 6s and Samsung Galaxy S7, running Apple A9 and Qualcomm Snapdragon-820 chips respectively.}
+With current mobile devices being based on 64-bit multi-core processors running speeds upwards of 2 GHz or more, these have more than enough processing power for performing substantial data operations  in real-time. However, due to the limitations of battery technology, mobile device chips are not intended for continuous bursts, but rather tailored for low-power usage by incorporating specialized chips dedicated for common tasks\fn{For instance, the current Apple M9 co-processor continuously  collects data from integrated sensors for later processing by the main processor.}. Also, memory is substantial but not abundant on these devices and the operation system they run is typically characterized by strict enforcement of memory limits, forcefully eliminating applications whenever memory availability drops below a certain threshold.
+
+As for spatial tracking,  close-proximity hand-tracking of the enveloping space is not yet part of any standard mobile device, but recent developments indicate they will be. Current tracking technology is available as separate devices that rely heavily on software, data ports, substantial  bandwidth and  continuous processing power. Hence, hybrid devices are likely to be the preferred choice for any research scenario.
+
+
+%-------------------------
+%The process of verifying or falsifying the proposed hypotheses will compose of several steps, as accounted for here. 
+
+
+\begin{comment}
+
+\section{Expected analysis and results}
+
+It is expected that the experiment will provide insight into whether or not interaction in off-screen space improves the user experience, given the particular approach taken. In addition, an analysis of how participants perceive and interact with the off-screen space through \AirSwipe\ gestures may lead to a subsequent exploration of a sub-hypothesis and possible refinement of the prototype. For instance, whether or not off-screen space, when implemented on a small portable device, correlates perfectly well with a simple imaginary extension of the display plane is an open question - one that is best explored through careful analysis of experimental data generated by actual human behavior. 
+
+\end{comment}
+
+
+
+\begin{comment} ### THESIS ##################################################
+
+
+In more explicit terms, this extension of the classic swipe will be invoked, executed and terminated as follows:
+
+\begin{enumerate}
+\item The user initiates a standard horizontal swipe (by touching the screen while moving the touch a distance greater than some preset threshold) 
+\item The user continues the swipe outside of the display's boundaries
+\item The device detects that the swipe crossed the display's boundaries, interprets the swipe as an extension
+and therefore perceives the touch as ongoing
+\item The users navigates the information space by changing his hand position relative to the device
+\item The users ends the swipe using some predetermined convention of gesture
+\end{enumerate}
+
+############################################################# 
+\end{comment}  
+
+
+
+
+

@@ -1,0 +1,4163 @@
+{
+  "UID": "b25a09f4-0245-49d0-b6e2-42ea6156eab3",
+  "Name": "rose",
+  "Trials": [
+    {
+      "UID": "5a1086ea-1c69-4e32-b519-c692e366fb1a",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:24:50.3759915-07:00",
+      "EndTime": "2016-07-09T13:24:58.2930253-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:07.9170338",
+      "DurationSeconds": 7.9170338,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.52359877559829882,
+      "Mode": "TwoDimensional",
+      "TargetValue": -40.0,
+      "FromOrigoToTargetPosition": {
+        "X": -2950.350830078125,
+        "Y": 1703.3857421875
+      },
+      "FromTargetToReleasePosition": {
+        "X": 790.111083984375,
+        "Y": -260.2476806640625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": -2160.23974609375,
+        "Y": 1443.1380615234375
+      },
+      "ReleasePositionValue": -30.503227557769371,
+      "ReleasePositionTargetDiff": 9.496772442230629,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -30.503227557769371
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.082342375129425313,
+      "FinalOffscreenY": -0.18870749201846904,
+      "FinalOffscreenZ": 1.411684632521053,
+      "FinalOffscreenLocation": {
+        "X": -0.082342375129425313,
+        "Y": -0.18870749201846904,
+        "Z": 1.411684632521053
+      }
+    },
+    {
+      "UID": "3868ffb9-20c9-4105-a45c-0ff3e56fe12b",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:25:03.7866307-07:00",
+      "EndTime": "2016-07-09T13:25:12.5643192-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:08.7776885",
+      "DurationSeconds": 8.7776885,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.0471975511965976,
+      "Mode": "TwoDimensional",
+      "TargetValue": -50.0,
+      "FromOrigoToTargetPosition": {
+        "X": -2129.232177734375,
+        "Y": 3687.9384765625
+      },
+      "FromTargetToReleasePosition": {
+        "X": 994.73046875,
+        "Y": -2125.20751953125
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": -1134.501708984375,
+        "Y": 1562.73095703125
+      },
+      "ReleasePositionValue": -22.673893492234733,
+      "ReleasePositionTargetDiff": 27.326106507765267,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -22.673893492234733
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.17151477880447741,
+      "FinalOffscreenY": -0.22890031598837479,
+      "FinalOffscreenZ": 1.6441775663806977,
+      "FinalOffscreenLocation": {
+        "X": -0.17151477880447741,
+        "Y": -0.22890031598837479,
+        "Z": 1.6441775663806977
+      }
+    },
+    {
+      "UID": "c4761854-840d-4cb4-b234-a10e26632b61",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:25:15.0457176-07:00",
+      "EndTime": "2016-07-09T13:25:21.3421979-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:06.2964803",
+      "DurationSeconds": 6.2964803,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.0471975511965976,
+      "Mode": "TwoDimensional",
+      "TargetValue": 10.0,
+      "FromOrigoToTargetPosition": {
+        "X": 425.8466796875,
+        "Y": -737.587646484375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -33.73486328125,
+        "Y": 10.40191650390625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": 392.11181640625,
+        "Y": -727.18572998046875
+      },
+      "ReleasePositionValue": 9.700283136246254,
+      "ReleasePositionTargetDiff": -0.29971686375374595,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 1,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        9.700283136246254
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.23882948487058436,
+      "FinalOffscreenY": -0.073577483207376809,
+      "FinalOffscreenZ": 1.7816120776340605,
+      "FinalOffscreenLocation": {
+        "X": 0.23882948487058436,
+        "Y": -0.073577483207376809,
+        "Z": 1.7816120776340605
+      }
+    },
+    {
+      "UID": "983f819b-4a53-4a04-bf18-1ae8685be1db",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:27:07.8985925-07:00",
+      "EndTime": "2016-07-09T13:27:34.0584138-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:26.1598213",
+      "DurationSeconds": 26.159821299999997,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.0943951023931953,
+      "Mode": "TwoDimensional",
+      "TargetValue": -50.0,
+      "FromOrigoToTargetPosition": {
+        "X": 2129.232421875,
+        "Y": 3687.9384765625
+      },
+      "FromTargetToReleasePosition": {
+        "X": -1272.359619140625,
+        "Y": -2737.487548828125
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": 856.872802734375,
+        "Y": 950.450927734375
+      },
+      "ReleasePositionValue": -15.025166044160098,
+      "ReleasePositionTargetDiff": 34.9748339558399,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -15.025166044160098
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.011112304260510911,
+      "FinalOffscreenY": -0.22806044410580445,
+      "FinalOffscreenZ": 1.8540628026294201,
+      "FinalOffscreenLocation": {
+        "X": -0.011112304260510911,
+        "Y": -0.22806044410580445,
+        "Z": 1.8540628026294201
+      }
+    },
+    {
+      "UID": "bf9d403a-989e-44a3-b232-dd470fd6db05",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:27:37.723054-07:00",
+      "EndTime": "2016-07-09T13:27:43.6680269-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:05.9449729",
+      "DurationSeconds": 5.9449729,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.617993877991494,
+      "Mode": "TwoDimensional",
+      "TargetValue": 40.0,
+      "FromOrigoToTargetPosition": {
+        "X": -2950.350830078125,
+        "Y": -1703.3857421875
+      },
+      "FromTargetToReleasePosition": {
+        "X": 811.7825927734375,
+        "Y": 1107.0625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": -2138.568359375,
+        "Y": -596.3232421875
+      },
+      "ReleasePositionValue": 26.067520690393998,
+      "ReleasePositionTargetDiff": -13.932479309606002,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        26.067520690393998
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.12555629520108119,
+      "FinalOffscreenY": 0.10667177908964889,
+      "FinalOffscreenZ": 1.3664204761094068,
+      "FinalOffscreenLocation": {
+        "X": 0.12555629520108119,
+        "Y": 0.10667177908964889,
+        "Z": 1.3664204761094068
+      }
+    },
+    {
+      "UID": "d44fb5d5-fc60-4f0f-bc8e-a4105cf3726a",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:27:47.173647-07:00",
+      "EndTime": "2016-07-09T13:27:51.4014995-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:04.2278525",
+      "DurationSeconds": 4.2278525,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.5707963267948966,
+      "Mode": "TwoDimensional",
+      "TargetValue": 20.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -1703.3857421875
+      },
+      "FromTargetToReleasePosition": {
+        "X": -10.64923095703125,
+        "Y": 719.74725341796875
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": -10.64923095703125,
+        "Y": -983.63848876953125
+      },
+      "ReleasePositionValue": 11.549892768936331,
+      "ReleasePositionTargetDiff": -8.4501072310636687,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        11.549892768936331
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.28621256601464445,
+      "FinalOffscreenY": -0.018302713873841296,
+      "FinalOffscreenZ": 1.7180670503170659,
+      "FinalOffscreenLocation": {
+        "X": 0.28621256601464445,
+        "Y": -0.018302713873841296,
+        "Z": 1.7180670503170659
+      }
+    },
+    {
+      "UID": "074659e1-ffed-46d1-8e84-d12e9df60934",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:27:54.80124-07:00",
+      "EndTime": "2016-07-09T13:28:01.3039506-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:06.5027106",
+      "DurationSeconds": 6.5027105999999995,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.52359877559829882,
+      "Mode": "TwoDimensional",
+      "TargetValue": 50.0,
+      "FromOrigoToTargetPosition": {
+        "X": 3687.9384765625,
+        "Y": -2129.232177734375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -795.138427734375,
+        "Y": 903.4111328125
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": 2892.800048828125,
+        "Y": -1225.821044921875
+      },
+      "ReleasePositionValue": 36.888924656242438,
+      "ReleasePositionTargetDiff": -13.111075343757562,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        36.888924656242438
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.27235830550421625,
+      "FinalOffscreenY": 0.019319403488020231,
+      "FinalOffscreenZ": 2.1833499829298826,
+      "FinalOffscreenLocation": {
+        "X": 0.27235830550421625,
+        "Y": 0.019319403488020231,
+        "Z": 2.1833499829298826
+      }
+    },
+    {
+      "UID": "75ad249b-8164-41cc-932c-4ef2439540c3",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:28:04.8063493-07:00",
+      "EndTime": "2016-07-09T13:28:08.273241-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:03.4668917",
+      "DurationSeconds": 3.4668916999999997,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.52359877559829882,
+      "Mode": "TwoDimensional",
+      "TargetValue": 10.0,
+      "FromOrigoToTargetPosition": {
+        "X": 737.587890625,
+        "Y": -425.8466796875
+      },
+      "FromTargetToReleasePosition": {
+        "X": 47.01904296875,
+        "Y": -12.31036376953125
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": 784.60693359375,
+        "Y": -438.15704345703125
+      },
+      "ReleasePositionValue": 10.551451162195223,
+      "ReleasePositionTargetDiff": 0.55145116219522272,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 1,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        10.551451162195223
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.22241734701861102,
+      "FinalOffscreenY": -0.12296028947543068,
+      "FinalOffscreenZ": 1.8396153898173842,
+      "FinalOffscreenLocation": {
+        "X": 0.22241734701861102,
+        "Y": -0.12296028947543068,
+        "Z": 1.8396153898173842
+      }
+    },
+    {
+      "UID": "d3afa2a7-12a2-4380-9548-79cd2d65a4a3",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:28:24.425964-07:00",
+      "EndTime": "2016-07-09T13:28:36.0185305-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:11.5925665",
+      "DurationSeconds": 11.5925665,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.5707963267948966,
+      "Mode": "TwoDimensional",
+      "TargetValue": 50.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -4258.46435546875
+      },
+      "FromTargetToReleasePosition": {
+        "X": 79.043731689453125,
+        "Y": 2752.662841796875
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": 79.043731689453125,
+        "Y": -1505.801513671875
+      },
+      "ReleasePositionValue": 17.704441952143085,
+      "ReleasePositionTargetDiff": -32.295558047856915,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        17.704441952143085
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.4067375659942627,
+      "FinalOffscreenY": 0.14124098420143127,
+      "FinalOffscreenZ": 1.7160612344741821,
+      "FinalOffscreenLocation": {
+        "X": 0.4067375659942627,
+        "Y": 0.14124098420143127,
+        "Z": 1.7160612344741821
+      }
+    },
+    {
+      "UID": "b66abb77-45cc-450e-a146-f2c343b558cb",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:28:39.5311333-07:00",
+      "EndTime": "2016-07-09T13:28:42.5443844-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:03.0132511",
+      "DurationSeconds": 3.0132510999999997,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Mode": "TwoDimensional",
+      "TargetValue": 10.0,
+      "FromOrigoToTargetPosition": {
+        "X": 851.69287109375,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 105.5667724609375,
+        "Y": -65.155563354492188
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": 957.2596435546875,
+        "Y": -65.155563354492188
+      },
+      "ReleasePositionValue": 11.265498513337809,
+      "ReleasePositionTargetDiff": 1.2654985133378087,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 1,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        11.265498513337809
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.18277542826696622,
+      "FinalOffscreenY": -0.17499550743702066,
+      "FinalOffscreenZ": 1.8653488578120911,
+      "FinalOffscreenLocation": {
+        "X": 0.18277542826696622,
+        "Y": -0.17499550743702066,
+        "Z": 1.8653488578120911
+      }
+    },
+    {
+      "UID": "81f2cd87-5506-41e2-ac5e-1de118337412",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:29:00.7138515-07:00",
+      "EndTime": "2016-07-09T13:29:11.793976-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:11.0801245",
+      "DurationSeconds": 11.0801245,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Mode": "TwoDimensional",
+      "TargetValue": -40.0,
+      "FromOrigoToTargetPosition": {
+        "X": -3406.771484375,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -3048.056640625,
+        "Y": 2367.715087890625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": -6454.828125,
+        "Y": 2367.715087890625
+      },
+      "ReleasePositionValue": -80.726074705317657,
+      "ReleasePositionTargetDiff": -40.726074705317657,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -80.726074705317657
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.040907802529442552,
+      "FinalOffscreenY": -0.066751648555827214,
+      "FinalOffscreenZ": 1.3102135853300336,
+      "FinalOffscreenLocation": {
+        "X": 0.040907802529442552,
+        "Y": -0.066751648555827214,
+        "Z": 1.3102135853300336
+      }
+    },
+    {
+      "UID": "c4b52cd2-d01f-4035-b0ad-6d6257906684",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:29:18.1420882-07:00",
+      "EndTime": "2016-07-09T13:29:27.6267648-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:09.4846766",
+      "DurationSeconds": 9.4846766,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.617993877991494,
+      "Mode": "TwoDimensional",
+      "TargetValue": -40.0,
+      "FromOrigoToTargetPosition": {
+        "X": 2950.3505859375,
+        "Y": 1703.3857421875
+      },
+      "FromTargetToReleasePosition": {
+        "X": -1681.2166748046875,
+        "Y": -1262.9476318359375
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": 1269.1339111328125,
+        "Y": 440.4381103515625
+      },
+      "ReleasePositionValue": -15.773130389875689,
+      "ReleasePositionTargetDiff": 24.226869610124311,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -15.773130389875689
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.20558808743953705,
+      "FinalOffscreenY": -0.086896158754825592,
+      "FinalOffscreenZ": 1.97161066532135,
+      "FinalOffscreenLocation": {
+        "X": -0.20558808743953705,
+        "Y": -0.086896158754825592,
+        "Z": 1.97161066532135
+      }
+    },
+    {
+      "UID": "b2faeb84-649a-43d1-8a28-724ba04ff2ee",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:29:32.7152105-07:00",
+      "EndTime": "2016-07-09T13:29:38.5682112-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:05.8530007",
+      "DurationSeconds": 5.8530007,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.5707963267948966,
+      "Mode": "TwoDimensional",
+      "TargetValue": 30.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -2555.078857421875
+      },
+      "FromTargetToReleasePosition": {
+        "X": -21.801422119140625,
+        "Y": 1044.1304931640625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": -21.801422119140625,
+        "Y": -1510.9483642578125
+      },
+      "ReleasePositionValue": 17.742375790109506,
+      "ReleasePositionTargetDiff": -12.257624209890494,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        17.742375790109506
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.37214562177763633,
+      "FinalOffscreenY": 0.13713760574784067,
+      "FinalOffscreenZ": 1.7181850093735729,
+      "FinalOffscreenLocation": {
+        "X": 0.37214562177763633,
+        "Y": 0.13713760574784067,
+        "Z": 1.7181850093735729
+      }
+    },
+    {
+      "UID": "31fa7bce-e496-4e8e-8cd3-773848a9a717",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:29:42.8804421-07:00",
+      "EndTime": "2016-07-09T13:29:47.6284666-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:04.7480245",
+      "DurationSeconds": 4.7480245,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Mode": "TwoDimensional",
+      "TargetValue": 20.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1703.3857421875,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 263.60791015625,
+        "Y": -43.682327270507813
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": 1966.99365234375,
+        "Y": -43.682327270507813
+      },
+      "ReleasePositionValue": 23.100799601339638,
+      "ReleasePositionTargetDiff": 3.1007996013396379,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 1,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        23.100799601339638
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.16434637099677987,
+      "FinalOffscreenY": -0.17884480351323023,
+      "FinalOffscreenZ": 2.0003176743197244,
+      "FinalOffscreenLocation": {
+        "X": 0.16434637099677987,
+        "Y": -0.17884480351323023,
+        "Z": 2.0003176743197244
+      }
+    },
+    {
+      "UID": "969c1dc5-695f-48da-827a-7b9fd58194a1",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:29:52.3429267-07:00",
+      "EndTime": "2016-07-09T13:29:56.4361989-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:04.0932722",
+      "DurationSeconds": 4.0932721999999995,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.0471975511965976,
+      "Mode": "TwoDimensional",
+      "TargetValue": -10.0,
+      "FromOrigoToTargetPosition": {
+        "X": -425.8466796875,
+        "Y": 737.587890625
+      },
+      "FromTargetToReleasePosition": {
+        "X": -338.25750732421875,
+        "Y": 279.693359375
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": -764.10418701171875,
+        "Y": 1017.28125
+      },
+      "ReleasePositionValue": -14.938335246914834,
+      "ReleasePositionTargetDiff": -4.9383352469148338,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 2,
+      "ReleaseValues": [
+        -14.938335246914834
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.045148596167564392,
+      "FinalOffscreenY": -0.20303784310817719,
+      "FinalOffscreenZ": 1.6627641916275024,
+      "FinalOffscreenLocation": {
+        "X": 0.045148596167564392,
+        "Y": -0.20303784310817719,
+        "Z": 1.6627641916275024
+      }
+    },
+    {
+      "UID": "5da90978-a017-456d-a26f-8210caac4752",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:30:01.2451992-07:00",
+      "EndTime": "2016-07-09T13:30:06.1685486-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:04.9233494",
+      "DurationSeconds": 4.9233494,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.52359877559829882,
+      "Mode": "TwoDimensional",
+      "TargetValue": -20.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1475.17529296875,
+        "Y": 851.69287109375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -205.023193359375,
+        "Y": 326.255615234375
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": -1680.198486328125,
+        "Y": 1177.948486328125
+      },
+      "ReleasePositionValue": -24.092979664986103,
+      "ReleasePositionTargetDiff": -4.0929796649861032,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 1,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -24.092979664986103
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.044504101173218749,
+      "FinalOffscreenY": -0.18601095272380841,
+      "FinalOffscreenZ": 1.5134990291171462,
+      "FinalOffscreenLocation": {
+        "X": -0.044504101173218749,
+        "Y": -0.18601095272380841,
+        "Z": 1.5134990291171462
+      }
+    },
+    {
+      "UID": "ed11a0aa-cfd4-47ce-8649-cca86fac1b80",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:30:11.4009801-07:00",
+      "EndTime": "2016-07-09T13:30:19.147907-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:07.7469269",
+      "DurationSeconds": 7.7469269,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.617993877991494,
+      "Mode": "TwoDimensional",
+      "TargetValue": -30.0,
+      "FromOrigoToTargetPosition": {
+        "X": 2212.76318359375,
+        "Y": 1277.53955078125
+      },
+      "FromTargetToReleasePosition": {
+        "X": -1070.666015625,
+        "Y": -827.46002197265625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false,
+      "FromOrigoToReleasePosition": {
+        "X": 1142.09716796875,
+        "Y": 450.07952880859375
+      },
+      "ReleasePositionValue": -14.413433338044358,
+      "ReleasePositionTargetDiff": 15.586566661955642,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -14.413433338044358
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.022948096455390816,
+      "FinalOffscreenY": -0.18289637714285764,
+      "FinalOffscreenZ": 1.8880108590408973,
+      "FinalOffscreenLocation": {
+        "X": 0.022948096455390816,
+        "Y": -0.18289637714285764,
+        "Z": 1.8880108590408973
+      }
+    },
+    {
+      "UID": "42f6bcac-9230-4134-8ac9-e7e666cad58c",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:31:21.0810014-07:00",
+      "EndTime": "2016-07-09T13:31:26.9085072-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:05.8275058",
+      "DurationSeconds": 5.8275058,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.0471975511965976,
+      "Mode": "TwoDimensional",
+      "TargetValue": -40.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1703.3857421875,
+        "Y": 2950.3505859375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -721.78466796875,
+        "Y": -206.765625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -2425.17041015625,
+        "Y": 2743.5849609375
+      },
+      "ReleasePositionValue": -42.994261474801469,
+      "ReleasePositionTargetDiff": -2.9942614748014691,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 2,
+      "ReleaseValues": [
+        -42.994261474801469
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.26173918055301715,
+      "FinalOffscreenY": -0.17620770549828196,
+      "FinalOffscreenZ": 1.5326990273856973,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.22022621116890129,
+          "Y": -0.0072925263263458372,
+          "Z": 1.86258325918205
+        },
+        "Delta": {
+          "X": 0.017105957387397674,
+          "Y": 0.0025199592041227348,
+          "Z": 0.0098380753524252018
+        },
+        "Direction": {
+          "X": -0.65186331343451565,
+          "Y": -0.10672747018728479,
+          "Z": -0.75078856391503246
+        },
+        "CaptureTime": "2016-07-09T13:31:26.898496-07:00",
+        "Confidence": 0,
+        "X": -0.26173918055301715,
+        "Y": -0.17620770549828196,
+        "Z": 1.5326990273856973
+      }
+    },
+    {
+      "UID": "c3232f52-be3a-4309-90ff-def7b5a5376f",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:31:32.7288091-07:00",
+      "EndTime": "2016-07-09T13:31:39.0386199-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:06.3098108",
+      "DurationSeconds": 6.3098107999999993,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.617993877991494,
+      "Mode": "TwoDimensional",
+      "TargetValue": 50.0,
+      "FromOrigoToTargetPosition": {
+        "X": -3687.9384765625,
+        "Y": -2129.232177734375
+      },
+      "FromTargetToReleasePosition": {
+        "X": 1616.8154296875,
+        "Y": 1245.9873046875
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -2071.123046875,
+        "Y": -883.244873046875
+      },
+      "ReleasePositionValue": 26.436679880869175,
+      "ReleasePositionTargetDiff": -23.563320119130825,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        26.436679880869175
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.26357840946367334,
+      "FinalOffscreenY": 0.15684598550689016,
+      "FinalOffscreenZ": 1.2387392031038862,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.069481424784307508,
+          "Y": 0.00570810792695934,
+          "Z": 1.7247724260724333
+        },
+        "Delta": {
+          "X": 0.00054566212156237359,
+          "Y": 0.012082600701846968,
+          "Z": -0.019966606037097989
+        },
+        "Direction": {
+          "X": 0.57973544459905713,
+          "Y": 0.42137231284861332,
+          "Z": -0.69738955271795111
+        },
+        "CaptureTime": "2016-07-09T13:31:37.392891-07:00",
+        "Confidence": 0,
+        "X": 0.26357840946367334,
+        "Y": 0.15684598550689016,
+        "Z": 1.2387392031038862
+      }
+    },
+    {
+      "UID": "7a2face4-a3ae-46c1-9fd8-838d9e50747a",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:31:45.4264019-07:00",
+      "EndTime": "2016-07-09T13:31:48.3164477-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:02.8900458",
+      "DurationSeconds": 2.8900457999999998,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Mode": "TwoDimensional",
+      "TargetValue": -10.0,
+      "FromOrigoToTargetPosition": {
+        "X": -851.69287109375,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 18.03363037109375,
+        "Y": 64.183990478515625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -833.65924072265625,
+        "Y": 64.183990478515625
+      },
+      "ReleasePositionValue": -9.81722875654532,
+      "ReleasePositionTargetDiff": 0.18277124345467932,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 1,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -9.81722875654532
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.14266237521973771,
+      "FinalOffscreenY": -0.14012390743213574,
+      "FinalOffscreenZ": 1.5845206014189765,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.12604852512076006,
+          "Y": -0.030417624414756171,
+          "Z": 1.8259116520554584
+        },
+        "Delta": {
+          "X": 0.0043558829167559543,
+          "Y": -0.0021449366019266336,
+          "Z": -0.00426605354636056
+        },
+        "Direction": {
+          "X": 0.80573072109068555,
+          "Y": 0.1683606225810009,
+          "Z": -0.567849192880312
+        },
+        "CaptureTime": "2016-07-09T13:31:48.2896649-07:00",
+        "Confidence": 0,
+        "X": 0.14266237521973771,
+        "Y": -0.14012390743213574,
+        "Z": 1.5845206014189765
+      }
+    },
+    {
+      "UID": "923966dd-e6f9-4ce2-b5ef-bf9ed8d86b0b",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:32:01.1182066-07:00",
+      "EndTime": "2016-07-09T13:32:09.9011563-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:08.7829497",
+      "DurationSeconds": 8.7829497,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.0943951023931953,
+      "Mode": "TwoDimensional",
+      "TargetValue": -30.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1277.53955078125,
+        "Y": 2212.76318359375
+      },
+      "FromTargetToReleasePosition": {
+        "X": 40.908203125,
+        "Y": 105.66552734375
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": 1318.44775390625,
+        "Y": 2318.4287109375
+      },
+      "ReleasePositionValue": -31.315261824896684,
+      "ReleasePositionTargetDiff": -1.3152618248966839,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 1,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -31.315261824896684
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.12167909537653021,
+      "FinalOffscreenY": -0.26199738379066106,
+      "FinalOffscreenZ": 1.8896521866512106,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.20892327635456753,
+          "Y": -0.014465076959984016,
+          "Z": 1.8608889573588545
+        },
+        "Delta": {
+          "X": 0.012245107007484324,
+          "Y": 0.003230944580093098,
+          "Z": -0.0095589664458861634
+        },
+        "Direction": {
+          "X": 0.33525251423271785,
+          "Y": -0.9316536218594148,
+          "Z": 0.14009739675267213
+        },
+        "CaptureTime": "2016-07-09T13:32:09.8830587-07:00",
+        "Confidence": 0,
+        "X": -0.12167909537653021,
+        "Y": -0.26199738379066106,
+        "Z": 1.8896521866512106
+      }
+    },
+    {
+      "UID": "6f34bf69-0aec-425b-bfed-cf11d1dc725c",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:32:24.960826-07:00",
+      "EndTime": "2016-07-09T13:32:37.8705171-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:12.9096911",
+      "DurationSeconds": 12.9096911,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.5707963267948966,
+      "Mode": "TwoDimensional",
+      "TargetValue": 40.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -3406.771484375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -74.072921752929688,
+        "Y": 1399.7672119140625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -74.072921752929688,
+        "Y": -2007.0042724609375
+      },
+      "ReleasePositionValue": 23.580926737563026,
+      "ReleasePositionTargetDiff": -16.419073262436974,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        23.580926737563026
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.50881761312484741,
+      "FinalOffscreenY": 0.29136812686920166,
+      "FinalOffscreenZ": 1.6959335803985596,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.015077505382390343,
+          "Y": 0.020595541387676771,
+          "Z": 1.804566918522015
+        },
+        "Delta": {
+          "X": 0.096594049719238961,
+          "Y": 0.075254985868810159,
+          "Z": -0.007388600467519213
+        },
+        "Direction": {
+          "X": 0.77327453284147918,
+          "Y": 0.62823894200341268,
+          "Z": -0.0858040127804335
+        },
+        "CaptureTime": "2016-07-09T13:32:37.0260469-07:00",
+        "Confidence": 0,
+        "X": 0.50881761312484741,
+        "Y": 0.29136812686920166,
+        "Z": 1.6959335803985596
+      }
+    },
+    {
+      "UID": "65143215-eae2-4c19-aa77-6cbe64cb7509",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:32:42.2555998-07:00",
+      "EndTime": "2016-07-09T13:32:45.3204505-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:03.0648507",
+      "DurationSeconds": 3.0648507,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.617993877991494,
+      "Mode": "TwoDimensional",
+      "TargetValue": -10.0,
+      "FromOrigoToTargetPosition": {
+        "X": 737.587890625,
+        "Y": 425.8466796875
+      },
+      "FromTargetToReleasePosition": {
+        "X": -61.879638671875,
+        "Y": -170.59445190429687
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": 675.708251953125,
+        "Y": 255.25222778320312
+      },
+      "ReleasePositionValue": -8.4809002079729581,
+      "ReleasePositionTargetDiff": 1.5190997920270419,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -8.4809002079729581
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.1184186266190409,
+      "FinalOffscreenY": -0.19528284422404765,
+      "FinalOffscreenZ": 1.8241194739513031,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.15388318734010678,
+          "Y": -0.034042646094366379,
+          "Z": 1.8656270393325622
+        },
+        "Delta": {
+          "X": -0.00087050262236244846,
+          "Y": -0.001797966963985459,
+          "Z": -0.0024195070897539139
+        },
+        "Direction": {
+          "X": 0.83784391603451414,
+          "Y": -0.28600400688051486,
+          "Z": -0.46499384986496389
+        },
+        "CaptureTime": "2016-07-09T13:32:45.2926202-07:00",
+        "Confidence": 0,
+        "X": 0.1184186266190409,
+        "Y": -0.19528284422404765,
+        "Z": 1.8241194739513031
+      }
+    },
+    {
+      "UID": "b0c2df67-a306-4a41-8854-ef36eed49618",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:32:49.419775-07:00",
+      "EndTime": "2016-07-09T13:32:53.9722228-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:04.5524478",
+      "DurationSeconds": 4.5524477999999995,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.52359877559829882,
+      "Mode": "TwoDimensional",
+      "TargetValue": 20.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1475.17529296875,
+        "Y": -851.69287109375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -55.4376220703125,
+        "Y": 51.3218994140625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": 1419.7376708984375,
+        "Y": -800.3709716796875
+      },
+      "ReleasePositionValue": 19.136008985649852,
+      "ReleasePositionTargetDiff": -0.86399101435014813,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 1,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        19.136008985649852
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.2882513569319638,
+      "FinalOffscreenY": -0.08738021926719014,
+      "FinalOffscreenZ": 1.94497709881249,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.11551117592784141,
+          "Y": -0.037533472952648569,
+          "Z": 1.8740996768545966
+        },
+        "Delta": {
+          "X": -0.0012056262506094373,
+          "Y": 0.0026265172708072465,
+          "Z": 0.0017886299442575471
+        },
+        "Direction": {
+          "X": 0.92226123748411659,
+          "Y": 0.38483539901834785,
+          "Z": 0.036550314590367942
+        },
+        "CaptureTime": "2016-07-09T13:32:53.9576038-07:00",
+        "Confidence": 0,
+        "X": 0.2882513569319638,
+        "Y": -0.08738021926719014,
+        "Z": 1.94497709881249
+      }
+    },
+    {
+      "UID": "21200cff-44b5-487a-a05f-311fab6d7ee5",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:33:07.3463951-07:00",
+      "EndTime": "2016-07-09T13:33:19.4369516-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:12.0905565",
+      "DurationSeconds": 12.0905565,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.0471975511965976,
+      "Mode": "TwoDimensional",
+      "TargetValue": 50.0,
+      "FromOrigoToTargetPosition": {
+        "X": 2129.232421875,
+        "Y": -3687.9384765625
+      },
+      "FromTargetToReleasePosition": {
+        "X": -258.78271484375,
+        "Y": 845.063720703125
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": 1870.44970703125,
+        "Y": -2842.874755859375
+      },
+      "ReleasePositionValue": 39.955905051494781,
+      "ReleasePositionTargetDiff": -10.044094948505219,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        39.955905051494781
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.54578436935603125,
+      "FinalOffscreenY": 0.31272721085399841,
+      "FinalOffscreenZ": 2.085000278461167,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": 0.081642601335057421,
+          "Y": 0.037844603529763106,
+          "Z": 1.901190951168982
+        },
+        "Delta": {
+          "X": 0.0076322039859128,
+          "Y": -0.0042067171579446838,
+          "Z": -0.0047713803629987339
+        },
+        "Direction": {
+          "X": 0.68973461523975832,
+          "Y": 0.5810204086807329,
+          "Z": 0.43206648242664786
+        },
+        "CaptureTime": "2016-07-09T13:33:19.4253098-07:00",
+        "Confidence": 0,
+        "X": 0.54578436935603125,
+        "Y": 0.31272721085399841,
+        "Z": 2.085000278461167
+      }
+    },
+    {
+      "UID": "c028462b-8f54-4968-9fee-b5001cfa1a28",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:33:24.7427595-07:00",
+      "EndTime": "2016-07-09T13:33:33.2323881-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:08.4896286",
+      "DurationSeconds": 8.4896286,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.5707963267948966,
+      "Mode": "TwoDimensional",
+      "TargetValue": -50.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 4258.46484375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -1859.950439453125,
+        "Y": -3060.64892578125
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -1859.950439453125,
+        "Y": 1197.81591796875
+      },
+      "ReleasePositionValue": -25.9750771072857,
+      "ReleasePositionTargetDiff": 24.0249228927143,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -25.9750771072857
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.11445263181549649,
+      "FinalOffscreenY": -0.23800326982884,
+      "FinalOffscreenZ": 1.5488525762658463,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.58654542351254757,
+          "Y": -0.034261543957753174,
+          "Z": 1.9134711667842774
+        },
+        "Delta": {
+          "X": 0.012698447639676119,
+          "Y": -0.0094825829463585642,
+          "Z": -0.010575386701464629
+        },
+        "Direction": {
+          "X": 0.89837677322227716,
+          "Y": -0.061030295010199007,
+          "Z": -0.43496491401686366
+        },
+        "CaptureTime": "2016-07-09T13:33:33.2178725-07:00",
+        "Confidence": 0,
+        "X": -0.11445263181549649,
+        "Y": -0.23800326982884,
+        "Z": 1.5488525762658463
+      }
+    },
+    {
+      "UID": "6f828d68-5430-42db-98c4-8e19849ec31b",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:33:40.3063236-07:00",
+      "EndTime": "2016-07-09T13:33:48.3613308-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:08.0550072",
+      "DurationSeconds": 8.0550072,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.0943951023931953,
+      "Mode": "TwoDimensional",
+      "TargetValue": 50.0,
+      "FromOrigoToTargetPosition": {
+        "X": -2129.232177734375,
+        "Y": -3687.9384765625
+      },
+      "FromTargetToReleasePosition": {
+        "X": 1180.8115234375,
+        "Y": 2427.87451171875
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -948.420654296875,
+        "Y": -1260.06396484375
+      },
+      "ReleasePositionValue": 18.517306807712114,
+      "ReleasePositionTargetDiff": -31.482693192287886,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        18.517306807712114
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.3941709574682129,
+      "FinalOffscreenY": 0.15856259877036988,
+      "FinalOffscreenZ": 1.4465396313199572,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.043799715660601826,
+          "Y": -0.0063843087743710464,
+          "Z": 1.8131771805336097
+        },
+        "Delta": {
+          "X": 0.00094780274546801824,
+          "Y": 0.022117174642303256,
+          "Z": -0.006063806065824906
+        },
+        "Direction": {
+          "X": 0.66895124369744874,
+          "Y": 0.54185052852926274,
+          "Z": -0.50882436880341653
+        },
+        "CaptureTime": "2016-07-09T13:33:44.8248341-07:00",
+        "Confidence": 0,
+        "X": 0.3941709574682129,
+        "Y": 0.15856259877036988,
+        "Z": 1.4465396313199572
+      }
+    },
+    {
+      "UID": "91aacb81-bc91-4346-b84e-38d8b56784de",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:33:53.4914531-07:00",
+      "EndTime": "2016-07-09T13:34:00.8008267-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:07.3093736",
+      "DurationSeconds": 7.3093736,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.52359877559829882,
+      "Mode": "TwoDimensional",
+      "TargetValue": -50.0,
+      "FromOrigoToTargetPosition": {
+        "X": -3687.9384765625,
+        "Y": 2129.232421875
+      },
+      "FromTargetToReleasePosition": {
+        "X": -1832.3740234375,
+        "Y": 2626.24169921875
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -5520.3125,
+        "Y": 4755.47412109375
+      },
+      "ReleasePositionValue": -85.549350116615088,
+      "ReleasePositionTargetDiff": -35.549350116615088,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -85.549350116615088
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.61581671695233242,
+      "FinalOffscreenY": -0.090377710941473108,
+      "FinalOffscreenZ": 1.1397417753092178,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.28085193465487346,
+          "Y": 0.022226433125489293,
+          "Z": 1.5843609633493747
+        },
+        "Delta": {
+          "X": 0.00661269075655202,
+          "Y": 0.00075486640371573432,
+          "Z": -0.0031631983966429189
+        },
+        "Direction": {
+          "X": -0.787310215147487,
+          "Y": 0.12945340502653579,
+          "Z": -0.602813769792507
+        },
+        "CaptureTime": "2016-07-09T13:34:00.7932453-07:00",
+        "Confidence": 0,
+        "X": -0.61581671695233242,
+        "Y": -0.090377710941473108,
+        "Z": 1.1397417753092178
+      }
+    },
+    {
+      "UID": "13d953b2-06d6-44eb-8a44-9fcbce4fe95b",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:34:05.587743-07:00",
+      "EndTime": "2016-07-09T13:34:10.2604552-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:04.6727122",
+      "DurationSeconds": 4.6727121999999994,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Mode": "TwoDimensional",
+      "TargetValue": -20.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1703.3857421875,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 183.5931396484375,
+        "Y": 88.11383056640625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -1519.7926025390625,
+        "Y": 88.11383056640625
+      },
+      "ReleasePositionValue": -17.874339714394655,
+      "ReleasePositionTargetDiff": 2.1256602856053455,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -17.874339714394655
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.15136856336029192,
+      "FinalOffscreenY": -0.12798635455615096,
+      "FinalOffscreenZ": 1.3893814526995336,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.08655526388342541,
+          "Y": -0.028753570358181418,
+          "Z": 1.7669129055439827
+        },
+        "Delta": {
+          "X": 0.0043144324915828647,
+          "Y": 0.0015153680901838495,
+          "Z": 0.0011032459438988784
+        },
+        "Direction": {
+          "X": 0.62626217842596543,
+          "Y": 0.026289389961636364,
+          "Z": -0.77916914200230558
+        },
+        "CaptureTime": "2016-07-09T13:34:10.2257488-07:00",
+        "Confidence": 0,
+        "X": 0.15136856336029192,
+        "Y": -0.12798635455615096,
+        "Z": 1.3893814526995336
+      }
+    },
+    {
+      "UID": "4b385371-2b45-4632-af7b-a468c1588ed8",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:34:14.6187591-07:00",
+      "EndTime": "2016-07-09T13:34:20.3809468-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:05.7621877",
+      "DurationSeconds": 5.7621877,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.5707963267948966,
+      "Mode": "TwoDimensional",
+      "TargetValue": -30.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 2555.07861328125
+      },
+      "FromTargetToReleasePosition": {
+        "X": -1576.18701171875,
+        "Y": 280.0341796875
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -1576.18701171875,
+        "Y": 2835.11279296875
+      },
+      "ReleasePositionValue": -38.08648417816304,
+      "ReleasePositionTargetDiff": -8.08648417816304,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -38.08648417816304
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.075481615960597992,
+      "FinalOffscreenY": -0.29555591940879822,
+      "FinalOffscreenZ": 1.50229012966156,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.23026718304006877,
+          "Y": 0.00026836467445278496,
+          "Z": 1.819132573407636
+        },
+        "Delta": {
+          "X": 0.162590391933918,
+          "Y": 0.020011544227600098,
+          "Z": -0.028913021087646484
+        },
+        "Direction": {
+          "X": 0.68325304937927878,
+          "Y": -0.20533486103745432,
+          "Z": -0.70071596624926857
+        },
+        "CaptureTime": "2016-07-09T13:34:20.3469192-07:00",
+        "Confidence": 0,
+        "X": -0.075481615960597992,
+        "Y": -0.29555591940879822,
+        "Z": 1.50229012966156
+      }
+    },
+    {
+      "UID": "53f3e312-3948-4487-a134-3b60068fd641",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:34:24.7933424-07:00",
+      "EndTime": "2016-07-09T13:34:28.8835069-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:04.0901645",
+      "DurationSeconds": 4.0901645,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.0943951023931953,
+      "Mode": "TwoDimensional",
+      "TargetValue": 20.0,
+      "FromOrigoToTargetPosition": {
+        "X": -851.69287109375,
+        "Y": -1475.17529296875
+      },
+      "FromTargetToReleasePosition": {
+        "X": 215.94381713867187,
+        "Y": 380.8795166015625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -635.7490234375,
+        "Y": -1094.2957763671875
+      },
+      "ReleasePositionValue": 14.859430631796569,
+      "ReleasePositionTargetDiff": -5.1405693682034315,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 2,
+      "ReleaseValues": [
+        14.859430631796569
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.39947230242237641,
+      "FinalOffscreenY": 0.04279469386825039,
+      "FinalOffscreenZ": 1.5375025646883371,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.033384020307757674,
+          "Y": -0.018940357318184806,
+          "Z": 1.7970177797037863
+        },
+        "Delta": {
+          "X": -0.0009273258800056583,
+          "Y": 0.0026766160420154811,
+          "Z": 0.00051825166220553776
+        },
+        "Direction": {
+          "X": 0.79655476597662389,
+          "Y": 0.40160035151393492,
+          "Z": -0.4519044837836973
+        },
+        "CaptureTime": "2016-07-09T13:34:28.8759966-07:00",
+        "Confidence": 0,
+        "X": 0.39947230242237641,
+        "Y": 0.04279469386825039,
+        "Z": 1.5375025646883371
+      }
+    },
+    {
+      "UID": "d95a688c-03c5-4a1c-91c6-f814f5ea83d9",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:34:33.0613978-07:00",
+      "EndTime": "2016-07-09T13:34:37.3815338-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:04.3201360",
+      "DurationSeconds": 4.320136,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.617993877991494,
+      "Mode": "TwoDimensional",
+      "TargetValue": -20.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1475.17529296875,
+        "Y": 851.69287109375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -774.49639892578125,
+        "Y": -632.7982177734375
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": 700.67889404296875,
+        "Y": 218.8946533203125
+      },
+      "ReleasePositionValue": -8.61900828779034,
+      "ReleasePositionTargetDiff": 11.38099171220966,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -8.61900828779034
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.084508419036865234,
+      "FinalOffscreenY": -0.19811423122882843,
+      "FinalOffscreenZ": 1.8565315008163452,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.13311887318439833,
+          "Y": -0.029942778015427989,
+          "Z": 1.8413953834995238
+        },
+        "Delta": {
+          "X": -0.029583712168177692,
+          "Y": -0.0092271531286421959,
+          "Z": 0.032349748861840055
+        },
+        "Direction": {
+          "X": -0.042431497965729738,
+          "Y": 0.34827781694239585,
+          "Z": -0.93643052609695676
+        },
+        "CaptureTime": "2016-07-09T13:34:35.7260366-07:00",
+        "Confidence": 0,
+        "X": 0.084508419036865234,
+        "Y": -0.19811423122882843,
+        "Z": 1.8565315008163452
+      }
+    },
+    {
+      "UID": "b17ea37f-addc-4432-aed3-7a0c3d252798",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:34:41.9512102-07:00",
+      "EndTime": "2016-07-09T13:34:47.1392964-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:05.1880862",
+      "DurationSeconds": 5.1880862,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.0943951023931953,
+      "Mode": "TwoDimensional",
+      "TargetValue": -20.0,
+      "FromOrigoToTargetPosition": {
+        "X": 851.69287109375,
+        "Y": 1475.17529296875
+      },
+      "FromTargetToReleasePosition": {
+        "X": -2116.0029296875,
+        "Y": 159.3336181640625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -1264.31005859375,
+        "Y": 1634.5089111328125
+      },
+      "ReleasePositionValue": -24.262524253749557,
+      "ReleasePositionTargetDiff": -4.2625242537495573,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -24.262524253749557
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.056815490988664515,
+      "FinalOffscreenY": -0.29076388178328766,
+      "FinalOffscreenZ": 1.4831371609742339,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.1346574055043572,
+          "Y": -0.032458881098044672,
+          "Z": 1.8422018798592055
+        },
+        "Delta": {
+          "X": 0.005380689822077539,
+          "Y": 0.0044678808608601961,
+          "Z": 0.0021237089354784189
+        },
+        "Direction": {
+          "X": -0.17446790648246674,
+          "Y": -0.42841497121381644,
+          "Z": -0.886578570712991
+        },
+        "CaptureTime": "2016-07-09T13:34:47.117482-07:00",
+        "Confidence": 0,
+        "X": -0.056815490988664515,
+        "Y": -0.29076388178328766,
+        "Z": 1.4831371609742339
+      }
+    },
+    {
+      "UID": "ca120094-87a2-46b1-97e5-daa558e06d71",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:34:51.5723632-07:00",
+      "EndTime": "2016-07-09T13:34:57.8229128-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:06.2505496",
+      "DurationSeconds": 6.2505495999999994,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.617993877991494,
+      "Mode": "TwoDimensional",
+      "TargetValue": 30.0,
+      "FromOrigoToTargetPosition": {
+        "X": -2212.76318359375,
+        "Y": -1277.539306640625
+      },
+      "FromTargetToReleasePosition": {
+        "X": 519.918701171875,
+        "Y": 539.66400146484375
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -1692.844482421875,
+        "Y": -737.87530517578125
+      },
+      "ReleasePositionValue": 21.682320709120887,
+      "ReleasePositionTargetDiff": -8.3176792908791128,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        21.682320709120887
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.29229339957237244,
+      "FinalOffscreenY": 0.0853690430521965,
+      "FinalOffscreenZ": 1.2618064880371094,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.032774042087165021,
+          "Y": -0.005951423451499821,
+          "Z": 1.718943439422514
+        },
+        "Delta": {
+          "X": 0.0099878770362849534,
+          "Y": 0.015191690488505077,
+          "Z": -0.032316078536061665
+        },
+        "Direction": {
+          "X": 0.59387508559324464,
+          "Y": 0.39019037365666154,
+          "Z": -0.7036077422948751
+        },
+        "CaptureTime": "2016-07-09T13:34:56.5919107-07:00",
+        "Confidence": 0,
+        "X": 0.29229339957237244,
+        "Y": 0.0853690430521965,
+        "Z": 1.2618064880371094
+      }
+    },
+    {
+      "UID": "744ba9ba-85e2-445b-94e8-67944271218f",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:35:02.5102945-07:00",
+      "EndTime": "2016-07-09T13:35:07.5199027-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:05.0096082",
+      "DurationSeconds": 5.0096082,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.5707963267948966,
+      "Mode": "TwoDimensional",
+      "TargetValue": -20.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 1703.3857421875
+      },
+      "FromTargetToReleasePosition": {
+        "X": -1391.323486328125,
+        "Y": 38.0460205078125
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -1391.323486328125,
+        "Y": 1741.4317626953125
+      },
+      "ReleasePositionValue": -26.171207584256528,
+      "ReleasePositionTargetDiff": -6.1712075842565284,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -26.171207584256528
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.0708586258349051,
+      "FinalOffscreenY": -0.29900300509506722,
+      "FinalOffscreenZ": 1.5015372422138704,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.20254639577993588,
+          "Y": -0.006757161968232857,
+          "Z": 1.8408728450179157
+        },
+        "Delta": {
+          "X": 0.0001179236659453603,
+          "Y": 0.00076233591393432,
+          "Z": -0.0018776273103577878
+        },
+        "Direction": {
+          "X": -0.32200502555165722,
+          "Y": -0.48189579523874509,
+          "Z": -0.814916686570286
+        },
+        "CaptureTime": "2016-07-09T13:35:07.4931891-07:00",
+        "Confidence": 0,
+        "X": -0.0708586258349051,
+        "Y": -0.29900300509506722,
+        "Z": 1.5015372422138704
+      }
+    },
+    {
+      "UID": "54277626-5a78-4ecf-8f9d-466714302106",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:35:12.2292043-07:00",
+      "EndTime": "2016-07-09T13:35:15.2808416-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:03.0516373",
+      "DurationSeconds": 3.0516373,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.5707963267948966,
+      "Mode": "TwoDimensional",
+      "TargetValue": -10.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 851.69287109375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -34.983367919921875,
+        "Y": -158.0355224609375
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -34.983367919921875,
+        "Y": 693.6573486328125
+      },
+      "ReleasePositionValue": -8.15480525634693,
+      "ReleasePositionTargetDiff": 1.8451947436530691,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -8.15480525634693
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.069926241452247823,
+      "FinalOffscreenY": -0.22005352518882834,
+      "FinalOffscreenZ": 1.7279360940745334,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.17873022311749323,
+          "Y": -0.011076849012285433,
+          "Z": 1.8258658891230668
+        },
+        "Delta": {
+          "X": 0.00095080972529802688,
+          "Y": 0.00086019755012223253,
+          "Z": -0.00048120740155743746
+        },
+        "Direction": {
+          "X": 0.87153202966883458,
+          "Y": -0.227021789294834,
+          "Z": -0.43461825599794318
+        },
+        "CaptureTime": "2016-07-09T13:35:15.2588061-07:00",
+        "Confidence": 0,
+        "X": 0.069926241452247823,
+        "Y": -0.22005352518882834,
+        "Z": 1.7279360940745334
+      }
+    },
+    {
+      "UID": "83a45579-0267-4b7b-a4b6-08edee84d46c",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:35:19.2142453-07:00",
+      "EndTime": "2016-07-09T13:35:21.9240334-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:02.7097881",
+      "DurationSeconds": 2.7097881,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.5707963267948966,
+      "Mode": "TwoDimensional",
+      "TargetValue": 10.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -851.69287109375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -31.3570556640625,
+        "Y": 204.69219970703125
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -31.3570556640625,
+        "Y": -647.00067138671875
+      },
+      "ReleasePositionValue": 7.6055596050260688,
+      "ReleasePositionTargetDiff": -2.3944403949739312,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        7.6055596050260688
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.25280413376839839,
+      "FinalOffscreenY": -0.0803935768729722,
+      "FinalOffscreenZ": 1.7119918963222225,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.11267742870575796,
+          "Y": -0.032597735675603569,
+          "Z": 1.8310527734341209
+        },
+        "Delta": {
+          "X": 0.0012690219530057667,
+          "Y": 2.9220283443806561E-05,
+          "Z": 0.0053196698462030234
+        },
+        "Direction": {
+          "X": 0.833846780998571,
+          "Y": 0.30454485514295143,
+          "Z": -0.46038242475607138
+        },
+        "CaptureTime": "2016-07-09T13:35:21.9040117-07:00",
+        "Confidence": 0,
+        "X": 0.25280413376839839,
+        "Y": -0.0803935768729722,
+        "Z": 1.7119918963222225
+      }
+    },
+    {
+      "UID": "72e9c4d7-5e1f-455d-8adb-09747532978a",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:35:26.0902387-07:00",
+      "EndTime": "2016-07-09T13:35:31.5403911-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:05.4501524",
+      "DurationSeconds": 5.4501523999999995,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.52359877559829882,
+      "Mode": "TwoDimensional",
+      "TargetValue": 30.0,
+      "FromOrigoToTargetPosition": {
+        "X": 2212.76318359375,
+        "Y": -1277.539306640625
+      },
+      "FromTargetToReleasePosition": {
+        "X": -35.935302734375,
+        "Y": 68.661865234375
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": 2176.827880859375,
+        "Y": -1208.87744140625
+      },
+      "ReleasePositionValue": 29.235569162706376,
+      "ReleasePositionTargetDiff": -0.76443083729362371,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 1,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        29.235569162706376
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.31634323614441767,
+      "FinalOffscreenY": -0.0082699245912173352,
+      "FinalOffscreenZ": 2.0890802128212105,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.11167242959063407,
+          "Y": -0.027179927700687959,
+          "Z": 1.8890613368958791
+        },
+        "Delta": {
+          "X": -0.001106298459526367,
+          "Y": -0.0013940829926178192,
+          "Z": -0.0031375930712034261
+        },
+        "Direction": {
+          "X": 0.8264622286343607,
+          "Y": 0.41268472880923524,
+          "Z": 0.38295104027587396
+        },
+        "CaptureTime": "2016-07-09T13:35:31.5249518-07:00",
+        "Confidence": 0,
+        "X": 0.31634323614441767,
+        "Y": -0.0082699245912173352,
+        "Z": 2.0890802128212105
+      }
+    },
+    {
+      "UID": "e5c78d95-1ab4-4e66-acbc-8009e1e7408f",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:35:43.740455-07:00",
+      "EndTime": "2016-07-09T13:35:51.7316296-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:07.9911746",
+      "DurationSeconds": 7.9911746,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.617993877991494,
+      "Mode": "TwoDimensional",
+      "TargetValue": 20.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1475.17529296875,
+        "Y": -851.69287109375
+      },
+      "FromTargetToReleasePosition": {
+        "X": 250.2122802734375,
+        "Y": 269.447998046875
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -1224.9630126953125,
+        "Y": -582.244873046875
+      },
+      "ReleasePositionValue": 15.92472799710273,
+      "ReleasePositionTargetDiff": -4.07527200289727,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        15.92472799710273
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.26146219992018493,
+      "FinalOffscreenY": -0.018231971369720296,
+      "FinalOffscreenZ": 1.4420654053924244,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.07686976234875384,
+          "Y": -0.031059656430926556,
+          "Z": 1.7878733580406727
+        },
+        "Delta": {
+          "X": 0.00097164912235314649,
+          "Y": 0.00011328627856632689,
+          "Z": -0.0010973208905016296
+        },
+        "Direction": {
+          "X": 0.76379891592191951,
+          "Y": 0.28866235218858188,
+          "Z": -0.57730863709583924
+        },
+        "CaptureTime": "2016-07-09T13:35:51.6920918-07:00",
+        "Confidence": 0,
+        "X": 0.26146219992018493,
+        "Y": -0.018231971369720296,
+        "Z": 1.4420654053924244
+      }
+    },
+    {
+      "UID": "51db7ff7-22b6-4d83-96b8-788d6cba0878",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:35:56.7536691-07:00",
+      "EndTime": "2016-07-09T13:36:00.7590501-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:04.0053810",
+      "DurationSeconds": 4.005381,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.0471975511965976,
+      "Mode": "TwoDimensional",
+      "TargetValue": 20.0,
+      "FromOrigoToTargetPosition": {
+        "X": 851.69287109375,
+        "Y": -1475.17529296875
+      },
+      "FromTargetToReleasePosition": {
+        "X": -115.43353271484375,
+        "Y": 376.209228515625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": 736.25933837890625,
+        "Y": -1098.966064453125
+      },
+      "ReleasePositionValue": 15.531440073198011,
+      "ReleasePositionTargetDiff": -4.4685599268019889,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        15.531440073198011
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.34845890936971191,
+      "FinalOffscreenY": -0.032818242698819659,
+      "FinalOffscreenZ": 1.840273541453249,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.0969184970702185,
+          "Y": -0.034061115590402542,
+          "Z": 1.8562705495313772
+        },
+        "Delta": {
+          "X": 0.0016885664876216122,
+          "Y": 0.00092928521322788865,
+          "Z": 0.00074426781690495325
+        },
+        "Direction": {
+          "X": 0.91617235522288809,
+          "Y": 0.36525476614061564,
+          "Z": -0.16497627507284388
+        },
+        "CaptureTime": "2016-07-09T13:36:00.7252148-07:00",
+        "Confidence": 0,
+        "X": 0.34845890936971191,
+        "Y": -0.032818242698819659,
+        "Z": 1.840273541453249
+      }
+    },
+    {
+      "UID": "890702f4-d1bc-445f-b2a5-89b6134e6543",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:36:05.3620239-07:00",
+      "EndTime": "2016-07-09T13:36:08.1710003-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:02.8089764",
+      "DurationSeconds": 2.8089763999999997,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.0943951023931953,
+      "Mode": "TwoDimensional",
+      "TargetValue": -10.0,
+      "FromOrigoToTargetPosition": {
+        "X": 425.8466796875,
+        "Y": 737.587890625
+      },
+      "FromTargetToReleasePosition": {
+        "X": 52.241943359375,
+        "Y": -83.3460693359375
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": 478.088623046875,
+        "Y": 654.2418212890625
+      },
+      "ReleasePositionValue": -9.5140981052699143,
+      "ReleasePositionTargetDiff": 0.48590189473008571,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 1,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -9.5140981052699143
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.073676952638166149,
+      "FinalOffscreenY": -0.21657529732459424,
+      "FinalOffscreenZ": 1.8001518595187109,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.15439861293526005,
+          "Y": -0.016923662324523012,
+          "Z": 1.8316668707452679
+        },
+        "Delta": {
+          "X": -0.00052524907030075674,
+          "Y": -0.00068154041073359428,
+          "Z": 0.0014913404768570615
+        },
+        "Direction": {
+          "X": 0.92695050797324463,
+          "Y": -0.2599222912897613,
+          "Z": -0.27056082173667417
+        },
+        "CaptureTime": "2016-07-09T13:36:08.1561692-07:00",
+        "Confidence": 0,
+        "X": 0.073676952638166149,
+        "Y": -0.21657529732459424,
+        "Z": 1.8001518595187109
+      }
+    },
+    {
+      "UID": "9a58201e-f16a-4a63-b672-951ce26cac07",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:36:19.3128136-07:00",
+      "EndTime": "2016-07-09T13:36:28.1806557-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:08.8678421",
+      "DurationSeconds": 8.867842099999999,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Mode": "TwoDimensional",
+      "TargetValue": 30.0,
+      "FromOrigoToTargetPosition": {
+        "X": 2555.07861328125,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 284.0029296875,
+        "Y": 392.7303466796875
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": 2839.08154296875,
+        "Y": 392.7303466796875
+      },
+      "ReleasePositionValue": -33.651990446931485,
+      "ReleasePositionTargetDiff": -63.651990446931485,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -33.651990446931485
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.12736052086862454,
+      "FinalOffscreenY": -0.19799927022682007,
+      "FinalOffscreenZ": 2.18511635894376,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.1540528549740014,
+          "Y": -0.00049008615509431785,
+          "Z": 1.851948505363872
+        },
+        "Delta": {
+          "X": -0.0033163686214803534,
+          "Y": -0.00053006490743015555,
+          "Z": 0.0091508231496906234
+        },
+        "Direction": {
+          "X": 0.81280374611902773,
+          "Y": -0.46093168266014989,
+          "Z": 0.35621910983965749
+        },
+        "CaptureTime": "2016-07-09T13:36:28.1579223-07:00",
+        "Confidence": 0,
+        "X": 0.12736052086862454,
+        "Y": -0.19799927022682007,
+        "Z": 2.18511635894376
+      }
+    },
+    {
+      "UID": "163141ff-5025-4bea-a358-daf15aeda496",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:36:32.6561005-07:00",
+      "EndTime": "2016-07-09T13:36:35.5212548-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:02.8651543",
+      "DurationSeconds": 2.8651543,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.617993877991494,
+      "Mode": "TwoDimensional",
+      "TargetValue": 10.0,
+      "FromOrigoToTargetPosition": {
+        "X": -737.587646484375,
+        "Y": -425.8466796875
+      },
+      "FromTargetToReleasePosition": {
+        "X": 41.7203369140625,
+        "Y": -13.225006103515625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -695.8673095703125,
+        "Y": -439.07168579101562
+      },
+      "ReleasePositionValue": 9.6608682838257156,
+      "ReleasePositionTargetDiff": -0.33913171617428439,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 1,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        9.6608682838257156
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.21836302837504631,
+      "FinalOffscreenY": -0.08786397859161639,
+      "FinalOffscreenZ": 1.5987644140601653,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.11792624135364897,
+          "Y": -0.017233942285310024,
+          "Z": 1.8261757269258621
+        },
+        "Delta": {
+          "X": -2.1628125548983634E-05,
+          "Y": -0.00039625988798903944,
+          "Z": 0.0017030299413620664
+        },
+        "Direction": {
+          "X": 0.800936648244359,
+          "Y": 0.29014646302446762,
+          "Z": -0.52375138710411384
+        },
+        "CaptureTime": "2016-07-09T13:36:35.4946369-07:00",
+        "Confidence": 0,
+        "X": 0.21836302837504631,
+        "Y": -0.08786397859161639,
+        "Z": 1.5987644140601653
+      }
+    },
+    {
+      "UID": "32bc0bcc-8837-4d62-9471-5a0919df29a8",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:36:47.0243164-07:00",
+      "EndTime": "2016-07-09T13:36:58.9064667-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:11.8821503",
+      "DurationSeconds": 11.8821503,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Mode": "TwoDimensional",
+      "TargetValue": 50.0,
+      "FromOrigoToTargetPosition": {
+        "X": 4258.46484375,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -5457.9873046875,
+        "Y": 1779.4718017578125
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -1199.5224609375,
+        "Y": 1779.4718017578125
+      },
+      "ReleasePositionValue": -25.197032247879783,
+      "ReleasePositionTargetDiff": -75.197032247879775,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -25.197032247879783
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.10679176985089034,
+      "FinalOffscreenY": -0.26430034202650066,
+      "FinalOffscreenZ": 1.5251530729333294,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.086094599077361833,
+          "Y": -0.024126650558328595,
+          "Z": 2.0518086970421265
+        },
+        "Delta": {
+          "X": 0.0051109461047108007,
+          "Y": -0.00072362168838291385,
+          "Z": 0.0018594453080442719
+        },
+        "Direction": {
+          "X": -0.031520670191834833,
+          "Y": -0.35958734833880018,
+          "Z": -0.93257889010277728
+        },
+        "CaptureTime": "2016-07-09T13:36:58.8815957-07:00",
+        "Confidence": 0,
+        "X": -0.10679176985089034,
+        "Y": -0.26430034202650066,
+        "Z": 1.5251530729333294
+      }
+    },
+    {
+      "UID": "da51eceb-6c90-4df0-be83-211ed79d1616",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:37:03.678088-07:00",
+      "EndTime": "2016-07-09T13:37:06.1740965-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:02.4960085",
+      "DurationSeconds": 2.4960085,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.52359877559829882,
+      "Mode": "TwoDimensional",
+      "TargetValue": -10.0,
+      "FromOrigoToTargetPosition": {
+        "X": -737.587646484375,
+        "Y": 425.8466796875
+      },
+      "FromTargetToReleasePosition": {
+        "X": 41.08892822265625,
+        "Y": -4.40850830078125
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -696.49871826171875,
+        "Y": 421.43817138671875
+      },
+      "ReleasePositionValue": -9.5583332251692568,
+      "ReleasePositionTargetDiff": 0.44166677483074324,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 1,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -9.5583332251692568
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.11248077654374081,
+      "FinalOffscreenY": -0.1869212531850562,
+      "FinalOffscreenZ": 1.6099979416107701,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.12999966954217662,
+          "Y": -0.028889273145339754,
+          "Z": 1.8624244120677833
+        },
+        "Delta": {
+          "X": 0.00081169279212395251,
+          "Y": 0.0027323931658184419,
+          "Z": -0.0037557939629002668
+        },
+        "Direction": {
+          "X": 0.75297491916619641,
+          "Y": -0.064645374965373814,
+          "Z": -0.65486620511540106
+        },
+        "CaptureTime": "2016-07-09T13:37:06.1561083-07:00",
+        "Confidence": 0,
+        "X": 0.11248077654374081,
+        "Y": -0.1869212531850562,
+        "Z": 1.6099979416107701
+      }
+    },
+    {
+      "UID": "2b699e4a-e5c7-477a-979d-464ccc681ac0",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:37:16.4719535-07:00",
+      "EndTime": "2016-07-09T13:37:29.5900673-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:13.1181138",
+      "DurationSeconds": 13.1181138,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.52359877559829882,
+      "Mode": "TwoDimensional",
+      "TargetValue": -30.0,
+      "FromOrigoToTargetPosition": {
+        "X": -2212.76318359375,
+        "Y": 1277.53955078125
+      },
+      "FromTargetToReleasePosition": {
+        "X": -1722.805908203125,
+        "Y": -61.5345458984375
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -3935.569091796875,
+        "Y": 1216.0050048828125
+      },
+      "ReleasePositionValue": -48.364224931426214,
+      "ReleasePositionTargetDiff": -18.364224931426214,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -48.364224931426214
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.15644031820395327,
+      "FinalOffscreenY": -0.20867487229447776,
+      "FinalOffscreenZ": 1.3071108141153849,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.12572116607524156,
+          "Y": -0.00039980441385934189,
+          "Z": 1.7547908710453175
+        },
+        "Delta": {
+          "X": 0.0050677997199004288,
+          "Y": 0.00424580999687138,
+          "Z": 0.00034312847518713774
+        },
+        "Direction": {
+          "X": -0.15391314118657964,
+          "Y": -0.41839798701847852,
+          "Z": -0.89512785088442259
+        },
+        "CaptureTime": "2016-07-09T13:37:29.5584401-07:00",
+        "Confidence": 0,
+        "X": -0.15644031820395327,
+        "Y": -0.20867487229447776,
+        "Z": 1.3071108141153849
+      }
+    },
+    {
+      "UID": "62541c06-0dd7-48d2-b147-f1e70c83a3b1",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:37:33.7110646-07:00",
+      "EndTime": "2016-07-09T13:37:40.5625846-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:06.8515200",
+      "DurationSeconds": 6.85152,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Mode": "TwoDimensional",
+      "TargetValue": 40.0,
+      "FromOrigoToTargetPosition": {
+        "X": 3406.771484375,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 456.90283203125,
+        "Y": 282.31936645507812
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": 3863.67431640625,
+        "Y": 282.31936645507812
+      },
+      "ReleasePositionValue": -45.485588520940759,
+      "ReleasePositionTargetDiff": -85.485588520940752,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -45.485588520940759
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.1116294793616936,
+      "FinalOffscreenY": -0.1873552943178047,
+      "FinalOffscreenZ": 2.3661971461759808,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.16096122160248649,
+          "Y": -0.014418048101442456,
+          "Z": 1.9092997479200891
+        },
+        "Delta": {
+          "X": 0.0067025879404825905,
+          "Y": -0.0044084477978073855,
+          "Z": -0.0049799105470715865
+        },
+        "Direction": {
+          "X": 0.74222071910707865,
+          "Y": -0.24328453099908598,
+          "Z": 0.624436578929138
+        },
+        "CaptureTime": "2016-07-09T13:37:40.5585811-07:00",
+        "Confidence": 0,
+        "X": 0.1116294793616936,
+        "Y": -0.1873552943178047,
+        "Z": 2.3661971461759808
+      }
+    },
+    {
+      "UID": "0d7c00c3-295b-4ce6-99d4-c25b5efbe467",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:37:45.174518-07:00",
+      "EndTime": "2016-07-09T13:37:53.370668-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:08.1961500",
+      "DurationSeconds": 8.19615,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.617993877991494,
+      "Mode": "TwoDimensional",
+      "TargetValue": -50.0,
+      "FromOrigoToTargetPosition": {
+        "X": 3687.9384765625,
+        "Y": 2129.232421875
+      },
+      "FromTargetToReleasePosition": {
+        "X": -1695.115478515625,
+        "Y": 4049.9892578125
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": 1992.822998046875,
+        "Y": 6179.2216796875
+      },
+      "ReleasePositionValue": -76.231944140999943,
+      "ReleasePositionTargetDiff": -26.231944140999943,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -76.231944140999943
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.61620931031730275,
+      "FinalOffscreenY": -0.17557722383160504,
+      "FinalOffscreenZ": 1.996697093434928,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.20861623952636751,
+          "Y": 0.033349763521944735,
+          "Z": 1.874831331882334
+        },
+        "Delta": {
+          "X": 0.0062367916107177734,
+          "Y": -0.0059589296579360962,
+          "Z": 0.006009221076965332
+        },
+        "Direction": {
+          "X": 0.00437140629291565,
+          "Y": -0.47101357627785007,
+          "Z": 0.88211512954317484
+        },
+        "CaptureTime": "2016-07-09T13:37:53.0188787-07:00",
+        "Confidence": 0,
+        "X": -0.61620931031730275,
+        "Y": -0.17557722383160504,
+        "Z": 1.996697093434928
+      }
+    },
+    {
+      "UID": "b4918044-9c33-4271-8d05-b156bd53f02a",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "0001-01-01T00:00:00",
+      "EndTime": "2016-07-09T13:38:00.7877569-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:00",
+      "DurationSeconds": 0.0,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.0943951023931953,
+      "Mode": "TwoDimensional",
+      "TargetValue": 10.0,
+      "FromOrigoToTargetPosition": {
+        "X": -425.8466796875,
+        "Y": -737.587646484375
+      },
+      "FromTargetToReleasePosition": {
+        "X": 67.637130737304688,
+        "Y": 29.5831298828125
+      },
+      "IsStarted": false,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -358.20953369140625,
+        "Y": -708.0045166015625
+      },
+      "ReleasePositionValue": 9.3163100719244234,
+      "ReleasePositionTargetDiff": -0.6836899280755766,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 1,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        9.3163100719244234
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.28791527020017116,
+      "FinalOffscreenY": -0.061739513942129134,
+      "FinalOffscreenZ": 1.63248434348777,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.0955424307036025,
+          "Y": -0.019066232118629036,
+          "Z": 1.8392677625602423
+        },
+        "Delta": {
+          "X": 0.0031753757213228151,
+          "Y": 0.0006413519469091189,
+          "Z": -0.00061887566609386546
+        },
+        "Direction": {
+          "X": 0.801851005623807,
+          "Y": 0.26004325827410057,
+          "Z": -0.5379706949326134
+        },
+        "CaptureTime": "2016-07-09T13:38:00.7611178-07:00",
+        "Confidence": 0,
+        "X": 0.28791527020017116,
+        "Y": -0.061739513942129134,
+        "Z": 1.63248434348777
+      }
+    },
+    {
+      "UID": "f40a13ff-7dc0-4bd4-baf7-28bdf8bd15f6",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:38:11.3436588-07:00",
+      "EndTime": "2016-07-09T13:38:20.4701293-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:09.1264705",
+      "DurationSeconds": 9.1264705,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Mode": "TwoDimensional",
+      "TargetValue": -30.0,
+      "FromOrigoToTargetPosition": {
+        "X": -2555.078857421875,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -229.85791015625,
+        "Y": 329.6810302734375
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -2784.936767578125,
+        "Y": 329.6810302734375
+      },
+      "ReleasePositionValue": -32.927156451349944,
+      "ReleasePositionTargetDiff": -2.9271564513499442,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -32.927156451349944
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.069520495884284619,
+      "FinalOffscreenY": -0.079229880991031315,
+      "FinalOffscreenZ": 1.1580911898092237,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.08536302517540989,
+          "Y": 0.0015452803951091203,
+          "Z": 1.6541654538336761
+        },
+        "Delta": {
+          "X": 0.00406009093126955,
+          "Y": 0.00051298749411621269,
+          "Z": 0.003945995511689171
+        },
+        "Direction": {
+          "X": 0.40945132929441508,
+          "Y": 0.040873631785321093,
+          "Z": -0.91141590679761242
+        },
+        "CaptureTime": "2016-07-09T13:38:20.4611178-07:00",
+        "Confidence": 0,
+        "X": 0.069520495884284619,
+        "Y": -0.079229880991031315,
+        "Z": 1.1580911898092237
+      }
+    },
+    {
+      "UID": "1cf2ad67-0b70-412b-b5f0-6f71b4c68aa5",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:38:27.5696474-07:00",
+      "EndTime": "2016-07-09T13:38:35.2988995-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:07.7292521",
+      "DurationSeconds": 7.7292521,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.0943951023931953,
+      "Mode": "TwoDimensional",
+      "TargetValue": -40.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1703.3857421875,
+        "Y": 2950.3505859375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -3221.448974609375,
+        "Y": -1106.7725830078125
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -1518.063232421875,
+        "Y": 1843.5780029296875
+      },
+      "ReleasePositionValue": -28.040124949070432,
+      "ReleasePositionTargetDiff": 11.959875050929568,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -28.040124949070432
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.025303609669208527,
+      "FinalOffscreenY": -0.26667699217796326,
+      "FinalOffscreenZ": 1.513440728187561,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.23975565662004814,
+          "Y": 0.023310401781096019,
+          "Z": 1.8652003490645817
+        },
+        "Delta": {
+          "X": 0.058709658682346344,
+          "Y": 0.030361860990524292,
+          "Z": 0.03506159782409668
+        },
+        "Direction": {
+          "X": 0.97634454309154528,
+          "Y": -0.14314638510230437,
+          "Z": -0.16205075009855591
+        },
+        "CaptureTime": "2016-07-09T13:38:35.2490604-07:00",
+        "Confidence": 0,
+        "X": -0.025303609669208527,
+        "Y": -0.26667699217796326,
+        "Z": 1.513440728187561
+      }
+    },
+    {
+      "UID": "48f62816-f158-425e-86a1-9e6968541ee8",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:38:40.8657767-07:00",
+      "EndTime": "2016-07-09T13:38:45.2421338-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:04.3763571",
+      "DurationSeconds": 4.3763571,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.0471975511965976,
+      "Mode": "TwoDimensional",
+      "TargetValue": -20.0,
+      "FromOrigoToTargetPosition": {
+        "X": -851.69287109375,
+        "Y": 1475.17529296875
+      },
+      "FromTargetToReleasePosition": {
+        "X": -723.5760498046875,
+        "Y": -97.5789794921875
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -1575.2689208984375,
+        "Y": 1377.5963134765625
+      },
+      "ReleasePositionValue": -24.57064491498101,
+      "ReleasePositionTargetDiff": -4.57064491498101,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -24.57064491498101
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.0819931149598056,
+      "FinalOffscreenY": -0.17435401125334973,
+      "FinalOffscreenZ": 1.5655603084938796,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.15645192870711103,
+          "Y": -0.01350371726079006,
+          "Z": 1.8468206122762048
+        },
+        "Delta": {
+          "X": -0.014312312781217779,
+          "Y": -0.00058139266440726534,
+          "Z": -0.0072552676433907948
+        },
+        "Direction": {
+          "X": 0.039398681636623405,
+          "Y": 0.035852879680179355,
+          "Z": -0.99858014946419527
+        },
+        "CaptureTime": "2016-07-09T13:38:44.5583135-07:00",
+        "Confidence": 0,
+        "X": -0.0819931149598056,
+        "Y": -0.17435401125334973,
+        "Z": 1.5655603084938796
+      }
+    },
+    {
+      "UID": "c938510d-619b-4c44-a3fe-0e21d2eb2caa",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:38:49.3569769-07:00",
+      "EndTime": "2016-07-09T13:38:55.0458079-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:05.6888310",
+      "DurationSeconds": 5.6888309999999995,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.0943951023931953,
+      "Mode": "TwoDimensional",
+      "TargetValue": 30.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1277.539306640625,
+        "Y": -2212.76318359375
+      },
+      "FromTargetToReleasePosition": {
+        "X": 481.29150390625,
+        "Y": 995.2178955078125
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -796.247802734375,
+        "Y": -1217.5452880859375
+      },
+      "ReleasePositionValue": 17.081209337362786,
+      "ReleasePositionTargetDiff": -12.918790662637214,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        17.081209337362786
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.45315700769424438,
+      "FinalOffscreenY": 0.0984693393111229,
+      "FinalOffscreenZ": 1.4640247821807861,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.02124018881946324,
+          "Y": -0.00078496268522446067,
+          "Z": 1.7710699817955637
+        },
+        "Delta": {
+          "X": 0.033774450867359529,
+          "Y": 0.022466466120696568,
+          "Z": -0.023028296902670053
+        },
+        "Direction": {
+          "X": 0.76867825010883928,
+          "Y": 0.39640752649396405,
+          "Z": -0.50199085723601589
+        },
+        "CaptureTime": "2016-07-09T13:38:53.4582008-07:00",
+        "Confidence": 0,
+        "X": 0.45315700769424438,
+        "Y": 0.0984693393111229,
+        "Z": 1.4640247821807861
+      }
+    },
+    {
+      "UID": "2221da5b-04cb-4e5e-bc6c-6f62fece0254",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:38:59.2551502-07:00",
+      "EndTime": "2016-07-09T13:39:04.7938829-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:05.5387327",
+      "DurationSeconds": 5.5387327,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.0471975511965976,
+      "Mode": "TwoDimensional",
+      "TargetValue": 30.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1277.53955078125,
+        "Y": -2212.76318359375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -24.4891357421875,
+        "Y": 514.259765625
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": 1253.0504150390625,
+        "Y": -1698.50341796875
+      },
+      "ReleasePositionValue": 24.782390206461503,
+      "ReleasePositionTargetDiff": -5.2176097935384966,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        24.782390206461503
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.43754311273265345,
+      "FinalOffscreenY": 0.075305837601230816,
+      "FinalOffscreenZ": 1.9419928530577693,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.0524368220580691,
+          "Y": -0.0090165732414496675,
+          "Z": 1.8708921660278832
+        },
+        "Delta": {
+          "X": 0.0008769344084025299,
+          "Y": -0.00011812992248615151,
+          "Z": 0.002630996807799546
+        },
+        "Direction": {
+          "X": 0.9079251378440113,
+          "Y": 0.41805863849319774,
+          "Z": 0.029981975454372142
+        },
+        "CaptureTime": "2016-07-09T13:39:04.7575249-07:00",
+        "Confidence": 0,
+        "X": 0.43754311273265345,
+        "Y": 0.075305837601230816,
+        "Z": 1.9419928530577693
+      }
+    },
+    {
+      "UID": "384e731d-b887-46da-b54b-3b0c69ba92d7",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:39:08.939964-07:00",
+      "EndTime": "2016-07-09T13:39:14.210694-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:05.2707300",
+      "DurationSeconds": 5.2707299999999995,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.0943951023931953,
+      "Mode": "TwoDimensional",
+      "TargetValue": 40.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1703.3857421875,
+        "Y": -2950.350830078125
+      },
+      "FromTargetToReleasePosition": {
+        "X": 730.08856201171875,
+        "Y": 1405.4403076171875
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -973.29718017578125,
+        "Y": -1544.9105224609375
+      },
+      "ReleasePositionValue": 21.438944901434667,
+      "ReleasePositionTargetDiff": -18.561055098565333,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        21.438944901434667
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.46965906023979187,
+      "FinalOffscreenY": 0.19443947076797485,
+      "FinalOffscreenZ": 1.4194529056549072,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.0110120073047666,
+          "Y": 0.026396326961378676,
+          "Z": 1.7570144911186032
+        },
+        "Delta": {
+          "X": 0.029952373141813982,
+          "Y": 0.030736415735288403,
+          "Z": -0.024217578151258579
+        },
+        "Direction": {
+          "X": 0.71117602245352207,
+          "Y": 0.43974042366435956,
+          "Z": -0.54850435265609043
+        },
+        "CaptureTime": "2016-07-09T13:39:13.2931908-07:00",
+        "Confidence": 0,
+        "X": 0.46965906023979187,
+        "Y": 0.19443947076797485,
+        "Z": 1.4194529056549072
+      }
+    },
+    {
+      "UID": "19364a54-debb-4029-94f5-885432c651cc",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:39:18.7684098-07:00",
+      "EndTime": "2016-07-09T13:39:25.2766458-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:06.5082360",
+      "DurationSeconds": 6.508236,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.5707963267948966,
+      "Mode": "TwoDimensional",
+      "TargetValue": -40.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 3406.771484375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -398.65777587890625,
+        "Y": -2140.90771484375
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -398.65777587890625,
+        "Y": 1265.86376953125
+      },
+      "ReleasePositionValue": -15.582548116982514,
+      "ReleasePositionTargetDiff": 24.417451883017485,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -15.582548116982514
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.17760080266990255,
+      "FinalOffscreenY": -0.22288101559289489,
+      "FinalOffscreenZ": 1.7409051848000909,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.42937193512254174,
+          "Y": -0.034671734284069493,
+          "Z": 1.8670518037441848
+        },
+        "Delta": {
+          "X": -0.022698978697768962,
+          "Y": -0.00575777444917272,
+          "Z": 0.001750170542593299
+        },
+        "Direction": {
+          "X": 0.76762671475455346,
+          "Y": -0.26536612777186042,
+          "Z": -0.58337813211201206
+        },
+        "CaptureTime": "2016-07-09T13:39:24.0923585-07:00",
+        "Confidence": 0,
+        "X": -0.17760080266990255,
+        "Y": -0.22288101559289489,
+        "Z": 1.7409051848000909
+      }
+    },
+    {
+      "UID": "152bc0a8-97e8-420a-beed-80b13d54a9fc",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:39:29.3485107-07:00",
+      "EndTime": "2016-07-09T13:39:36.3698914-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:07.0213807",
+      "DurationSeconds": 7.0213807,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.0471975511965976,
+      "Mode": "TwoDimensional",
+      "TargetValue": 40.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1703.3857421875,
+        "Y": -2950.350830078125
+      },
+      "FromTargetToReleasePosition": {
+        "X": 31.5726318359375,
+        "Y": 1017.9017333984375
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": 1734.9583740234375,
+        "Y": -1932.4490966796875
+      },
+      "ReleasePositionValue": 30.49228133231404,
+      "ReleasePositionTargetDiff": -9.50771866768596,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        30.49228133231404
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.55300643469156385,
+      "FinalOffscreenY": 0.089592263449720322,
+      "FinalOffscreenZ": 2.0302293618596292,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": 0.0672359489105879,
+          "Y": -0.042251829505952812,
+          "Z": 1.928402427298084
+        },
+        "Delta": {
+          "X": -0.00020647765684334018,
+          "Y": 0.0012181084174159029,
+          "Z": -0.0038100240221825565
+        },
+        "Direction": {
+          "X": 0.80674201954137059,
+          "Y": 0.5890408166370743,
+          "Z": -0.046885288117270857
+        },
+        "CaptureTime": "2016-07-09T13:39:36.3582113-07:00",
+        "Confidence": 0,
+        "X": 0.55300643469156385,
+        "Y": 0.089592263449720322,
+        "Z": 2.0302293618596292
+      }
+    },
+    {
+      "UID": "a50801c6-7956-43c2-bce5-05f84e7e15bb",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:39:40.8509443-07:00",
+      "EndTime": "2016-07-09T13:39:48.4792475-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:07.6283032",
+      "DurationSeconds": 7.6283031999999995,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.52359877559829882,
+      "Mode": "TwoDimensional",
+      "TargetValue": 40.0,
+      "FromOrigoToTargetPosition": {
+        "X": 2950.3505859375,
+        "Y": -1703.3857421875
+      },
+      "FromTargetToReleasePosition": {
+        "X": 885.62841796875,
+        "Y": -155.4583740234375
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": 3835.97900390625,
+        "Y": -1858.8441162109375
+      },
+      "ReleasePositionValue": 50.048941084683776,
+      "ReleasePositionTargetDiff": 10.048941084683776,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        50.048941084683776
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": 0.38038539285741479,
+      "FinalOffscreenY": 0.051117587837680459,
+      "FinalOffscreenZ": 2.341333768274009,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": 0.0058134155763002529,
+          "Y": -0.0578102354045409,
+          "Z": 2.0102373231160549
+        },
+        "Delta": {
+          "X": 0.0028559878605801114,
+          "Y": -0.001504416478670903,
+          "Z": -0.00070202291737064826
+        },
+        "Direction": {
+          "X": 0.77276278797797893,
+          "Y": 0.48858703844885248,
+          "Z": 0.40511773520333672
+        },
+        "CaptureTime": "2016-07-09T13:39:48.4568549-07:00",
+        "Confidence": 0,
+        "X": 0.38038539285741479,
+        "Y": 0.051117587837680459,
+        "Z": 2.341333768274009
+      }
+    },
+    {
+      "UID": "783f5055-3307-40a2-b1c6-875f66e00f50",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:40:29.3158941-07:00",
+      "EndTime": "2016-07-09T13:40:38.2490228-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:08.9331287",
+      "DurationSeconds": 8.9331287,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.0471975511965976,
+      "Mode": "TwoDimensional",
+      "TargetValue": -30.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1277.539306640625,
+        "Y": 2212.76318359375
+      },
+      "FromTargetToReleasePosition": {
+        "X": 25.9417724609375,
+        "Y": -269.0966796875
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -1251.5975341796875,
+        "Y": 1943.66650390625
+      },
+      "ReleasePositionValue": -27.143374010444468,
+      "ReleasePositionTargetDiff": 2.8566259895555319,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 1,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -27.143374010444468
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.089945325634432347,
+      "FinalOffscreenY": -0.28670273798923274,
+      "FinalOffscreenZ": 1.5429652342466675,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.16069707099045874,
+          "Y": -0.018966479117125342,
+          "Z": 1.8237937601279777
+        },
+        "Delta": {
+          "X": 0.0099385692290761968,
+          "Y": 0.00835856288200404,
+          "Z": -0.0003743701020961776
+        },
+        "Direction": {
+          "X": 0.057347348620220846,
+          "Y": -0.20523198561865272,
+          "Z": -0.97703178744872776
+        },
+        "CaptureTime": "2016-07-09T13:40:38.2234258-07:00",
+        "Confidence": 0,
+        "X": -0.089945325634432347,
+        "Y": -0.28670273798923274,
+        "Z": 1.5429652342466675
+      }
+    },
+    {
+      "UID": "04b68240-77a5-4ac8-9aec-7c0856cd6177",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "GroupName": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-07-09T13:22:51.2602164-07:00",
+      "StartTime": "2016-07-09T13:40:03.4398302-07:00",
+      "EndTime": "2016-07-09T13:40:16.9071858-07:00",
+      "IsCompleted": true,
+      "Duration": "00:00:13.4673556",
+      "DurationSeconds": 13.4673556,
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Mode": "TwoDimensional",
+      "TargetValue": -50.0,
+      "FromOrigoToTargetPosition": {
+        "X": -4258.46435546875,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -3707.848876953125,
+        "Y": 620.02069091796875
+      },
+      "IsStarted": true,
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true,
+      "FromOrigoToReleasePosition": {
+        "X": -7966.3134765625,
+        "Y": 620.02069091796875
+      },
+      "ReleasePositionValue": -93.817918659328839,
+      "ReleasePositionTargetDiff": -43.817918659328839,
+      "InertialDistanceTraveled": 0.0,
+      "NoninertialDistanceTraveled": 0.0,
+      "TotalDistanceTraveled": 0.0,
+      "InertialDistanceTraveledRatio": 0.0,
+      "IsOutlier": false,
+      "BullsEyeEntryCount": 0,
+      "OvershootTravelDistance": 0.0,
+      "OvershootTravelRatio": 0.0,
+      "TouchCount": 1,
+      "ReleaseValues": [
+        -93.817918659328839
+      ],
+      "IsStatistic": false,
+      "IsDuplication": false,
+      "FinalOffscreenX": -0.1233442736722106,
+      "FinalOffscreenY": -0.014764368744898004,
+      "FinalOffscreenZ": 0.74170438768065494,
+      "FinalOffscreenLocation": {
+        "SphereCenter": {
+          "X": -0.26593214784931363,
+          "Y": 0.044514002038105169,
+          "Z": 1.2724545672435599
+        },
+        "Delta": {
+          "X": -0.0027636129793037617,
+          "Y": 0.00019673162505493696,
+          "Z": 0.0033837131584302238
+        },
+        "Direction": {
+          "X": 0.098125741058200946,
+          "Y": 0.1289748984525709,
+          "Z": -0.98678103676090567
+        },
+        "CaptureTime": "2016-07-09T13:40:16.8740157-07:00",
+        "Confidence": 0,
+        "X": -0.1233442736722106,
+        "Y": -0.014764368744898004,
+        "Z": 0.74170438768065494
+      }
+    }
+  ],
+  "CreateTime": "2016-07-09T13:22:51.2592147-07:00",
+  "IsSessionCompleted": true,
+  "CompletionRate": 1.0,
+  "IsStarted": true,
+  "Duration": "00:15:38.9399026",
+  "Type": "E2"
+}

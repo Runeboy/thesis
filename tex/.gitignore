@@ -1,0 +1,11 @@
+* 
+
+# But not these files...
+!README.md
+!.gitignore
+!thesis.pdf
+!*.tex
+
+# ...even if they are in subdirectories
+!*/
+

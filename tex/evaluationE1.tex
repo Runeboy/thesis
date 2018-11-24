@@ -1,0 +1,382 @@
+\subsection{Experiment one: spatial definitions}
+
+Initially, it was sought to explore through experimentation how different definitions of off-screen space  compared against each other, including a baseline derived from using on-screen space (touch) only. The three different off-screen space definitions were chosen to test separately, as previously accounted for. For each of these, different dimensionalities were explored in isolation through variations of an appropriately designed number-panning task. 
+
+\subsubsection{Tasks}
+
+The participants were asked to perform a panning task, conceived so as to be easily comprehensible and yet capable of efficiently capturing the desired metrics. Each exercise presented the participant with the simple concept of dragging a line with numbered tick marks in some numerical range that exceeded the on-screen viewport by several factors. The size of the input space was then equal to the length of this range (as visualized by the line), with an added $\ifrac{3}{4}$ of the on-screen viewport as "buffer" on each side. This buffer was added to ensure that navigating to an extreme of the input space still left $\ifrac{1}{4}$ of the line in view, thereby avoiding any loss of spatial orientation. 
+
+Each value on the line was made clearly visible as a contrast overlay on the corresponding tick mark. The  task was then to drag the line until a particular trial "target value" came into center-view  of a bullseye-circle (of 3.0 centimeters in diameter). This circle, initially red, turns green when the target value is positioned within its enclosing space. In order successfully complete the trial, the participant was then required to continuously hold the value within that space for 3 seconds. Each trial was fully recorded with e.g. various vector data, such as target and release positions, and durations from initial interaction until completion of the exercise.
+
+Ideally, the task would be designed to cover a full systematic exploration in two dimensions. But due to the extent of such an experiment, this would likely fatigue the participants and decrease the quality of the data to collect. Hence, only two dimensionalities, horizontal and vertical, were included and examined in isolation. Two variations of the task were therefore designed:
+
+\begin{itemize}
+	\item \tb{Exercise \ti{a}} aligns the line of numbers with the  horizontal dimension and places the positive range of values on the right-hand side of the origo (under the assumption  that a left-to-right increasing order is culturally appropriate for the test subject)\\
+	\item \tb{Exercise \ti{b}} is as the previous, except the line is angled vertically and lists the positive numbers on the upper half (assuming the intuition of height is appropriate choice for the test subject)   
+	%	\item \tb{Exercise three} combines the two dimensions and angles the line differently for each trial,  although with the positive range always in the upper-half, under the same assumptions as that of exercise two.
+\end{itemize}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{image/e1exercise}
+	\caption{The initial viewport of the input space in exercise \ti{a} (left) and \ti{b} (right, as used in experiment one.}
+	\label{fig:expOneExecises}
+\end{figure}
+
+
+%\begin{figure}
+%	\centering
+%%	\subfigure[Title A]{
+%	\includegraphics[width=0.7\linewidth]{image/expTwoDimsNeg}
+%	\caption{An instance of The experimental exercise with negative target value. }
+%	\label{fig:expTwoDimsNeg}
+%\end{figure}
+
+
+
+
+%Hence, the initial values visible to the user are in the range of TODO for the horizontal layout, TODO for the vertical and [TODO to TODO] for the two-dimensional layout, depending on the angling of the line (which is maximized on the diagonal of the input space). 
+
+The two exercises, shown in figure \ref{fig:expOneExecises}, share equal tick-mark distances and have approximately the same initial visible input range, $[-3..3]$ for task \ti{a} and  $[-2..2]$ for task \ti{b}, which is assumed to provide an adequate sense of spatial scale. They share the same numerical tick range of $[-50..50]$ and therefore have equal dimensions of input space, which spans a  distance of 1 meter. This choice of physical range is estimated to be somewhat beyond the comfortable motion range for the average user, and as such, the experiment is assumed to cover (and go slightly beyond) fringe conditions.
+
+As previously work has shown, loss of spatial awareness is an issue on small mobile devices unless countered and may therefore also be an issue for the experimental design used here. For instance, high navigation velocities will likely be disorienting, since the only spatial references are the line numbers, which can only be read at idle or slow speeds. In addition, the user should obviously not be left without any visual references at all, as this would lead to a total loss of orientation.
+% any navigation that positions the viewport with the line out of view then leaves the user with no visual references at all.
+
+These considerations were found to be very relevant, given the extreme simplicity of the task design. That is, the simplicity of the design is considered more detrimental to spatial awareness than most normal user interfaces. This was sought countered by minor design decisions. 
+
+First, it was assumed that any user interface interaction starts out with some clear reference of location. For instance, opening a text document usually starts out on the first page. Likewise, digital maps usually start out in a location familiar to the user. To align with such observations, it was  assumed desirable to have the user consistently start in a well-known location, regardless of the particular trial parameters. The start location was therefore chosen to always be the origo (center) of the line, as opposed to e.g. some randomization. 
+
+Second, it was assumed that for any user interface, some indications of spatial awareness will be present during both low and high navigational velocity. To exemplify, the pages of a document are distinctly different and rapidly enumerating them still provides some awareness in the form of quick glances of the unique outline of each page. This same reasoning applies to map navigation, since any top-down map view has a distinct topographical outline that is perceivable during both slow and fast location changes. Thus, to provide some awareness feedback during navigation, the tick marks were therefore made to increase in size and elliptical shape with increasing distance from the origo. Such design provides subtle hints that support spatial awareness,  regardless of the navigational velocity. 
+
+In addition, a pilot test of the trials showed that users may mistake positive and negative target values. Both the  target value indicator and line tick marks were therefore color coded, with negative numbers in cold color and positive numbers in warm. This color-coding is shown in figure \ref{fig:expTwoDimsPosNeg} for a trial variant from one of the subsequent experiments. 
+
+All in all, the decisions made here are assumed to bring the trial design  closer to the general user interface characteristics of smaller mobile devices. 
+
+
+\begin{figure*}
+	\centering
+	\begin{minipage}[b]{0.484\textwidth} %.33
+		\includegraphics[width=1\linewidth]{image/expTwoDimsNeg}
+	\end{minipage}
+	\begin{minipage}[b]{0.5\textwidth}
+		\includegraphics[width=1\linewidth]{image/expTwoDimsPos}
+	\end{minipage}
+	\caption{Two instances of the experimental trial variant used in experiment three, with a negative target value on the left and positive on the right. Color coding of the indicated target value mitigates sign confusion, an inherent weakness in this type of experimental design.}
+	\label{fig:expTwoDimsPosNeg}
+\end{figure*}
+
+\subsubsection{Input interfaces}
+
+To provide a reference point for comparison, a baseline was first derived by completing the two tasks in an interface that allowed touch input only. Next, each off-screen space definition of interest was explored as a separate interface, again using the same two tasks, $a$ and $b$. 
+
+%Minor visual feedback was given to provide . The background would initially be neutral (white) and yield a subtle but perceivable  
+%for both the initiation of touch input and the subsequent transition into off-screen space
+
+%, with one task per definition.
+
+
+%The experimental interfaces were based on the desire for exploring all given definitions of the off-screen space, of which three have been given. In addition, isolating and evaluating all combinations of input dimensionalities were assumed to be desirable, since the solution may yield differing effects for different ones. With all three off-screen definitions being based on a planar extension of the display, these dimensionality combinations are covered by horizontal input, vertical input and both them combined. Thus, with three definitions and three dimensionality combinations, a total of nine interfaces were tested.
+
+
+
+\subsubsubsection{Baseline}
+
+\def\nativeInertiaFn{Using the \href{https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.uielement.manipulationmode.aspx}{ManipulationDelta} event provided by the WintRT framework.} %\fn{\nativeInertiaFn}
+As mentioned, the baseline was derived with input confined to the on-screen space only and no use of off-screen space. Exclusive to the baseline is the incorporation of inertia, a navigational aid so common in touch-enabled interfaces that it was considered required in order for the baseline to generalize well. For this same reason, the implementation of inertia was done so as to align its behavior with what is presumed normal to most users. The inertia reference of choice was therefore that of a widely known map service provider\fn{Google maps}. Using  on-screen inertial delta movement vector $\b{\delta}$ and its associated velocity $v$ (both provided by the chosen framework), the modified inertia delta movement $\b{{\hat\delta}}$ that most closely resembles the desired behavior was found to be the exponentially decreasing
+$$ 
+\b{\hat\delta} =   2.7^{ - \(\large \ifrac{  \hat{v}} {v} \)} \b{\delta}  
+$$
+%where and are the incremental movement and velocity vectors of the input,  
+where $\hat{v}$ is the velocity of the last non-inertial movement before the intertia was initiated. Furthermore, the magnitude of the velocity was scaled by 
+$$ v = \min( v, 7.3 ) $$
+to enforce an upper ceiling that avoids extreme inertia. Such a ceiling is necessary on a touch-enabled device, because excessive swipe velocities do occur frequently and applying the corresponding inertia will result in loss of spatial awareness unless capped.   
+
+
+\subsubsubsection{Plane-orthogonal}
+
+The simplest of the off-screen definitions, this interface projects the user's finger in a line orthogonal to the plane. The user may then continue the swipe off-screen, as if an imaginary virtual extension of the display was present in the plane spanned by the device.
+
+\subsubsubsection{Plane-directional}
+
+Here, the projection follows the direction of the participants finger, defined as the vector from the base of the index finger and to the tip\fn{In detail, some minor offset is applied through visual inspection during calibration, since the tracker provides a fix on the center of the hand (rather than the base of the index finger, as is the desired point to approximate for deriving pointing direction).}. As the extension of the display is still planar, the velocity of navigational movements then depends not only  on the orthogonal distance from the finger to the plane, but also its angle with the plane's normal.
+
+\subsubsubsection{Spherical}
+
+The most complex of the interfaces, this allows for interacting with off-screen space through projecting onto a sphere. This sphere is centered at the user's shoulder, with radius equal to the shoulder's orthogonal distance to the plane spanned by the device. This distance is assumed to correspond to the length of the user's arm, such that the finger ideally remains at the boundary of the sphere, regardless of the input position. Although this definition of radius is in fact dynamic (calculated for each received tracking frame), the user is presumed to not move around relative to the device and thus, the radius will be close to constant. However, should the user choose to move further from the device for whatever reason, the projections will take on a more directional behavior (i.e. a simple enlargement of the sphere), which is still presumed intuitive to most users.
+
+% spherical approximation of the motion range of the user's arm and thereby invariant to the exact positioning of the user, given that the distance of the shoulder to the display plane remains relatively constant.
+
+%
+%\subsubsection{Horizontal}
+%
+%\subsubsection{Vertical}
+%
+%\subsubsection{Horizontal and vertical}
+%
+%
+
+\subsubsection{Trial design}
+
+To conduct the experiment for a given interface and task, participants had to complete a set of trials, each asking for navigating to a target value unique to the task. In other words, the relation between trials and target values is a bijection. 
+
+The set of target values was conceived on three assumptions. First, the range should cover the presumed physical limit (i.e. a line length of one meter). Second, the target values should be equally spaced to provide interpretable results. Third, the steps should be numerically simple, under the assumption that humans do not relate odd-sized numbers very well to each other. 
+
+To take these assumptions into account, the 10 symmetrical target values 
+%$$\[-50,-40,-30,-20,-10,10,20,30,40,50\]$$
+$$\pm\{10, 20, 30, 40, 50\}$$
+%$$\{t \mid -50 \le t \le 50, t\mod 10 = 0\}$$
+were chosen as the target value set for full and evenly spaced coverage of the input range, with the step size (10) presumed optimal in terms of  numerical comprehension. 
+
+Both the interfaces and task exercises were executed in the order presented here. For each interface, all target values were systematically randomized, using a unique string identifier for each participant as seed (for reproducibility while uniquely randomizing for each participant). 
+%In addition and specific to the two-dimensional exercise, is the additional choice of line angles that ideally should cover the full spectrum. Hence, for this exercise type, the trials have unique and equally spaced angles, with the combined set covering the full range of angles (i.e. one half-circle, since the positive range is to be in the upper half by design choice). As with the target values, this set of angles is randomized using the aforementioned seed.
+
+
+
+All in all, a total of 5 participants $\times$ 4 interfaces $\times$ 2 tasks $\times$ 10 trials = 400 trials were recorded. % 5 x 4 x 2 x 10
+
+
+\subsubsection{Procedure}
+
+Participants were given an introduction and demonstration to the general procedure for completing trial instances of the two task variants for both negative and positive numbers. Next, a few practice sessions were completed so as to get comfortable with the situation. Each participant was placed in front of the on-screen input space in a position that allowed for a natural and relaxed use of the interacting arm. In addition, participants were informed that the off-screen interfaces varied slightly, but no other hints were given, in order to obtain results that accurately reflect how well a given interface performs on the premise of the \ti{user's} intuition. That is, the aim of the procedure was to prevent data pollution by ensuring that the user did not try to conform to any predefined notions of off-screen space. 
+
+%That is, with the experimental end goal of uncovering the user's perception of input space, the aim of the procedure was to prevent data pollution by ensuring that the user did not try to conform to any predefined notions of the space. 
+
+
+
+%qusationanare..TODO
+%All american participants informed about dimension of information space : 1m approx 40 inch
+
+\subsubsection{Participants}
+
+Two males and three females agreed to participate in the experiment. All were in the age span 20-40 (mean 29, standard dev. 9.3), all had normal vision and all chose to interact with the right hand.
+
+\begin{figure}[!h]
+	\centering
+		\includegraphics[width=1\linewidth]{image/collage}
+	\caption{Happy and healthy Silicon Valley techies in their prime, all presumed quick to engage with new technology.}
+	\label{fig:collage}
+\end{figure}
+
+
+\subsubsection{Hypothesis}
+
+It was hypothesized that a simple extension of the plane would best align with the users' perception of off-screen space, since the display itself is planar.  Hence, the plane-normal interface was expected to yield the shortest interaction times (H1).
+
+Adding directional capabilities, i.e. allowing the user to navigate a planar extension by anchoring  to the directional projection of the finger, was assumed difficult to manage for two reasons. For one, directional projection obviously has little effect in close proximity to the display, due to the projection distances being short. On the other hand, the velocity was expected to become too sensitive outside the display, since the convex curve formed by the motion of the arm will increase directional projection distances very rapidly (from zero and to infinity for when the arm is parallel with the plane). Hence, the plane-directional interface was expected to equal the plane-normal interface for low target values, but overshoot for the high targets due to uncontrollable velocities, possibly with additional clutches for regaining navigational control and sensitivity (H2).  
+
+Introducing a curve in the off-screen space was presumed to maximize continuous (single-touch) travel distances while keeping the sensitivity constant. However, the transition in moving from a visible plane to an invisible curvature was assumed disorienting  and with the user likely to follow a plane rather than the depth of the sphere. This would presumably result in undershooting of degree increasing with target value, making the spherical interface slow and clutch-based for high target values (H3).
+
+Lastly, all off-screen interfaces were expected to perform less optimally for the side of the non-dominating hand due to more constrained movement and obstruction of view, as has been shown to be the case in previous work\cite{adbin}(H4).
+
+%\cite{adbin}
+%TODO: dominating side
+%
+% ... expect optimal results on side of  dominating hand, as per \cite{adbin}  TODO.
+% 
+
+\subsubsection{Results}
+
+To reduce noise, outliers were detected and removed for each type of interaction, defined as the unique combination of an  interface, dimension and target value. 
+
+Trials were identified as outliers if their duration violated an upper fence, which we define as the full interaction time exceeding three interquartile ranges above the upper quartile (Q3) or under the lower quartile (Q1). In addition, any trial taking above a hard limit of 25 seconds were bluntly categorized as an outlier\fn{Such an instance corresponds to \ti{at least} 5 seconds for every interval of target value (0.1 meter) - clearly an extreme duration and one that has significant impact on the interquartile range, due to the smaller sample size.}. In numbers, three trials from three separate participants were removed (plane-normal, horizontal: 1, directional, horizontal: 1, spherical, horizontal: 1).
+
+
+
+%PlaneNormal, dims mode: Horisontal: 1
+%Directional, dims mode: Horisontal: 1
+%Spherical, dims mode: Horisontal : 1
+
+\subsubsubsection{Baseline}
+
+As seen in figure \ref{fig:expOneBaselineData}, the duration for the baseline could appear to be approximately linear in the target value, or put differently, linear in the distance to cover. In numbers, we see durations of approximately four through seven seconds. There is a slight tendency for the curve to  flatten out at target extremums. A  possible explanation for this may be found on the right-hand side of the figure, where it is seen that inertia covers almost all the travel for high targets and is presumably of high velocity. 
+One particular trait of the inertia  appears to be an immediate and rapid increase for positive target values, which correspond to the side of the participant's interacting hand. This is sensible, since the only way to avoid obstructing the display for an east-to-west swipe motion is to interact quickly (by removing the hand and letting inertia do the traveling). %This would also be supportive of existing research. 
+
+Overshoot statistics is also shown by the figure, defined as the accumulated travel distance taking place after the target has entered and prematurely exited the bulls eye, over the total travel distance. As is seen, overshooting could appear to decrease slightly with increasing target values. This is somewhat counter-intuitive, as one may expect greater inertia velocities at higher target values and therefore more overshooting. However, the noticeable spike for the horizontal dimension and target 20 could possibly indicate that users tend to apply inertia in a very rough and invariant manner regardless of the target, which would consistently result in more overshooting for smaller (nearby) targets.
+
+The statistic on the number of touches (which are shown in absolute values  rather than percentage) indicate that user's perform a touch for every 0.1 meter. Thus, targets highs such as 50 require approximately five touch operations, which implies significant redundancy in the physical input for the baseline. 
+
+%
+%Also, the intertia travel ratio as seen in figure TODO.
+%
+%Also, the touch count as seen in figure TODO.
+
+
+%\def\expOneProjectionMode{Horisontal} 
+
+
+\begin{figure*}[!ht]
+	\centering
+%	\vspace*{-1cm}
+	%	\def\plotHideYLabel{ylabel={\textcolor{white}{}}, yticklabels={,,}}
+	\begin{tikzpicture}
+	\threeFigureTrialMode{Baseline}{\meanColor}
+	{ymax=25, y post scale=1}
+	{ymax=85,y post scale=1, legend style={at={(axis cs:0,\plotYMax*.95)}} }
+	\end{tikzpicture}		
+	\caption{The baseline data collected for the horizontal dimension (top) and vertical (middle). The two combined is also shown (bottom), in order to obtain an idea of how a true two-dimensional interface is likely to perform. The left-hand side of each row shows the duration data in lightly scattered form, along with the mean (that does not include outliers). On the right-side of each row, statistics is shown for the mean percentages of overshoot and inertia travel, as well as the mean number of touches used (note the latter is in absolute values and is amplified by a factor of 10, to distinguish it more clearly on the scale used).}
+	\label{fig:expOneBaselineData}
+\end{figure*}
+
+
+
+\subsubsubsection{Plane-normal}
+
+In figure \ref{fig:expOnePlaneNormalData}, wee see that the duration for the plane-normal bears strong resemblance with the baseline, although slightly more fluctuating and with an overall pattern of longer durations. Interaction now takes upwards of 12 seconds in general. Overshooting appears more arbitrary and difficult to interpret. The number of touches and redundant input  is significantly lower however and only rises above a single one (the initiating touch) for target values of 40 or greater. 
+
+\begin{figure*}[!ht]
+	\centering
+	\vspace*{-2cm}
+		%	\def\plotHideYLabel{ylabel={\textcolor{white}{}}, yticklabels={,,}}
+	\begin{tikzpicture}
+	\threeFigureTrialMode
+		{PlaneNormal}
+		{\meanColor}
+		{ymax=25, y post scale=1}
+		{ymax=85,y post scale=1}  %legend style={at={(axis cs:0,\plotYMax*0.98)}}
+	\end{tikzpicture}		
+	\caption{The data collected for the plane-normal interface. Inertia data do not exist here, as it is not a feature of any of the off-screen interfaces.}
+	\label{fig:expOnePlaneNormalData}
+\end{figure*}
+
+%	\caption{}
+%	\label{fig:}
+
+
+\subsubsubsection{Plane-directional}
+%
+
+The plane-directional interface results in the data shown in figure \ref{fig:expOneDirectionalData}. Again, durations are significantly more fluctuant and take upwards of 11 seconds, slightly worse than the baseline. What stands out for this interface though, is the close-to elimination of subsequent touch operations. Conversely, there is significant overshooting for all intermediary values. While speculative, the drop in overshooting at the extremes may possibly be a result of the user performing a release before reaching the target value hold. This would be supported by the concurrent rise in touch count for high target values and could indicate difficulty in controlling the interface at high targets. Not shown by the plots, but noted by two of the participants, is that the directional projections became more "jittery" at high target values, which again supports this theory.
+
+%\onecolumn
+%\newpage
+%\pagebreak
+%\twocolumn
+
+
+\begin{figure*}[!ht]
+	\centering
+	%	\def\plotHideYLabel{ylabel={\textcolor{white}{}}, yticklabels={,,}}
+	\vspace*{-2cm}
+	\begin{tikzpicture}
+	\threeFigureTrialMode{Directional}{\meanColor}{ymax=25, y post scale=1}{ymax=85,y post scale=1}
+	\end{tikzpicture}		
+	\caption{The data for the plane-directional interface.}
+	\label{fig:expOneDirectionalData}
+\end{figure*}
+
+\subsubsubsection{Spherical}
+
+The data of the last remaining interface is illustrated in figure \ref{fig:expOneSphericalData}. This could appear to have the lowest variance of all three off-screen definitions. Also, the interaction durations are slightly better than the all past off-screen interfaces and come very close to the baseline, with an approximate maximum of nine seconds for  extreme targets . Overshooting is almost non-existing and the same applies to subsequent touch operations, there are almost none.
+
+\begin{figure*}[!ht]
+	\centering
+	\vspace*{-2cm}
+	%	\def\plotHideYLabel{ylabel={\textcolor{white}{}}, yticklabels={,,}}
+	\begin{tikzpicture}
+	\threeFigureTrialMode{Spherical}{\meanColor}{ymax=25, y post scale=1}{ymax=85,y post scale=1}
+	\end{tikzpicture}		
+	\caption{The data for the spherical interface.}
+	\label{fig:expOneSphericalData}
+\end{figure*}
+
+
+
+\subsubsection{Discussion}
+
+To sum up and evaluate, we will compare the general behavior of each interface, as captured by their means. Furthermore, we will view the combined dimension as the most meaningful to compare, under the assumption that future use of off-screen space is likely to be for  two-dimensional interfaces. Such comparison is given in figure \ref{fig:expOneMeansCompared}. From this, it appears that the spherical interface aligns best with the baseline and is most stable. We therefore dismiss the original idea that the plane-normal should perform optimally in terms of duration time (H1).
+
+For the plane-directional interface, this did indeed result in significant over-shooting, increased touch counts and was inferior from a time-perspective. This supports the initial presumptions about the interface (H2), which are therefore confirmed.
+
+Contrary to what was expected, the spherical interface did not suffer from long durations and came quite close to the baseline. In addition, this interface had virtually no touch input redundancy and almost zero overshooting. This hypothesis (H3) is therefore rejected.
+
+As previously touched upon, a right-handed interaction may possibly obstruct part of the view for  when the user initiates an on-screen swipe that ends in the north or west. With regards to the test interface, this corresponds to seeking out high target numbers in the horizontal dimension and low target numbers in the vertical. Thus, the data for these targets should show disproportionately longer durations, if the assumption of negative impact is true. However, the data does not indicate any significant pattern that strongly supports this view. This leaves the general assumption (H4) rejected for now and any minor effects to be explored more intricately in future work.
+
+On a final note, it is assumed that the baseline has been significantly advantaged in this experiment, since the participants are all experienced with that interface and conversely, are all new to the idea of using off-screen input. Hence,  the baseline may have appeared best in terms of duration, but the picture could likely be different, had all interfaces been on par in terms of user experience. In addition, all off-screen interfaces are presumed to greatly enhance the user experience by  eliminating redundancy in the input, as was observed here. This allowed participants to locate target values in a single motion (except for the extremums that occasionally required an additional touch operation). Whether any  incurred   strain of off-screen interaction have a negative impact, such as the physical fatigue identified in previous work\cite{peep}, is yet another topic left for future research.  
+
+
+
+
+%\def\(#1\){\left(#1\right)}
+
+
+\begin{figure}[!ht]
+	\centering
+	%	\begin{scaletikzpicturetowidth}
+	\hspace{-1cm}
+	\begin{tikzpicture}[]%[rotate=90]
+	\begin{axis}[
+%	scale=2, 
+	smooth,
+	xmajorgrids=true, ymajorgrids=true, 
+	ymin=0, ymax=15,		
+	%	domain=-50:50,
+	xmin=-55,xmax=55,
+	%		nodes near coords,
+	xlabel={Target value},
+	ylabel={Duration (seconds)},
+	xtick distance={10},
+	legend style={draw=none},
+	legend entries={
+		baseline,
+		plane-normal,
+		plane-directional,
+		spherical},	
+	legend style={
+		font=\scriptsize\selectfont,
+		at={(axis cs:-3,14)},anchor=north
+	}
+	%	legend pos=outer north east
+	%	legend pos=inner north
+	]
+	
+	%	\addlegendimage{no markers,green}
+	%	\addlegendimage{no markers,blue}
+	%	\addlegendimage{only marks, mark=o}
+	%	\addlegendimage{only marks, mark=square}
+	\addlegendimage{thick,no markers, \meanColor}
+	\addlegendimage{thick,no markers,\myRed}
+	\addlegendimage{thick,no markers,\myGreen}
+	\addlegendimage{thick,no markers, \myBlue}
+	%	444444\addlegendimage{only marks, mark=square}
+	
+	\drawAxes				
+	
+	\edef\plotX{trialTargetValue}
+	\edef\plotY{trialDurationSeconds}
+	\edef\plotErrorMarginColName{trialDurationSecondsConfidence}
+	
+	\def\trialGroupName{DimsConcatenationAveraged}
+	\expOnePlotMean{Baseline-\trialGroupName}{y error=}
+	\expOnePlotMean[\myRed]{PlaneNormal-\trialGroupName}{y error=}
+	\expOnePlotMean[\myGreen]{Directional-\trialGroupName}{y error=}
+	\expOnePlotMean[\myBlue]{Spherical-\trialGroupName}{y error=}
+	
+	%	\edef\trialGroupName{Baseline-TwoDimensional}
+	%	\expScatterPlotMean{}
+	%	\addlegendentry{Baseline}
+	
+	
+	%	\edef\trialGroupName{PlaneNormal-TwoDimensional}
+	%	\expScatterPlotMean[\myRed]{}
+	%	
+	%	
+	%	\edef\trialGroupName{Directional-TwoDimensional}
+	%	\expScatterPlotMean[\myGreen]{}
+	%	
+	%	\edef\trialGroupName{Spherical-TwoDimensional}
+	%	\expScatterPlotMean[\myBlue]{}
+	
+	\end{axis}			
+	
+	%	\expOneScatterPlot{Baseline-TwoDimensional}{trialTargetValue}{trialDurationSeconds}{}
+	\end{tikzpicture}	
+	%	\end{scaletikzpicturetowidth}
+	\caption{The mean for the baseline and all off-screen interface definitions. These are the combined means of the perpendicular horizontal and vertical dimensions, which are presumed to provide good insight into the interaction efficiencies of a true two-dimensional interface. }
+	\label{fig:expOneMeansCompared}			
+\end{figure}
+
+
+
+
+

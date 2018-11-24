@@ -1,0 +1,104 @@
+\twocolumn[
+	\section{Introduction}\label{ch:introduction}
+	]
+	
+	
+\noi The use of tools is a  trademark of human history, both in simple times of mere survival and even more so in the establishment of societies and specializations of trades. This potential for people to gain from optimization through specialization is not the result of any obvious physical superiority. Quite the contrary, its stems from the ability to communicate abstract concepts over time, with the tool itself being nothing more than a momentary manifestation.
+
+While the concept of a tool is abstract, its physical realization always takes some mechanized form intended for human interaction, one that usually  that draws on our most distinguished evolutionary advantage: the extraordinary  flexibility  and sensitivity of our hands and fingers. The computer is well-suited in this regard, due the lack of mechanics. The most remarkable human tool to date, it is capable of emulating the same logic that is embedded in all natural laws, but logic is all information and has no matter or motion. The application of logic, through algorithms that process  information, results in nothing but information itself. Not surprisingly, the physical activity needed to interact with a computer is also limited to information, provided through alphabetized languages for defining computational steps.
+
+%And persisting that is close to instantaneous  through negligible physical differentia. 
+% combinations of standardized letters of some alphabet.  
+
+The most successful input methods reflect these observations, in the sense that they rely on the hands  to provide a vast array of combinatorial input with as little mechanical action as possible. In addition, the flexibility of modern displays help to rapidly  comprehend informational complexity, due to the fast perceptual speed of vision. Display technology has recently changed the way we interact with computers, due to quantum leaps in terms of quality, dimensionality and price reduction. As an obvious real-world example, mobile telephones  went from  panels of knobs and buttons to all display-based  miniature computers almost overnight  - \ti{mobile devices} that  incorporate a multitude of functions, each previously only available in some dedicated and more mechanical form factor. In other words, rapid progress in one technology facilitated the convergence of a multitude of others, such that a modern lifestyle now includes having a mobile device - using a pocket-size rectangular display to perform a wide variety of daily activities is now the norm. Not surprisingly, developments in user interface design principles have followed suit, with designers unanimously adopting a \ti{Mobile First}\cite{MobileFirst} paradigm that anticipates the most probable human-computer interaction as one based on mobile devices.
+
+Although these minimalistic devices provide mobility, there are caveats. Designing an appropriate navigational user interface on touch-based devices cannot be approached with a one-size-fits-all paradigm, but must take into account some basic factors that greatly influences the user experience. As an imaginary example, a user dragging a map by touch on a large display will typically be positioned close to the center of the screen. Hence, with half or more of the displayed map in peripheral view, the user then has a good overview of the information space. This will obviously not apply in the case of a small portable device, where conditions are opposite - the display being in full view, but the presentation of input space severely restricted by the reduced dimensions of the display. Differing form factors therefore make for very different user experiences, with the smaller ones presumably resulting in a greater number of repetitive swipes and "tricks" to offset this, such as inertia. This represents a general problem that currently has no good solution: on a small touch screen, navigating to specific information usually requires many touch operations, due to the restricted input and presentation space. Clearly, this is an undesirable property of any user interface. Furthermore, the problem of increased input is exacerbated by the very fact that any touch operation is somewhat imprecise and tends to obscure the user interface for each interaction, since the input and display plane are the same. 
+
+Hence, the information space that needs to be accessible for presentation within typical mobile applications usually exceeds the amount of display space available. User interface design usually deals with this issue through some form of strict prioritization,  presenting only what is considered most relevant to the current information need, along with the ability to navigate into other parts of the information space. Such designs therefore need input methods that allow for bringing specific parts of non-visible information into view, in a flexible and discrete manner that ideally minimizes obstruction of the display.
+
+Looking forward, it would be reasonable to assume that any use of a tool that may alleviate these problems is highly relevant from a  research perspective. One clear contender here, is the use of  computer vision and pattern recognition, fields that have recently made tremendous progress.  These center around how natural human language, i.e. speech, body gestures and touch can be interpreted successfully to the extent that it may either serve as the sole input for controlling a computer or work in parallel with other types of input. With increasing gains in hardware, software and falling costs, the future applicability of computer vision is currently being anticipated through active research attempts at blending frontier technology with innovative thought. Naturally, the question arises as to whether or not this may be have any potential in mobile device interaction. For instance, what if the user's finger could be monitored, using computer vision, as it moves outside the boundaries of the display?\\
+
+\subsection{Contributions}
+
+%to test a hypothetical solution to the problem of navigating efficiently on small touch screens. 
+The goal of the research undertaken here is to investigate a potential use of off-screen space for addressing the issues associated with small displays, as typically found on  smaller portable devices.  More specifically, the work explores  how a touch-screen operation (a \ti{swipe}) can extend beyond the display boundaries and into off-screen space. This leads to the question of how this space is to be defined, how the swipe transition from the display into this space will take place and how the efficiency and effect on the user experience is to be measured. 
+
+Three experiments follows a learning path that first identifies an assumed optimal spatial interface, then explores this in more detail and finally attempts to optimize it based on observed properties of the true space. The first of these shows that incorporating off-screen space as if it was a sphere leads to a slight interaction time penalty, but also eliminates the need for redundancy and inertia. Second, if users are asked to perform estimations of spatial locations, it appears that the true space does in fact align with a sphere, but also has some inherent properties that differ. Third, modifying the interface to accommodate these properties shows a slight improvement in interaction time and serves as a potential starting point for further studies. 
+
+  
+\subsection{Organization}
+
+This document has been organized as follows. Chapter \ref{ch:background} provides the background on current mobile devices, tracking technologies and existing work  related to the topic. In chapter \ref{ch:motivation}, the exact boundaries of what constitutes the goal, and what does not, is more formally defined, including the motivations and feasibility of the proposed solution. Next, assumptions and requirements of a solution that meets these goals are presented in chapter \ref{ch:approach}, including the reasoning and evolution of technology choices. Chapter \ref{ch:solution} enumerates the sequence of theoretical steps for solving the challenges involved with deriving a full solution. A brief commentary on the actual implementation is then given in chapter \ref{ch:implementation}. The data resulting from undertaking experiments with the implementation is then evaluated and interpreted in chapter \ref{ch:evaluation}. Lastly, thoughts and conclusions are given in the final chapter \ref{ch:conclusion}.
+
+
+%which with increasing efficiency allows for the partial or total elimination of any mechanical or physical device for interacting with a computer. In other words, the search is on for the future of HCI and 
+
+
+
+
+
+
+
+		  
+
+\begin{comment} ### THESIS ##################################################
+
+Not surprisingly however, a major drawback of mechanical devices is that they take the shape of moderately sized physical appendixes (often in the form of cheaply-made Asian plastics) and all but a few tend to require cumbersome wiring, with neither of these characteristics providing much in terms of portability or aesthetics. This has never posed a major problem in the traditional stationary desktop setup, but unfortunately don't go well with current trends that seek to embed minimalistic digital technology in every aspect of life. The future of computational devices is therefore expected to depend heavily on infusing minimalism into the design of \ti{cross-over devices} such as \ti{ultrabooks}\fn{A term introduced by Intel for categorizing an evolving class of laptops that are very thin, battery-efficient, and use low-voltage processors. Previously known as \ti{CULV laptops} (consumer ultra-low-voltage processors).} or entirely new devices, such as the widely adopted \ti{smart phone}, with both of these developments made possible by the realization of Moore's law\fn{A widely cited article\cite{Moore} that has recurrently served as predictor of computational performance trends for the past 50 years.} and four decades of innovation in silicon semiconductor manufacturing technology. 
+
+In addition to their practical deficiencies, this inherent "clunkiness" of traditional interaction devices also fail from a health perspective. This is typically seen as the widespread tendency of computer users to contract neurological conditions, such as \ti{carpal tunnel syndrome}, which essentially result from the use of redundant physical patterns that the devices themselves strictly rely on. This over-exploitation of repetitive movement patterns is in fact a significant departure from the varied ways that human beings would normally interact with their natural surroundings, which further underlines the problematic nature of traditional human-computer interaction.
+
+
+As a result, conditions have long been ripe for one or more evolutionary leaps within the field of human-computer interaction and the lack of accessible alternatives to overcome the obstacles associated with tradition currently represents a problem, even for those users with a moderate need for interacting with computer technology. 
+
+############################################################# 
+\end{comment}  
+
+%\subsection{Future input methods}
+
+\begin{comment} ### THESIS ##################################################
+
+Intuition has always been center in the quest for future devices in human-computer interaction. An obvious example of this is the invention of the computer mouse, which represented a major breakthrough in usability and deserves partial credit for the popularization and rise of the personal computer in the 1980s. Th concept of the mouse remains largely unchanged to this day and has accumulated extensive (and still relevant) research on its usage patterns in standard desktops. In the early 1990s, about a decade after commercial mice became available and with the use of personal computer rocketing off, it was showed by  Johnson et al.\cite{MouseUsage} that people rely quite heavily on complementing keyboard input with the more intuitive and visual mouse. For a natural mix of varied computer tasks and people, it was shown that mouse usage composes between one third and up to two thirds of all input and represents an integral part of the user experience, rather than the occasional exception.  
+
+This result illuminated that intuition cannot be downplayed in favor of efficiency, by assuming that human behavior will naturally gravitate towards what is theoretically optimal. For instance, relying solely on the keyboard for all input represents a highly efficient solution in terms of speed and physical effort, although this fact obviously has little effect on neither the majority of computer users, nor the design of the operating systems they commonly use\fn{Even within the world of keyboard devices, the statistically highly efficient Dvorak layout has failed to become the standard due to tradition, which again is a human factor.}. Hence, intuition should be viewed as a key criteria in the bi-directional play of forces between design that appeals to human behavior and inputs that allow for efficiently operating a modern computer, which at its core, is nothing but logical transitions between a set of states.
+
+Yet, the field of interaction has been at a standstill for many years, with keyboard and mice dominating the desktop\fn{Alternatives (such as trackballs, touch-pads, electronic pens etc.) exist, although haven't gained widespread use and are all limited to interactions in two dimensions only. }.  Recent technological advancements have however managed to bridge the gap between the shortcomings of the past and an array of new ideas for what the future may hold within the field of interaction. One of the major foundations of this new progress is \ti{computer vision}, which may appropriately be described as the result of a cataclysm between existing research and broad gains in computational power, especially on consumer-level. More precisely, the ability of an algorithm to recognize and categorize visual cues, such as physical shapes or human gestures, relies heavily on searching a hypothesis space that scales far beyond what is computationally feasible, given narrow time constraints. For instance, the task of locating a hand within an image with reasonable certainty will typically rely on a mix of algorithms, of which one candidate may very well be \ti{support vector machines}\cite{Bishop} (SVMs). For the example of SVMs, these have been around for more than 50 years, but have gained immense popularity in recent years, due to their ability of efficiently performing classification and regression in very high dimensional spaces\fn{I.e. when employed with \ti{kernel methods}\cite{Bishop}.}. Hence, computer vision and pattern recognition is in fact a well-established research tradition, but with newfound applicability due to the rise of big data\fn{A broad term coined in 1997\cite{BigData}, here to be understood as extremely large data sets that may be analysed computationally to reveal patterns, trends, and associations, especially relating to human behaviour and interactions.} and increased availability of computational power.
+
+############################################################# 
+\end{comment}  
+
+
+\begin{comment} ### THESIS ##################################################
+
+\subsection{Applicability of computer vision}
+
+The utility of computer vision's ability in recognizing visual cues reaches far beyond simply disrupting existing input methods. It has broad impact on all industries that rely on interacting with computers and even opens up new commercial opportunities for incorporating digital technology into areas where its use has previously been hindered by the lack of appropriate input methods.
+
+For instance, the medical establishment has long since adopted the use of computers for the goal of achieving medical results that are beyond human capability. One typical example of this is the application of pattern recognition to imaging scans of patients, in order to estimate likelihoods of various types of disease (a textbook example within the field of statistical learning). Another is the optimization of surgical accuracy by guiding robotics, which minimizes incisions and tissue damage, thus allowing the patient for a faster recovery and resumption of daily activities. These two examples are particularly interesting, because advancements within the first has blended into the latter; imaging modalities are now the foundation of complex computer applications that directly guide surgical procedures, by overlaying radiologic imaging data onto the operative visualization system using computer vision. This concept, known as \ti{augmented reality}, can guide the surgeon's dissection path, by demonstrating vital anatomic structures beyond the visible surface, thereby providing a sense of depth that increases the probability of a successful outcome\cite{RobotsInSurgery}.
+
+Another area of great potential is the inclusion of demographic groups that for one reason or another are not able to operate mechanical devices. This may include those that are suffering from certain types of disabilities or simply elderly people that are unable to learn how to interact with standard input devices, such as keyboard or mice. As such, any innovation that allows for more intuitive human-computer interaction, e.g. touch, speech or visual cues, would in fact open up the opportunity for certain individuals to enter the digital era, where they could not before.
+
+############################################################# 
+\end{comment}  
+
+%\subsection{The problem with touch}
+
+\begin{comment} ### THESIS ##################################################
+
+The elimination of mechanical input has gained huge momentum within the domain of graphical user interfaces in recent years, largely due to the proliferation of relatively robust and innovative devices on consumer-level. As a result, a wide variety of touch-based devices now exist and a common denominator to them all is the portability and compactness that they pack by way of eliminating (or virtualizing) the traditional keyboard and mouse. Furthermore, this new generation of touch-based devices all offer one obvious feature that has become their signature and unique selling point; associating specific types of \ti{multi-touch} input with corresponding navigational actions, made possible by the application of pattern recognition\cite{Wood}. 
+
+While the innovative features of touch input and gesture navigation are common to most of today's mobiles devices, what is not however, is their display sizes. Thus, the presentation space of these devices vary widely from that of large displays with dimensions measured in meters (e.g. interactive \ti{SMART boards}) to small smart phones with displays that measure no more than a few inches. Furthermore, they also differ in terms of processing capability, which greatly affects responsiveness, and finally, may have differing spacial orientations (e.g. the horizontally placed Microsoft Pixelsense table\fn{Previously known under the product name \ti{Surface}.}).
+
+For these reasons, 
+
+############################################################# 
+\end{comment}  
+
+\begin{comment} ### THESIS ##################################################
+
+\subsection{Sensors on the rise}
+
+Given the computer industry's rapidly increasing tendency to incorporate various types of sensors into newer designs, it would not be unreasonable to assume that pattern recognition will be deeply embedded within future operating systems. This is in fact already the case, as fingerprints and facial recognition are now being actively used to unlock smart phones\fn{As has been implemented by Apple and Samsung, respectively.}. Hence, it's not unfathomable that the spatial awareness of mobile devices will soon encompass the ability to sense the user's off-screen hand gestures. One could even speculate that one form of this may be facilitated by the upgrading of current front-facing cameras to \ti{fish-eyes}, i.e. cameras with a view angle of 360\textdegree. If so, computer vision could be used to provide a natural extension of the information space beyond the dimensions of the display, a concept that may prove to be particularly powerful for small devices such as smart phones and tablets, where space is scarce.
+
+############################################################# 
+\end{comment}  
+

@@ -1,0 +1,47 @@
+\def\dotNetDoubleLimit{1.7976931348623157 \times 10^{308}}
+
+
+\def\true{\string TRUE}
+\def\false{\string FALSE}
+
+\def\isFinalBuild{\false} % set to true on final build
+
+\newcommand\ifIsFinalBuildElse[2]{
+	\ifthenelse{\equal{\isFinalBuild}{\true}}{#1}{#2}
+	}
+
+
+
+%\def\ifBuild_#1{\\#1}
+
+\def\IFBUILDSTART#1\IFBUILDEND{
+%	#1
+	}
+	
+
+\newcommand\runeshade[3]{
+	\draw[#1, fill=#2]	
+	%	\draw[#1, top color=#2!#3]			
+}
+
+
+%
+%\newcommand\projectionPointOptions{color=orange}
+%\def\projectedPointOptions{color=gray}
+%\def\projectionLineOptions{->, shorten <= 1pt, shorten >= 1pt, color = gray}
+%
+%
+
+
+\def\colorTopInput{green!40}
+\def\colorRightInput{blue!20}
+\def\colorBottomInput{red!20}
+\def\colorLeftInput{orange!50!yellow!40}
+
+
+\def\colorTop{green}
+\def\colorRight{blue!60}
+\def\colorBottom{red!60}
+\def\colorLeft{orange!70!yellow!50}
+
+

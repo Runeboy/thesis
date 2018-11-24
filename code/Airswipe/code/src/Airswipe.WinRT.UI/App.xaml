@@ -1,0 +1,32 @@
+﻿<Application
+    x:Class="Airswipe.WinRT.UI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    >
+
+    
+    <Application.Resources>
+
+        <!-- Application-specific resources -->
+        <x:String x:Key="AppName">Airswipe</x:String>
+
+        <Style x:Key="AppBarButtonStyle" TargetType="Button">
+            <!--Setter Property="Fill" Value="#B2203D" /-->
+        </Style>
+        
+        <!-- added to make masterpage content visible -->
+        <Style x:Key="LayoutRootStyle"
+        TargetType="Panel">
+            <!--<Setter Property="Background"
+            Value="{StaticResource ApplicationPageBackgroundThemeBrush}" />-->
+            <Setter Property="ChildrenTransitions">
+                <Setter.Value>
+                    <TransitionCollection>
+                        <EntranceThemeTransition />
+                    </TransitionCollection>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+    </Application.Resources>
+</Application>

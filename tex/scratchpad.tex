@@ -1,0 +1,755 @@
+%\pgfplotstableread{\expTwoPolarCsvFilepath}{\expTwoData}
+
+
+\def\pcaFilepath{data/exp1/PCA.csv}
+
+
+
+\loadTabbedCsv{Pca}\pcaFilepath
+\loadTabbedCsv{PcaAggregated}{data/exp1/PCA-aggregated.csv}
+
+
+%%% DEVICE PARAMS
+\def\deviceFilepath{data/exp1/device.csv}	
+\loadTabbedCsv{Device}\deviceFilepath	
+%%%
+
+
+
+
+\loadTabbedCsv{PcaTarget50}{data/exp1/PCA-targetValue(50).csv}
+
+
+\def\PPM{10} % i,e. 851
+
+\newcommand\drawOnscreenDims[1][fill=red!40, draw=red, opacity=0.2]{
+	\coordinate (origin) at (axis cs:0,0);			    
+	\pgfplotsextra{\DTLforeach*{Device}{\onscreenPixelHeight=onscreenPixelHeight, \onscreenPixelWidth=onscreenPixelWidth}{
+			%	\edef\onscreenPixelHeight{\onscreenPixelHeight}
+			%	\edef\onscreenPixelWidth{\onscreenPixelWidth}
+			\filldraw[#1] ($(origin) - (.5*\onscreenPixelWidth/\PPM,.5*\onscreenPixelHeight/\PPM)$) rectangle ($(origin) +  (.5*\onscreenPixelWidth/\PPM,.5*\onscreenPixelHeight/\PPM)$);	
+		}}
+	}
+
+
+% E2 July 10: [2016-07-10 20:10:20 INFORMATIONAL] TestPage: Offscreen rect: (0.223457493299726,-0.16266075098759,1.68620133133376) -- (0.228854267516688,-0.167606074963504,1.77226374528067) -- (0.179204979256355,-0.191535168366078,1.68731712014177) -- (0.184601753473317,-0.196480492341992,1.77337953408869)
+
+
+
+
+%\readCsvFiltered{\expTwoCsvFilepath}{
+%%	tablefilter in={sessionName}{evan},
+%%	columns={sessionName, sessionType, trialUIAngle, trialIsStatistic, trialFinalOffscreenX, trialFinalOffscreenY,  trialFinalOffscreenZ},
+%%	tablefilter in={sessionType}{E2},
+%%	tablefilter in={trialUIAngle}{1.0471975511966},
+%%	tablefilter in={sessionName}{Lily},
+%%	tablefilter in={sessionName}{Lily},
+%	tablefilter in={sessionName}{evan},
+%	tablefilter out={trialIsStatistic}{1},
+%%	tablefilter in={trialDurationSecondsIsOutlier}{0}
+%	}\expTwoData
+%%\pgfplotstableread{test.dat}{\expTwoData}
+
+
+
+
+%\pgfplotstablesort[sort key={trialFinalOffscreenY}]{\sorted}{\total} %get the data and sort by column 'T'
+
+%\pgfplotstablesort[sort key={trialFinalOffscreenY}]{\sorted}{\expTwoData} %get the data and sort by column 'T'
+
+
+\def\strangeScale{1/10}
+
+
+%\def\participantName{Lily}
+%\def\participantName{rose}
+%\def\participantName{evan}
+\def\participantName{rose}
+\def\participantColor{\leahColor!50}
+\pgfplotstableread{data/exp1/TrialSesssions-(E2-\participantName).csv}{\releaseSpaceData}
+
+
+\pgfplotstableread{data/exp1/TrialSesssions-(E2-evan).csv}{\dataTwoEvan}
+\pgfplotstableread{data/exp1/TrialSesssions-(E2-rose).csv}{\dataTwoRose}
+\pgfplotstableread{data/exp1/TrialSesssions-(E2-leah).csv}{\dataTwoLeah	}
+\pgfplotstableread{data/exp1/TrialSesssions-(E2-Lily).csv}{\dataTwoLily}
+\pgfplotstableread{data/exp1/TrialSesssions-(E2-soniaa).csv}{\dataTwoSonia}
+\pgfplotstableread{data/exp1/TrialSesssions-(E2-mikee).csv}{\dataTwoMike}
+
+
+\begin{figure*}[!ht]
+	%	\def\domainMax{1.2}
+	\centering
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%	
+		\fullPageReleaseSpacePlots
+%	\end{scaletikzpicturetowidth}
+\caption{Final locations with respect to the axis formed by the device callibration (axis units in meters).}
+\label{figure:expOneTwoBaselineTwoDimDurationAll}			
+\end{figure*}
+
+
+
+%\begin{figure*}[!ht]
+%%	\def\domainMax{1.2}
+%	\centering
+%%	\def\participantName{Lily}
+%	\twoFigure{
+%		\hspace*{-2cm}
+%		\begin{tikzpicture}[scale=1.15]%[rotate=90]
+%			\releaseSpaceAxis[view={0}{90}]{
+%				\releaseSpacePlotAllParticipants
+%%				\releaseSpacePlot[\participantColor]{\releaseSpaceData}
+%			}			
+%		\end{tikzpicture}	
+%	}{
+%		\vspace*{-2cm}
+%		\begin{tikzpicture}[scale=1.15]%[rotate=90]
+%			\releaseSpaceAxis[view={20}{20}]{
+%				\releaseSpacePlotAllParticipants
+%%				\releaseSpacePlot[\participantColor]{\releaseSpaceData}
+%			}
+%		\end{tikzpicture}	
+%	}
+%	%	\end{scaletikzpicturetowidth}
+%	\caption{Top-down view of final locations.}
+%	\label{figure:expOneTwoBaselineTwoDimDurationAll}			
+%\end{figure*}
+
+% -----------------------------------
+
+
+
+%\readCsvFiltered{\expOneCsvFilepath}{
+%%	tablefilter in={sessionName}{evan},
+%%	columns={sessionName, sessionType, trialUIAngle, trialIsStatistic, trialFinalOffscreenX, trialFinalOffscreenY,  trialFinalOffscreenZ},
+%	tablefilter in={sessionType}{E2},
+%%	tablefilter in={trialUIAngle}{1.0471975511966},
+%%	tablefilter in={sessionName}{Lily},
+%	tablefilter out={sessionName}{mean},
+%%	tablefilter out={trialIsStatistic}{1},
+%%	tablefilter in={trialDurationSecondsIsOutlier}{0}
+%	}\expTwoMeanData
+
+
+%\pgfplotstablegetrowsof{\expTwoMeanData}
+%\pgfmathsetmacro{\N}{\pgfplotsretval-1}  
+%\foreach \angle in {0,1,2,,...,360} {
+%	\definecolor{degreeColor\angle}{hsb}{\angle/360, 1, 1}
+%}
+
+\newcommand\expPolarPlotAngles{
+	\expPolarPlotAngle{0}
+	\expPolarPlotAngle{30}
+	\expPolarPlotAngle{60}
+	\expPolarPlotAngle{90}
+	\expPolarPlotAngle{120}
+	\expPolarPlotAngle{150}
+}
+
+\begin{figure*}	
+	\begin{centering}
+		
+	\hspace*{-1cm}			
+	\twoFigure{		
+%		\hspace*{-0.22cm}
+		\begin{tikzpicture}[scale=1.2]
+%		\hspace*{-0.22cm}
+		\expPolarAxis[		
+			extra y tick labels={ 0.5m, 0, -0.5m},					
+			y dir=reverse,  %%% REVERSE BECAUSE TRACKER VIEWS FROM OPPOSITE SIDE!		
+			]{	
+				\drawCircles
+				
+				\expPolarPlotAngles
+%					
+%				\expPolarPlotAngle{0}
+%				\expPolarPlotAngle{30}
+%				\expPolarPlotAngle{60}
+%				\expPolarPlotAngle{90}
+%				\expPolarPlotAngle{120}
+%				\expPolarPlotAngle{150}
+				
+				\begin{scope}[yscale=-1] % to get the axis labels positioned correctly
+					\polarPlotDrawRadials				
+				\end{scope}						
+				
+				\drawOnscreenDims
+%			\plotPcaRings
+
+		}	
+		\end{tikzpicture}
+	}{
+	\hspace{1cm}
+		\begin{tikzpicture}[scale=1.2]	
+		\expPolarAxis[			
+			extra y tick labels={ 0.5m, 0, -0.5m},					
+			y dir=reverse,  %%% REVERSE BECAUSE TRACKER VIEWS FROM OPPOSITE SIDE!
+%			extra y tick labels=,	
+%				hide y axis,ymajorgrids=true,yminorgrids=true,
+			]{		
+			\drawCircles
+				
+
+				
+			\expPolarPlotAngleAlt{0}
+			\expPolarPlotAngleAlt{30}
+			\expPolarPlotAngleAlt{60}
+			\expPolarPlotAngleAlt{90}
+			\expPolarPlotAngleAlt{120}
+			\expPolarPlotAngleAlt{150}
+			
+			\begin{scope}[yscale=-1] 
+				\polarPlotDrawRadials 
+			\end{scope}			
+				
+			\drawOnscreenDims
+
+%				\draw[
+%				%	rotate=deg(\an),
+%				color=blue,very thick] (axis cs:0,0) ellipse [x radius=40.58140,y radius=32.07781,
+%%				rotate around={deg(148):(9.4,28.8)}
+%				%				rotate around={deg(148):(50,0)}
+%				];
+
+%				\draw[dashed, ->, color=brown,very thick] (origin) -- +(100,100); 			
+%				\draw[dashed, ->, color=pink,very thick] (origin) -- +(10,10); 
+			
+%				\draw[color=blue,very thick] ($(origin) + (5.0, 4.7)$) ellipse [x radius=57,y radius=65,
+%				rotate around={deg(17):(5.0,4.7)}
+%				%				rotate around={deg(148):(50,0)}
+%				];
+
+
+
+	
+%			\draw[
+%			%	rotate=deg(\an),
+%			color=orange,very thick] (axis cs:0,28.8) ellipse [x radius=405.8140,y radius=320.7781,
+%			rotate around={deg(148):(9.4,28.8)}
+%			%				rotate around={deg(148):(50,0)}
+%			];
+
+		}		
+		\end{tikzpicture}
+	}
+	\end{centering}
+	\caption{TT: Mean estimations of target value locations, with each estimation mean indicated by color and arrow towards the true location. The two plots are identical except  for the color convention used, where the coloring of the left plot  illustrates the distribution of estimations for each (absolute) target value and the coloring og the right gives the distribution for each angle.}
+	\label{figure:expOneBaselineDuration}				
+\end{figure*}
+
+\begin{figure*}	
+	\centering
+%		\hspace*{-1cm}			
+%		\twoFigure{		
+%			%		\hspace*{-0.22cm}
+	\begin{tikzpicture}[scale=1.2]
+		%		\hspace*{-0.22cm}
+		\expPolarAxis[		
+		extra y tick labels={ 0.5m, 0, -0.5m},					
+		y dir=reverse,  %%% REVERSE BECAUSE TRACKER VIEWS FROM OPPOSITE SIDE!		
+		]{	
+			
+			\begin{scope}[yscale=-1] 
+				\polarPlotDrawRadials 
+			\end{scope}			
+							
+							
+			\plotReleasePositionsColorByTarget			
+					
+	%		\coordinate (origin) at (axis cs:0,0);			    
+						
+			\plotPcaRings
+					
+			\drawOnscreenDims
+		}	
+		\end{tikzpicture}
+		\caption{The projected locations onto the sphere (i.e. not equivalent to a top-down view - release height changes location). Color codings are target values.}
+%		\label{figure:}				
+\end{figure*}
+
+
+
+
+
+
+
+
+\begin{figure*}	
+	\centering
+	%		\hspace*{-1cm}			
+	%		\twoFigure{		
+	%			%		\hspace*{-0.22cm}
+	\begin{tikzpicture}[scale=1.2]
+	%		\hspace*{-0.22cm}
+	\expPolarAxis[		
+	extra y tick labels={ 0.5m, 0, -0.5m},					
+	y dir=reverse,  %%% REVERSE BECAUSE TRACKER VIEWS FROM OPPOSITE SIDE!		
+	]{	
+		
+		\begin{scope}[yscale=-1] 
+		\polarPlotDrawRadials 
+		\end{scope}			
+		
+		\drawOnscreenDims
+		
+%		\plotReleasePositionsColorByTarget			
+		
+		
+		
+		%		\coordinate (origin) at (axis cs:0,0);			    
+		
+%	\plotPcaRings
+	
+	
+	\coordinate (origin) at (axis cs:0,0);			    
+%	\def\PPM{10} % i,e. 851
+%%	\foreachTabbedCsvRowInPlot
+	\pgfplotsextra{\DTLforeach*[\DTLiseq{\target}{50}]{Pca}{\xc=x, \yc=y,\xr=xr,\yr=yr,\circleAngle=deg,\target=target,\circleRadius=circleRadius,\circleRadiusM=circleRadiusM}{	
+			
+			
+			\coordinate (circlePos) at ($(origin) + (\xc/\PPM, \yc/\PPM)$);
+			%			\node[mark size=0.02cm,color=\targetColor\target] at (circlePos) {\pgfuseplotmark{triangle*}};
+			\draw (circlePos) node[cross, rotate around={-1*\circleAngle-45:(circlePos)},color=\targetColor\target] {};		
+
+			% ellipse	
+			\draw[color=\targetColor\target,very thick] ($(origin) + (\xc/\PPM, \yc/\PPM)$) ellipse [
+				x radius=\xr/\PPM,
+				y radius=\yr/\PPM,
+				rotate around={-1*\circleAngle:(circlePos)} %				rotate around={deg(148):(50,0)}
+				];
+				
+			% circle radius text and line
+			\draw[black!80,<->,thick] (origin) -- +($(\circleRadius/\PPM,0)$);
+			\node[align=left, fill=white,text=black!80] at ($(origin)  + (0.5*\circleRadius/\PPM,0)$) {\scriptsize $\circleRadiusM$m};
+%					
+			% circle at mean
+			\draw[color=\targetColor\target,thick,dashed,opacity=0.2] (circlePos) ellipse [
+			x radius=\circleRadius/\PPM,
+			y radius=\circleRadius/\PPM
+			];
+			% circle at origin
+			\draw[color=\targetColor\target] (origin) ellipse [
+				x radius=\circleRadius/\PPM,
+				y radius=\circleRadius/\PPM
+				];
+	}}
+	
+			
+	}	
+	\end{tikzpicture}
+	\caption{Determining the radius, cutoff target=40 TODO!}
+	%		\label{figure:}				
+\end{figure*}
+
+
+
+\begin{figure*}	
+	\centering
+	%		\hspace*{-1cm}			
+	%		\twoFigure{		
+	%			%		\hspace*{-0.22cm}
+	\begin{tikzpicture}[scale=1.2,>=stealth]
+	%		\hspace*{-0.22cm}
+		\expPolarAxis[		
+		extra y tick labels={ 0.5m, 0, -0.5m},					
+		y dir=reverse,  %%% REVERSE BECAUSE TRACKER VIEWS FROM OPPOSITE SIDE!		
+		]{	
+			
+		\begin{scope}[yscale=-1] 
+			\polarPlotDrawRadials[lightgray, dashed, shorten >=.03cm, shorten <=.4cm, opacity=0.3] 
+		\end{scope}			
+			
+
+		%% ELLIPSES 			
+		\addplot[
+%			red,
+			scatter,
+			only marks,
+			opacity=0.75,
+			mark size=0.3,
+			point meta=explicit symbolic,
+			scatter/classes={
+				10=\targetColor{10},
+				20=\targetColor{20},
+				30=\targetColor{30},
+				40=\targetColor{40},
+				50=\targetColor{50} %				50={mark=*,\targetColor{50},line width=1mm, draw=\targetColor{50}}							
+			}					
+			] 	
+			table[
+			x=x,
+			y=y,	
+			meta=target
+			,filter in={type}{ellipse}					
+%			filter in={target}{50}					
+			] {data/exp1/skewedCircles.csv};	
+
+
+		%% ELLIPSES 			
+		\addplot[
+		%			red,
+		scatter,
+		only marks,
+		opacity=0.75,
+		mark size=0.8,
+		point meta=explicit symbolic,
+		scatter/classes={
+			10=\targetColor{10},
+			20=\targetColor{20},
+			30=\targetColor{30},
+			40=\targetColor{40},
+			50=\targetColor{50} %				50={mark=*,\targetColor{50},line width=1mm, draw=\targetColor{50}}							
+		}					
+		] 	
+		table[
+		x=x,
+		y=y,	
+		meta=target
+		,filter in={type}{radial},				
+					filter in={target}{50}					
+		] {data/exp1/skewedCircles.csv};	
+		
+		
+
+%			\loadTabbedCsv{..}\path	
+%			\pgfplotsextra{\DTLforeach*[\DTLiseq{type}{radial}\DTLiseq{targt}{50}]{}{\xc=x}{
+%					
+%			}}
+
+
+		
+		
+		%			\loadTabbedCsv{..}\path	
+		%			\pgfplotsextra{\DTLforeach*[\DTLiseq{type}{radial}\DTLiseq{targt}{50}]{}{\xc=x}{
+		%					
+		%			}}
+
+		%% RADIALS			
+		\addplot[
+		%			red,
+		scatter,
+		only marks,
+		mark size=0.1,
+%		red,
+		point meta=explicit symbolic,
+		scatter/classes={
+%			ellipse=transparent, %{mark=*,gray,line width=1mm}							
+			radial={black!50, dashed} %{mark=*,gray,line width=1mm}							
+		}					
+		] 	
+		table[
+		x=x,
+		y=y,	
+		meta=type,
+		filter in={type}{radial},					
+%		filter in={target}{50}					
+		] {data/exp1/skewedCircles.csv};	
+		
+						\begin{scope}[yscale=-1] 
+						\polarPlotDrawRadials 
+						\end{scope}			
+									\drawCircles
+									
+									
+			
+		
+		
+%								\angle30x=angle30x,
+%								\angle30y=angle30y,
+%								\angle60x=angle60x,
+%								\angle60y=angle60y,
+%								\angle90x=angle90x,
+%								\angle90y=angle90y,
+%								\angle120x=angle120x,
+%								\angle120y=angle120y,
+%								\angle150x=angle150x,
+%								\angle150y=angle150y
+%								
+			\coordinate (origin) at (axis cs:0,0);			    
+%			\def\PPM{10} % i,e. 851
+			%%	\foreachTabbedCsvRowInPlot
+			\pgfplotsextra{\DTLforeach*[\DTLiseq{\target}{50}]{Pca}{\xc=x, \yc=y,\xr=xr,\yr=yr,\circleAngle=deg,\target=target,\circleRadius=circleRadius,\circleRadiusM=circleRadiusM,
+					\angleAx=angle0x,
+					\angleAy=angle0y,
+					\angleBx=angle30x,
+					\angleBy=angle30y,
+					\angleCx=angle60x,
+					\angleCy=angle60y,
+					\angleDx=angle90x,
+					\angleDy=angle90y,
+					\angleEx=angle120x,
+					\angleEy=angle120y,
+					\angleFx=angle150x,
+					\angleFy=angle150y,
+					\angleGx=angle180x,
+					\angleGy=angle180y,
+					\angleHx=angle210x,
+					\angleHy=angle210y,
+					\angleIx=angle240x,
+					\angleIy=angle240y,
+					\angleJx=angle270x,
+					\angleJy=angle270y,
+					\angleKx=angle300x,
+					\angleKy=angle300y,
+					\angleLx=angle330x,
+					\angleLy=angle330y}{	
+								
+%				\coordinate (circlePos) at ($(origin) + (\xc/\PPM, \yc/\PPM)$);
+				\coordinate (circlePos) at ($(origin) + (\xc/\PPM, \yc/\PPM)$);
+				%			\node[mark size=0.02cm,color=\targetColor\target] at (circlePos) {\pgfuseplotmark{triangle*}};
+				\draw (circlePos) node[cross,
+					rotate around={-1*\circleAngle-45:(circlePos)},
+					color=\targetColor\target] {};		
+				
+				
+				
+				%% ELLIPSES
+				
+				
+				
+				\draw[\targetColor{50}, fill=lightgray, opacity=0.082] ($(origin) + (\xc/\PPM, \yc/\PPM)$) ellipse [
+				x radius=\xr/\PPM,
+				y radius=\yr/\PPM,
+				rotate around={-1*\circleAngle:(circlePos)} 
+				];
+
+%				\newcommand\drawEllipse{
+%					\draw[color=\targetColor{\currentAngle0}] ($(origin) + (\xc/\PPM, \yc/\PPM)$) ellipse [
+%					x radius=\currentAngle*\xr/\circleRadius*\targetTickDistance/\PPM,
+%					y radius=\currentAngle*\yr/\circleRadius*\targetTickDistance/\PPM,
+%					rotate around={-1*\circleAngle:(circlePos)} %				rotate around={deg(148):(50,0)}
+%					];
+%				}
+%				\edef\currentAngle{1}\drawEllipse
+%				\edef\currentAngle{2}\drawEllipse
+%				\edef\currentAngle{3}\drawEllipse
+%				\edef\currentAngle{4}\drawEllipse
+%				\edef\currentAngle{5}\drawEllipse
+
+
+				
+				%% RADIALS
+%%				, path fading=west, fading angle=30
+%				\newcommand\drawSkewedRadials{				
+%					\draw[lightgray, dashed, shorten >=.03cm, shorten <=.12cm] (circlePos) -- ($(origin) + (\angleAx/\PPM,\angleAy/\PPM)$) node[right]{\scriptsize 0};% node[circle,fill,inner sep=1pt]{}; 
+%					\draw[lightgray, dashed, shorten >=.03cm, shorten <=.12cm] (circlePos) -- ($(origin) + (\angleBx/\PPM,\angleBy/\PPM)$) node[above right]{\scriptsize 30}; 
+%					\draw[lightgray, dashed, shorten >=.03cm, shorten <=.12cm, path fading=west, fading angle=60] (circlePos) -- ($(origin) + (\angleCx/\PPM,\angleCy/\PPM)$) node[above right]{\scriptsize 60}; 
+%					\draw[lightgray, dashed, shorten >=.03cm, shorten <=.12cm, path fading=west, fading angle=90] (circlePos) -- ($(origin) + (\angleDx/\PPM,\angleDy/\PPM)$) node[above]{\scriptsize 90}; 
+%					\draw[lightgray, dashed, shorten >=.03cm, shorten <=.12cm, path fading=west, fading angle=120] (circlePos) -- ($(origin) + (\angleEx/\PPM,\angleEy/\PPM)$) node[above left]{\scriptsize 120}; 
+%					\draw[lightgray, dashed, shorten >=.03cm, shorten <=.12cm, path fading=west, fading angle=150] (circlePos) -- ($(origin) + (\angleFx/\PPM,\angleFy/\PPM)$) node[above left]{\scriptsize 150}; 
+%					\draw[lightgray, dashed, shorten >=.03cm, shorten <=.12cm, path fading=west, fading angle=180] (circlePos) -- ($(origin) + (\angleGx/\PPM,\angleGy/\PPM)$) node[left]{\scriptsize 180}; 
+%					\draw[lightgray, dashed, shorten >=.03cm, shorten <=.12cm, path fading=west, fading angle=210] (circlePos) -- ($(origin) + (\angleHx/\PPM,\angleHy/\PPM)$) node[left]{\scriptsize 210}; 
+%					\draw[lightgray, dashed, shorten >=.03cm, shorten <=.12cm, path fading=west, fading angle=240] (circlePos) -- ($(origin) + (\angleIx/\PPM,\angleIy/\PPM)$) node[left]{\scriptsize 240};  
+%					\draw[lightgray, dashed, shorten >=.03cm, shorten <=.12cm, path fading=west, fading angle=270] (circlePos) -- ($(origin) + (\angleJx/\PPM,\angleJy/\PPM)$) node[above right]{\scriptsize 270}; 
+%					\draw[lightgray, dashed, shorten >=.03cm, shorten <=.12cm, path fading=west, fading angle=300] (circlePos) -- ($(origin) + (\angleKx/\PPM,\angleKy/\PPM)$) node[below right]{\scriptsize 300}; 
+%					\draw[lightgray, dashed, shorten >=.03cm, shorten <=.12cm, path fading=west, fading angle=330] (circlePos) -- ($(origin) + (\angleLx/\PPM,\angleLy/\PPM)$) node[below right]{\scriptsize 330}; 
+%				}
+%				\drawSkewedRadials
+			}}
+			%\shade[inner color=transparent,outer color=red!40] (0,0) rectangle (4,4);
+			
+	
+			\drawOnscreenDims
+%			\expPolarPlotAngles
+%			\plotReleasePositionsColorByTarget			
+		}	
+	\end{tikzpicture}
+	\caption{Determining the radius, cutoff target=40 TODO!}
+	%		\label{figure:}				
+\end{figure*}
+
+
+%((((((((((
+%\begin{loopTabbedCsv}{skod}{\xc=x, \yc=y,\xr=xr,\yr=yr,\circleAngle=phi,\target=target, \circleColor=color}
+%	\target\\
+%\end{loopTabbedCsv}
+%))))))))
+
+
+
+%	\begin{tikzpicture}
+%	
+%	% help lines
+%	\draw[step=1,help lines,black!20] (-0.95,-0.95) grid (4.95,4.95);
+%	% axis
+%	\draw[thick,->] (-10,0) -- (10,0);
+%	\draw[thick,->] (0,-10) -- (0,10);
+%	
+%	\end{tikzpicture}
+%
+
+
+
+
+
+\newcommand\expPolarPlotReleaseDiff[2]{%%%%%%%%TEST
+%	\pgfmathdivide{#1}{180}
+%	\definecolor{degreeColor#1}{hsb}{\pgfmathresult, 1, 1}
+	\addplot[
+		%		red,
+		%			only marks,
+		%	->,
+		rotate around={#1:(axis cs:0,0)},
+		%	shorten >=.15cm,
+		%	shorten <=.15cm,
+		ycomb,
+		%	x dir=reverse, 
+		%	scatter,
+		ybar, bar width=4,
+		fill=#2,%degreeColor#1!90,%red!30,
+		point meta=explicit symbolic,
+		%			red,
+	%	scatter/classes={
+	%		mean={mark=*,\myRed,line width=0mm},
+	%		target={mark=*,\myGreen,line width=0mm}		
+	%	}						
+		]%surf, mesh/rows=10] 	
+		plot[error bars/.cd, 
+		y dir = both, y explicit,  	
+		%	x dir = both, x explicit,  	
+		%		error bar style={
+		%			line width=1.5pt, 
+		%			rotate around={30:(axis cs:\x,\y)},
+		%			xshift=4.5mm
+		%			},
+		error mark options = {
+			%		rotate around={#1:current origin} 
+			%%		line width=1.5pt, 
+			mark size = 0pt 
+		},
+		] %,bar width=3pt,
+		table[
+		x=trialTargetHorizontalDistanceFromOrigo,
+		y=trialFromTargetToReleaseVerticalLength,
+		y error=trialFromTargetToReleaseVerticalLengthConfidence,
+		%	x error=trialFromTargetToReleaseVerticalLengthConfidence,
+		meta=sessionName,
+		filter in={sessionName}{mean},
+		%			filter in={sessionType}{E2},
+		filter in={trialUIAngleDegrees}{#1},
+		%	filter in={trialTargetValue}{#2}
+		%		filter in={trialUIAngle}{1.5707963267949}
+		] 
+		%			{data/exp1/TrialSesssions-(E2-polar-evan,rose,Lily,Lily).csv} 
+		{\expTwoPolarCsvFilepath};	
+}
+
+
+
+\begin{figure}
+	\centering
+	\begin{tikzpicture}[scale=1.2]		
+		\hspace*{-1cm}
+		\expPolarAxis{		
+			\polarPlotDrawRadials
+			\drawCircles		
+	
+			\expPolarPlotReleaseDiff{0}{angle0}
+			\expPolarPlotReleaseDiff{30}{angle30}
+			\expPolarPlotReleaseDiff{60}{angle60}
+			\expPolarPlotReleaseDiff{90}{angle90}
+			\expPolarPlotReleaseDiff{120}{angle120}
+			\expPolarPlotReleaseDiff{150}{angle150}
+		}	
+	\end{tikzpicture}
+	\caption{A compact illustration that captures all combinations of mean target estimate deviations (Euclidean distance), along with 95\% confidence values (i.e. one bar for each pair and bars of same color resulting from input on the same angle.}
+	\label{fig:experimentalSetupAbove}
+\end{figure}
+
+%\begin{figure*}
+%	\twoFigure{		
+%	}{
+%	}
+%\end{figure*}
+%	
+	
+	
+
+%\begin{figure*}	
+%	\centering
+%	\begin{tikzpicture}
+%		\begin{axis}[ 
+%			xmin=-55, 
+%			xmax=55, 
+%	%		ymin=0,
+%	%		ymax=#4,
+%	%		legend pos=outer north east,
+%			xlabel={Target value},			
+%			ylabel={Euclidean distance to target},			
+%			y label style={
+%%				rotate=-90,
+%				%						yshift=50.
+%	%			xshift=10
+%			},
+%			%		xscale=1.3,
+%			%		yscale=1.3,
+%	%		scale=0.9,
+%			]
+%		
+%			\addplot[
+%			%		red,
+%			%			only marks,
+%			%	->,
+%			%	shorten >=.15cm,
+%			%	shorten <=.15cm,
+%%			ycomb,
+%			%	x dir=reverse, 
+%			%	scatter,
+%%			ybar, bar width=4,
+%			red,
+%		%	fill=#2,%degreeColor#1!90,%red!30,
+%			point meta=explicit symbolic,
+%			%			red,
+%			%	scatter/classes={
+%			%		mean={mark=*,\myRed,line width=0mm},
+%			%		target={mark=*,\myGreen,line width=0mm}		
+%			%	}						
+%			]%surf, mesh/rows=10] 	
+%			plot[error bars/.cd, 
+%			y dir = both, y explicit,  	
+%			%	x dir = both, x explicit,  	
+%			%		error bar style={
+%			%			line width=1.5pt, 
+%			%			rotate around={30:(axis cs:\x,\y)},
+%			%			xshift=4.5mm
+%			%			},
+%			error mark options = {
+%				%		rotate around={#1:current origin} 
+%				%%		line width=1.5pt, 
+%				mark size = 0pt 
+%			},
+%			] %,bar width=3pt,
+%			table[
+%			x=trialTargetValue,
+%			y=trialReleasePositionTargetDiff,
+%			y error=trialReleasePositionTargetDiffConfidence,
+%			%	x error=trialFromTargetToReleaseVerticalLengthConfidence,
+%		%	meta=sessionName,
+%			filter in={sessionName}{mean}
+%			] 
+%			{data/exp1/TrialSesssions-(E2-mean,target).csv};	
+%
+%
+%		\end{axis}
+%	\end{tikzpicture}
+%	\caption{Mean target diffs}
+%		%		\label{figure:}				
+%\end{figure*}
+

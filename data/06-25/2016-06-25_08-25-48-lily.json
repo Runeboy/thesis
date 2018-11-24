@@ -1,0 +1,2845 @@
+{
+  "UID": "f0051430-4ed6-41b6-baa8-72ec22921ee8",
+  "Name": "lily",
+  "Type": "TrialSession",
+  "Trials": [
+    {
+      "UID": "ef8bf098-6ab0-44fe-856d-0d6a357297b6",
+      "Name": "Baseline-Horisontal",
+      "ProjectionMode": "Baseline",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:14:02.2757168-07:00",
+      "EndTime": "2016-06-25T20:14:05.6797092-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:03.4039924",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 5.0,
+      "FromOrigoToTargetPosition": {
+        "X": 400.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -2.382904052734375,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": false,
+      "IsIntertialMoveAllowedOnscreen": true,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "3f9cf6f1-7562-4ae6-9916-0c9231c35669",
+      "Name": "Baseline-Horisontal",
+      "ProjectionMode": "Baseline",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:14:10.8167158-07:00",
+      "EndTime": "2016-06-25T20:14:16.2032073-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:05.3864915",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -23.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1840.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 54.028717041015625,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": false,
+      "IsIntertialMoveAllowedOnscreen": true,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "224f0112-a921-4a8b-be8c-9ddaa41cdb0b",
+      "Name": "Baseline-Horisontal",
+      "ProjectionMode": "Baseline",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:14:20.1288051-07:00",
+      "EndTime": "2016-06-25T20:14:23.7264042-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:03.5975991",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 6.0,
+      "FromOrigoToTargetPosition": {
+        "X": 480.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -4.608978271484375,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": false,
+      "IsIntertialMoveAllowedOnscreen": true,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "8a8b69d4-8c8a-4d5c-8dd3-b72f136ac5ca",
+      "Name": "Baseline-Horisontal",
+      "ProjectionMode": "Baseline",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:14:26.9498823-07:00",
+      "EndTime": "2016-06-25T20:14:33.4347472-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:06.4848649",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -45.0,
+      "FromOrigoToTargetPosition": {
+        "X": -3600.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 6.832672119140625,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": false,
+      "IsIntertialMoveAllowedOnscreen": true,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "0b9777d3-7cea-4a88-acaa-117c6aee124a",
+      "Name": "Baseline-Horisontal",
+      "ProjectionMode": "Baseline",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:14:36.6211357-07:00",
+      "EndTime": "2016-06-25T20:14:43.6079749-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:06.9868392",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -28.0,
+      "FromOrigoToTargetPosition": {
+        "X": -2240.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 0.110382080078125,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": false,
+      "IsIntertialMoveAllowedOnscreen": true,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "77099650-3381-483c-9d08-72c5125f8ce7",
+      "Name": "Baseline-Vertical",
+      "ProjectionMode": "Baseline",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:14:47.4001243-07:00",
+      "EndTime": "2016-06-25T20:14:53.9337163-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:06.5335920",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 44.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -3520.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 37.6748046875
+      },
+      "IsOffscreenSpaceEnabled": false,
+      "IsIntertialMoveAllowedOnscreen": true,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "84489974-d00b-4385-9a1d-1a4cb64e630f",
+      "Name": "Baseline-Vertical",
+      "ProjectionMode": "Baseline",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:14:57.2806577-07:00",
+      "EndTime": "2016-06-25T20:15:03.372931-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:06.0922733",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 15.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -1200.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 11.213134765625
+      },
+      "IsOffscreenSpaceEnabled": false,
+      "IsIntertialMoveAllowedOnscreen": true,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "8ecb064c-aa48-46ff-b411-0edf5c5bd20a",
+      "Name": "Baseline-Vertical",
+      "ProjectionMode": "Baseline",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:15:06.672682-07:00",
+      "EndTime": "2016-06-25T20:15:12.7297187-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:06.0570367",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 17.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -1360.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 38.0595703125
+      },
+      "IsOffscreenSpaceEnabled": false,
+      "IsIntertialMoveAllowedOnscreen": true,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "48775fe6-9d4d-4613-9b02-5c52a5b9e6a6",
+      "Name": "Baseline-Vertical",
+      "ProjectionMode": "Baseline",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:15:15.6685601-07:00",
+      "EndTime": "2016-06-25T20:15:21.3026063-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:05.6340462",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 18.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -1440.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 13.698974609375
+      },
+      "IsOffscreenSpaceEnabled": false,
+      "IsIntertialMoveAllowedOnscreen": true,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "7a3d0d28-5601-4121-af11-8c1dac18ef2a",
+      "Name": "Baseline-Vertical",
+      "ProjectionMode": "Baseline",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:15:24.746053-07:00",
+      "EndTime": "2016-06-25T20:15:29.8108449-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:05.0647919",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 13.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -1040.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 77.83935546875
+      },
+      "IsOffscreenSpaceEnabled": false,
+      "IsIntertialMoveAllowedOnscreen": true,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "fffd8df9-217f-481c-b387-eb732f57f411",
+      "Name": "Baseline-TwoDimensional",
+      "ProjectionMode": "Baseline",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:15:34.5340695-07:00",
+      "EndTime": "2016-06-25T20:15:38.9666498-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 1.5707963267948966,
+      "Duration": "00:00:04.4325803",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -8.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 640.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 13.395904541015625,
+        "Y": -8.47607421875
+      },
+      "IsOffscreenSpaceEnabled": false,
+      "IsIntertialMoveAllowedOnscreen": true,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "57ddefe9-d020-44d5-96b5-677b1e82496d",
+      "Name": "Baseline-TwoDimensional",
+      "ProjectionMode": "Baseline",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:15:43.390809-07:00",
+      "EndTime": "2016-06-25T20:15:47.8895106-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 2.617993877991494,
+      "Duration": "00:00:04.4987016",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 13.0,
+      "FromOrigoToTargetPosition": {
+        "X": -900.66650390625,
+        "Y": -520.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 29.446685791015625,
+        "Y": 3.300048828125
+      },
+      "IsOffscreenSpaceEnabled": false,
+      "IsIntertialMoveAllowedOnscreen": true,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "1f101b75-f5e4-48f0-b818-e45a19949643",
+      "Name": "Baseline-TwoDimensional",
+      "ProjectionMode": "Baseline",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:15:52.5670153-07:00",
+      "EndTime": "2016-06-25T20:15:59.0984697-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.52359877559829882,
+      "Duration": "00:00:06.5314544",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -24.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1662.768798828125,
+        "Y": 960.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 8.661773681640625,
+        "Y": -5.37158203125
+      },
+      "IsOffscreenSpaceEnabled": false,
+      "IsIntertialMoveAllowedOnscreen": true,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "4b70cd66-9961-462d-92c7-98f7f664c91e",
+      "Name": "Baseline-TwoDimensional",
+      "ProjectionMode": "Baseline",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:16:03.0697246-07:00",
+      "EndTime": "2016-06-25T20:16:07.9555732-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 1.0471975511965976,
+      "Duration": "00:00:04.8858486",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 15.0,
+      "FromOrigoToTargetPosition": {
+        "X": 600.0,
+        "Y": -1039.23046875
+      },
+      "FromTargetToReleasePosition": {
+        "X": -13.201263427734375,
+        "Y": 21.490966796875
+      },
+      "IsOffscreenSpaceEnabled": false,
+      "IsIntertialMoveAllowedOnscreen": true,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "40038cdc-7954-46df-8f0b-e458a9c61955",
+      "Name": "Baseline-TwoDimensional",
+      "ProjectionMode": "Baseline",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:16:14.6420353-07:00",
+      "EndTime": "2016-06-25T20:16:22.2319716-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 2.0943951023931953,
+      "Duration": "00:00:07.5899363",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 29.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1160.0,
+        "Y": -2009.178955078125
+      },
+      "FromTargetToReleasePosition": {
+        "X": 14.873687744140625,
+        "Y": 61.047119140625
+      },
+      "IsOffscreenSpaceEnabled": false,
+      "IsIntertialMoveAllowedOnscreen": true,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "07d81b05-9c66-4449-a016-86ab5aa816d2",
+      "Name": "PlaneNormal-Horisontal",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:20:43.957394-07:00",
+      "EndTime": "2016-06-25T20:23:04.5543485-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:02:20.5969545",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -38.0,
+      "FromOrigoToTargetPosition": {
+        "X": -3040.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 58.701568603515625,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "9a6c0d04-254d-4773-88c0-389af8f40c8d",
+      "Name": "PlaneNormal-Horisontal",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:23:09.73304-07:00",
+      "EndTime": "2016-06-25T20:23:38.6111149-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:28.8780749",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -22.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1760.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 7.275054931640625,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "2393493f-f3de-4573-985e-95c67ddc3c98",
+      "Name": "PlaneNormal-Horisontal",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:22:15.0150622-07:00",
+      "EndTime": "2016-06-25T20:24:02.5115996-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:01:47.4965374",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -22.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1760.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 6.463043212890625,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "668ab8f9-4423-46e2-9fcf-e18007136e34",
+      "Name": "PlaneNormal-Horisontal",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:22:24.3054835-07:00",
+      "EndTime": "2016-06-25T20:24:16.2245646-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:01:51.9190811",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -9.0,
+      "FromOrigoToTargetPosition": {
+        "X": -720.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -50.049407958984375,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "a6f0dc41-091b-411a-9d82-50aaa50fe0d1",
+      "Name": "PlaneNormal-Horisontal",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:24:34.1782473-07:00",
+      "EndTime": "2016-06-25T20:24:44.0300506-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:09.8518033",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -18.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1440.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -8.760589599609375,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "f4993dac-248d-4c8f-aaa9-4ed1bdbe22f9",
+      "Name": "PlaneNormal-Horisontal-Estimation",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:28:55.464585-07:00",
+      "EndTime": "2016-06-25T20:29:06.5085375-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:11.0439525",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 13.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1040.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 186.9117431640625,
+        "Y": 55.004058837890625
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "a6dea1a6-20bb-4865-91b8-0f5e483e9211",
+      "Name": "PlaneNormal-Horisontal-Estimation",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:29:11.0667159-07:00",
+      "EndTime": "2016-06-25T20:29:15.3609142-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:04.2941983",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -23.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1840.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -77.238525390625,
+        "Y": 125.9490966796875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "c9d4d716-03e2-46e3-9cff-a70addecf3b9",
+      "Name": "PlaneNormal-Horisontal-Estimation",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:29:20.7163745-07:00",
+      "EndTime": "2016-06-25T20:29:23.0102403-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:02.2938658",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 6.0,
+      "FromOrigoToTargetPosition": {
+        "X": 480.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 319.135498046875,
+        "Y": 185.2889404296875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "422ac3f1-5a6e-4fa6-b0d9-10858a054643",
+      "Name": "PlaneNormal-Horisontal-Estimation",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:29:26.8486611-07:00",
+      "EndTime": "2016-06-25T20:29:31.4366876-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:04.5880265",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 17.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1360.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -42.389892578125,
+        "Y": 150.22686767578125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "1cbcadcf-99de-47bd-a2c0-6d92e72d6761",
+      "Name": "PlaneNormal-Horisontal-Estimation",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:29:35.40925-07:00",
+      "EndTime": "2016-06-25T20:29:38.5514569-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:03.1422069",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -28.0,
+      "FromOrigoToTargetPosition": {
+        "X": -2240.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 132.28515625,
+        "Y": 186.72332763671875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "93d925e7-2c42-4047-a896-8242ee7c5312",
+      "Name": "PlaneNormal-Vertical",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:30:13.4904276-07:00",
+      "EndTime": "2016-06-25T20:30:28.3035341-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:14.8131065",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": -31.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 2480.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 10.72802734375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "b0bb657d-68b2-40b4-96cf-b741a86b58c5",
+      "Name": "PlaneNormal-Vertical",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:30:31.9551756-07:00",
+      "EndTime": "2016-06-25T20:30:38.0618454-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:06.1066698",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 18.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -1440.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 5.65234375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "dd290788-0f8b-453c-8b9c-cba4b2608aa3",
+      "Name": "PlaneNormal-Vertical",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:30:41.2983817-07:00",
+      "EndTime": "2016-06-25T20:30:45.7532143-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:04.4548326",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 13.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -1040.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 1.552734375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "0db5f9b2-9de8-4d5f-adb7-3a9c4274cabe",
+      "Name": "PlaneNormal-Vertical",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:30:48.9274068-07:00",
+      "EndTime": "2016-06-25T20:30:54.3242475-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:05.3968407",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 17.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -1360.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 25.667236328125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "906c5d88-4dec-419c-9028-b8d3d67e61be",
+      "Name": "PlaneNormal-Vertical",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:31:19.4007702-07:00",
+      "EndTime": "2016-06-25T20:31:26.2140094-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:06.8132392",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 33.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -2640.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 69.272216796875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "fc6e8a94-a1e3-4725-b571-d13e1d1d4a59",
+      "Name": "PlaneNormal-Vertical-Estimation",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:31:33.039175-07:00",
+      "EndTime": "2016-06-25T20:31:36.6381323-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:03.5989573",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": -17.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 1360.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 33.58099365234375,
+        "Y": -136.367919921875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "bc81623b-7f0f-4753-b9cd-37a402366e0c",
+      "Name": "PlaneNormal-Vertical-Estimation",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:31:40.2017032-07:00",
+      "EndTime": "2016-06-25T20:31:44.1894005-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:03.9876973",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 16.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -1280.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 123.75509643554687,
+        "Y": 3.7320556640625
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "d868a70d-7f6d-438a-87cf-aaa3dfd47d42",
+      "Name": "PlaneNormal-Vertical-Estimation",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "0001-01-01T00:00:00",
+      "EndTime": "2016-06-25T20:31:46.3164088-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:00",
+      "IsStarted": false,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 16.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -1280.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "ebbc899d-1e99-4d73-88e1-f1ebe42983fd",
+      "Name": "PlaneNormal-Vertical-Estimation",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:31:50.0204492-07:00",
+      "EndTime": "2016-06-25T20:31:54.1092424-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:04.0887932",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": -20.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 1600.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 69.935546875,
+        "Y": -213.9051513671875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "7f018f7a-6235-48d1-85c7-cc44d1bf7758",
+      "Name": "PlaneNormal-Vertical-Estimation",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:31:57.4574182-07:00",
+      "EndTime": "2016-06-25T20:32:00.0170205-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:02.5596023",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 10.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -800.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 162.89151000976562,
+        "Y": -14.68505859375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "6120eaa5-95d4-4a5e-8d27-b7320b23bbcf",
+      "Name": "PlaneNormal-TwoDimensional",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:32:31.7709787-07:00",
+      "EndTime": "2016-06-25T20:32:37.2854091-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.52359877559829882,
+      "Duration": "00:00:05.5144304",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 14.0,
+      "FromOrigoToTargetPosition": {
+        "X": 969.9482421875,
+        "Y": -560.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -15.608489990234375,
+        "Y": 1.777587890625
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "ebf6f31c-e5bc-45c4-838e-80f7479901b1",
+      "Name": "PlaneNormal-TwoDimensional",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:33:02.4933055-07:00",
+      "EndTime": "2016-06-25T20:33:13.763985-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 2.0943951023931953,
+      "Duration": "00:00:11.2706795",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -17.0,
+      "FromOrigoToTargetPosition": {
+        "X": 680.0,
+        "Y": 1177.79443359375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -30.550384521484375,
+        "Y": 28.703125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "ab63b12f-1c29-474a-9ed9-b11978ecd64a",
+      "Name": "PlaneNormal-TwoDimensional",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:33:18.8868591-07:00",
+      "EndTime": "2016-06-25T20:33:23.8831895-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 1.0471975511965976,
+      "Duration": "00:00:04.9963304",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 17.0,
+      "FromOrigoToTargetPosition": {
+        "X": 680.0,
+        "Y": -1177.79443359375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -50.416107177734375,
+        "Y": -21.83837890625
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "c31c7c8b-0c35-4ebe-8534-bad5b13b3e54",
+      "Name": "PlaneNormal-TwoDimensional",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:33:28.1598575-07:00",
+      "EndTime": "2016-06-25T20:33:33.0296715-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 2.617993877991494,
+      "Duration": "00:00:04.8698140",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -7.0,
+      "FromOrigoToTargetPosition": {
+        "X": 484.97412109375,
+        "Y": 280.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 1.971588134765625,
+        "Y": 6.5498046875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "6bcf8dca-9220-4223-a424-7092e8e63407",
+      "Name": "PlaneNormal-TwoDimensional",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:33:37.4822296-07:00",
+      "EndTime": "2016-06-25T20:33:41.9177343-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 1.5707963267948966,
+      "Duration": "00:00:04.4355047",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 7.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -560.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -2.816741943359375,
+        "Y": -8.35595703125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "0d0d1de8-1b07-471e-8d66-fe1dab5092dd",
+      "Name": "PlaneNormal-TwoDimensional-Estimation",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:33:51.1351849-07:00",
+      "EndTime": "2016-06-25T20:34:06.7979995-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.0471975511965976,
+      "Duration": "00:00:15.6628146",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 11.0,
+      "FromOrigoToTargetPosition": {
+        "X": 440.0,
+        "Y": -762.102294921875
+      },
+      "FromTargetToReleasePosition": {
+        "X": 106.02862548828125,
+        "Y": 104.26593017578125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "ddada243-22af-46f7-8338-4650d8ee7ea0",
+      "Name": "PlaneNormal-TwoDimensional-Estimation",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:34:11.5495239-07:00",
+      "EndTime": "2016-06-25T20:34:14.2478282-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.5707963267948966,
+      "Duration": "00:00:02.6983043",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 12.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -960.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 136.25582885742187,
+        "Y": 58.31451416015625
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "e9ed49fb-b251-4562-901f-832bde7e5209",
+      "Name": "PlaneNormal-TwoDimensional-Estimation",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:34:18.9959648-07:00",
+      "EndTime": "2016-06-25T20:34:22.920834-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.52359877559829882,
+      "Duration": "00:00:03.9248692",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -25.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1732.05078125,
+        "Y": 1000.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 14.9937744140625,
+        "Y": 266.49658203125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "796d4364-3b9e-4531-8e83-1db09e1844b0",
+      "Name": "PlaneNormal-TwoDimensional-Estimation",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:34:27.7855839-07:00",
+      "EndTime": "2016-06-25T20:34:31.4388724-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.0943951023931953,
+      "Duration": "00:00:03.6532885",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -48.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1920.0,
+        "Y": 3325.53759765625
+      },
+      "FromTargetToReleasePosition": {
+        "X": -724.7349853515625,
+        "Y": -1589.866455078125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "acda7515-7a19-49b4-a8bc-f83e0e03d340",
+      "Name": "PlaneNormal-TwoDimensional-Estimation",
+      "ProjectionMode": "PlaneNormal",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:34:36.5407238-07:00",
+      "EndTime": "2016-06-25T20:34:40.8786044-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.617993877991494,
+      "Duration": "00:00:04.3378806",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 36.0,
+      "FromOrigoToTargetPosition": {
+        "X": -2494.1533203125,
+        "Y": -1440.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 31.763916015625,
+        "Y": 430.21539306640625
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "e0fc3d1e-2bf4-4149-a4d3-b16514f4a98d",
+      "Name": "Directional-Horisontal",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:35:22.4465448-07:00",
+      "EndTime": "2016-06-25T20:36:03.856402-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:41.4098572",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 33.0,
+      "FromOrigoToTargetPosition": {
+        "X": 2640.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -17.868743896484375,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "f6c14afb-39d4-4240-8cdf-9ff0113f6fe2",
+      "Name": "Directional-Horisontal",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:36:07.4348018-07:00",
+      "EndTime": "2016-06-25T20:36:12.4126015-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:04.9777997",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 17.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1360.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 32.110260009765625,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "12c400c7-fe19-46a3-9f99-dce619311c48",
+      "Name": "Directional-Horisontal",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:36:15.6336382-07:00",
+      "EndTime": "2016-06-25T20:36:20.8195806-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:05.1859424",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -15.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1200.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 72.909332275390625,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "a6853ce4-bbea-4820-9427-c63d665878ad",
+      "Name": "Directional-Horisontal",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:36:23.8725967-07:00",
+      "EndTime": "2016-06-25T20:36:32.6941543-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:08.8215576",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 39.0,
+      "FromOrigoToTargetPosition": {
+        "X": 3120.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -57.474700927734375,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "33534f97-696b-49c4-adeb-24698f03f7e3",
+      "Name": "Directional-Horisontal",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:36:36.1725167-07:00",
+      "EndTime": "2016-06-25T20:36:56.311877-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:20.1393603",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 53.0,
+      "FromOrigoToTargetPosition": {
+        "X": 3120.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 915.3074951171875,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "ef871373-8880-439b-8eed-00c1a2b86a36",
+      "Name": "Directional-Horisontal-Estimation",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:37:16.2798933-07:00",
+      "EndTime": "2016-06-25T20:37:31.5804415-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:15.3005482",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -8.0,
+      "FromOrigoToTargetPosition": {
+        "X": -640.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -207.34820556640625,
+        "Y": 55.086044311523437
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "9dfc551d-531b-49a9-8640-dcecba759cd9",
+      "Name": "Directional-Horisontal-Estimation",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:37:34.7271541-07:00",
+      "EndTime": "2016-06-25T20:37:36.3403061-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:01.6131520",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 5.0,
+      "FromOrigoToTargetPosition": {
+        "X": 400.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 203.5509033203125,
+        "Y": -68.500457763671875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "d40f9a93-25b1-43bc-8ab6-c43c2ddd3f44",
+      "Name": "Directional-Horisontal-Estimation",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:37:39.2258523-07:00",
+      "EndTime": "2016-06-25T20:37:42.4596796-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:03.2338273",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 27.0,
+      "FromOrigoToTargetPosition": {
+        "X": 2160.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 759.48681640625,
+        "Y": -52.426727294921875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "be41416c-5757-4b1c-af30-eef37f2904dc",
+      "Name": "Directional-Horisontal-Estimation",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:37:45.1592567-07:00",
+      "EndTime": "2016-06-25T20:37:48.0221927-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:02.8629360",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 14.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1120.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 327.3504638671875,
+        "Y": -64.068077087402344
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "70e47b6f-4912-4203-ae99-ebab9cbe0d7c",
+      "Name": "Directional-Horisontal-Estimation",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:37:50.8116892-07:00",
+      "EndTime": "2016-06-25T20:37:53.2504564-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:02.4387672",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 11.0,
+      "FromOrigoToTargetPosition": {
+        "X": 880.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 302.4210205078125,
+        "Y": -73.053474426269531
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "f50f97e2-1f70-4ab3-8aaa-5d6d121fe6c0",
+      "Name": "Directional-Vertical",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:38:30.675384-07:00",
+      "EndTime": "2016-06-25T20:38:40.5574898-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:09.8821058",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 5.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -400.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 17.919189453125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "02376d10-0724-4533-af17-c9dded4be521",
+      "Name": "Directional-Vertical",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:38:44.1234775-07:00",
+      "EndTime": "2016-06-25T20:38:52.4149594-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:08.2914819",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": -26.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 2080.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 75.6923828125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "91c5253e-8556-458c-a4e3-c38424b9d9d6",
+      "Name": "Directional-Vertical",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:38:55.7756541-07:00",
+      "EndTime": "2016-06-25T20:39:00.2570402-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:04.4813861",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 9.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -720.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 0.511474609375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "cb2d6354-0332-4a5c-8743-c7cf69670fc1",
+      "Name": "Directional-Vertical",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:39:02.8293585-07:00",
+      "EndTime": "2016-06-25T20:39:06.7653411-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:03.9359826",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 7.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -560.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": -33.910400390625
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "b461b04d-09ff-4909-94b9-2ab7c380e8ba",
+      "Name": "Directional-Vertical",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:39:08.9125991-07:00",
+      "EndTime": "2016-06-25T20:39:14.5979842-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:05.6853851",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 19.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -1520.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": -23.583251953125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "b0b3fe16-6c09-459a-a49c-11c9670b82a3",
+      "Name": "Directional-Vertical-Estimation",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:39:29.5744365-07:00",
+      "EndTime": "2016-06-25T20:39:38.456309-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:08.8818725",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 34.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -2720.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -471.72119140625,
+        "Y": 1422.9296875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "6f5d708f-6297-4759-b6c0-784e8e0ace34",
+      "Name": "Directional-Vertical-Estimation",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:39:41.4613998-07:00",
+      "EndTime": "2016-06-25T20:39:44.8062433-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:03.3448435",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": -20.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 1600.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -101.10452270507812,
+        "Y": 264.7286376953125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "18876021-bddb-41d0-b1bd-8562336b8fbd",
+      "Name": "Directional-Vertical-Estimation",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:39:49.1883282-07:00",
+      "EndTime": "2016-06-25T20:39:51.8552435-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:02.6669153",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": -10.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 800.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -10.356109619140625,
+        "Y": 126.7255859375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "1c969921-498c-44e7-9902-1ed543d95eba",
+      "Name": "Directional-Vertical-Estimation",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:39:54.4400548-07:00",
+      "EndTime": "2016-06-25T20:39:55.9269491-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:01.4868943",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 5.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -400.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 51.8328857421875,
+        "Y": -143.14251708984375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "dd81b195-de24-4e02-9431-2123fbd61764",
+      "Name": "Directional-Vertical-Estimation",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:39:58.966987-07:00",
+      "EndTime": "2016-06-25T20:40:01.0657476-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:02.0987606",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": -12.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 960.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -84.393310546875,
+        "Y": -133.34368896484375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "a86b44a9-78ec-4cd4-8f96-2d982c603fa0",
+      "Name": "Directional-TwoDimensional",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:40:32.4753919-07:00",
+      "EndTime": "2016-06-25T20:40:37.7444436-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.52359877559829882,
+      "Duration": "00:00:05.2690517",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 16.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1108.5126953125,
+        "Y": -640.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 1.379302978515625,
+        "Y": 11.32861328125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "863e310a-8258-47ac-8091-eee9a2a7e987",
+      "Name": "Directional-TwoDimensional",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:40:42.3527149-07:00",
+      "EndTime": "2016-06-25T20:40:55.5070431-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 2.0943951023931953,
+      "Duration": "00:00:13.1543282",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -47.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1880.0,
+        "Y": 3256.25537109375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -35.697845458984375,
+        "Y": -24.7607421875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "48b7abbc-fd2d-4521-82ee-2cd93124a7a4",
+      "Name": "Directional-TwoDimensional",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:40:59.928492-07:00",
+      "EndTime": "2016-06-25T20:41:03.8321954-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 1.0471975511965976,
+      "Duration": "00:00:03.9037034",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 7.0,
+      "FromOrigoToTargetPosition": {
+        "X": 280.0,
+        "Y": -484.97412109375
+      },
+      "FromTargetToReleasePosition": {
+        "X": -16.294525146484375,
+        "Y": -3.2607421875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "ad906cf5-52ed-4ebc-b2e8-9c4928cc3aff",
+      "Name": "Directional-TwoDimensional",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:41:07.6073187-07:00",
+      "EndTime": "2016-06-25T20:41:12.5552003-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 2.617993877991494,
+      "Duration": "00:00:04.9478816",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 17.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1177.79443359375,
+        "Y": -680.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 19.765777587890625,
+        "Y": -3.99560546875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "02b22499-1b4e-4187-acfa-672c5f0adffa",
+      "Name": "Directional-TwoDimensional",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:41:17.099119-07:00",
+      "EndTime": "2016-06-25T20:41:24.3445443-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 1.5707963267948966,
+      "Duration": "00:00:07.2454253",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -33.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 2640.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -1.735687255859375,
+        "Y": -4.85595703125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "5ca168f9-e7c3-4156-89f1-9747bf9f8c5e",
+      "Name": "Directional-TwoDimensional-Estimation",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:41:35.9442776-07:00",
+      "EndTime": "2016-06-25T20:41:49.0673241-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.0471975511965976,
+      "Duration": "00:00:13.1230465",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -14.0,
+      "FromOrigoToTargetPosition": {
+        "X": -560.0,
+        "Y": 969.9482421875
+      },
+      "FromTargetToReleasePosition": {
+        "X": -230.20166015625,
+        "Y": 36.7867431640625
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "9c38e4d1-db9e-4084-adf5-417992fea3fe",
+      "Name": "Directional-TwoDimensional-Estimation",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:41:54.7631796-07:00",
+      "EndTime": "2016-06-25T20:41:58.0179086-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.617993877991494,
+      "Duration": "00:00:03.2547290",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -28.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1939.89697265625,
+        "Y": 1120.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 376.45751953125,
+        "Y": 62.34716796875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "00af8f17-442c-4304-b678-69d336db1d4a",
+      "Name": "Directional-TwoDimensional-Estimation",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:42:02.285134-07:00",
+      "EndTime": "2016-06-25T20:42:05.6048875-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.52359877559829882,
+      "Duration": "00:00:03.3197535",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -27.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1870.614990234375,
+        "Y": 1080.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -23.409912109375,
+        "Y": 715.7119140625
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "54be46a8-78a7-48b0-b6d3-3e970f99d06c",
+      "Name": "Directional-TwoDimensional-Estimation",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:42:18.7551233-07:00",
+      "EndTime": "2016-06-25T20:42:25.538556-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.5707963267948966,
+      "Duration": "00:00:06.7834327",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 46.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -3680.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -11.99169921875,
+        "Y": 1636.595458984375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "96c96068-c03c-48ee-a021-12365d6b8f12",
+      "Name": "Directional-TwoDimensional-Estimation",
+      "ProjectionMode": "Directional",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:42:29.8611561-07:00",
+      "EndTime": "2016-06-25T20:42:32.8114052-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.0943951023931953,
+      "Duration": "00:00:02.9502491",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 26.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1040.0,
+        "Y": -1801.332763671875
+      },
+      "FromTargetToReleasePosition": {
+        "X": 283.4715576171875,
+        "Y": 221.456298828125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "8902e2ce-1d22-4fb5-ae7e-32c8000fa45a",
+      "Name": "Spherical-Horisontal",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:44:25.318959-07:00",
+      "EndTime": "2016-06-25T20:44:31.8022993-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:06.4833403",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -9.0,
+      "FromOrigoToTargetPosition": {
+        "X": -720.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 57.713531494140625,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "4eb93199-ded9-4050-8495-529173556591",
+      "Name": "Spherical-Horisontal",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:42:53.0078618-07:00",
+      "EndTime": "2016-06-25T20:44:03.1650789-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:01:10.1572171",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 31.0,
+      "FromOrigoToTargetPosition": {
+        "X": 2480.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -32.968353271484375,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "04c5de17-885d-4f18-baae-3f31bc689bc4",
+      "Name": "Spherical-Horisontal",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:42:57.5251455-07:00",
+      "EndTime": "2016-06-25T20:44:11.9903971-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:01:14.4652516",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 19.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1520.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -29.094329833984375,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "3fa0384b-d131-4e51-95a6-f610b081c666",
+      "Name": "Spherical-Horisontal",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:44:44.5043095-07:00",
+      "EndTime": "2016-06-25T20:44:49.0834819-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:04.5791724",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 10.0,
+      "FromOrigoToTargetPosition": {
+        "X": 800.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -6.290618896484375,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "36eae490-662a-4f2f-bc17-495f10c6d2a9",
+      "Name": "Spherical-Horisontal",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:44:52.4651761-07:00",
+      "EndTime": "2016-06-25T20:44:57.4594381-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:04.9942620",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -26.0,
+      "FromOrigoToTargetPosition": {
+        "X": -2080.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 32.490509033203125,
+        "Y": 0.0
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "66b38a91-85bc-4480-849f-61203ebbbf4b",
+      "Name": "Spherical-Horisontal-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:45:06.8762539-07:00",
+      "EndTime": "2016-06-25T20:45:08.7003097-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:01.8240558",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -11.0,
+      "FromOrigoToTargetPosition": {
+        "X": -880.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -154.0438232421875,
+        "Y": 174.73046875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "d49c1c55-c532-4ee4-ba6a-d524fbcd9e19",
+      "Name": "Spherical-Horisontal-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:45:11.5978897-07:00",
+      "EndTime": "2016-06-25T20:45:13.7498696-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:02.1519799",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -30.0,
+      "FromOrigoToTargetPosition": {
+        "X": -2400.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 440.5906982421875,
+        "Y": 451.64532470703125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "7df84cb5-d782-4237-8d82-8d8c7b5e5307",
+      "Name": "Spherical-Horisontal-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:45:19.58425-07:00",
+      "EndTime": "2016-06-25T20:45:26.0985127-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:06.5142627",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 8.0,
+      "FromOrigoToTargetPosition": {
+        "X": 640.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 238.4052734375,
+        "Y": -68.164443969726563
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "21b56908-0273-4752-8b77-fa179d4ad150",
+      "Name": "Spherical-Horisontal-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:45:29.2229668-07:00",
+      "EndTime": "2016-06-25T20:45:31.5415031-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:02.3185363",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": -14.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1120.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -5.05126953125,
+        "Y": 185.63922119140625
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "476712ea-eeef-4871-85f7-84619498a0b5",
+      "Name": "Spherical-Horisontal-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:45:34.4808638-07:00",
+      "EndTime": "2016-06-25T20:45:38.5379888-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:04.0571250",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Horisontal",
+      "TargetValue": 27.0,
+      "FromOrigoToTargetPosition": {
+        "X": 2160.0,
+        "Y": 0.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 197.460205078125,
+        "Y": 51.93792724609375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "7437f948-1a51-4ded-a59e-d74e038a45cb",
+      "Name": "Spherical-Vertical",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:46:07.534064-07:00",
+      "EndTime": "2016-06-25T20:46:15.6300185-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:08.0959545",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": -8.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 640.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": -15.01904296875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "94c39d5d-b957-43a2-b318-30604edc619b",
+      "Name": "Spherical-Vertical",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:46:18.5997926-07:00",
+      "EndTime": "2016-06-25T20:46:27.6924956-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:09.0927030",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": -36.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 2880.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 2.48291015625
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "85ff8558-6f5f-41fc-8c87-ea6c1741b09a",
+      "Name": "Spherical-Vertical",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:46:30.6927262-07:00",
+      "EndTime": "2016-06-25T20:46:34.8286776-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:04.1359514",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": -11.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 880.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 68.681640625
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "21bbb161-5b42-428a-8e74-57e4420efee4",
+      "Name": "Spherical-Vertical",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:46:37.64806-07:00",
+      "EndTime": "2016-06-25T20:46:41.8206165-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:04.1725565",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": -11.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 880.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 37.68359375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "73dac2d4-eedb-445e-92dc-cd397df2d525",
+      "Name": "Spherical-Vertical",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:46:44.446876-07:00",
+      "EndTime": "2016-06-25T20:46:51.6945778-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.0,
+      "Duration": "00:00:07.2477018",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": -30.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 2400.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -9.1552734375E-05,
+        "Y": 32.8134765625
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "85e48e40-975f-4b1b-aa94-59fd0102529f",
+      "Name": "Spherical-Vertical-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:47:02.2154497-07:00",
+      "EndTime": "2016-06-25T20:47:08.4549391-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:06.2394894",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 37.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -2960.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 88.9508056640625,
+        "Y": 1782.9619140625
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "b2964b62-0e32-4035-b0a5-473edb4baf9d",
+      "Name": "Spherical-Vertical-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:47:11.2150001-07:00",
+      "EndTime": "2016-06-25T20:47:12.8644986-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:01.6494985",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": -18.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 1440.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 106.95809936523437,
+        "Y": -233.7664794921875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "e977644b-56a0-470f-b2b7-36964678c57e",
+      "Name": "Spherical-Vertical-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:47:15.1694718-07:00",
+      "EndTime": "2016-06-25T20:47:17.463512-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:02.2940402",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": 24.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -1920.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 182.32955932617187,
+        "Y": 956.677734375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "91541b27-29fd-4332-bfc6-fe3739dad07c",
+      "Name": "Spherical-Vertical-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:47:20.9857942-07:00",
+      "EndTime": "2016-06-25T20:47:24.2569136-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:03.2711194",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": -16.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 1280.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -20.51495361328125,
+        "Y": -138.5599365234375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "124323d2-3a46-4e93-8f68-9d3ec646a291",
+      "Name": "Spherical-Vertical-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:47:27.0536837-07:00",
+      "EndTime": "2016-06-25T20:47:28.3837358-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.0,
+      "Duration": "00:00:01.3300521",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "Vertical",
+      "TargetValue": -17.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": 1360.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 86.018402099609375,
+        "Y": -351.3660888671875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "ab554147-8bca-4b2a-a6f0-4b72e1ebcb16",
+      "Name": "Spherical-TwoDimensional",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:47:33.2531776-07:00",
+      "EndTime": "2016-06-25T20:47:39.0786258-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 2.617993877991494,
+      "Duration": "00:00:05.8254482",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 22.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1524.20458984375,
+        "Y": -880.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 43.223052978515625,
+        "Y": 18.017822265625
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "9e889e44-2f0e-45d3-a1f6-790b46ce7107",
+      "Name": "Spherical-TwoDimensional",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:47:43.195352-07:00",
+      "EndTime": "2016-06-25T20:47:48.3534039-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 0.52359877559829882,
+      "Duration": "00:00:05.1580519",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -18.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1247.07666015625,
+        "Y": 720.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": -5.157073974609375,
+        "Y": -38.14599609375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "67ba43ee-1655-4591-ae94-f6cdb006a2dc",
+      "Name": "Spherical-TwoDimensional",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:47:52.6190097-07:00",
+      "EndTime": "2016-06-25T20:47:56.5093305-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 2.0943951023931953,
+      "Duration": "00:00:03.8903208",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -6.0,
+      "FromOrigoToTargetPosition": {
+        "X": 240.0,
+        "Y": 415.6923828125
+      },
+      "FromTargetToReleasePosition": {
+        "X": -24.368743896484375,
+        "Y": 42.18896484375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "3efca562-c6a1-48e6-8751-cb287312c0fd",
+      "Name": "Spherical-TwoDimensional",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:48:24.3524411-07:00",
+      "EndTime": "2016-06-25T20:48:37.9212561-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 1.5707963267948966,
+      "Duration": "00:00:13.5688150",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 26.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -2080.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 68.691314697265625,
+        "Y": 31.510986328125
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "eb3f96b2-5153-41e8-91f9-ab98e773dded",
+      "Name": "Spherical-TwoDimensional",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:48:42.5212617-07:00",
+      "EndTime": "2016-06-25T20:48:52.1492058-07:00",
+      "MoveBullsEyeInsteadOfMap": false,
+      "UIAngle": 1.0471975511965976,
+      "Duration": "00:00:09.6279441",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -30.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1200.0,
+        "Y": 2078.4609375
+      },
+      "FromTargetToReleasePosition": {
+        "X": 8.577545166015625,
+        "Y": -28.63037109375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": false
+    },
+    {
+      "UID": "62bbc075-402e-4763-9ed5-a4600bff8588",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:48:56.886779-07:00",
+      "EndTime": "2016-06-25T20:48:59.5347407-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.5707963267948966,
+      "Duration": "00:00:02.6479617",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 12.0,
+      "FromOrigoToTargetPosition": {
+        "X": 0.0,
+        "Y": -960.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 194.05718994140625,
+        "Y": 332.16644287109375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "a07129fc-185c-4b07-adbd-15d0de879a28",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:49:03.8741314-07:00",
+      "EndTime": "2016-06-25T20:49:06.3415924-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.617993877991494,
+      "Duration": "00:00:02.4674610",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -24.0,
+      "FromOrigoToTargetPosition": {
+        "X": 1662.7685546875,
+        "Y": 960.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 302.741455078125,
+        "Y": 59.5731201171875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "3c0cea83-12e5-4689-a0c6-9ccf675be3ab",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:49:09.450614-07:00",
+      "EndTime": "2016-06-25T20:49:19.873534-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 0.52359877559829882,
+      "Duration": "00:00:10.4229200",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -23.0,
+      "FromOrigoToTargetPosition": {
+        "X": -1593.48681640625,
+        "Y": 920.0
+      },
+      "FromTargetToReleasePosition": {
+        "X": 108.759033203125,
+        "Y": 417.582763671875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "765a1246-c0e9-4706-9f64-685f99ad9668",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:49:23.9268703-07:00",
+      "EndTime": "2016-06-25T20:49:25.9738342-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 1.0471975511965976,
+      "Duration": "00:00:02.0469639",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": -10.0,
+      "FromOrigoToTargetPosition": {
+        "X": -400.0,
+        "Y": 692.8203125
+      },
+      "FromTargetToReleasePosition": {
+        "X": -21.271484375,
+        "Y": 121.281005859375
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    },
+    {
+      "UID": "cdeb38ea-caf3-4cbf-8e27-1c15fbeba0ce",
+      "Name": "Spherical-TwoDimensional-Estimation",
+      "ProjectionMode": "Spherical",
+      "CreateTime": "2016-06-25T20:12:05.4447597-07:00",
+      "StartTime": "2016-06-25T20:49:30.318508-07:00",
+      "EndTime": "2016-06-25T20:49:32.9916445-07:00",
+      "MoveBullsEyeInsteadOfMap": true,
+      "UIAngle": 2.0943951023931953,
+      "Duration": "00:00:02.6731365",
+      "IsStarted": true,
+      "IsCompleted": true,
+      "Mode": "TwoDimensional",
+      "TargetValue": 16.0,
+      "FromOrigoToTargetPosition": {
+        "X": -640.0,
+        "Y": -1108.512451171875
+      },
+      "FromTargetToReleasePosition": {
+        "X": 190.71163940429687,
+        "Y": 300.77459716796875
+      },
+      "IsOffscreenSpaceEnabled": true,
+      "IsIntertialMoveAllowedOnscreen": false,
+      "Comment": "",
+      "IsForcefullyEnded": true
+    }
+  ],
+  "CreateTime": "2016-06-25T20:25:48.3099393-07:00",
+  "IsSessionCompleted": true,
+  "CompletionRate": 1.0
+}
